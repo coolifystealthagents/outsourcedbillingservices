@@ -104,7 +104,7 @@ export default async function Service({ params }: { params: Promise<{ slug: stri
               </a>
             </div>
             <div className="hero-card">
-              <img src={site.serviceImage} alt={`${service.title} offshore service team`} />
+              <img src={site.serviceImage} alt={`${service.title} team reviewing billing work`} />
             </div>
           </div>
         </section>
@@ -112,7 +112,7 @@ export default async function Service({ params }: { params: Promise<{ slug: stri
         <section className="section">
           <div className="container">
             <p className="eyebrow">Scope</p>
-            <h2>Good billing support starts with a narrow desk.</h2>
+            <h2>Start with one billing queue.</h2>
             <div className="cards">
               <div className="card">
                 <h3>Best tasks</h3>
@@ -170,7 +170,7 @@ export default async function Service({ params }: { params: Promise<{ slug: stri
         <section className="section" id="faq">
           <div className="container">
             <p className="eyebrow">Buyer questions</p>
-            <h2>Questions teams ask before they outsource billing work.</h2>
+            <h2>Questions to settle before the handoff.</h2>
             <div className="cards">
               {service.faqs.map((faq) => (
                 <div className="card" key={faq.q}>

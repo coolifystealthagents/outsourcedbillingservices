@@ -11,7 +11,7 @@ export const site = {
   accent: '#16a34a',
   heroImage: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
   serviceImage: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80',
-  alt: 'billing specialist working on invoice reports',
+  alt: 'Billing team reviewing invoice reports',
   badge: 'Billing desk',
 } as const;
 
@@ -37,7 +37,7 @@ export const services = [
   {
     slug: 'operations-support',
     title: 'Billing Operations Support',
-    desc: 'Remote billing operations support for teams that need clean queues, aging follow-up, payment notes, and daily handoff reports.',
+    desc: 'Filipino billing operations support for clean queues, aging follow-up, payment notes, and daily handoff reports.',
     buyerProblem: 'Billing work gets risky when every invoice, claim, or follow-up lives in a different inbox. This service turns the daily desk into a reviewed queue with owners, due dates, and exception notes.',
     bestTasks: [
       'Clean billing queues and tag items by owner, payer, status, and next step',
@@ -71,7 +71,7 @@ export const services = [
   {
     slug: 'customer-support',
     title: 'Billing Customer Support',
-    desc: 'Billing customer support for payment questions, balance follow-up, document requests, and simple status updates with clear escalation rules.',
+    desc: 'Filipino billing customer support for payment questions, balance follow-up, document requests, and simple status updates.',
     buyerProblem: 'Customers usually do not care which department owns billing. They want a clear answer. Outsourced support can handle simple billing replies while your internal team keeps control of exceptions.',
     bestTasks: [
       'Answer basic invoice, statement, balance, and payment-status questions from approved scripts',
@@ -105,7 +105,7 @@ export const services = [
   {
     slug: 'admin-support',
     title: 'Billing Admin Support',
-    desc: 'Billing admin support for document collection, data cleanup, invoice prep, portal checks, and billing desk coordination.',
+    desc: 'Filipino billing admin support for document collection, data cleanup, invoice prep, portal checks, and desk coordination.',
     buyerProblem: 'Billing admins lose time chasing small missing pieces. A remote assistant can keep forms, portal notes, invoice details, and task lists moving so senior billing staff can handle judgment calls.',
     bestTasks: [
       'Collect missing billing details, files, purchase orders, claim attachments, and contact updates',
@@ -139,7 +139,7 @@ export const services = [
   {
     slug: 'reporting-and-qa',
     title: 'Billing Reporting and QA',
-    desc: 'Billing reporting and QA support for aging summaries, denial logs, invoice checks, work sampling, and simple weekly management dashboards.',
+    desc: 'Filipino reporting and QA support for aging summaries, denial logs, invoice checks, work samples, and weekly management reports.',
     buyerProblem: 'Billing problems hide when nobody checks the same numbers each week. Reporting support gives the owner a short view of queue age, blockers, errors, and follow-up work.',
     bestTasks: [
       'Build weekly aging, denial, invoice, or unpaid-item summaries from approved exports',
@@ -175,53 +175,47 @@ export const services = [
 export const blogPosts = [
   {
     slug: 'outsourced-billing-services-planning',
-    title: 'Outsourced Billing Services: What does it plan?',
-    excerpt: 'A plain-English guide to staffing details, scope, and hidden planning.',
+    title: 'How to plan outsourced billing support',
+    excerpt: 'Turn your billing queue into a clear role, with approval lines and a review plan.',
     minutes: 6,
   },
   {
     slug: 'outsourced-billing-services-tasks-to-outsource',
-    title: 'Outsourced Billing Services: What tasks should you outsource first?',
-    excerpt: 'Start with recurring work that has examples and clear review rules.',
+    title: 'Which billing tasks should you outsource first?',
+    excerpt: 'Choose repeatable billing work with examples, an owner, and clear review rules.',
     minutes: 7,
   },
   {
     slug: 'outsourced-billing-services-provider-questions',
-    title: 'Outsourced Billing Services: Questions to ask before hiring',
-    excerpt: 'Use these questions before you sign with a provider or freelancer.',
+    title: 'Questions to ask an outsourced billing provider',
+    excerpt: 'Ask who reviews the work, how access is limited, and when issues reach your team.',
     minutes: 8,
   },
   {
     slug: 'outsourced-billing-services-onboarding-checklist',
-    title: 'Outsourced Billing Services: First week onboarding checklist',
-    excerpt: 'A simple checklist for tools, SOPs, calls, QA, and reporting.',
+    title: 'First-week checklist for a Filipino billing specialist',
+    excerpt: 'Set up safe tool access, sample work, daily checks, and a clear escalation path.',
     minutes: 9,
   },
 ] as const;
 
-export const stats = [
-  { label: 'Typical savings target', value: '30-60%', note: 'depends on role, management, and local hiring plan' },
-  { label: 'Best pilot length', value: '14 days', note: 'enough time to test quality before scaling' },
-  { label: 'Start with', value: '5-10 tasks', note: 'clear recurring tasks beat vague job descriptions' },
-] as const;
-
 export const staffingOffer = {
-  partner: 'our staffing team',
-  promise: 'Get a managed offshore staffing plan built around the work you need removed from your plate.',
+  partner: 'our Philippines staffing team',
+  promise: 'Get a Filipino billing staffing plan built around the queue you need covered.',
   fit: [
-    'business owners who need reliable remote staff but do not want to screen alone',
-    'teams that want trained support, backup coverage, and a clear manager path',
-    'companies that need help with admin, operations, customer support, calls, bookkeeping, development, or marketing work',
+    'billing owners who need a Filipino specialist but do not want to screen alone',
+    'teams that want a named reviewer and a clear escalation path',
+    'companies with invoice, claims admin, payment follow-up, or billing QA queues',
   ],
   included: [
-    'role planning call to turn your task list into a clear staffing scope',
-    'candidate matching based on skills, schedule, tools, and communication needs',
-    'onboarding guidance for SOPs, scorecards, reporting, and safe tool access',
-    'managed support so quality, attendance, and replacement questions do not sit only on the owner',
+    'A role call that turns your billing queue into a clear scope',
+    'Matching with Filipino talent based on billing skills, schedule, tools, and communication needs',
+    'A handoff plan for examples, review points, reporting, and safe tool access',
+    'A named contact for quality, attendance, and replacement questions',
   ],
   proof: [
     'clear task scope before hiring',
-    'weekly reporting rhythm',
+    'a weekly report the billing owner can review',
     'named accountability and escalation path',
     'simple handoff plan for tools, SOPs, and quality checks',
   ],
@@ -229,7 +223,7 @@ export const staffingOffer = {
 
 export const leadQuestions = [
   'What work do you want off your plate first?',
-  'Which tools, inboxes, phones, CRMs, or systems will the staff member use?',
+  'Which billing tools, portals, inboxes, or account systems will the specialist use?',
   'What hours, time zone, and response time do you need?',
   'Who checks quality during the first two weeks?',
   'What should the staff member never decide without approval?',
@@ -237,9 +231,9 @@ export const leadQuestions = [
 
 export const staffingProcess = [
   { step: '1', title: 'Map the role', body: 'We turn messy tasks into one clear role with outcomes, tools, limits, and a first-week checklist.' },
-  { step: '2', title: 'Match the staff', body: 'our staffing team can help match remote staff to the work, schedule, communication style, and skill level you need.' },
+  { step: '2', title: 'Match the specialist', body: 'Our staffing team matches Filipino talent to the billing work, schedule, tools, and skill level you need.' },
   { step: '3', title: 'Launch with control', body: 'Start with SOPs, sample work, limited access, daily review, and a simple scorecard so quality is easy to see.' },
-  { step: '4', title: 'Scale what works', body: 'Once the first tasks are stable, add more work, better reporting, and stronger delegation without guessing.' },
+  { step: '4', title: 'Add work carefully', body: 'Once the first tasks are stable, add more billing work and update the review plan.' },
 ] as const;
 
-export const staffingFitNote = 'Every staffing plan depends on role scope, schedule, skills, tools, and management needs. Send the role details and our staffing team can guide the best fit.';
+export const staffingFitNote = 'Every plan depends on the billing scope, schedule, tools, access, and review needs. We recruit and hire Filipino talent only in the Philippines.';

@@ -29,7 +29,8 @@ export default function Home() {
         name: 'Outsourced billing support',
         serviceType: 'Billing administration and operations support',
         provider: { '@type': 'Organization', name: site.brand, url: baseUrl },
-        areaServed: 'Worldwide',
+        areaServed: 'United States',
+        availableChannel: { '@type': 'ServiceChannel', serviceLocation: { '@type': 'Country', name: 'Philippines' } },
       },
     ],
   };
@@ -43,17 +44,17 @@ export default function Home() {
         <div className="billing-grid" aria-hidden="true" />
         <div className="container billing-hero-grid">
           <div className="billing-copy">
-            <p className="billing-kicker"><span /> Managed billing operations</p>
+            <p className="billing-kicker"><span /> Filipino billing support</p>
             <h1>Get the billing queue out of your inbox.</h1>
-            <p className="billing-lead">A managed specialist handles invoice prep, claims admin, payment follow-up, customer questions, and weekly QA. Your team keeps control of approvals and account decisions.</p>
+            <p className="billing-lead">A Filipino billing specialist handles invoice prep, claims admin, payment follow-up, customer questions, and weekly checks. Your team keeps control of approvals and account decisions.</p>
             <div className="billing-actions">
               <a className="btn billing-primary" href="/contact">Map my billing desk <span>↗</span></a>
               <a className="billing-text-link" href="#tasks">See what to hand off <span>↓</span></a>
             </div>
             <div className="control-line">
+              <span>Philippines-based talent</span><i />
               <span>Limited access</span><i />
-              <span>Named owner</span><i />
-              <span>Reviewed work</span>
+              <span>Named reviewer</span>
             </div>
           </div>
 
@@ -77,7 +78,7 @@ export default function Home() {
           </div>
         </div>
         <div className="container workflow-strip">
-          <span className="workflow-title">A cleaner route to done</span>
+          <span className="workflow-title">How the queue moves</span>
           {['Received', 'Prepared', 'Reviewed', 'Sent', 'Follow-up'].map((item, i) => <div key={item}><i>{i + 1}</i><b>{item}</b></div>)}
         </div>
       </section>
@@ -106,7 +107,7 @@ export default function Home() {
           <div className="control-copy">
             <p className="billing-kicker"><span /> Built around control</p>
             <h2>Outsource the work. Keep the decisions.</h2>
-            <p>A useful billing desk does not hide behind a monthly report. You should know what moved, what is blocked, and exactly where your approval is needed.</p>
+            <p>Your billing desk should not hide behind a monthly report. You should know what moved, what is blocked, and where your approval is needed.</p>
             <div className="control-list">
               {(staffingOffer.included || []).map((item, i) => <div key={item}><span>{String(i + 1).padStart(2, '0')}</span><p>{item.replace(/^./, (m) => m.toUpperCase())}</p></div>)}
             </div>
