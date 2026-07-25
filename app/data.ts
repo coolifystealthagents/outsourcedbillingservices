@@ -823,6 +823,131 @@ export const blogPosts = [
       ],
     },
   },
+  {
+    slug: 'philippines-medical-billing-eligibility-verification-checklist',
+    title: 'Philippines medical billing eligibility verification checklist',
+    excerpt: 'A practical guide for Filipino billing staff who check coverage sources, record benefit facts, and send uncertain cases to the right owner.',
+    minutes: 13,
+    detail: {
+      keyword: 'Philippines medical billing eligibility verification checklist',
+      marker: 'OBS-PH-ELIGIBILITY-20260725',
+      published: '2026-07-25',
+      updated: '2026-07-25',
+      intro: [
+        'A Philippines medical billing eligibility verification checklist should show which approved source to open, which facts to record, and when the worker must stop. It should keep coverage interpretation, clinical choices, coding changes, patient promises, and account decisions with the people allowed to make them.',
+        'This guide is for a Filipino billing specialist who checks eligibility facts inside approved payer and practice systems. The worker can preserve what the source shows and flag a mismatch without telling a patient that a service is covered or deciding what the business should bill.',
+      ],
+      stats: [
+        { label: 'Insufficient documentation', value: 59.8, display: '59.8%' },
+        { label: 'Medical necessity', value: 15.7, display: '15.7%' },
+        { label: 'Incorrect coding', value: 10, display: '10.0%' },
+        { label: 'No documentation', value: 8.2, display: '8.2%' },
+        { label: 'Other', value: 6.3, display: '6.3%' },
+      ],
+      table: [
+        { check: 'Person and plan match', staff: 'Compare the approved patient reference, payer, member record, and plan details shown by the source.', owner: 'Resolve a disputed identity, plan, subscriber, or encounter before anyone relies on the result.' },
+        { check: 'Coverage dates', staff: 'Record the start, end, and check date exactly as the approved source displays them.', owner: 'Decide what conflicting dates mean and whether another source or payer contact is required.' },
+        { check: 'Benefit facts', staff: 'Copy the named benefit facts and source reference without turning them into a coverage promise.', owner: 'Interpret exclusions, limits, medical-need rules, network issues, or unclear benefit language.' },
+        { check: 'Other coverage', staff: 'Record any other-plan message shown by the source and place it in the approved exception queue.', owner: 'Decide the order of coverage and any claim, patient, or account action.' },
+        { check: 'Source failure or mismatch', staff: 'Save the error, check time, and approved reference, then route the item without guessing.', owner: 'Choose the next approved source and decide whether work should pause or continue.' },
+        { check: 'Privacy or access concern', staff: 'Stop work and report the facts through the approved channel.', owner: 'Lead the response and decide whether access, notice, or the work path must change.' },
+      ],
+      quote: {
+        text: 'Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet) or based on asset ownership (enterprise or personally owned).',
+        by: 'National Institute of Standards and Technology, SP 800-207, August 2020',
+        url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf',
+      },
+      sections: [
+        {
+          heading: 'Set the eligibility check boundary',
+          paragraphs: [
+            'Start with the payers, plan types, approved source paths, and appointment groups the specialist may check. Give the worker a field list, two checked examples, and one exception queue before the first live record arrives.',
+            'Write down every choice that stays with the practice or billing owner. A Filipino specialist may record what an approved source displays, but the worker should not promise coverage, interpret a clinical rule, choose a code, or change the patient account.',
+            'Test the boundary with a small mixed set. Include an inactive result, conflicting dates, another-plan message, unreadable source, name mismatch, and unclear benefit note so the handoff rules meet hard cases early.',
+          ],
+          bullets: ['Name the allowed payer and plan groups.', 'List approved source paths.', 'Mark every owner-only decision.', 'Choose one exception queue.'],
+        },
+        {
+          heading: 'Build one source-based eligibility record',
+          paragraphs: [
+            'The working record should list the patient reference, payer, member reference, plan, coverage dates, check time, source, and review state. Keep sensitive details in the approved system rather than moving them into personal files or chat.',
+            'Use plain states tied to real work. Ready to check, source checked, mismatch found, owner review, second source needed, waiting, and closed tell the next person where the item stands.',
+            'Keep a source reference another approved user can reopen. The team needs the portal name, response reference, check date, and fields copied from the source.',
+          ],
+          bullets: ['One patient reference', 'One source and check time', 'One clear state', 'One named owner'],
+        },
+        {
+          heading: 'Match the person before reading benefits',
+          paragraphs: [
+            'Begin with the approved patient and subscriber fields that the payer source expects. Compare them carefully, because a coverage result tied to the wrong person is not useful proof for the scheduled record.',
+            'Do not repair a mismatch by trying new identities until something works. Save the facts shown by the source and send the item to the person who can confirm registration, subscriber details, or the approved next check.',
+            'If the source shows more than one plan, record each result without choosing which plan controls the claim. The billing owner should decide the order of coverage and tell the worker what to document next.',
+          ],
+          bullets: ['Use the approved patient reference.', 'Compare subscriber fields carefully.', 'Preserve every source response.', 'Send identity questions to the owner.'],
+        },
+        {
+          heading: 'Use dated national findings as context',
+          paragraphs: [
+            'CMS reported that 7.66% of measured Medicare fee-for-service payments were improper for the 2024 report period. Its cause table assigned 59.8% of measured improper payments to insufficient documentation and 8.2% to no documentation.',
+            'The same 2024 table assigned 15.7% to medical necessity and 10.0% to incorrect coding. An eligibility result does not settle those questions, so the checklist should keep coverage facts apart from clinical support and coding decisions.',
+            'These national findings do not measure one practice, one eligibility queue, or one Philippines-based worker. Local results depend on payer mix, source access, registration quality, owner rules, and the way the business selects records for review.',
+          ],
+          bullets: ['Use dated national data for context.', 'Measure the local queue on its own.', 'Keep eligibility apart from judgment.', 'Record how the sample was chosen.'],
+        },
+        {
+          heading: 'Record facts without promising coverage',
+          paragraphs: [
+            'A payer response may show active dates and still leave questions about a service, setting, network, referral, or other condition. The worker should copy the source facts and use the owner-approved note instead of telling a patient what will happen.',
+            'When a field is blank or unclear, write that the source did not show a clear answer at the check time. Do not turn silence into approval, fill a gap from memory, or reuse an older result as if it were current.',
+            'Give patient-facing staff a short handoff that names the source, check date, verified facts, and open owner question. This helps the next person speak carefully without making the remote specialist responsible for the final explanation.',
+          ],
+          bullets: ['Copy only what the source shows.', 'Name blank or unclear fields.', 'Avoid coverage promises.', 'Send open meaning to the owner.'],
+        },
+        {
+          heading: 'Limit access for remote eligibility work',
+          paragraphs: [
+            'A Filipino billing specialist needs access to the assigned eligibility queue, not every patient, claim, report, or folder the business owns. Use a named login, approved sign-in controls, and permissions that fit the job.',
+            'NIST explains that a person or account should not be trusted merely because of location or ownership. For eligibility work, that means checking the user and device, limiting reachable systems, and reviewing access whenever the assignment changes.',
+            'The Philippine Data Privacy Act matters when personal data is processed in the Philippines. The business should get advice for its own legal setup, while the daily guide tells the worker where records may be opened, saved, and discussed.',
+          ],
+          bullets: ['Use a named account.', 'Allow only the required systems.', 'Keep exports off personal tools.', 'Report an access problem before continuing.'],
+        },
+        {
+          heading: 'Check the first week before adding more records',
+          paragraphs: [
+            'On the first day, walk through two checks and point out every owner decision. During the next two days, let the specialist prepare a small group while the owner checks every match, source, field, note, and handoff.',
+            'Group mistakes by cause on the fourth day. A missing source path needs a better guide, a repeated meaning question needs a clearer owner, and an entry error needs a focused recheck.',
+            'On the fifth day, approve only the payer and plan groups the sample supports. Keep uncertain records in full review until the team has enough checked work to change the boundary safely.',
+          ],
+          bullets: ['Day 1: guided examples', 'Days 2–3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
+        },
+      ],
+      faqs: [
+        { q: 'Can a Filipino billing specialist tell a patient that a service is covered?', a: 'The specialist can record what an approved payer source displays and prepare a careful handoff. A named owner or approved patient-facing team member should interpret unclear terms and decide what the business can say about the planned service.' },
+        { q: 'What belongs in an eligibility verification record?', a: 'List the patient reference, payer, member reference, plan, coverage dates, check time, source, response reference, verified fields, open mismatches, and named next owner. Keep sensitive details in the approved system instead of copying the full result into chat.' },
+        { q: 'What should happen when two sources disagree?', a: 'Preserve both results with their source and check time, then send the difference to the assigned owner. The support worker should not choose the answer that looks easier or hide the earlier result.' },
+        { q: 'How should the owner review the first sample?', a: 'Compare the patient source, payer response, copied fields, source reference, worker note, open question, and final handoff for every item in a small varied sample. Fix the guide before adding more records when the same gap appears twice.' },
+      ],
+      banners: [
+        { title: 'Give eligibility facts a clean review path', body: 'Use billing data quality review to define source checks, exception owners, and review points.', href: '/services/billing-data-quality-review', label: 'Map quality review' },
+        { title: 'Keep claim preparation tied to proof', body: 'Use invoice preparation support to separate repeatable record work from owner decisions.', href: '/services/invoice-preparation', label: 'Review preparation' },
+        { title: 'Turn eligibility work into a staffing brief', body: 'Share the payers, plan groups, tools, access limits, and review owner for the role.', href: '/contact', label: 'Build the brief' },
+      ],
+      internalLinks: [
+        { title: 'Medical billing audit checklist', href: '/blog/philippines-medical-billing-audit-checklist' },
+        { title: 'Documentation follow-up checklist', href: '/blog/philippines-medical-billing-documentation-follow-up-checklist' },
+        { title: 'Claim status follow-up checklist', href: '/blog/philippines-medical-billing-claim-status-follow-up-checklist' },
+        { title: 'Medical billing denial intake checklist', href: '/blog/philippines-medical-billing-denial-intake-checklist' },
+      ],
+      sources: [
+        { n: 1, name: 'CMS, 2024 Medicare Fee-for-Service Supplemental Improper Payment Data', date: '2024', url: 'https://www.cms.gov/files/document/2024-medicare-fee-service-supplemental-improper-payment-data.pdf', note: 'Primary source for the 7.66%, 59.8%, 15.7%, 10.0%, and 8.2% findings used in this guide.' },
+        { n: 2, name: 'NIST SP 800-207, Zero Trust Architecture', date: 'August 2020', url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf', note: 'Primary source for the exact access-control quote and guidance against location-based trust.' },
+        { n: 3, name: 'NIST SP 800-66 Revision 2, Implementing the HIPAA Security Rule', date: 'February 2024', url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-66r2.pdf', note: 'Federal guidance for protecting electronic health information and reviewing security risks.' },
+        { n: 4, name: 'CMS Medicare Claims Processing Manual', date: 'CMS manual page checked July 2026', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912', note: 'CMS hosts claim-processing chapters used to check how eligibility facts fit into Medicare billing work.' },
+        { n: 5, name: 'Republic Act No. 10173, Data Privacy Act of 2012', date: '2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Philippine legal text covering personal data processing and security duties.' },
+      ],
+    },
+  },
 ] as const;
 
 export const staffingOffer = {
