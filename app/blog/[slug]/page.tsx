@@ -86,6 +86,7 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
               <h2 id="chart-title">Why the checklist starts with proof</h2>
               <p>CMS grouped measured Medicare fee-for-service improper payments by cause. Documentation made up the largest share.</p>
             </div>
+            <span className="scroll-cue">Swipe chart sideways to see every value →</span>
             <svg viewBox="0 0 760 330" role="img" aria-labelledby="chart-svg-title chart-svg-desc">
               <title id="chart-svg-title">CMS 2024 improper payment categories</title>
               <desc id="chart-svg-desc">Horizontal bars show 59.8 percent insufficient documentation, 15.7 percent medical necessity, 10 percent incorrect coding, 8.2 percent no documentation, and 6.3 percent other.</desc>
@@ -127,6 +128,7 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
               <blockquote className="expert-quote"><p>"{detail.quote.text}"</p><cite><a href={detail.quote.url}>{detail.quote.by}</a></cite></blockquote>
               <figure className="handoff-graphic" aria-labelledby="handoff-title handoff-note">
                 <div><p className="module-label">Decision route</p><h2 id="handoff-title">A clean claim-review handoff</h2></div>
+                <span className="scroll-cue">Swipe diagram sideways to see every step →</span>
                 <svg viewBox="0 0 900 260" role="img" aria-labelledby="flow-title flow-desc">
                   <title id="flow-title">Medical billing audit handoff</title>
                   <desc id="flow-desc">The billing specialist checks the source, closes clean records, and sends exceptions to the named owner before recording the approved result.</desc>

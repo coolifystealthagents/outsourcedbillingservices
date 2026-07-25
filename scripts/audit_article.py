@@ -94,6 +94,10 @@ def main():
     ap.add_argument('html')
     ap.add_argument('--sitemap', required=True)
     ap.add_argument('--slug', required=True)
+    ap.add_argument('--keyword', default='Philippines medical billing audit checklist')
+    ap.add_argument('--marker', default='OBS-PH-MED-AUDIT-20260725')
+    ap.add_argument('--quote', default='Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location.')
+    ap.add_argument('--stat', action='append', dest='stats', default=[])
     args = ap.parse_args()
     raw = Path(args.html).read_text(encoding='utf-8')
     parser = AuditParser(); parser.feed(raw)
@@ -101,7 +105,7 @@ def main():
     page_text = ' '.join(parser.page_text)
     words = len(WORD_RE.findall(article_text))
     h1 = ' '.join(parser.h1)
-    keyword = 'Philippines medical billing audit checklist'
+    keyword = args.keyword
     canonical = f'https://outsourcedbillingservices.com/blog/{args.slug}'
     narrative = []
     for p in parser.paragraphs:
@@ -129,7 +133,7 @@ def main():
     require('h1_keyword_prefix', h1.lower().startswith(keyword.lower()))
     require('title_exact', keyword.lower() in ''.join(parser.title).lower())
     require('canonical_exact', parser.canonical == canonical)
-    require('marker', parser.marker == 'OBS-PH-MED-AUDIT-20260725')
+    require('marker', parser.marker == args.marker)
     require('paragraphs_2_3_sentences', all(2 <= p['sentences'] <= 3 for p in narrative))
     require('exactly_3_banners', parser.counts['article_banner'] == 3)
     require('exactly_2_svgs', parser.counts['svg'] == 2)
@@ -137,8 +141,9 @@ def main():
     require('methods_note', parser.counts['methods_note'] >= 1)
     require('internal_links_3_plus', len(internal) >= 3)
     require('external_links_4_plus', len(external) >= 4)
-    require('quote_exact', 'Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location.' in article_text)
-    require('dated_stats', all(x in article_text for x in ['59.8%', '15.7%', '10.0%', '8.2%']))
+    require('quote_exact', args.quote in article_text)
+    expected_stats = args.stats or ['59.8%', '15.7%', '10.0%', '8.2%']
+    require('dated_stats', all(x in article_text for x in expected_stats))
     require('numbered_sources', parser.counts['source_items'] == 5)
     require('schemas', all(x in schema_types for x in ['BlogPosting', 'FAQPage', 'BreadcrumbList']))
     require('sitemap_slug', f'/blog/{args.slug}' in sitemap)
