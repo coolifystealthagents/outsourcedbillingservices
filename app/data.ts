@@ -323,6 +323,131 @@ export const blogPosts = [
       ],
     },
   },
+  {
+    slug: 'philippines-medical-billing-remittance-review-checklist',
+    title: 'Philippines medical billing remittance review checklist',
+    excerpt: 'A practical guide for Filipino billing staff who review remittance records, post approved results, and send money or coding decisions to the right owner.',
+    minutes: 13,
+    detail: {
+      keyword: 'Philippines medical billing remittance review checklist',
+      marker: 'OBS-PH-REMIT-REVIEW-20260725',
+      published: '2026-07-25',
+      updated: '2026-07-25',
+      intro: [
+        'A Philippines medical billing remittance review checklist should tell a staff member which file to open, which fields to compare, and where an exception goes. It should also keep refunds, write-offs, coding changes, and disputed payment decisions with a named owner.',
+        'This guide is for a Filipino billing specialist who handles repeatable remittance work in approved systems. The worker can sort records, match approved details, and prepare a clean handoff without guessing what a payer meant or changing an account without permission.',
+      ],
+      stats: [
+        { label: 'Insufficient documentation', value: 59.8, display: '59.8%' },
+        { label: 'Medical necessity', value: 15.7, display: '15.7%' },
+        { label: 'Incorrect coding', value: 10, display: '10.0%' },
+        { label: 'No documentation', value: 8.2, display: '8.2%' },
+        { label: 'Other', value: 6.3, display: '6.3%' },
+      ],
+      table: [
+        { check: 'Remittance and account match', staff: 'Match the remittance, payer, patient or account ID, and service date in the approved billing system.', owner: 'Resolve a disputed identity, payer, or encounter match before anything is posted.' },
+        { check: 'Paid and allowed amounts', staff: 'Copy the stated figures into the review row and flag any difference from the approved source.', owner: 'Decide whether the difference is expected, disputed, or ready for another action.' },
+        { check: 'Adjustment reason', staff: 'Record the payer code and plain description from the approved reference. Do not invent a reason.', owner: 'Interpret an unclear adjustment and choose the response.' },
+        { check: 'Payment posting', staff: 'Post only the result covered by the written rule and save the remittance reference.', owner: 'Approve unusual adjustments, refunds, write-offs, and balance changes.' },
+        { check: 'Reversal or recoupment', staff: 'Stop the item, save the payer notice, and place it in the named exception queue.', owner: 'Review the notice and approve the account response.' },
+        { check: 'Privacy or access concern', staff: 'Stop work and report the facts through the approved channel.', owner: 'Lead the response and decide whether access or notice must change.' },
+      ],
+      quote: {
+        text: 'Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet) or based on asset ownership (enterprise or personally owned).',
+        by: 'National Institute of Standards and Technology, SP 800-207, August 2020',
+        url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf',
+      },
+      sections: [
+        {
+          heading: 'Set the remittance review boundary',
+          paragraphs: [
+            'Start with one payer, one approved file type, and one place where finished work is recorded. The staff member needs a written list of the fields to compare before opening a live queue.',
+            'Name the decisions that stay with the practice or billing owner. A Filipino specialist may match an account, record a payer code, and post an approved result, but the worker should not approve a refund, choose a write-off, or settle a coding dispute.',
+            'Test the boundary with a small group of varied records. Include a clean payment, a partial payment, an adjustment, a reversal, and a record that cannot be matched so the handoff rules face real examples.',
+          ],
+          bullets: ['Name the payer and file type.', 'List every field the worker must compare.', 'Mark each owner-only decision.', 'Choose one exception queue.'],
+        },
+        {
+          heading: 'Build a queue that shows the next action',
+          paragraphs: [
+            'Each row should show the remittance reference, account ID, service date, amount shown, adjustment code, status, and next owner. Keep patient details inside the approved billing system instead of copying them into a personal sheet or chat message.',
+            'Use a short status list that describes actual work. Ready to review, matched, owner question, approved to post, posted, and closed are easier to scan than a long list of vague labels.',
+            'Give every open item a check date and a named person. The worker can then return to the right records without deciding alone how long an exception should wait.',
+          ],
+          bullets: ['One remittance reference', 'One current status', 'One next check date', 'One named decision owner'],
+        },
+        {
+          heading: 'Read adjustment details without guessing',
+          paragraphs: [
+            'The specialist should copy the payer code and its approved description exactly as shown in the source. If the code is missing, combined with another message, or unclear for that account, the item moves to the owner queue.',
+            'A plain note should say what the worker found and where it came from. "Adjustment code shown on the remittance, account balance does not match the approved posting rule" gives the reviewer something useful to check.',
+            'Do not ask support staff to translate a payer message into a new code or clinical conclusion. Their job is to preserve the evidence, describe the conflict, and send it to the person who owns that decision.',
+          ],
+          bullets: ['Copy the code exactly.', 'Use the approved code reference.', 'Describe the conflict in plain words.', 'Send unclear meaning to the owner.'],
+        },
+        {
+          heading: 'Use national findings as a warning, not a target',
+          paragraphs: [
+            'CMS reported that 7.66% of measured Medicare fee-for-service payments were improper for the 2024 report period. Its cause table assigned 59.8% of measured improper payments to insufficient documentation and 8.2% to no documentation.',
+            'The same 2024 table assigned 15.7% to medical necessity and 10.0% to incorrect coding. These findings are a good reason to keep proof checks, coding questions, and clinical questions in separate paths.',
+            'Those national percentages do not describe one practice or one Philippines-based worker. Local findings depend on the payer mix, claim types, source records, owner rules, and the way the team selects its review sample.',
+          ],
+          bullets: ['Use dated national data only for context.', 'Measure the local queue on its own.', 'Keep document checks apart from judgment.', 'Write down how samples are chosen.'],
+        },
+        {
+          heading: 'Separate posting work from money decisions',
+          paragraphs: [
+            'A written posting rule should cover the ordinary result, the required source, and the evidence saved after posting. Anything outside that rule should pause before the account changes.',
+            'Refunds, write-offs, unusual adjustments, disputed balances, and recoupments need a named owner. The specialist can prepare the record and show the payer notice, but the owner decides what the business will do.',
+            'The approved decision should return through the same queue with the reviewer name and source note. The worker can then post or close the item without trying to remember a decision made in a call or private message.',
+          ],
+          bullets: ['Post only from a written rule.', 'Pause every exception.', 'Save the owner approval.', 'Record the final result in the approved system.'],
+        },
+        {
+          heading: 'Limit access for remote remittance work',
+          paragraphs: [
+            'A Filipino billing specialist needs access to the records used for the assigned queue, not every account or folder the business owns. Use a named login, approved sign-in controls, and permissions that match the task.',
+            'NIST explains that a person or account should not be trusted merely because of location or ownership. For a billing desk, that means checking the user and device, limiting reachable systems, and reviewing access whenever the assignment changes.',
+            'The Philippine Data Privacy Act matters when personal data is processed in the Philippines. The business should get advice for its own legal setup, while the daily checklist tells the worker where records may be opened, saved, and discussed.',
+          ],
+          bullets: ['Use a named account.', 'Allow only the required systems.', 'Keep exports off personal tools.', 'Report an access problem before continuing.'],
+        },
+        {
+          heading: 'Check the first week before adding volume',
+          paragraphs: [
+            'On the first day, walk through two examples and point out every owner decision. During the next two days, let the specialist review a small batch while the owner checks every result before posting.',
+            'Group mistakes by cause on the fourth day. A missing source path needs a better guide, a repeated judgment call needs a clearer owner, and an entry error needs a focused recheck.',
+            'On the fifth day, approve only the record types that the sample supports. Keep hard cases in review until the team has enough checked work to change the boundary safely.',
+          ],
+          bullets: ['Day 1: guided examples', 'Days 2–3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
+        },
+      ],
+      faqs: [
+        { q: 'Can a Filipino billing specialist post every remittance result?', a: 'The specialist should post only the ordinary results covered by a written and tested rule. Every exception should go to the named owner before the account changes.' },
+        { q: 'What should happen when an adjustment code is unclear?', a: 'The worker should save the exact code, payer message, and account reference, then send the item to the owner. The worker should not invent a description or choose the account response.' },
+        { q: 'Should remittance details be copied into chat?', a: 'Keep sensitive details in approved billing tools whenever possible. A handoff can use the approved record ID and a short issue label without copying the full record into another system.' },
+        { q: 'How should the owner review the first sample?', a: 'Compare the source remittance, worker note, posting result, and any owner approval for every item in a small varied sample. Fix the guide before adding more records when the same gap appears twice.' },
+      ],
+      banners: [
+        { title: 'Define the payment posting role', body: 'Use the service guide to separate routine matching from owner-only account changes.', href: '/services/payment-posting', label: 'Map payment posting' },
+        { title: 'Give exceptions a clean review path', body: 'Use billing reconciliation support to organize mismatches before the owner decides.', href: '/services/billing-reconciliation', label: 'Review reconciliation' },
+        { title: 'Turn the queue into a staffing brief', body: 'Share the payer files, tools, schedule, access limits, and review owner for the role.', href: '/contact', label: 'Build the brief' },
+      ],
+      internalLinks: [
+        { title: 'Billing data quality review', href: '/services/billing-data-quality-review' },
+        { title: 'Billing dispute documentation', href: '/services/dispute-documentation' },
+        { title: 'Medical billing audit checklist', href: '/blog/philippines-medical-billing-audit-checklist' },
+        { title: 'Documentation follow-up checklist', href: '/blog/philippines-medical-billing-documentation-follow-up-checklist' },
+      ],
+      sources: [
+        { n: 1, name: 'CMS, 2024 Medicare Fee-for-Service Supplemental Improper Payment Data', date: '2024', url: 'https://www.cms.gov/files/document/2024-medicare-fee-service-supplemental-improper-payment-data.pdf', note: 'Primary source for the 7.66%, 59.8%, 15.7%, 10.0%, and 8.2% findings used in this guide.' },
+        { n: 2, name: 'NIST SP 800-207, Zero Trust Architecture', date: 'August 2020', url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf', note: 'Primary source for the exact access-control quote and guidance against location-based trust.' },
+        { n: 3, name: 'NIST SP 800-66 Revision 2, Implementing the HIPAA Security Rule', date: 'February 2024', url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-66r2.pdf', note: 'Federal guidance for protecting electronic health information and reviewing security risks.' },
+        { n: 4, name: 'CMS Medicare Claims Processing Manual', date: 'CMS manual page checked July 2026', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912', note: 'CMS hosts claim-processing chapters, including remittance advice instructions, on this manual page.' },
+        { n: 5, name: 'Republic Act No. 10173, Data Privacy Act of 2012', date: '2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Philippine legal text covering personal data processing and security duties.' },
+      ],
+    },
+  },
 ] as const;
 
 export const staffingOffer = {

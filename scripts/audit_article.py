@@ -147,7 +147,7 @@ def main():
     require('numbered_sources', parser.counts['source_items'] == 5)
     require('schemas', all(x in schema_types for x in ['BlogPosting', 'FAQPage', 'BreadcrumbList']))
     require('sitemap_slug', f'/blog/{args.slug}' in sitemap)
-    forbidden_copy = re.findall(r'(?i)\bpricing\b|\btiers?\b|\bhourly\b|\bmonthly\b', page_text)
+    forbidden_copy = re.findall(r'(?i)\bpricing\b|\brates?\b|\btiers?\b|\bhourly\b|\bmonthly\b', page_text)
     forbidden_hrefs = [x for x in parser.links if '/pricing' in x.lower()]
     require('no_forbidden_copy', not forbidden_copy)
     require('no_forbidden_hrefs', not forbidden_hrefs)

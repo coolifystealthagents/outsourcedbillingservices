@@ -95,7 +95,7 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
                 return <g key={stat.label}>
                   <text x="0" y={y + 17} className="chart-label">{stat.label}</text>
                   <rect x="220" y={y} width="500" height="25" rx="7" className="chart-track" />
-                  <rect x="220" y={y} width={stat.value * 7.7} height="25" rx="7" className={`chart-bar chart-bar-${index + 1}`} />
+                  <rect x="220" y={y} width={stat.value * 5} height="25" rx="7" className={`chart-bar chart-bar-${index + 1}`} />
                   <text x="730" y={y + 18} textAnchor="end" className="chart-value">{stat.display}</text>
                 </g>;
               })}
