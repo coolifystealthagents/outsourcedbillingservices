@@ -1760,6 +1760,122 @@ export const blogPosts = [
       ],
     },
   },
+  {
+    slug: 'philippines-medical-billing-payment-posting-exception-checklist',
+    title: 'Philippines medical billing payment posting exception checklist',
+    excerpt: 'A practical guide for Filipino billing staff who trace payment posting exceptions, preserve approved records, and leave refunds, write-offs, coding, and account decisions with the named owner.',
+    minutes: 13,
+    detail: {
+      keyword: 'Philippines medical billing payment posting exception checklist',
+      marker: 'OBS-PH-POSTING-EXCEPTION-20260726',
+      published: '2026-07-26',
+      updated: '2026-07-26',
+      intro: [
+        'A Philippines medical billing payment posting exception checklist should show what failed to match, which source was checked, and who decides the next account action. It should keep refunds, write-offs, coding changes, patient balance choices, and payer disputes with authorized owners.',
+        'This guide is for a Filipino billing specialist supporting a United States healthcare billing team in approved systems. The specialist can trace records and prepare a clear exception file without changing money or guessing what a payer message means.',
+      ],
+      stats: [
+        { label: 'Insufficient documentation', value: 59.8, display: '59.8%' },
+        { label: 'Medical necessity', value: 15.7, display: '15.7%' },
+        { label: 'Incorrect coding', value: 10, display: '10.0%' },
+        { label: 'No documentation', value: 8.2, display: '8.2%' },
+        { label: 'Other', value: 6.3, display: '6.3%' },
+      ],
+      table: [
+        { check: 'Account and remittance match', staff: 'Compare the patient or account reference, payer, service date, payment reference, and remittance in the approved systems.', owner: 'Resolve disputed identity, payer, encounter, or payment ownership before posting continues.' },
+        { check: 'Amount trail', staff: 'Record the paid amount, allowed amount, adjustment, patient share, and posted result exactly as shown by approved sources.', owner: 'Decide how an unexplained amount affects the account and approve any correction.' },
+        { check: 'Payer message', staff: 'Copy the complete code, text, date, and reference from the approved payer record. Do not invent an explanation.', owner: 'Interpret an unclear payer message and choose the response.' },
+        { check: 'Duplicate or missing entry', staff: 'Place both records, or the missing source point, in the exception file without changing either entry.', owner: 'Confirm whether a duplicate or omission exists and approve the account action.' },
+        { check: 'Approved completion', staff: 'Record the owner, decision, source, allowed step, completed result, and confirmation in the approved system.', owner: 'Authorize refunds, write-offs, transfers, corrections, and disputed balance changes.' },
+        { check: 'Privacy or access concern', staff: 'Stop work, preserve the basic facts, and alert the approved contact through the safe channel.', owner: 'Lead the response and decide whether access or the work path must change.' },
+      ],
+      quote: {
+        text: 'Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet) or based on asset ownership (enterprise or personally owned).',
+        by: 'NIST SP 800-207, section 1, August 2020',
+        url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf',
+      },
+      sections: [
+        {
+          heading: 'Open one record for the posting exception',
+          paragraphs: [
+            'Start with the remittance, system message, account row, payer notice, or owner note that brought the exception into view. Save the complete source and reference instead of shortening the problem to a vague label such as payment issue.',
+            'Give the record one account reference, one payment reference, one open question, one check date, and one owner. The specialist should be able to see why the item stopped without searching private messages or asking who controls the decision.',
+            'Keep the original posting view unchanged while the facts are gathered. A Filipino support worker can trace records and show a difference, but the owner decides whether the account needs a correction or another action.',
+          ],
+          bullets: ['Keep the complete opening source.', 'Name the account and payment references.', 'Write one clear open question.', 'Assign one decision owner.'],
+        },
+        {
+          heading: 'Trace the payment from source to account',
+          paragraphs: [
+            'Begin with the payer or patient payment source and follow the record into the account in date order. Compare the remittance, deposit reference, posted amount, adjustments, reversals, transfers, and current balance using only approved systems.',
+            'Write the source name, shown amount, service date, check time, and record reference beside each step. When a source is missing or two systems disagree, leave both facts visible and move the item to owner review.',
+            'Do not add a balancing entry just to close the row. An unexplained difference may involve a duplicate, reversal, transfer, payer action, patient amount, or earlier correction that needs an authorized decision.',
+          ],
+          bullets: ['Start with the original payment source.', 'Follow entries in date order.', 'Link every step to a record.', 'Stop when the trail breaks.'],
+        },
+        {
+          heading: 'Use the 2024 CMS findings as context',
+          paragraphs: [
+            'CMS reported a 7.66% Medicare fee-for-service improper payment finding for the 2024 report period. CMS says the reviewed claims were submitted from July 1, 2022 through June 30, 2023, so the program and dates belong beside the figure.',
+            'CMS Table A3 assigned 59.8% of measured improper payments to insufficient documentation, 15.7% to medical necessity, 10.0% to incorrect coding, and 8.2% to no documentation. These are dated national Medicare findings, not a result for one practice, payment queue, or Philippines team.',
+            'The numbers support a narrow lesson: account work needs a source trail and a clear stop point. They do not prove that a local payment was posted incorrectly or tell a support worker which financial, clinical, or coding choice to make.',
+          ],
+          bullets: ['Keep the 2024 report date visible.', 'Name the measured Medicare program.', 'Do not claim a local outcome.', 'Use the findings to shape source checks.'],
+        },
+        {
+          heading: 'Build a short owner decision file',
+          paragraphs: [
+            'Put the account reference, payment source, remittance, posting trail, exact difference, open question, and due date in one review row. The owner should be able to reopen the evidence without asking staff to copy sensitive records into chat.',
+            'Ask one plain question that points to the blocked step. For example, ask whether the second remittance line belongs to this account and what approved action follows, rather than asking the specialist to make the balance look right.',
+            'Keep refunds, write-offs, offsets, transfers, patient contact, coding changes, payer disputes, and account corrections with named owners. The specialist may prepare the facts, record the approved answer, complete an assigned mechanical step, and preserve the result.',
+          ],
+          bullets: ['Show the complete payment trail.', 'Link the deciding records.', 'Ask one direct owner question.', 'Save the named answer and source.'],
+        },
+        {
+          heading: 'Record the approved step and check it again',
+          paragraphs: [
+            'The approval should name the allowed action, amount, source, account, owner, decision date, and completion check. If the live account changed after review, the worker should return the item instead of applying an old answer to new facts.',
+            'After the assigned step, compare the saved result with the approval and source records. Keep the completion time, worker, owner reference, system response, and final account view beside the exception record.',
+            'Treat a failed entry, new payer message, reversed payment, or later dispute as another review point. Preserve the earlier source and approval trail so the next owner can see what changed without rebuilding the history.',
+          ],
+          bullets: ['Follow the written approval.', 'Recheck the saved result.', 'Keep the system confirmation.', 'Open a new review point for changed facts.'],
+        },
+        {
+          heading: 'Limit access and test a small first batch',
+          paragraphs: [
+            'A Filipino billing specialist needs the assigned posting queue and its source records, not every patient account, report, shared drive, bank record, or payer portal the business can reach. Use a named account, approved sign-in controls, and permissions tied to the actual task.',
+            'NIST says location or asset ownership does not create automatic trust. For this role, check the user and device, allow only the records needed for the queue, and review access whenever the assignment changes.',
+            'Have the owner review every item in a small mixed first batch. Include a clean match, missing remittance, duplicate line, reversal, transfer, unclear payer message, and changed balance so weak instructions show up before more work is added.',
+          ],
+          bullets: ['Use a named account.', 'Allow only assigned records.', 'Review the first batch in full.', 'Fix the guide before adding volume.'],
+        },
+      ],
+      faqs: [
+        { q: 'Can a Filipino billing specialist correct a posting exception?', a: 'The specialist can trace approved records, describe the exact difference, and prepare the owner file. An authorized owner should approve any correction, refund, write-off, transfer, or disputed balance change.' },
+        { q: 'What belongs in a posting exception record?', a: 'Keep the account and payment references, remittance, source trail, posted result, exact difference, owner question, approval, completed step, system response, and final check. Sensitive details should stay inside approved systems.' },
+        { q: 'What should happen when the remittance and account disagree?', a: 'The worker should preserve both records with their dates and references, then stop the affected step. The named owner should decide which source controls and whether another check or correction is needed.' },
+        { q: 'Can the support worker discuss the balance with a patient or payer?', a: 'Only through a message and path the business has approved for that exact case. Questions about what to promise, disclose, refund, change, or dispute should go to the named owner.' },
+      ],
+      banners: [
+        { title: 'Give posting exceptions a clear owner path', body: 'Use billing reconciliation support to define source checks, account conflicts, and review points.', href: '/services/billing-reconciliation', label: 'Map reconciliation' },
+        { title: 'Keep payment work inside tested rules', body: 'Use payment posting support to separate record work from owner-only account decisions.', href: '/services/payment-posting', label: 'Review posting support' },
+        { title: 'Turn the queue into a staffing brief', body: 'Share the account groups, systems, access limits, and review owner for the Filipino billing role.', href: '/contact', label: 'Build the brief' },
+      ],
+      internalLinks: [
+        { title: 'Remittance review checklist', href: '/blog/philippines-medical-billing-remittance-review-checklist' },
+        { title: 'Credit balance review checklist', href: '/blog/philippines-medical-billing-credit-balance-review-checklist' },
+        { title: 'Charge entry checklist', href: '/blog/philippines-medical-billing-charge-entry-checklist' },
+        { title: 'Medical billing audit checklist', href: '/blog/philippines-medical-billing-audit-checklist' },
+      ],
+      sources: [
+        { n: 1, name: 'CMS, 2024 Medicare Fee-for-Service Supplemental Improper Payment Data', date: '2024', url: 'https://www.cms.gov/files/document/2024-medicare-fee-service-supplemental-improper-payment-data.pdf', note: 'Primary source for the 7.66%, 59.8%, 15.7%, 10.0%, 8.2%, and report-period details used in this guide.' },
+        { n: 2, name: 'CMS Medicare Claims Processing Manual', date: 'CMS manual page checked July 2026', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912', note: 'CMS source for Medicare payment posting and remittance chapters used by qualified owners when they write local guides.' },
+        { n: 3, name: 'NIST SP 800-66 Revision 2, Implementing the HIPAA Security Rule', date: 'February 2024', url: 'https://csrc.nist.gov/pubs/sp/800/66/r2/final', note: 'Federal guidance for protecting electronic health information and managing access risks.' },
+        { n: 4, name: 'NIST SP 800-207, Zero Trust Architecture', date: 'August 2020', url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf', note: 'Primary source for the exact access-control quote in section 1.' },
+        { n: 5, name: 'Republic Act No. 10173, Data Privacy Act of 2012', date: '2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Philippine legal text covering personal data processing and security duties.' },
+      ],
+    },
+  },
 ] as const;
 
 export const staffingOffer = {
