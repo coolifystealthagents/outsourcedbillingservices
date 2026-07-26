@@ -80,7 +80,7 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
             {detail.intro.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}
           </section>
 
-          <figure className="evidence-chart" aria-labelledby="chart-title chart-caption">
+          <figure className="evidence-chart" aria-labelledby="chart-title chart-caption" tabIndex={0}>
             <div className="chart-copy">
               <p className="module-label">2024 CMS evidence</p>
               <h2 id="chart-title">Why the checklist starts with proof</h2>
@@ -126,7 +126,7 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
             {bannerSlots[index] !== undefined && <ArticleBanner banner={detail.banners[bannerSlots[index]]} />}
             {index === 4 && <>
               <blockquote className="expert-quote"><p>"{detail.quote.text}"</p><cite><a href={detail.quote.url}>{detail.quote.by}</a></cite></blockquote>
-              <figure className="handoff-graphic" aria-labelledby="handoff-title handoff-note">
+              <figure className="handoff-graphic" aria-labelledby="handoff-title handoff-note" tabIndex={0}>
                 <div><p className="module-label">Decision route</p><h2 id="handoff-title">A clean claim-review handoff</h2></div>
                 <span className="scroll-cue">Swipe diagram sideways to see every step →</span>
                 <svg viewBox="0 0 900 260" role="img" aria-labelledby="flow-title flow-desc">
