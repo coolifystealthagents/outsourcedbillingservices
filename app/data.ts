@@ -1876,6 +1876,122 @@ export const blogPosts = [
       ],
     },
   },
+  {
+    slug: 'philippines-medical-billing-patient-demographic-verification-checklist',
+    title: 'Philippines medical billing patient demographic verification checklist',
+    excerpt: 'A practical guide for Filipino billing staff who compare patient details, preserve source records, and send identity, coverage, disclosure, and claim decisions to the named owner.',
+    minutes: 13,
+    detail: {
+      keyword: 'Philippines medical billing patient demographic verification checklist',
+      marker: 'OBS-PH-PATIENT-DEMOGRAPHICS-20260726',
+      published: '2026-07-26',
+      updated: '2026-07-26',
+      intro: [
+        'A Philippines medical billing patient demographic verification checklist should show which patient details were compared, where each detail came from, and who owns any correction. It should keep identity matches, record merges, coverage choices, disclosures, and claim changes with authorized people.',
+        'This guide is for a Filipino billing specialist supporting a United States healthcare billing team inside approved systems. The specialist can compare records and prepare a clean mismatch file without guessing which person, address, plan, or encounter is correct.',
+      ],
+      stats: [
+        { label: 'Insufficient documentation', value: 59.8, display: '59.8%' },
+        { label: 'Medical necessity', value: 15.7, display: '15.7%' },
+        { label: 'Incorrect coding', value: 10, display: '10.0%' },
+        { label: 'No documentation', value: 8.2, display: '8.2%' },
+        { label: 'Other', value: 6.3, display: '6.3%' },
+      ],
+      table: [
+        { check: 'Patient identity fields', staff: 'Compare the approved patient record, intake source, and claim view for name, date of birth, account reference, and other assigned fields.', owner: 'Resolve uncertain identity, possible duplicate records, or a mismatch between people before work continues.' },
+        { check: 'Contact details', staff: 'Record the address, phone, and email exactly as shown in each approved source, including the source date.', owner: 'Approve a disputed change and decide whether the patient must confirm it through an approved channel.' },
+        { check: 'Coverage details', staff: 'Compare the member name, member reference, group reference, payer, and effective dates shown in approved records.', owner: 'Interpret unclear coverage, choose the controlling source, and approve claim or account changes.' },
+        { check: 'Encounter link', staff: 'Match the patient and coverage record to the assigned service date and encounter reference without changing clinical details.', owner: 'Resolve a wrong-person, wrong-encounter, or clinical-record concern and decide the next step.' },
+        { check: 'Approved completion', staff: 'Record the owner, source, approved correction, completed step, system response, and final check in the approved tool.', owner: 'Authorize identity, coverage, disclosure, account, and claim changes before they are made.' },
+        { check: 'Privacy or access concern', staff: 'Stop work, preserve only the needed facts, and alert the approved contact through the safe channel.', owner: 'Lead the response and decide whether access, disclosure, or the work path must change.' },
+      ],
+      quote: {
+        text: 'Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet) or based on asset ownership (enterprise or personally owned).',
+        by: 'NIST SP 800-207, section 1, August 2020',
+        url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf',
+      },
+      sections: [
+        {
+          heading: 'Open one record for the demographic mismatch',
+          paragraphs: [
+            'Start with the intake form, patient account, coverage record, claim view, returned message, or owner note that exposed the mismatch. Keep the complete source and its date instead of shortening the issue to a label such as bad demographics.',
+            'Give the item one patient reference, one encounter or claim reference when available, one open question, one check date, and one owner. The specialist should see what stopped and who can answer without searching private messages.',
+            'Leave the original values visible while the facts are gathered. A Filipino support worker can compare records and point out a difference, but an authorized owner decides which identity or coverage detail controls.',
+          ],
+          bullets: ['Keep the complete opening source.', 'Name the patient and work references.', 'Write one clear mismatch question.', 'Assign one decision owner.'],
+        },
+        {
+          heading: 'Compare approved sources without filling gaps',
+          paragraphs: [
+            'Check only the fields assigned in the local guide, such as name, date of birth, address, phone, member reference, group reference, payer, and coverage dates. Write each value exactly as it appears and keep the source beside it.',
+            'Do not copy a value from an old claim simply because it looks familiar. When two approved systems disagree, show both values, their dates, and their record references so the owner can judge the difference.',
+            'Stop if the records may belong to different people or encounters. A possible duplicate, merged chart, family member mix-up, or wrong service date needs owner review before any account or claim work continues.',
+          ],
+          bullets: ['Use only assigned fields.', 'Keep every value beside its source.', 'Show both sides of a mismatch.', 'Stop on identity or encounter doubt.'],
+        },
+        {
+          heading: 'Use the 2024 CMS findings as context',
+          paragraphs: [
+            'CMS reported a 7.66% Medicare fee-for-service improper payment finding for the 2024 report period. CMS says the reviewed claims were submitted from July 1, 2022 through June 30, 2023, so the program and dates belong beside the figure.',
+            'CMS Table A3 assigned 59.8% of measured improper payments to insufficient documentation, 15.7% to medical necessity, 10.0% to incorrect coding, and 8.2% to no documentation. These are dated national Medicare findings, not a result for one practice, patient file, or Philippines team.',
+            'The numbers support a narrow lesson: billing work needs complete source records and clear review points. They do not prove that a demographic field caused an improper payment or tell a support worker which patient value to choose.',
+          ],
+          bullets: ['Keep the 2024 report date visible.', 'Name the measured Medicare program.', 'Do not claim a local outcome.', 'Use the findings to shape record checks.'],
+        },
+        {
+          heading: 'Send one clear question to the owner',
+          paragraphs: [
+            'Put the patient reference, work reference, compared fields, source dates, exact mismatch, blocked step, and due date in one review row. The owner should be able to reopen the records without asking staff to paste patient details into chat.',
+            'Ask a plain question tied to the next blocked action. For example, ask which approved source controls the member reference for this claim, rather than asking the specialist to fix the patient record.',
+            'Keep identity decisions, record merges, coverage interpretation, patient contact, disclosures, account changes, and claim corrections with named owners. The specialist may prepare facts, save the approved answer, complete a mechanical step that was assigned, and record the result.',
+          ],
+          bullets: ['Show the compared source values.', 'Name the blocked billing step.', 'Ask one direct owner question.', 'Save the answer and its source.'],
+        },
+        {
+          heading: 'Record the approval and check the saved result',
+          paragraphs: [
+            'The approval should name the allowed field, correct value, source, patient reference, work reference, owner, decision date, and completion check. If the record changed after review, return the item instead of applying an old answer to new facts.',
+            'After the assigned step, compare the saved result with the written approval and original source. Keep the completion time, worker, owner reference, system response, and final view beside the mismatch record.',
+            'Treat a failed save, new coverage message, another identity conflict, or later patient dispute as a fresh review point. Preserve the earlier source and approval trail so the next owner can see what changed without rebuilding the history.',
+          ],
+          bullets: ['Follow the written approval.', 'Recheck the saved value.', 'Keep the system response.', 'Open a new review point for changed facts.'],
+        },
+        {
+          heading: 'Limit access and test a small first batch',
+          paragraphs: [
+            'A Filipino billing specialist needs the assigned patient queue and its approved source records, not every chart, claim, mailbox, report, shared drive, or payer portal the business can reach. Use a named account, approved sign-in controls, and permissions tied to the actual task.',
+            'NIST says location or asset ownership does not create automatic trust. For this role, check the user and device, allow only the records needed for the queue, and review access whenever the assignment changes.',
+            'Have the owner review every item in a small mixed first batch. Include a clean match, address mismatch, member-name difference, possible duplicate, changed coverage record, wrong encounter concern, and failed save so weak instructions appear early.',
+          ],
+          bullets: ['Use a named account.', 'Allow only assigned records.', 'Review the first batch in full.', 'Fix the guide before adding volume.'],
+        },
+      ],
+      faqs: [
+        { q: 'Can a Filipino billing specialist correct patient demographics?', a: 'The specialist can compare approved records, describe the exact mismatch, and prepare the owner file. An authorized owner should approve identity, coverage, disclosure, account, and claim changes.' },
+        { q: 'What belongs in a demographic mismatch record?', a: 'Keep the patient and work references, compared fields, source names, source dates, exact difference, owner question, approval, completed step, system response, and final check. Sensitive details should stay inside approved systems.' },
+        { q: 'What should happen when two patient records disagree?', a: 'The worker should preserve both values with their dates and references, then stop the affected step. The named owner should decide which source controls and whether another identity or coverage check is needed.' },
+        { q: 'Can the support worker contact a patient about a mismatch?', a: 'Only through a script and channel the business has approved for that exact task. Questions about what to disclose, promise, confirm, or change should go to the named owner.' },
+      ],
+      banners: [
+        { title: 'Give demographic mismatches a clear owner path', body: 'Use billing data quality review to define source checks, blocked work, and owner decisions.', href: '/services/billing-data-quality-review', label: 'Map the review' },
+        { title: 'Keep claim work tied to approved patient records', body: 'Use customer billing support to separate record checks from identity and disclosure decisions.', href: '/services/customer-billing-support', label: 'Review support' },
+        { title: 'Turn the queue into a staffing brief', body: 'Share the assigned fields, systems, access limits, and review owner for the Filipino billing role.', href: '/contact', label: 'Build the brief' },
+      ],
+      internalLinks: [
+        { title: 'Eligibility verification checklist', href: '/blog/philippines-medical-billing-eligibility-verification-checklist' },
+        { title: 'Claim submission checklist', href: '/blog/philippines-medical-billing-claim-submission-checklist' },
+        { title: 'Claim correction checklist', href: '/blog/philippines-medical-billing-claim-correction-checklist' },
+        { title: 'Medical billing audit checklist', href: '/blog/philippines-medical-billing-audit-checklist' },
+      ],
+      sources: [
+        { n: 1, name: 'CMS, 2024 Medicare Fee-for-Service Supplemental Improper Payment Data', date: '2024', url: 'https://www.cms.gov/files/document/2024-medicare-fee-service-supplemental-improper-payment-data.pdf', note: 'Primary source for the 7.66%, 59.8%, 15.7%, 10.0%, 8.2%, report period, and claim dates used in this guide.' },
+        { n: 2, name: 'CMS Medicare Claims Processing Manual', date: 'CMS manual page checked July 2026', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912', note: 'CMS source for Medicare claim field and processing guidance used by qualified owners when they write local instructions.' },
+        { n: 3, name: 'NIST SP 800-66 Revision 2, Implementing the HIPAA Security Rule', date: 'February 2024', url: 'https://csrc.nist.gov/pubs/sp/800/66/r2/final', note: 'Federal guidance for protecting electronic health information and managing access risks.' },
+        { n: 4, name: 'NIST SP 800-207, Zero Trust Architecture', date: 'August 2020', url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf', note: 'Primary source for the exact access-control quote in section 1.' },
+        { n: 5, name: 'Republic Act No. 10173, Data Privacy Act of 2012', date: '2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Philippine legal text covering personal data processing and security duties.' },
+      ],
+    },
+  },
 ] as const;
 
 export const staffingOffer = {
