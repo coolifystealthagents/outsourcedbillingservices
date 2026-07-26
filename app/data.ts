@@ -1180,6 +1180,122 @@ export const blogPosts = [
       ],
     },
   },
+  {
+    slug: 'philippines-medical-billing-coordination-of-benefits-checklist',
+    title: 'Philippines medical billing coordination of benefits checklist',
+    excerpt: 'A practical guide for Filipino billing staff who compare coverage records, preserve source facts, and send every insurance or account decision to the right owner.',
+    minutes: 13,
+    detail: {
+      keyword: 'Philippines medical billing coordination of benefits checklist',
+      marker: 'OBS-PH-COB-20260726',
+      published: '2026-07-26',
+      updated: '2026-07-26',
+      intro: [
+        'A Philippines medical billing coordination of benefits checklist should show which coverage sources to compare, which facts to record, and where a conflict goes. It should keep payer order, coding, clinical, patient, claim, and account decisions with the people allowed to make them.',
+        'This guide is for a Filipino billing specialist supporting a United States healthcare billing team in approved systems. The specialist can build a clear coverage record without choosing the primary payer, promising coverage, or changing a claim without approval.',
+      ],
+      stats: [
+        { label: 'Insufficient documentation', value: 59.8, display: '59.8%' },
+        { label: 'Medical necessity', value: 15.7, display: '15.7%' },
+        { label: 'Incorrect coding', value: 10, display: '10.0%' },
+        { label: 'No documentation', value: 8.2, display: '8.2%' },
+        { label: 'Other', value: 6.3, display: '6.3%' },
+      ],
+      table: [
+        { check: 'Person and policy match', staff: 'Compare the approved patient reference, subscriber, member record, payer, plan, and coverage dates shown in each source.', owner: 'Resolve disputed identity, subscriber, plan, or coverage facts before the record moves.' },
+        { check: 'Other coverage record', staff: 'Save the other-payer response, source, check date, and reference exactly as displayed.', owner: 'Decide whether another plan applies and what more proof is required.' },
+        { check: 'Payer order question', staff: 'Place conflicting source facts in the owner queue without choosing which plan pays first.', owner: 'Apply the business rule, payer guidance, and case facts to approve the payer order.' },
+        { check: 'Claim and source match', staff: 'Compare the approved payer fields on the claim with the checked coverage record and flag every mismatch.', owner: 'Approve claim changes, coding choices, and any release or resubmission action.' },
+        { check: 'Payer reply or recovery notice', staff: 'Preserve the full message, date, source, and record link in the approved system.', owner: 'Interpret the notice and choose the claim, patient, refund, or account response.' },
+        { check: 'Privacy or access concern', staff: 'Stop work, preserve the basic facts, and alert the approved contact.', owner: 'Lead the response and decide whether access or the work path must change.' },
+      ],
+      quote: {
+        text: 'Zero trust (ZT) provides a collection of concepts and ideas designed to minimize uncertainty in enforcing accurate, least privilege per-request access decisions in information systems and services in the face of a network viewed as compromised.',
+        by: 'NIST SP 800-207, section 2, August 2020',
+        url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf',
+      },
+      sections: [
+        {
+          heading: 'Set the coverage review boundary',
+          paragraphs: [
+            'Name the payer groups, plan types, approved sources, and claim queues the specialist may review. Give the worker a field list, two checked examples, and one place for conflicts before opening live records.',
+            'Write the owner-only choices beside the routine checks. A Filipino specialist may compare source facts and flag a difference, but the worker should not choose the primary payer, interpret plan language, promise a result, or change an account.',
+            'Test the boundary with a small mixed set before adding more work. Include a name mismatch, two active plans, missing dates, an old payer reply, conflicting subscriber facts, and a claim filed to the wrong plan.',
+          ],
+          bullets: ['Name the allowed plan groups.', 'List approved source paths.', 'Mark every owner-only choice.', 'Use one conflict queue.'],
+        },
+        {
+          heading: 'Build one source trail for every plan',
+          paragraphs: [
+            'Each working row should show the patient reference, subscriber, payer, plan, member reference, coverage dates, source, check time, response reference, and current owner. Sensitive details stay in the approved healthcare or billing system instead of personal files or chat.',
+            'Use plain states tied to work someone can verify. Ready to check, source saved, second plan found, facts conflict, owner review, approved next step, waiting, and closed make the queue easier to read.',
+            'Keep enough detail for another approved user to reopen the source. Record the portal or document name, response reference, checked date, and the exact fields that disagree instead of writing a broad note such as insurance issue.',
+          ],
+          bullets: ['One source for each plan', 'One checked date', 'One clear conflict note', 'One named owner'],
+        },
+        {
+          heading: 'Compare facts without choosing the payer order',
+          paragraphs: [
+            'Start with identity and coverage facts before looking at the claim. Compare the person, subscriber, plan, active dates, other-coverage message, and source reference exactly as the approved screens or documents show them.',
+            'A worker may find two active plans, but that fact alone does not settle which one should receive the claim first. The specialist should preserve both results and send the question to the owner who applies the business rules and case facts.',
+            'Do not hide an older result when a newer source disagrees. Keep both check dates and references in the record so the owner can see what changed and decide whether another payer contact or document is needed.',
+          ],
+          bullets: ['Match identity first.', 'Save every active-plan result.', 'Keep conflicting sources visible.', 'Send payer order to the owner.'],
+        },
+        {
+          heading: 'Use dated national findings as context',
+          paragraphs: [
+            'CMS reported a 7.66% Medicare fee-for-service improper payment finding for the 2024 report period. The reviewed claims were submitted from July 1, 2022 through June 30, 2023, so the program and dates belong beside the number.',
+            'CMS Table A3 assigned 59.8% of measured improper payments to insufficient documentation, 15.7% to medical necessity, 10.0% to incorrect coding, and 8.2% to no documentation. These are dated national findings, not results for one practice, one plan, or one Philippines team.',
+            'The lesson for coordination work is narrow: save the source and stop when the facts do not line up. A support worker should not turn a national finding into a local promise or use it to settle a coverage, clinical, or coding question.',
+          ],
+          bullets: ['Keep the report year visible.', 'Name the measured Medicare program.', 'Do not claim a local result.', 'Use findings to shape checks.'],
+        },
+        {
+          heading: 'Route claim and recovery notices carefully',
+          paragraphs: [
+            'A coverage conflict can appear before submission, after a payer reply, or when a recovery notice arrives. The specialist should save the full message, source, date, claim reference, and related coverage records before anyone changes the account.',
+            'The owner decides whether the claim needs correction, another payer review, a new submission, a patient contact, or a recovery response. The worker can prepare the file and record the approved result, but should not choose among those actions.',
+            'Keep the original notice even after the issue closes. A short summary helps the queue, yet the next reviewer still needs the source message and approval trail to understand why the payer or account record changed.',
+          ],
+          bullets: ['Preserve the complete notice.', 'Link it to the coverage sources.', 'Send the choice to the owner.', 'Record the approved result.'],
+        },
+        {
+          heading: 'Limit access and check the first week',
+          paragraphs: [
+            'A Filipino billing specialist needs the assigned coverage and claim records, not every patient, report, shared drive, or payer portal the business can reach. Use a named account, approved sign-in controls, and permissions tied to the actual queue.',
+            'NIST describes zero trust as least privilege access decisions made for each request in a network treated as compromised. For this role, that means checking the user and device, limiting reachable records, and reviewing access whenever the assignment changes.',
+            'During the first week, have the owner review every item in a small mixed sample. Fix unclear source paths and decision lines before adding more records, and approve only the plan groups the checked sample supports.',
+          ],
+          bullets: ['Use a named account.', 'Allow only assigned systems.', 'Review every first-week item.', 'Widen the queue only after checked work.'],
+        },
+      ],
+      faqs: [
+        { q: 'Can a Filipino billing specialist decide which payer is primary?', a: 'The specialist can compare approved sources, preserve both plan records, and flag a conflict. A named owner should apply the business rules, payer guidance, and case facts before approving the payer order.' },
+        { q: 'What belongs in a coordination of benefits record?', a: 'Include the patient reference, subscriber, payer, plan, member reference, coverage dates, source, check date, response reference, conflicts, claim link, current state, and next owner. Keep sensitive details inside approved systems.' },
+        { q: 'What should happen when two payer sources disagree?', a: 'Save both results with their source and check time, then stop the affected work. The owner should decide which source controls, whether another check is needed, and what approved claim or account action follows.' },
+        { q: 'Can the support worker change a claim after finding another plan?', a: 'The worker can prepare the source record and point out the claim fields that may be affected. An authorized owner should approve payer order, coding, claim changes, submission, patient contact, and account actions.' },
+      ],
+      banners: [
+        { title: 'Give coverage records a checked path', body: 'Use billing data quality review to define source checks, owner decisions, and review points.', href: '/services/billing-data-quality-review', label: 'Map quality review' },
+        { title: 'Keep payer conflicts ready for review', body: 'Use billing reconciliation support to organize source differences before an owner acts.', href: '/services/billing-reconciliation', label: 'Review reconciliation' },
+        { title: 'Turn the queue into a staffing brief', body: 'Share the plan groups, systems, access limits, and review owner for the Filipino billing role.', href: '/contact', label: 'Build the brief' },
+      ],
+      internalLinks: [
+        { title: 'Eligibility verification checklist', href: '/blog/philippines-medical-billing-eligibility-verification-checklist' },
+        { title: 'Claim submission checklist', href: '/blog/philippines-medical-billing-claim-submission-checklist' },
+        { title: 'Claim status follow-up checklist', href: '/blog/philippines-medical-billing-claim-status-follow-up-checklist' },
+        { title: 'Remittance review checklist', href: '/blog/philippines-medical-billing-remittance-review-checklist' },
+      ],
+      sources: [
+        { n: 1, name: 'CMS, 2024 Medicare Fee-for-Service Supplemental Improper Payment Data', date: '2024', url: 'https://www.cms.gov/files/document/2024-medicare-fee-service-supplemental-improper-payment-data.pdf', note: 'Primary source for the 7.66%, 59.8%, 15.7%, 10.0%, 8.2%, and report-period details used in this guide.' },
+        { n: 2, name: 'CMS, Coordination of Benefits and Recovery overview', date: 'CMS page checked July 2026', url: 'https://www.cms.gov/medicare/coordination-benefits-recovery/overview', note: 'CMS overview of coordination work and Medicare Secondary Payer responsibilities.' },
+        { n: 3, name: 'CMS Medicare Secondary Payer Manual', date: 'CMS manual page checked July 2026', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms019017', note: 'CMS source for Medicare Secondary Payer manual chapters used by qualified owners when they set local rules.' },
+        { n: 4, name: 'NIST SP 800-207, Zero Trust Architecture', date: 'August 2020', url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf', note: 'Primary source for the exact least privilege access quote in section 2.' },
+        { n: 5, name: 'Republic Act No. 10173, Data Privacy Act of 2012', date: '2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Philippine legal text covering personal data processing and security duties.' },
+      ],
+    },
+  },
 ] as const;
 
 export const staffingOffer = {
