@@ -1644,6 +1644,122 @@ export const blogPosts = [
       ],
     },
   },
+  {
+    slug: 'philippines-medical-billing-charge-entry-checklist',
+    title: 'Philippines medical billing charge entry checklist',
+    excerpt: 'A practical guide for Filipino billing staff who compare approved charge records, prepare clean entries, and leave coding, clinical, release, and account decisions with the named owner.',
+    minutes: 13,
+    detail: {
+      keyword: 'Philippines medical billing charge entry checklist',
+      marker: 'OBS-PH-CHARGE-ENTRY-20260726',
+      published: '2026-07-26',
+      updated: '2026-07-26',
+      intro: [
+        'A Philippines medical billing charge entry checklist should show which approved record controls each field and who reviews a mismatch. It should keep code choice, medical meaning, claim release, and account changes with qualified owners.',
+        'This guide is for a Filipino billing specialist supporting a United States healthcare billing team in approved systems. The specialist can compare source facts and prepare an entry without guessing at missing clinical or coding details.',
+      ],
+      stats: [
+        { label: 'Insufficient documentation', value: 59.8, display: '59.8%' },
+        { label: 'Medical necessity', value: 15.7, display: '15.7%' },
+        { label: 'Incorrect coding', value: 10, display: '10.0%' },
+        { label: 'No documentation', value: 8.2, display: '8.2%' },
+        { label: 'Other', value: 6.3, display: '6.3%' },
+      ],
+      table: [
+        { check: 'Patient and encounter match', staff: 'Compare the patient reference, encounter, service date, location, and rendering record in the approved systems.', owner: 'Resolve identity, encounter, or service conflicts before charge work continues.' },
+        { check: 'Approved coding source', staff: 'Compare the proposed code, units, and modifiers with the source named in the local guide. Flag every difference.', owner: 'Choose or change codes, modifiers, units, and coding instructions.' },
+        { check: 'Clinical record state', staff: 'Record whether the required note, order, signature, and other named proof are present. Do not interpret medical meaning.', owner: 'Decide whether the record supports the service and whether more proof is needed.' },
+        { check: 'Charge fields', staff: 'Enter only the fields covered by the approved source and rule. Save the source reference with the work row.', owner: 'Approve exceptions, disputed fields, and any change outside the written rule.' },
+        { check: 'Release and correction', staff: 'Move the entry only through the step assigned in writing and record the approval reference.', owner: 'Approve claim release, corrections, account changes, and responses to failed edits.' },
+        { check: 'Privacy or access concern', staff: 'Stop work, preserve the basic facts, and alert the approved contact through the safe channel.', owner: 'Lead the response and decide whether access or the work path must change.' },
+      ],
+      quote: {
+        text: 'Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet) or based on asset ownership (enterprise or personally owned).',
+        by: 'NIST SP 800-207, section 1, August 2020',
+        url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf',
+      },
+      sections: [
+        {
+          heading: 'Open one charge record from an approved source',
+          paragraphs: [
+            'Start with the encounter, owner instruction, or approved work list that puts the charge in the queue. Keep its full reference beside the row so the specialist can reopen the source instead of relying on a copied note.',
+            'Give the row one patient reference, one encounter, one service date, one source set, and one decision owner. This keeps similar visits apart and gives every open question somewhere to go.',
+            'The source list should name the records the business has approved for this task. If a required note, order, signature, or coding source is missing, the worker stops that field and records the gap.',
+          ],
+          bullets: ['Keep the opening work source.', 'Name the patient and encounter references.', 'List each approved record path.', 'Assign one decision owner.'],
+        },
+        {
+          heading: 'Compare the charge fields without choosing them',
+          paragraphs: [
+            'Put the source fact next to each field the specialist checks, including service date, location, provider, code, modifier, and units when those items belong in the local guide. The worker can show that two records disagree without deciding which value is medically or technically correct.',
+            'Use plain exception notes that name both facts and their sources. A note such as "work list shows two units; approved coding record shows one" gives the owner a clear question and preserves the evidence.',
+            'Do not fill an empty field from habit or from a similar visit. The owner must decide what controls when a source is absent, unsigned, changed, or inconsistent with another approved record.',
+          ],
+          bullets: ['Compare one field at a time.', 'Name both sources when facts conflict.', 'Leave missing fields open.', 'Send code choices to the qualified owner.'],
+        },
+        {
+          heading: 'Use the 2024 CMS findings in the right way',
+          paragraphs: [
+            'CMS reported a 7.66% Medicare fee-for-service improper payment finding for the 2024 report period. CMS says the reviewed claims were submitted from July 1, 2022 through June 30, 2023, so the program and dates need to stay beside the number.',
+            'CMS Table A3 assigned 59.8% of measured improper payments to insufficient documentation, 15.7% to medical necessity, 10.0% to incorrect coding, and 8.2% to no documentation. Those are dated national Medicare findings, not a score for one practice, charge queue, or Philippines team.',
+            'The figures explain why charge entry needs separate paths for record checks, coding questions, and clinical questions. They do not tell a support worker which code to use or prove that one local entry is right or wrong.',
+          ],
+          bullets: ['Keep the 2024 report date visible.', 'Name the measured Medicare program.', 'Do not claim a local result.', 'Use the findings to separate checks from decisions.'],
+        },
+        {
+          heading: 'Build a short owner review packet',
+          paragraphs: [
+            'Place the encounter reference, source links, compared fields, exact conflict, requested decision, and due date in one review row. The owner should be able to reopen the evidence without asking the specialist to copy clinical records into chat.',
+            'Ask one direct question and point to the field that blocks the work. For example, ask which approved unit value controls when the work list and coding record disagree, rather than asking staff to make the entry look right.',
+            'Send coding to the qualified coding owner and clinical meaning to the approved clinical reviewer. Claim release, correction, write-off, and other account decisions also stay with the person assigned by the business.',
+          ],
+          bullets: ['Link the deciding records.', 'Show the exact field conflict.', 'Ask one clear owner question.', 'Save the named answer and source.'],
+        },
+        {
+          heading: 'Record the approved entry and check the result',
+          paragraphs: [
+            'The approval should name the allowed fields, source, owner, decision date, and next step. If the live record has changed since review, the specialist should return the row rather than apply an old answer to new facts.',
+            'After entry, compare the saved result with the approval before the item moves on. Keep the completed time, worker name, approval reference, and any system message beside the record.',
+            'Treat a failed edit, new payer message, or later source change as another review point. Preserve the first record and answer so the owner can see what changed instead of losing the earlier trail.',
+          ],
+          bullets: ['Follow the written approval.', 'Recheck the saved fields.', 'Keep the system response.', 'Open a new review point when facts change.'],
+        },
+        {
+          heading: 'Limit access and test a small first batch',
+          paragraphs: [
+            'A Filipino billing specialist needs the assigned charge queue and approved source records, not every patient account, report, shared drive, or payer portal the business can reach. Use a named account, approved sign-in controls, and permissions tied to the actual task.',
+            'NIST says location or asset ownership does not create automatic trust. For this role, check the user and device, allow only the records needed for the queue, and review access whenever the assignment changes.',
+            'Have the owner review every item in a small mixed first batch. Include a clean entry, missing signature, code conflict, unit mismatch, wrong service date, and changed source so weak instructions show up before more work is added.',
+          ],
+          bullets: ['Use a named account.', 'Allow only assigned records.', 'Review the first batch in full.', 'Fix the guide before adding volume.'],
+        },
+      ],
+      faqs: [
+        { q: 'Can a Filipino billing specialist choose a medical code during charge entry?', a: 'The specialist can compare a proposed code with the approved coding source and flag a difference. A qualified owner should choose, change, and approve the code.' },
+        { q: 'What belongs in a charge entry review record?', a: 'Keep the patient and encounter references, service date, approved sources, compared fields, open conflicts, owner questions, approvals, completed result, and system response. Sensitive details should stay inside approved systems.' },
+        { q: 'What should happen when the note and work list disagree?', a: 'The worker should preserve both facts with their source references and stop the affected field. The named clinical or coding owner should decide which source controls and whether more proof is needed.' },
+        { q: 'Can the support worker release the claim after entering the charge?', a: 'Only when the business has assigned that exact step and the required approval record is complete. Any coding, clinical, payer, privacy, or account uncertainty should go back to the named owner.' },
+      ],
+      banners: [
+        { title: 'Give charge checks a clear owner path', body: 'Use billing data quality review to define source checks, field conflicts, and review points.', href: '/services/billing-data-quality-review', label: 'Map quality review' },
+        { title: 'Keep corrections tied to approved records', body: 'Use dispute documentation support to preserve source facts, owner answers, and system replies.', href: '/services/dispute-documentation', label: 'Review documentation' },
+        { title: 'Turn the queue into a staffing brief', body: 'Share the encounter groups, systems, access limits, and review owner for the Filipino billing role.', href: '/contact', label: 'Build the brief' },
+      ],
+      internalLinks: [
+        { title: 'Claim submission checklist', href: '/blog/philippines-medical-billing-claim-submission-checklist' },
+        { title: 'Claim correction checklist', href: '/blog/philippines-medical-billing-claim-correction-checklist' },
+        { title: 'Documentation follow-up checklist', href: '/blog/philippines-medical-billing-documentation-follow-up-checklist' },
+        { title: 'Medical billing audit checklist', href: '/blog/philippines-medical-billing-audit-checklist' },
+      ],
+      sources: [
+        { n: 1, name: 'CMS, 2024 Medicare Fee-for-Service Supplemental Improper Payment Data', date: '2024', url: 'https://www.cms.gov/files/document/2024-medicare-fee-service-supplemental-improper-payment-data.pdf', note: 'Primary source for the 7.66%, 59.8%, 15.7%, 10.0%, 8.2%, and report-period details used in this guide.' },
+        { n: 2, name: 'CMS Medicare Claims Processing Manual', date: 'CMS manual page checked July 2026', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912', note: 'CMS source for Medicare claim-processing chapters used by qualified owners when they write local charge entry guides.' },
+        { n: 3, name: 'CMS National Correct Coding Initiative edits', date: 'CMS page checked July 2026', url: 'https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits', note: 'CMS source for Medicare coding edit material used by qualified coding owners.' },
+        { n: 4, name: 'NIST SP 800-207, Zero Trust Architecture', date: 'August 2020', url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf', note: 'Primary source for the exact access-control quote in section 1.' },
+        { n: 5, name: 'Republic Act No. 10173, Data Privacy Act of 2012', date: '2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Philippine legal text covering personal data processing and security duties.' },
+      ],
+    },
+  },
 ] as const;
 
 export const staffingOffer = {
