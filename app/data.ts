@@ -50,30 +50,6 @@ export const services = [
 
 export const blogPosts = [
   {
-    slug: 'outsourced-billing-services-planning',
-    title: 'How to plan outsourced billing support',
-    excerpt: 'Turn your billing queue into a clear role, with approval lines and a review plan.',
-    minutes: 6,
-  },
-  {
-    slug: 'outsourced-billing-services-tasks-to-outsource',
-    title: 'Which billing tasks should you outsource first?',
-    excerpt: 'Choose repeatable billing work with examples, an owner, and clear review rules.',
-    minutes: 7,
-  },
-  {
-    slug: 'outsourced-billing-services-provider-questions',
-    title: 'Questions to ask an outsourced billing provider',
-    excerpt: 'Ask who reviews the work, how access is limited, and when issues reach your team.',
-    minutes: 8,
-  },
-  {
-    slug: 'outsourced-billing-services-onboarding-checklist',
-    title: 'First-week checklist for a Filipino billing specialist',
-    excerpt: 'Set up safe tool access, sample work, daily checks, and a clear escalation path.',
-    minutes: 9,
-  },
-  {
     slug: 'philippines-medical-billing-audit-checklist',
     title: 'Philippines medical billing audit checklist for safer claim review',
     excerpt: 'A practical audit plan for Filipino billing staff, with clear evidence checks, owner approvals, and escalation rules.',
@@ -187,7 +163,7 @@ export const blogPosts = [
         { title: 'Billing dispute documentation', href: '/services/dispute-documentation' },
         { title: 'Month-end billing support', href: '/services/month-end-billing-support' },
         { title: 'Billing reconciliation', href: '/services/billing-reconciliation' },
-        { title: 'First-week Filipino billing checklist', href: '/blog/outsourced-billing-services-onboarding-checklist' },
+        { title: 'First-week Filipino billing checklist', href: '/blog' },
       ],
       sources: [
         { n: 1, name: 'CMS, 2024 Medicare Fee-for-Service Supplemental Improper Payment Data', date: '2024', url: 'https://www.cms.gov/files/document/2024-medicare-fee-service-supplemental-improper-payment-data.pdf', note: 'National findings for the 2024 report period, including the 7.66 percent total, 59.8 percent insufficient-documentation share, 15.7 percent medical-necessity share, 10.0 percent incorrect-coding share, and 8.2 percent no-documentation share.' },
@@ -310,7 +286,7 @@ export const blogPosts = [
       ],
       internalLinks: [
         { title: 'Medical billing audit checklist', href: '/blog/philippines-medical-billing-audit-checklist' },
-        { title: 'First-week Filipino billing checklist', href: '/blog/outsourced-billing-services-onboarding-checklist' },
+        { title: 'First-week Filipino billing checklist', href: '/blog' },
         { title: 'Billing data quality review', href: '/services/billing-data-quality-review' },
         { title: 'Customer billing support', href: '/services/customer-billing-support' },
       ],

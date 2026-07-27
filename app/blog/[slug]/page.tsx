@@ -172,7 +172,5 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) notFound();
-  if ('detail' in post) return <RichArticle post={post} />;
-  const url = `https://${String(site.domain).toLowerCase()}/blog/${post.slug}`;
-  return <><Header/><main className="section"><JsonLd data={{'@context':'https://schema.org','@type':'Article',headline:post.title,description:post.excerpt,url}}/><article className="container guide-article"><p className="eyebrow">Philippines staffing blog</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p><div className="card"><h2>Start with a defined role</h2><p>Write the recurring tasks, examples, tools, and approval boundaries before a Filipino specialist begins. This gives the role owner a practical basis for review.</p><h2>Build a controlled handoff</h2><p>Begin with low-risk samples and only the permissions required for the approved Philippines-based workload. Record questions and exceptions for the owner.</p><h2>Review the workload</h2><p>Use a weekly check of completed work, open decisions, and changing priorities. Update the role notes when the process changes.</p></div></article><CTA/></main><Footer/></>;
+  return <RichArticle post={post} />;
 }
