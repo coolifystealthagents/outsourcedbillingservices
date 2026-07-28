@@ -2896,6 +2896,122 @@ export const blogPosts = [
       ],
     },
   },
+  {
+    slug: 'philippines-medical-billing-unapplied-cash-review-checklist',
+    title: 'Philippines medical billing unapplied cash review checklist',
+    excerpt: 'A practical guide for Filipino billing staff who match unapplied receipts to approved records, document exceptions, and send patient, payer, account, and money decisions to the named owner.',
+    minutes: 13,
+    detail: {
+      keyword: 'Philippines medical billing unapplied cash review checklist',
+      marker: 'OBS-PH-UNAPPLIED-CASH-20260728',
+      published: '2026-07-28',
+      updated: '2026-07-28',
+      intro: [
+        'A Philippines medical billing unapplied cash review checklist should help a Filipino billing specialist trace a receipt without deciding where money belongs. The checklist must name the approved records to compare, the proof to save, and the owner who answers each exception.',
+        'The specialist can organize receipts, compare visible identifiers, and prepare a clear exception packet. Posting, moving, refunding, writing off, or changing a patient or payer balance stays with the qualified people who own those decisions.',
+      ],
+      stats: [
+        { label: 'Insufficient documentation', value: 59.8, display: '59.8%' },
+        { label: 'Medical necessity', value: 15.7, display: '15.7%' },
+        { label: 'Incorrect coding', value: 10, display: '10.0%' },
+        { label: 'No documentation', value: 8.2, display: '8.2%' },
+        { label: 'Other', value: 6.3, display: '6.3%' },
+      ],
+      table: [
+        { check: 'Receipt identity', staff: 'Confirm the receipt date, amount, trace or reference number, payment channel, source file, and approved system record.', owner: 'Resolve a missing source, duplicate receipt, changed amount, wrong account, or payment that may belong outside the assigned work list.' },
+        { check: 'Possible match', staff: 'List the patient, payer, claim, encounter, or account identifiers that agree with the approved source records without choosing a final destination.', owner: 'Decide whether the evidence supports a posting, transfer, correction, refund review, or another account action.' },
+        { check: 'Mismatch', staff: 'Record the exact field that differs, attach the source on each side, and state one direct question for the owner.', owner: 'Interpret the mismatch and approve the next action, owner, account, and limit before any money field changes.' },
+        { check: 'Duplicate risk', staff: 'Compare trace numbers, amounts, dates, sources, and prior notes, then flag records that may describe the same receipt.', owner: 'Decide whether the records are duplicates and approve any correction or reversal needed in the billing system.' },
+        { check: 'Age and follow-up', staff: 'Record when the item entered the queue, the last documented check, the blocking fact, and the next owner review date.', owner: 'Set the order of work and decide whether an older exception needs another team, payer, bank, patient, or compliance review.' },
+        { check: 'Privacy or access concern', staff: 'Stop work, keep needed facts in the approved system, and alert the named contact through the safe channel.', owner: 'Lead the response and decide whether access, disclosure, notice, or the assignment must change.' },
+      ],
+      quote: {
+        text: 'Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet) or based on asset ownership (enterprise or personally owned).',
+        by: 'NIST SP 800-207, section 1, August 2020',
+        url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf',
+      },
+      sections: [
+        {
+          heading: 'Define the work before opening the queue',
+          paragraphs: [
+            'Write down what counts as an unapplied item in the local billing system and which receipt sources the Filipino specialist may review. Name the payment channels, claim groups, work states, source folders, and owner for each kind of exception.',
+            'Give the worker a field list rather than a broad order to clean the queue. Useful fields include receipt date, amount, trace number, source, possible account, matching identifiers, conflict, owner question, owner answer, and next review date.',
+            'Keep the role boundary beside the checklist so it is hard to miss. The specialist gathers and compares proof, while the named owner approves every posting, transfer, refund review, balance change, write-off, or correction.',
+          ],
+          bullets: ['Name the allowed receipt sources.', 'List every review field.', 'Assign an owner to each exception type.', 'Keep money decisions outside the support role.'],
+        },
+        {
+          heading: 'Build one source packet for each receipt',
+          paragraphs: [
+            'Start with the original approved receipt source and record its stable reference. Save the visible amount, date, payer or patient information, channel, trace number, file name, and system location without copying sensitive details into chat or a loose spreadsheet.',
+            'Then collect the related remittance, claim, encounter, account, deposit, and prior note records that the local rule permits. Keep every item linked to its source so the owner can repeat the check instead of trusting a summary.',
+            'If a source is missing, mark the packet incomplete and state exactly what is needed. Do not fill a blank from memory, a nearby receipt, or a record that only looks similar.',
+          ],
+          bullets: ['Begin with the original receipt source.', 'Use stable references.', 'Link each supporting record.', 'Mark missing proof plainly.'],
+        },
+        {
+          heading: 'Use CMS findings as context, not a local score',
+          paragraphs: [
+            'CMS reported a 7.66% Medicare fee-for-service improper payment finding for the 2024 report period. CMS says the reviewed claims were submitted from July 1, 2022 through June 30, 2023, so those dates and that program must stay beside the figure.',
+            'CMS Table A3 assigned 59.8% of measured improper payments to insufficient documentation, 15.7% to medical necessity, 10.0% to incorrect coding, and 8.2% to no documentation. The figures support careful source checks, but they do not measure one business, one cash queue, or one Philippines team.',
+            'Use this evidence to explain why a receipt packet needs traceable proof and a named decision owner. Do not turn a national finding into a target, forecast, sales claim, or judgment about a local worker.',
+          ],
+          bullets: ['Keep the report period visible.', 'Name the Medicare program.', 'Do not claim a local result.', 'Check each receipt on its own records.'],
+        },
+        {
+          heading: 'Compare identifiers without making the match',
+          paragraphs: [
+            'Compare exact fields in a fixed order: trace number, amount, date, payment channel, payer or patient identifier, claim or encounter reference, and prior system note. Record which fields agree, which differ, and which are absent.',
+            'A likely match is still an owner question when the role does not have authority to place the money. The worker should present the possible destination, supporting records, conflicting facts, and the single decision needed.',
+            'Treat duplicate amounts with care because two real receipts can share the same value. Require another matching identifier and source proof before the packet moves to owner review, and flag any prior action that could cause a second posting.',
+          ],
+          bullets: ['Compare fields in one order.', 'Show agreements and conflicts.', 'Ask one clear owner question.', 'Check duplicate risk before review.'],
+        },
+        {
+          heading: 'Route exceptions with a clean handoff',
+          paragraphs: [
+            'Put each unresolved item in a state that tells the truth, such as missing receipt source, possible patient match, possible payer match, duplicate risk, conflicting account, or owner review needed. Avoid vague labels that force the next person to open every file just to learn the problem.',
+            'The handoff should include the receipt reference, visible facts, linked sources, exact mismatch, prior action, owner question, and date the answer is needed. Keep the question narrow enough for the owner to answer in writing.',
+            'After the owner responds, record the answer, approval date, allowed action, named actor, and any limit. If a source changes before the approved action is completed, return the item for review instead of relying on an old answer.',
+          ],
+          bullets: ['Use truthful exception states.', 'Link all decision proof.', 'Record the written owner answer.', 'Return changed facts for review.'],
+        },
+        {
+          heading: 'Limit access and test a mixed first set',
+          paragraphs: [
+            'A Filipino billing specialist needs access to assigned receipt and account records, not every portal, mailbox, bank file, patient chart, or shared folder the business can reach. Use a named account, approved sign-in controls, and permissions tied to the assigned work list.',
+            'NIST says location or device ownership does not create automatic trust. Check the user and device, allow only the records needed for the assigned review, and revisit access when the role or queue changes.',
+            'Have the owner review every item in a mixed first set that includes a clean source packet, missing proof, duplicate risk, conflicting identifier, wrong-account risk, older item, and privacy concern. Fix the checklist before adding more work, then sample completed packets on a written schedule.',
+          ],
+          bullets: ['Use named user access.', 'Limit records to the assigned queue.', 'Review the first mixed set in full.', 'Fix weak fields before adding work.'],
+        },
+      ],
+      faqs: [
+        { q: 'Can a Filipino billing specialist decide where unapplied cash belongs?', a: 'The specialist can gather records and show possible matches, but the named owner should approve the destination and any posting, transfer, refund review, write-off, or balance change. The local rule should state this boundary in plain words.' },
+        { q: 'What should be in an unapplied cash source packet?', a: 'Include the receipt date, amount, trace number, payment channel, original source, possible account identifiers, related claim or remittance records, mismatches, prior actions, and one owner question. Keep sensitive facts in approved systems.' },
+        { q: 'How should the team handle two receipts with the same amount?', a: 'Compare trace numbers, dates, channels, source files, patient or payer identifiers, and prior notes. If the records can still describe one receipt, flag duplicate risk and wait for the owner before any system change.' },
+        { q: 'What happens when the source changes after approval?', a: 'Stop the planned action and send the changed source back to the owner with the old answer attached. The earlier approval may no longer fit the facts.' },
+      ],
+      banners: [
+        { title: 'Give cash exceptions a clear review rule', body: 'Use billing data quality review to define source fields, match checks, and owner decisions.', href: '/services/billing-data-quality-review', label: 'Map the review' },
+        { title: 'Keep every receipt tied to proof', body: 'Use payment posting support guidance to organize source records and exception handoffs.', href: '/services/payment-posting', label: 'Review the role' },
+        { title: 'Turn the queue into a role brief', body: 'Share the receipt sources, systems, access limits, exception types, and decision owners for the Filipino billing role.', href: '/contact', label: 'Build the brief' },
+      ],
+      internalLinks: [
+        { title: 'Payment posting exception checklist', href: '/blog/philippines-medical-billing-payment-posting-exception-checklist' },
+        { title: 'Remittance review checklist', href: '/blog/philippines-medical-billing-remittance-review-checklist' },
+        { title: 'Aging report review checklist', href: '/blog/philippines-medical-billing-aging-report-review-checklist' },
+        { title: 'Claim note quality review checklist', href: '/blog/philippines-medical-billing-claim-note-quality-review-checklist' },
+      ],
+      sources: [
+        { n: 1, name: 'CMS, 2024 Medicare Fee-for-Service Supplemental Improper Payment Data', date: '2024', url: 'https://www.cms.gov/files/document/2024-medicare-fee-service-supplemental-improper-payment-data.pdf', note: 'Primary source for the 7.66%, 59.8%, 15.7%, 10.0%, 8.2%, report period, and claim dates used in this guide.' },
+        { n: 2, name: 'CMS Medicare Claims Processing Manual', date: 'CMS manual page checked July 2026', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912', note: 'CMS source for claim processing guidance that qualified owners can use when writing local receipt and account rules.' },
+        { n: 3, name: 'CMS Medicare Remit Easy Print software page', date: 'CMS page checked July 2026', url: 'https://www.cms.gov/data-research/cms-information-technology/access-cms-data-application/medicare-remit-easy-print', note: 'CMS source describing remittance advice access and the claim adjustment information available for review.' },
+        { n: 4, name: 'NIST SP 800-207, Zero Trust Architecture', date: 'August 2020', url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf', note: 'Primary source for the exact access-control quote in section 1.' },
+        { n: 5, name: 'Republic Act No. 10173, Data Privacy Act of 2012', date: '2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Philippine legal text covering personal data processing and security duties.' },
+      ],
+    },
+  },
 ] as const;
 
 export const staffingOffer = {
