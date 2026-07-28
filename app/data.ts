@@ -2664,6 +2664,122 @@ export const blogPosts = [
       ],
     },
   },
+  {
+    slug: 'philippines-medical-billing-aging-report-review-checklist',
+    title: 'Philippines medical billing aging report review checklist',
+    excerpt: 'A practical guide for Filipino billing staff who review aging report rows, check source records, and send claim, coding, clinical, and money decisions to the named owner.',
+    minutes: 13,
+    detail: {
+      keyword: 'Philippines medical billing aging report review checklist',
+      marker: 'OBS-PH-AGING-20260728',
+      published: '2026-07-28',
+      updated: '2026-07-28',
+      intro: [
+        'A Philippines medical billing aging report review checklist should tell a Filipino billing specialist which report to open, which source fields to compare, and when to stop. It should keep coding, clinical meaning, claim release, write-offs, refunds, and account changes with the qualified owner.',
+        'This guide covers careful review of open claim rows inside approved billing and payer systems. The worker can find missing facts, group like issues, and prepare a clean owner handoff without deciding why a payer acted or changing a balance without approval.',
+      ],
+      stats: [
+        { label: 'Insufficient documentation', value: 59.8, display: '59.8%' },
+        { label: 'Medical necessity', value: 15.7, display: '15.7%' },
+        { label: 'Incorrect coding', value: 10, display: '10.0%' },
+        { label: 'No documentation', value: 8.2, display: '8.2%' },
+        { label: 'Other', value: 6.3, display: '6.3%' },
+      ],
+      table: [
+        { check: 'Report identity', staff: 'Save the report name, run date, filters, payer group, business unit, and approved system where the file came from.', owner: 'Confirm the controlling report and correct any wrong scope, filter, source, or business unit before review continues.' },
+        { check: 'Claim and patient match', staff: 'Compare the claim ID, patient reference, payer, service date, billed amount, and current state with the approved claim record.', owner: 'Resolve a mixed patient, duplicate claim, wrong payer, changed amount, or conflict between source systems.' },
+        { check: 'Aging group and last action', staff: 'Record the displayed age, last action date, last note, next check, and saved proof without guessing why the row remains open.', owner: 'Decide whether the claim needs follow-up, correction, appeal review, closure, or another approved action.' },
+        { check: 'Payer response and documents', staff: 'Link the latest payer message, remittance, acknowledgment, attachment, and portal confirmation found in the approved tools.', owner: 'Interpret unclear payer wording and decide whether the record supports any claim, coding, clinical, or account change.' },
+        { check: 'Owner handoff', staff: 'Send one row with the source links, missing fact, blocked task, exact question, and date for the next check.', owner: 'Answer the question, name the allowed next step, and record any approval needed before the worker acts.' },
+        { check: 'Privacy or access concern', staff: 'Stop work, keep needed facts in the approved system, and alert the named contact through the safe channel.', owner: 'Lead the response and decide whether access, disclosure, notice, or the work assignment must change.' },
+      ],
+      quote: {
+        text: 'Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet) or based on asset ownership (enterprise or personally owned).',
+        by: 'NIST SP 800-207, section 1, August 2020',
+        url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf',
+      },
+      sections: [
+        {
+          heading: 'Lock the report scope before touching a row',
+          paragraphs: [
+            'Write down the report name, run date, payer group, business unit, included claim states, and approved system before the specialist begins. A saved scope keeps an old export or broad filter from becoming the day\'s work list.',
+            'Use one protected working copy and keep the source report unchanged. If the row count or report date differs from the owner\'s request, stop and confirm the correct file before reviewing patient or claim details.',
+            'Assign each row one reviewer, one current state, and one next check date. This makes missed work easier to see and keeps two staff members from contacting the payer about the same claim.',
+          ],
+          bullets: ['Name the exact report and run date.', 'Save the approved filters.', 'Keep the source file unchanged.', 'Assign one reviewer to each row.'],
+        },
+        {
+          heading: 'Match every row to the claim source',
+          paragraphs: [
+            'Compare the report row with the approved claim record before reading old notes or choosing a task. Check the claim ID, patient reference, payer, service date, submitted amount, and displayed claim state.',
+            'Flag a missing claim, repeated row, wrong payer, changed amount, or patient mismatch as an exception. The Filipino specialist should not merge records or choose which source wins when the facts disagree.',
+            'Keep links to the source claim, latest payer response, remittance, acknowledgment, and any document named in the row. A short source list is safer than copying patient details into chat, email, or a personal file.',
+          ],
+          bullets: ['Match the claim and patient references.', 'Compare the payer and service date.', 'Flag duplicates and source conflicts.', 'Link proof inside approved tools.'],
+        },
+        {
+          heading: 'Use the 2024 CMS findings as context',
+          paragraphs: [
+            'CMS reported a 7.66% Medicare fee-for-service improper payment finding for the 2024 report period. CMS says the reviewed claims were submitted from July 1, 2022 through June 30, 2023, so those dates and that program must stay beside the figure.',
+            'CMS Table A3 assigned 59.8% of measured improper payments to insufficient documentation, 15.7% to medical necessity, 10.0% to incorrect coding, and 8.2% to no documentation. These dated national findings support careful source checks, but they do not describe one aging report, one practice, or one Philippines team.',
+            'Use the evidence to explain why proof matters, not to label a local row or promise a result. Each open claim still needs its own payer record, documents, owner decision, and saved next step.',
+          ],
+          bullets: ['Keep the report period visible.', 'Name the measured Medicare program.', 'Do not apply a national figure to one claim.', 'Check every row on its own facts.'],
+        },
+        {
+          heading: 'Separate fact checks from owner decisions',
+          paragraphs: [
+            'The specialist can record what the report and source systems show, including the last action, latest payer message, missing file, and next check already approved. The specialist should not decide medical necessity, select a code, approve an appeal, release a claim, or change money fields.',
+            'Give each common exception a named owner and one direct handoff question. Ask which approved record controls the next step instead of asking support staff to explain a payer rule they are not qualified to interpret.',
+            'Keep the owner\'s written answer beside the row and record who approved the action. If the claim or payer message changes after approval, return the row rather than using an answer that no longer fits.',
+          ],
+          bullets: ['Write down facts from the source.', 'Name the decision owner.', 'Ask one direct question.', 'Return changed facts for review.'],
+        },
+        {
+          heading: 'Close only after the proof is complete',
+          paragraphs: [
+            'A row is not finished because someone opened it, added a note, or sent a message. The record should show the approved task, owner answer, action date, confirmation, current claim state, and next check or close reason.',
+            'For an allowed payer follow-up, save the contact path, reference number, exact response, and date when the claim should be checked again. For an approved upload or claim step, keep the file list and system confirmation with the source record.',
+            'Leave a failed upload, blank confirmation, unclear response, changed claim, or missing owner answer open. The worker should preserve the facts and send the exception back instead of trying an unapproved fix.',
+          ],
+          bullets: ['Require proof before closure.', 'Save contact and upload confirmations.', 'Record the next check.', 'Return failed or unclear work.'],
+        },
+        {
+          heading: 'Limit access and test a mixed first batch',
+          paragraphs: [
+            'A Filipino billing specialist needs the assigned report and linked claim records, not every patient chart, payer portal, mailbox, or shared drive the business can reach. Use a named account, approved sign-in controls, and permissions tied to the work list.',
+            'NIST says location or device ownership does not create automatic trust. Check the user and device, allow only the records needed for the assigned rows, and review access when the role or report scope changes.',
+            'Have the owner review every item in a small first batch with a clean claim, duplicate row, missing payer response, document gap, wrong-patient risk, access concern, and unclear next step. Fix the checklist before adding more rows so the worker does not learn unsafe shortcuts.',
+          ],
+          bullets: ['Use a named account.', 'Allow only assigned report access.', 'Review the first batch in full.', 'Fix the checklist before adding work.'],
+        },
+      ],
+      faqs: [
+        { q: 'Can a Filipino billing specialist decide which aging report claims to close?', a: 'The specialist can close only the rows covered by a written rule and owner approval. Claim release, coding, clinical, appeal, write-off, refund, and other account decisions should stay with qualified owners.' },
+        { q: 'What should an aging report review row contain?', a: 'Keep the report date, filters, claim and patient references, payer, service date, displayed age, last action, source links, missing fact, owner question, approval, confirmation, and next check. Sensitive details should remain inside approved systems.' },
+        { q: 'How should staff handle two rows that look like the same claim?', a: 'The worker should link both rows, compare the visible claim fields, and stop before merging, closing, or changing either record. A named owner should decide whether the rows are duplicates and which source controls.' },
+        { q: 'What happens when the payer response is unclear?', a: 'Keep the exact payer wording, source location, reference, and any named document. Send the row to the qualified owner rather than guessing what the response means or taking a claim action.' },
+      ],
+      banners: [
+        { title: 'Give aging rows a clear review path', body: 'Use billing data quality review to define source checks, owner decisions, and proof for closure.', href: '/services/billing-data-quality-review', label: 'Map the review' },
+        { title: 'Keep open claims tied to source proof', body: 'Use claim status follow-up guidance to organize payer checks before the owner decides.', href: '/blog/philippines-medical-billing-claim-status-follow-up-checklist', label: 'Review follow-up' },
+        { title: 'Turn the report into a staffing brief', body: 'Share the report scope, systems, access limits, claim groups, and review owner for the Filipino billing role.', href: '/contact', label: 'Build the brief' },
+      ],
+      internalLinks: [
+        { title: 'Claim status follow-up checklist', href: '/blog/philippines-medical-billing-claim-status-follow-up-checklist' },
+        { title: 'Denial trend report checklist', href: '/blog/philippines-medical-billing-denial-trend-report-checklist' },
+        { title: 'Claim edit report checklist', href: '/blog/philippines-medical-billing-claim-edit-report-checklist' },
+        { title: 'Medical billing audit checklist', href: '/blog/philippines-medical-billing-audit-checklist' },
+      ],
+      sources: [
+        { n: 1, name: 'CMS, 2024 Medicare Fee-for-Service Supplemental Improper Payment Data', date: '2024', url: 'https://www.cms.gov/files/document/2024-medicare-fee-service-supplemental-improper-payment-data.pdf', note: 'Primary source for the 7.66%, 59.8%, 15.7%, 10.0%, 8.2%, report period, and claim dates used in this guide.' },
+        { n: 2, name: 'CMS Medicare Claims Processing Manual', date: 'CMS manual page checked July 2026', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912', note: 'CMS source for claim processing guidance used by qualified owners when they write local claim review and follow-up instructions.' },
+        { n: 3, name: 'NIST SP 800-66 Revision 2, Implementing the HIPAA Security Rule', date: 'February 2024', url: 'https://csrc.nist.gov/pubs/sp/800/66/r2/final', note: 'Federal guidance for protecting electronic health information and managing access risks.' },
+        { n: 4, name: 'NIST SP 800-207, Zero Trust Architecture', date: 'August 2020', url: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf', note: 'Primary source for the exact access-control quote in section 1.' },
+        { n: 5, name: 'Republic Act No. 10173, Data Privacy Act of 2012', date: '2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Philippine legal text covering personal data processing and security duties.' },
+      ],
+    },
+  },
 ] as const;
 
 export const staffingOffer = {
