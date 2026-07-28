@@ -37,7 +37,7 @@ export default function Home() {
 
   return <>
     <Header />
-    <main className="billing-home" data-release="billing-desk-2026-07">
+    <main className="billing-home" data-release="billing-desk-2026-07" data-gi-rollout="two-illustration-packs-one-icon-pack">
       <JsonLd data={schema} />
 
       <section className="billing-hero">
@@ -60,7 +60,7 @@ export default function Home() {
 
           <div className="billing-visual">
             <div className="billing-photo">
-              <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=88" alt="Billing operations team reviewing account work" />
+              <img src="/illustrations/getillustrations/drawink-e-commerce-illustrations-svg/billing-queue-specialist.svg" alt="Illustration of a billing specialist preparing financial documents" />
 
             </div>
             <div className="queue-card">
@@ -101,7 +101,7 @@ export default function Home() {
       <section className="control-room">
         <div className="container control-room-grid">
           <div className="control-image">
-            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=88" alt="Manager and billing specialist reviewing an operations report" />
+            <img src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" alt="Illustration of a manager reviewing a billing operations dashboard" />
             <div className="image-note"><span>OWNER CHECK</span><b>Exceptions stay visible.</b></div>
           </div>
           <div className="control-copy">
@@ -128,9 +128,14 @@ export default function Home() {
       <section className="fit-section">
         <div className="container fit-grid">
           <div className="fit-intro"><p className="billing-kicker dark"><span /> A sensible first scope</p><h2>Good fit or bad fit?</h2><p>Billing support works best when the work has examples, an owner, and a clear stop sign. If nobody can explain the decision rules yet, fix that before you hand the queue to someone else.</p></div>
-          <div className="fit-card good"><span className="fit-tag">Good first handoff</span><ul><li>Draft invoices and claim packets</li><li>Missing document follow-up</li><li>Account notes and portal checks</li><li>Aging and exception summaries</li></ul></div>
+          <div className="fit-card good"><span className="fit-tag">Good first handoff</span><ul className="icon-replacement-list"><li><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt=""/>Draft invoices and claim packets</li><li><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt=""/>Missing document follow-up</li><li><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt=""/>Account notes and portal checks</li><li>Aging and exception summaries</li></ul></div>
           <div className="fit-card wait"><span className="fit-tag">Keep with your owner</span><ul><li>Refund and write-off decisions</li><li>Pricing or coding exceptions</li><li>Disputed balances</li><li>Legal or medical advice</li></ul></div>
         </div>
+      </section>
+
+      <section className="container gi-proof" aria-label="Billing workflow checks">
+        <img className="gi-proof-art" src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" alt=""/>
+        <div><p className="billing-kicker dark"><span/>A reviewable queue</p><h2>Keep every billing checkpoint visible.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt=""/>Invoice prep</span><span><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt=""/>Payment follow-up</span><span><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt=""/>Weekly review</span></div></div>
       </section>
 
       <section className="container billing-section guides-section">
