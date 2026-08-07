@@ -3128,6 +3128,122 @@ export const blogPosts = [
       ],
     },
   },
+  {
+    slug: 'philippines-medical-billing-daily-queue-review-checklist',
+    title: 'Philippines medical billing daily queue review checklist',
+    excerpt: 'A practical daily review for Filipino billing staff who prepare queue work, preserve source evidence, and route decisions to the right owner.',
+    minutes: 10,
+    detail: {
+      keyword: 'Philippines medical billing daily queue review checklist',
+      marker: 'OBS-PH-DAILY-QUEUE-20260807',
+      published: '2026-08-07',
+      updated: '2026-08-07',
+      intro: [
+        'A Philippines medical billing daily queue review checklist gives a Filipino billing specialist a safe order for repeatable work. It names what to inspect, what evidence to save, and which questions must stop at the owner.',
+        'The checklist is designed for invoice, claim, remittance, follow-up, and exception queues. It supports preparation and documentation without giving a support worker authority to choose codes, approve money changes, or make clinical or legal conclusions.',
+      ],
+      stats: [
+        { label: 'Source check', value: 1, display: '01' },
+        { label: 'Owner route', value: 2, display: '02' },
+        { label: 'Exception log', value: 3, display: '03' },
+        { label: 'End-of-day handoff', value: 4, display: '04' },
+      ],
+      table: [
+        { check: 'Queue and source match', staff: 'Confirm the item belongs to the assigned queue, date range, and approved source location.', owner: 'Change the scope or resolve an unclear record assignment.' },
+        { check: 'Required evidence', staff: 'Find the named invoice, claim, remittance, note, or payer response and record what is missing.', owner: 'Decide whether the evidence supports the billing action.' },
+        { check: 'Routine preparation', staff: 'Complete the documented comparison or draft and leave the source reference in the approved system.', owner: 'Approve any final submission, coding, clinical interpretation, or financial change.' },
+        { check: 'Exception or conflict', staff: 'Stop the item, describe the exact conflict, and route one clear owner question.', owner: 'Choose the correction, appeal, write-off, refund, or other next step.' },
+        { check: 'Privacy or access concern', staff: 'Stop work and report the concern through the approved safe channel.', owner: 'Lead the incident response and decide whether access or disclosure action is needed.' },
+      ],
+      quote: {
+        text: 'Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location.',
+        by: 'NIST SP 800-207, section 1, August 2020',
+        url: 'https://csrc.nist.gov/pubs/sp/800/207/final',
+      },
+      sections: [
+        {
+          heading: 'Start with the queue boundary',
+          paragraphs: [
+            'The daily review begins with the work list, not with the first item that looks urgent. Record the queue name, reporting date, cutoff, allowed systems, and named reviewer so a second person can understand what the specialist was asked to touch.',
+            'A clear boundary prevents a common failure in outsourced billing support: a worker moves from a repeatable comparison into a judgment call without noticing. Invoice preparation, claim packet assembly, status checks, and evidence indexing can be documented tasks; coding, clinical meaning, refunds, write-offs, and policy exceptions stay with the qualified owner.',
+          ],
+          bullets: ['Name the queue and date range.', 'List approved source systems.', 'State the owner and reviewer.', 'Write the stopping points beside the task.'],
+        },
+        {
+          heading: 'Check the source before changing the record',
+          paragraphs: [
+            'For each item, compare the billing record with the source that is supposed to support it. Depending on the queue, that may be an approved invoice request, encounter record, remittance advice, payer message, customer instruction, or internal approval note.',
+            'Record a stable reference and the result of the comparison. If the source is missing, unreadable, contradictory, or outside the assigned date range, use a truthful exception state rather than filling the gap from a similar record or from memory.',
+          ],
+          bullets: ['Match account or claim references.', 'Confirm dates and amounts.', 'Save the payer or source reference.', 'Name missing proof in plain language.'],
+        },
+        {
+          heading: 'Separate preparation from approval',
+          paragraphs: [
+            'The specialist can prepare a packet, compare a payment to a remittance, draft an approved follow-up, and organize an exception note. The work should make the owner decision easier without implying that preparation is approval.',
+            'Keep a visible status such as ready for review, missing source, owner decision needed, submitted by owner, or held for correction. The status should show the next actor and the next date, not merely that someone opened the item.',
+          ],
+          bullets: ['Use named statuses.', 'Keep the final actor visible.', 'Record the question needing an answer.', 'Do not release owner-only changes.'],
+        },
+        {
+          heading: 'Make exceptions answerable',
+          paragraphs: [
+            'An exception log is useful when it narrows the decision. Include the item reference, exact conflict, source checked, missing evidence, deadline if known, proposed route, owner, and one question that can be answered without reopening the entire queue.',
+            'Do not call every difficult item a denial or a billing error. A missing document, duplicate-looking payment, payer deadline, access problem, coding question, and unexplained balance need different owners and different evidence.',
+          ],
+          bullets: ['Describe the conflict, not a guess.', 'Route to the right owner.', 'Flag deadline risk immediately.', 'Keep one question per handoff.'],
+        },
+        {
+          heading: 'Protect records in a remote workflow',
+          paragraphs: [
+            'A Philippines-based specialist should use a named account, approved sign-in controls, and only the systems needed for the assigned queue. Keep sensitive details in the approved billing or document system instead of copying them into personal notes, casual chat, or unapproved exports.',
+            'NIST zero-trust guidance is a useful control principle: location and ownership do not create automatic access. Review permissions when the queue changes, remove access when the assignment ends, and stop work when a request exceeds the documented boundary.',
+          ],
+          bullets: ['Use named access.', 'Limit systems and fields.', 'Keep exports in approved locations.', 'Report suspected access issues before continuing.'],
+        },
+        {
+          heading: 'Close the day with a reviewable handoff',
+          paragraphs: [
+            'At the end of the day, reconcile the starting list to completed, held, escalated, and carried-forward items. A short count is useful only when every count can be traced to the queue and the exceptions remain visible.',
+            'Send the owner a concise handoff with completed work, blocked items, unanswered questions, deadline risks, and the next review date. The owner should be able to approve, correct, or reprioritize work without asking the specialist to reconstruct the day from memory.',
+          ],
+          bullets: ['Reconcile the queue count.', 'List every carried-forward item.', 'Highlight deadline and privacy risk.', 'Set the next review date.'],
+        },
+        {
+          heading: 'Test the routine before adding volume',
+          paragraphs: [
+            'Start with a small mixed sample that includes routine matches, missing proof, conflicting dates, an unapplied amount, a payer message, and an item that needs owner judgment. Review the sample in full before widening access or increasing daily volume.',
+            'Measure complete source references, correct routing, aging of exceptions, owner rework, and repeat causes. Do not turn national billing statistics into a target for one team; use local evidence to improve the checklist and its escalation paths.',
+          ],
+          bullets: ['Review a mixed first sample.', 'Check routing and evidence.', 'Fix repeat causes in the guide.', 'Increase volume only after owner review.'],
+        },
+      ],
+      faqs: [
+        { q: 'Can the specialist approve a billing correction?', a: 'The specialist can prepare the evidence and identify the conflict. The qualified owner approves coding, clinical, financial, policy, and final submission decisions.' },
+        { q: 'What should happen when a source record is missing?', a: 'Name the missing record, record where it was checked, move the item to a held or missing-source state, and route it to the assigned owner.' },
+        { q: 'How large should the first daily sample be?', a: 'Use a small mixed sample the owner can review completely. Expand the queue only after the instructions and stopping points work in practice.' },
+        { q: 'Should sensitive details be sent in chat?', a: 'Keep sensitive details in approved systems. Use a record reference and a short issue label in the handoff unless the business has approved a safer detailed channel.' },
+      ],
+      banners: [
+        { title: 'Make billing data quality visible', body: 'Define the checks, sampling rules, and owner limits for a reviewable billing queue.', href: '/services/billing-data-quality-review', label: 'Map the review' },
+        { title: 'Keep payment work traceable', body: 'Separate routine matching from unapplied cash, reversals, refunds, and other owner decisions.', href: '/services/payment-posting', label: 'Review payment support' },
+        { title: 'Turn the routine into a role', body: 'Share the queue, systems, schedule, access limits, and review owner for a Philippines-based billing specialist.', href: '/contact', label: 'Build the role brief' },
+      ],
+      internalLinks: [
+        { title: 'Billing data quality review', href: '/services/billing-data-quality-review' },
+        { title: 'Payment posting exception checklist', href: '/blog/philippines-medical-billing-payment-posting-exception-checklist' },
+        { title: 'Claim status follow-up checklist', href: '/blog/philippines-medical-billing-claim-status-follow-up-checklist' },
+        { title: 'Billing reconciliation', href: '/services/billing-reconciliation' },
+      ],
+      sources: [
+        { n: 1, name: 'NIST SP 800-207, Zero Trust Architecture', date: 'August 2020', url: 'https://csrc.nist.gov/pubs/sp/800/207/final', note: 'Primary source for the access-control quote and the principle that network location does not create implicit trust.' },
+        { n: 2, name: 'CMS Medicare Claims Processing Manual', date: 'CMS manual page checked August 2026', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912', note: 'Reference for claim-processing owners who define the source and review rules for their queue.' },
+        { n: 3, name: 'NIST SP 800-66 Revision 2', date: 'February 2024', url: 'https://csrc.nist.gov/pubs/sp/800/66/r2/final', note: 'Guidance for protecting electronic health information and managing access risks.' },
+        { n: 4, name: 'HHS HIPAA Security Rule', date: 'HHS guidance', url: 'https://www.hhs.gov/hipaa/for-professionals/security/index.html', note: 'Primary U.S. health-information security reference for organizations defining their own compliance controls.' },
+        { n: 5, name: 'Republic Act No. 10173, Data Privacy Act of 2012', date: 'August 2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Philippine legal text covering personal data processing and security duties.' },
+      ],
+    },
+  },
 ] as const;
 
 export const staffingOffer = {
