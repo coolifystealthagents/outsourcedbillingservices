@@ -3488,6 +3488,19 @@ export const researchBatchPosts: Array<{ slug: string; title: string; excerpt: s
   return { slug, title, excerpt, body: researchBatchBody(title, premise, checks, owner, related) };
 });
 
+const researchRunDates: Record<string, string> = {
+  'research-medical-billing-authorization-denial-analysis': '2026-08-10',
+  'research-medical-billing-claim-correction-controls': '2026-08-10',
+  'research-medical-billing-claim-submission-reconciliation': '2026-08-10',
+  'research-medical-billing-duplicate-claim-prevention': '2026-08-10',
+  'research-medical-billing-medical-record-request-controls': '2026-08-10',
+  'research-medical-billing-patient-statement-review': '2026-08-10',
+  'research-medical-billing-payer-enrollment-workflow': '2026-08-10',
+  'research-medical-billing-prior-authorization-tracking': '2026-08-10',
+  'research-medical-billing-rejected-claim-routing': '2026-08-10',
+  'research-medical-billing-unbilled-account-review': '2026-08-10',
+};
+
 const researchRunPosts: Array<{ slug: string; title: string; excerpt: string; body: string[] }> = [
   ['research-medical-billing-prior-authorization-tracking', 'Prior Authorization Tracking Research: Evidence, Dates, and Escalation', 'A bounded tracking model for authorization requests that keeps payer evidence, service dates, and next actions visible.', 'Authorization work is a date-sensitive evidence workflow. A useful record distinguishes a submitted request, a payer response, a missing document, an expiration date, and an owner decision instead of treating every item as simply pending.', 'Capture the service or claim reference, requested service, payer, submission date, source documents, transaction reference, response, effective and expiration dates, follow-up date, and escalation owner. Route clinical interpretation, coding questions, and urgent deadline conflicts to the qualified owner.', 'The specialist can assemble documents, check status through approved channels, and document the response. The owner decides whether the evidence supports scheduling, billing, resubmission, or escalation.', ['research-medical-billing-claim-status-follow-up','research-medical-billing-documentation-follow-up','research-medical-billing-workqueue-sla-design']],
   ['research-medical-billing-duplicate-claim-prevention', 'Duplicate Claim Prevention Research: Matching Before Submission', 'A practical control map for identifying duplicate-looking claims without hiding legitimate corrections or replacements.', 'Duplicate prevention works when the comparison uses stable source fields and preserves the reason an item is considered new, corrected, or potentially repetitive. A broad warning alone is not a safe release decision.', 'Compare permitted claim and encounter references, patient or account identifiers, service dates, provider context, billed lines, modifiers, payer, prior submission status, and correction reason. Hold ambiguous matches and route coding or replacement-claim decisions to the owner.', 'A specialist can run the documented comparison and prepare an evidence note. A qualified billing owner approves corrections, replacements, resubmissions, and any exception to the duplicate rule.', ['research-medical-billing-claim-intake-controls','research-medical-billing-charge-entry-review','research-medical-billing-clean-claim-readiness']],
@@ -3501,7 +3514,19 @@ const researchRunPosts: Array<{ slug: string; title: string; excerpt: string; bo
   ['research-medical-billing-claim-submission-reconciliation', 'Claim Submission Reconciliation Research: Proving What Entered the Queue', 'A submission-control guide for tying released claims to transmission evidence, acknowledgments, and follow-up.', 'Submission reconciliation closes the gap between a released claim and a documented payer or clearinghouse response. A release timestamp alone does not prove that the intended payload was transmitted or accepted.', 'Reconcile the release queue to the transmission batch, claim control number, destination, timestamp, acknowledgment, rejection or acceptance response, correction history, and next status action. Isolate missing acknowledgments and duplicate-looking transmissions before another submission.', 'The specialist can prepare the reconciliation and flag missing or conflicting transmission evidence. The owner approves resubmission, correction, appeal, and unresolved exception disposition.', ['research-medical-billing-claim-status-follow-up','research-medical-billing-payment-reconciliation','research-medical-billing-audit-trail-design']],
 ].map((entry) => {
   const [slug, title, excerpt, premise, checks, owner, related] = entry as [string, string, string, string, string, string, string[]];
-  return { slug, title, excerpt, body: researchBatchBody(title, premise, checks, owner, related), published: '2026-08-10', updated: '2026-08-10' };
+  return { slug, title, excerpt, body: researchBatchBody(title, premise, checks, owner, related), published: researchRunDates[slug], updated: researchRunDates[slug] };
 });
 
-researchPosts.push(...researchRunPosts, ...researchBatchPosts);
+const researchRunOrder = [
+  'research-medical-billing-authorization-denial-analysis',
+  'research-medical-billing-claim-correction-controls',
+  'research-medical-billing-claim-submission-reconciliation',
+  'research-medical-billing-duplicate-claim-prevention',
+  'research-medical-billing-medical-record-request-controls',
+  'research-medical-billing-patient-statement-review',
+  'research-medical-billing-payer-enrollment-workflow',
+  'research-medical-billing-prior-authorization-tracking',
+  'research-medical-billing-rejected-claim-routing',
+  'research-medical-billing-unbilled-account-review',
+] as const;
+researchPosts.push(...researchRunOrder.map((slug) => researchRunPosts.find((post) => post.slug === slug)!), ...researchBatchPosts);
