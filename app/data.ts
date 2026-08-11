@@ -130,6 +130,7 @@ const thirdBlogSeeds: DailyBlogSeed[] = ([
 const aug10BlogDateMetadata: Record<string, string> = {
   'philippines-medical-billing-appeal-deadline-calendar': '2026-08-10',
   'philippines-medical-billing-appeal-packet-preparation': '2026-08-10',
+  'philippines-medical-billing-clean-claim-review-routine': '2026-08-10',
 };
 
 const buildDailyBlogBatch = (seeds: DailyBlogSeed[], batchTag: string) => seeds.map((seed, index) => {
