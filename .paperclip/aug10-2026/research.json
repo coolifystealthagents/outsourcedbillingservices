@@ -9,7 +9,7 @@
   "minimum": 10,
   "priorRunId": "d0235c4d-d809-4138-a0f8-821bcba3a780",
   "priorIssueId": "d9f056f2-dcdd-4cf9-857b-f43e7ae880dc",
-  "validationCommands": ["npm run build", "node scripts/validate_aug10_research.mjs"],
+  "validationCommands": ["npm run build", "node scripts/validate_aug10_research.mjs", "node scripts/validate_aug10_rendered.mjs"],
   "cleanBuildPassed": true,
   "existingCompliancePassed": true,
   "indexNewestFirstPassed": true,
