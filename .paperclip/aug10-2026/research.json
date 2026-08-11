@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "contract": "sites3-aug10-public-date-v6",
+  "targetDate": "2026-08-10",
+  "family": "research",
+  "domain": "outsourcedbillingservices.com",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "branch": "main",
+  "minimum": 10,
+  "priorRunId": "d0235c4d-d809-4138-a0f8-821bcba3a780",
+  "priorIssueId": "d9f056f2-dcdd-4cf9-857b-f43e7ae880dc",
+  "validationCommands": ["npm run build", "node scripts/validate_aug10_research.mjs"],
+  "cleanBuildPassed": true,
+  "existingCompliancePassed": true,
+  "indexNewestFirstPassed": true,
+  "entries": [
+    {"slug":"research-medical-billing-prior-authorization-tracking","route":"/research/research-medical-billing-prior-authorization-tracking","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"bc04bb61b3d2edf7be8e3d43c8f27144f49ac6d3","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-medical-billing-duplicate-claim-prevention","route":"/research/research-medical-billing-duplicate-claim-prevention","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"bc04bb61b3d2edf7be8e3d43c8f27144f49ac6d3","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-medical-billing-payer-enrollment-workflow","route":"/research/research-medical-billing-payer-enrollment-workflow","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"bc04bb61b3d2edf7be8e3d43c8f27144f49ac6d3","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-medical-billing-medical-record-request-controls","route":"/research/research-medical-billing-medical-record-request-controls","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"bc04bb61b3d2edf7be8e3d43c8f27144f49ac6d3","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-medical-billing-claim-correction-controls","route":"/research/research-medical-billing-claim-correction-controls","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"bc04bb61b3d2edf7be8e3d43c8f27144f49ac6d3","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-medical-billing-patient-statement-review","route":"/research/research-medical-billing-patient-statement-review","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"bc04bb61b3d2edf7be8e3d43c8f27144f49ac6d3","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-medical-billing-unbilled-account-review","route":"/research/research-medical-billing-unbilled-account-review","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"bc04bb61b3d2edf7be8e3d43c8f27144f49ac6d3","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-medical-billing-rejected-claim-routing","route":"/research/research-medical-billing-rejected-claim-routing","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"bc04bb61b3d2edf7be8e3d43c8f27144f49ac6d3","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-medical-billing-authorization-denial-analysis","route":"/research/research-medical-billing-authorization-denial-analysis","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"bc04bb61b3d2edf7be8e3d43c8f27144f49ac6d3","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-medical-billing-claim-submission-reconciliation","route":"/research/research-medical-billing-claim-submission-reconciliation","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"bc04bb61b3d2edf7be8e3d43c8f27144f49ac6d3","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"}
+  ]
+}
