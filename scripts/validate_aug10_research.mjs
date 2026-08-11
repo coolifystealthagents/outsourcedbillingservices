@@ -12,13 +12,16 @@ require('unique-slugs', new Set(manifest.entries.map((e) => e.slug)).size === ma
 require('family-routes', manifest.entries.every((e) => e.route === `/research/${e.slug}`));
 require('source-path', manifest.entries.every((e) => e.sourcePath === 'app/data.ts'));
 require('source-records', manifest.entries.every((e) => source.includes(`'${e.slug}'`)));
-require('source-dates', manifest.entries.every((e) => e.sourceDate === '2026-08-10' && e.sourceDateField === 'published'));
+require('source-dates', manifest.entries.every((e) => e.sourceDate === '2026-08-10' && e.sourceDateField === 'published' && e.provenance === 'repair-replacement' && e.introducedByCommit === '5d5220a2933aceec39363b9cc3d51efa821024c6'));
 require('sitemap-route', manifest.entries.every((e) => sitemapSource.includes('researchPosts.map')));
 for (const entry of manifest.entries) {
   const parent = execFileSync('git', ['show', `${entry.introducedByCommit}^:app/data.ts`], { encoding: 'utf8' });
   const introduced = execFileSync('git', ['show', `${entry.introducedByCommit}:app/data.ts`], { encoding: 'utf8' });
-  require(`${entry.slug}:absent-before`, !parent.includes(`'${entry.slug}'`));
+  const parentRun = parent.slice(parent.indexOf('const researchRunPosts'));
+  const introducedRun = introduced.slice(introduced.indexOf('const researchRunPosts'));
+  require(`${entry.slug}:date-absent-before`, !parentRun.includes("published: '2026-08-10'"));
   require(`${entry.slug}:present-after`, introduced.includes(`'${entry.slug}'`));
+  require(`${entry.slug}:date-present-after`, introducedRun.includes("published: '2026-08-10'"));
 }
 const firstTarget = source.indexOf(`'${manifest.entries[0].slug}'`);
 const firstHistorical = source.indexOf('researchPosts.push(...researchRunPosts, ...researchBatchPosts)');
