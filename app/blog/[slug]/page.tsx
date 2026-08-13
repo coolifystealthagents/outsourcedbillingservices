@@ -72,7 +72,7 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
           <p className="article-kicker">Philippines medical billing guide</p>
           <h1>{post.title}</h1>
           <p className="article-deck">{post.excerpt}</p>
-          <div className="article-meta"><span>Published {detail.published}</span><span>{post.minutes} minute read</span><span>Evidence checked</span></div>
+          <div className="article-meta"><span>Published <time dateTime={detail.published}>{new Date(`${detail.published}T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</time></span><span>{post.minutes} minute read</span><span>Evidence checked</span></div>
         </header>
 
         <div className="article-body">
