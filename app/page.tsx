@@ -128,14 +128,14 @@ export default function Home() {
       <section className="fit-section">
         <div className="container fit-grid">
           <div className="fit-intro"><p className="billing-kicker dark"><span /> A sensible first scope</p><h2>Good fit or bad fit?</h2><p>Billing support works best when the work has examples, an owner, and a clear stop sign. If nobody can explain the decision rules yet, fix that before you hand the queue to someone else.</p></div>
-          <div className="fit-card good"><span className="fit-tag">Good first handoff</span><ul className="icon-replacement-list"><li><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt=""/>Draft invoices and claim packets</li><li><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt=""/>Missing document follow-up</li><li><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt=""/>Account notes and portal checks</li><li>Aging and exception summaries</li></ul></div>
+          <div className="fit-card good"><span className="fit-tag">Good first handoff</span><ul className="icon-replacement-list"><li><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt="Invoice preparation step"/>Draft invoices and claim packets</li><li><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt="Payment follow-up step"/>Missing document follow-up</li><li><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt="Weekly billing review"/>Account notes and portal checks</li><li>Aging and exception summaries</li></ul></div>
           <div className="fit-card wait"><span className="fit-tag">Keep with your owner</span><ul><li>Refund and write-off decisions</li><li>Pricing or coding exceptions</li><li>Disputed balances</li><li>Legal or medical advice</li></ul></div>
         </div>
       </section>
 
       <section className="container gi-proof" aria-label="Billing workflow checks">
-        <img className="gi-proof-art" src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" alt=""/>
-        <div><p className="billing-kicker dark"><span/>A reviewable queue</p><h2>Keep every billing checkpoint visible.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt=""/>Invoice prep</span><span><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt=""/>Payment follow-up</span><span><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt=""/>Weekly review</span></div></div>
+        <img className="gi-proof-art" src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" alt="Billing team reviewing an accounts dashboard"/>
+        <div><p className="billing-kicker dark"><span/>A reviewable queue</p><h2>Keep every billing checkpoint visible.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt="Invoice preparation step"/>Invoice prep</span><span><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt="Payment follow-up step"/>Payment follow-up</span><span><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt="Weekly billing review"/>Weekly review</span></div></div>
       </section>
 
       <section className="container billing-section guides-section">
