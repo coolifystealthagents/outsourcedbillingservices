@@ -2,6 +2,16 @@ import {Header, Footer} from '../components';
 import {researchPosts, site} from '../data';
 
 const acceptedResearchRank = new Map([
+  ['research-medical-billing-aug17-eligibility-response-versioning', 0],
+  ['research-medical-billing-aug17-claim-control-number-lineage', 1],
+  ['research-medical-billing-aug17-remittance-batch-cutoff-integrity', 2],
+  ['research-medical-billing-aug17-document-access-denial-analysis', 3],
+  ['research-medical-billing-aug17-patient-responsibility-variance', 4],
+  ['research-medical-billing-aug17-coding-query-turnaround-cohort', 5],
+  ['research-medical-billing-aug17-payer-portal-evidence-reproducibility', 6],
+  ['research-medical-billing-aug17-reversal-reinstatement-lineage', 7],
+  ['research-medical-billing-aug17-account-credit-transfer-cohort', 8],
+  ['research-medical-billing-aug17-billing-queue-exclusion-audit', 9],
   ['research-medical-billing-aug14-remittance-adjustment-lineage', 0],
   ['research-medical-billing-aug14-claim-receipt-cohort', 1],
   ['research-medical-billing-aug14-credit-balance-cohort', 2],
@@ -38,6 +48,8 @@ export const metadata = {title: `Research | ${site.brand}`, description: 'Resear
 
 export default function Research() {
   const posts = [...researchPosts].sort((a, b) => {
+    const dateOrder = (b.published ?? '').localeCompare(a.published ?? '');
+    if (dateOrder !== 0) return dateOrder;
     const ar = acceptedResearchRank.get(a.slug);
     const br = acceptedResearchRank.get(b.slug);
     if (ar !== undefined || br !== undefined) {
