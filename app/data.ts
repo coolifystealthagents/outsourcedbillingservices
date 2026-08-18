@@ -268,6 +268,8 @@ const aug14BlogSeeds: Aug14BlogSeed[] = [
 ];
 const aug14BlogBatch = buildAug13BlogBatch(aug14BlogSeeds, '20260814');
 
+import { aug17BlogBatch as authoredAug17BlogBatch } from './aug17-blog';
+
 type Aug17BlogSeed = DailyBlogSeed & { published: '2026-08-17' };
 const aug17BlogSeeds: Aug17BlogSeed[] = [
   {slug:'aug17-philippines-medical-billing-authorization-expiration-handoff',title:'Philippines medical billing authorization expiration handoff',excerpt:'A handoff for tracking authorization end dates, affected work, missing proof, and owner review.',focus:'authorization expiration handoff',service:'billing-data-quality-review',related:['prior-authorization-tracker','eligibility-exception-log','documentation-follow-up-checklist'],published:'2026-08-17'},
@@ -293,7 +295,7 @@ const aug17BlogSeeds: Aug17BlogSeed[] = [
   {slug:'aug17-philippines-medical-billing-duplicate-account-merge-preparation',title:'Philippines medical billing duplicate account merge preparation',excerpt:'A preparation workflow for suspected duplicate accounts that keeps identity and merge authority separate.',focus:'duplicate account merge preparation',service:'billing-data-quality-review',related:['patient-demographic-verification-checklist','duplicate-charge-review','billing-reconciliation'],published:'2026-08-17'},
   {slug:'aug17-philippines-medical-billing-revenue-schedule-source-check',title:'Philippines medical billing revenue schedule source check',excerpt:'A source check for schedule entries, billing periods, supporting records, and owner-approved changes.',focus:'revenue schedule source checking',service:'revenue-schedule-preparation',related:['billing-reconciliation','contract-terms-billing-handoff','month-end-close-checklist'],published:'2026-08-17'},
 ];
-const aug17BlogBatch = buildAug13BlogBatch(aug17BlogSeeds, '20260817');
+const aug17BlogBatch = authoredAug17BlogBatch;
 
 export const blogPosts = [
   ...aug17BlogBatch,
