@@ -3820,7 +3820,7 @@ const researchAug17Posts: Array<{ slug: string; title: string; excerpt: string; 
 ];
 
 const researchAug18Body = (question: string, scope: string, evidence: string, finding: string, role: string, comparison: string, comparisonTwo: string, limits: string, conclusion: string, sources: string[], ...sourceAdditions: string[]) => [
-  'Research date: 2026-08-18. Research question: ' + question,
+  'Research date: 2026-08-18. Methodology and research question: define the bounded evidence question before reviewing outcomes: ' + question,
   scope,
   'Methodology: define the source population before reviewing outcomes, freeze the date window, and record the system, event timestamp, identifier, and evidence location for every sampled item. Separate observed source language from calculated intervals and from the analyst’s interpretation. Use a mixed cohort that includes routine records, exceptions, reopened work, and records with incomplete evidence. Report the denominator, exclusions, and unknown states rather than silently dropping difficult cases.',
   evidence,
