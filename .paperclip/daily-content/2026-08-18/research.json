@@ -1,0 +1,16 @@
+{
+  "campaignDate": "2026-08-18",
+  "family": "research",
+  "entries": [
+    {"route":"/research/research-medical-billing-clearinghouse-rejection-denial-boundary","sourcePaths":["app/data.ts"]},
+    {"route":"/research/research-medical-billing-authorization-expiry-cohort","sourcePaths":["app/data.ts"]},
+    {"route":"/research/research-medical-billing-coordination-benefits-sequencing","sourcePaths":["app/data.ts"]},
+    {"route":"/research/research-medical-billing-provider-enrollment-effective-date","sourcePaths":["app/data.ts"]},
+    {"route":"/research/research-medical-billing-timely-filing-evidence-chain","sourcePaths":["app/data.ts"]},
+    {"route":"/research/research-medical-billing-telehealth-place-service-evidence","sourcePaths":["app/data.ts"]},
+    {"route":"/research/research-medical-billing-recoupment-notice-lineage","sourcePaths":["app/data.ts"]},
+    {"route":"/research/research-medical-billing-medical-necessity-document-gap","sourcePaths":["app/data.ts"]},
+    {"route":"/research/research-medical-billing-npi-taxonomy-mismatch","sourcePaths":["app/data.ts"]},
+    {"route":"/research/research-medical-billing-remittance-adjustment-code-cohort","sourcePaths":["app/data.ts"]}
+  ]
+}
