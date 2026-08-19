@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "campaignDate": "2026-08-18",
+  "family": "blog",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "branch": "main",
+  "sourcePath": "app/aug18-blog.ts",
+  "entries": [
+    {"route":"/blog/aug18-philippines-medical-billing-eligibility-response-reconciliation","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-invoice-cutoff-control","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-unmatched-remittance-line-review","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-customer-dispute-evidence-index","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-subscription-change-approval-log","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-billing-data-access-review","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-duplicate-invoice-investigation","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-month-end-unposted-item-review","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-payment-reversal-lineage","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-denial-response-source-map","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-claim-status-contact-log","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-credit-balance-refund-evidence","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-claim-attachment-version-control","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-accounts-receivable-next-action-queue","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-usage-estimate-exception-review","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-revenue-schedule-change-log","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-invoice-approval-routing","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-payer-message-retention-index","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-claim-correction-approval-packet","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-statement-balance-reconciliation","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-billing-queue-exclusion-register","sourcePaths":["app/aug18-blog.ts"]},
+    {"route":"/blog/aug18-philippines-medical-billing-shift-close-exception-handoff","sourcePaths":["app/aug18-blog.ts"]}
+  ]
+}
