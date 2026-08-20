@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-19",
+  "articles": [
+    {
+      "route": "/research/billing-operations-source-quality-evidence-research",
+      "source": "content/research/billing-operations-source-quality-evidence-research.md"
+    },
+    {
+      "route": "/research/billing-operations-exception-aging-patterns-research",
+      "source": "content/research/billing-operations-exception-aging-patterns-research.md"
+    },
+    {
+      "route": "/research/billing-operations-review-consistency-research",
+      "source": "content/research/billing-operations-review-consistency-research.md"
+    },
+    {
+      "route": "/research/billing-operations-access-governance-research",
+      "source": "content/research/billing-operations-access-governance-research.md"
+    },
+    {
+      "route": "/research/billing-operations-handoff-reliability-research",
+      "source": "content/research/billing-operations-handoff-reliability-research.md"
+    }
+  ]
+}

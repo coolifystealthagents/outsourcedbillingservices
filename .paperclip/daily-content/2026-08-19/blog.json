@@ -1,0 +1,53 @@
+{
+  "date": "2026-08-19",
+  "articles": [
+    {
+      "route": "/blog/billing-operations-intake-source-register",
+      "source": "content/blog/billing-operations-intake-source-register.md"
+    },
+    {
+      "route": "/blog/billing-operations-approval-evidence-matrix",
+      "source": "content/blog/billing-operations-approval-evidence-matrix.md"
+    },
+    {
+      "route": "/blog/billing-operations-exception-queue-triage",
+      "source": "content/blog/billing-operations-exception-queue-triage.md"
+    },
+    {
+      "route": "/blog/billing-operations-quality-review-cadence",
+      "source": "content/blog/billing-operations-quality-review-cadence.md"
+    },
+    {
+      "route": "/blog/billing-operations-handoff-acceptance-log",
+      "source": "content/blog/billing-operations-handoff-acceptance-log.md"
+    },
+    {
+      "route": "/blog/billing-operations-access-recertification-review",
+      "source": "content/blog/billing-operations-access-recertification-review.md"
+    },
+    {
+      "route": "/blog/billing-operations-weekly-decision-brief",
+      "source": "content/blog/billing-operations-weekly-decision-brief.md"
+    },
+    {
+      "route": "/blog/billing-operations-source-of-truth-map",
+      "source": "content/blog/billing-operations-source-of-truth-map.md"
+    },
+    {
+      "route": "/blog/billing-operations-change-control-record",
+      "source": "content/blog/billing-operations-change-control-record.md"
+    },
+    {
+      "route": "/blog/billing-operations-work-queue-ownership",
+      "source": "content/blog/billing-operations-work-queue-ownership.md"
+    },
+    {
+      "route": "/blog/billing-operations-escalation-path-design",
+      "source": "content/blog/billing-operations-escalation-path-design.md"
+    },
+    {
+      "route": "/blog/billing-operations-launch-readiness-review",
+      "source": "content/blog/billing-operations-launch-readiness-review.md"
+    }
+  ]
+}
