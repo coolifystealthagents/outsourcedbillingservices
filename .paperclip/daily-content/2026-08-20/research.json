@@ -2,10 +2,10 @@
   "campaignDate": "2026-08-20",
   "family": "research",
   "entries": [
-    {"route":"/research/research-medical-billing-claim-evidence-lineage","sourcePaths":["app/aug20-research.ts"]},
-    {"route":"/research/research-medical-billing-remittance-batch-reconciliation","sourcePaths":["app/aug20-research.ts"]},
-    {"route":"/research/research-medical-billing-denial-response-evidence","sourcePaths":["app/aug20-research.ts"]},
-    {"route":"/research/research-medical-billing-queue-exception-sampling","sourcePaths":["app/aug20-research.ts"]},
-    {"route":"/research/research-medical-billing-access-recertification","sourcePaths":["app/aug20-research.ts"]}
+    {"route":"/research/research-medical-billing-claim-evidence-lineage","sourcePaths":["app/research-sources/claim-evidence-lineage.ts","app/aug20-research.ts"]},
+    {"route":"/research/research-medical-billing-remittance-batch-reconciliation","sourcePaths":["app/research-sources/remittance-batch-reconciliation.ts","app/aug20-research.ts"]},
+    {"route":"/research/research-medical-billing-denial-response-evidence","sourcePaths":["app/research-sources/denial-response-evidence.ts","app/aug20-research.ts"]},
+    {"route":"/research/research-medical-billing-queue-exception-sampling","sourcePaths":["app/research-sources/queue-exception-sampling.ts","app/aug20-research.ts"]},
+    {"route":"/research/research-medical-billing-access-recertification","sourcePaths":["app/research-sources/access-recertification.ts","app/aug20-research.ts"]}
   ]
 }
