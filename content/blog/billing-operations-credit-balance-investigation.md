@@ -89,3 +89,7 @@ Close with an approved reference, documented hold, or next review. Retain reject
 +29. Escalate contradictions early, because a confident summary built on conflicting sources is harder to repair than an explicit unresolved state.
 
 +30. Make the handoff useful to a new shift: source, current state, evidence, owner, question, deadline, and next review should be findable together.
+
+## Add a stop point before disposition
+
+Before a credit balance is refunded, transferred, or left open, perform a separate stop-point review. Confirm the balance is tied to the correct account, that every payment and adjustment is represented, and that no pending reversal or duplicate transaction could change the result. The preparer can assemble this packet and show the arithmetic. The authorized owner decides the disposition and records the reason. Keeping that final choice separate from investigation prevents a plausible explanation from becoming an unreviewed financial action.

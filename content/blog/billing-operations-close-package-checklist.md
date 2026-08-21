@@ -85,6 +85,10 @@ Close with named approvals, unresolved risks, next review dates, and retention i
 +29. Escalate contradictions early, because a confident summary built on conflicting sources is harder to repair than an explicit unresolved state.
 
 +30. Make the handoff useful to a new shift: source, current state, evidence, owner, question, deadline, and next review should be findable together.
+
+## Make the packet reviewable later
+
+A close package should let a reviewer reconstruct the decision without asking the preparer to repeat the process. Keep the opening population, source extracts, reconciliation notes, exception decisions, and sign-off references together, while limiting copied sensitive data to the approved location. If a late item is added, record when it arrived, which rule admitted it, and whether the owner accepted the change. That small history protects the integrity of the package and gives the next close team a usable starting point.
 ## Additional review note
 
 The package should include a short assumptions register. List timezone, cutoff interpretation, source substitutions, excluded populations, and calculations that rely on incomplete evidence. An assumption is not an approval; it is a visible condition for owner review. If an assumption changes, show which totals and exceptions it affects. This small register prevents a polished close summary from hiding the choices that shaped its denominator.

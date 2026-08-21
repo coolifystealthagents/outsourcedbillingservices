@@ -85,6 +85,10 @@ Use an index with purpose, version, date, owner, access state, and next review. 
 +29. Escalate contradictions early, because a confident summary built on conflicting sources is harder to repair than an explicit unresolved state.
 
 +30. Make the handoff useful to a new shift: source, current state, evidence, owner, question, deadline, and next review should be findable together.
+
+## Separate retention from convenience
+
+Retention is not a reason to keep every working copy forever. Identify the authoritative record, its required retention rule, the owner of that rule, and the event that starts the retention period. A support specialist can label files, preserve lineage, and flag conflicting versions, but should not invent a retention period or delete evidence to tidy a queue. When access changes during a handoff, record the change and route permission questions through the approved owner so the retained record remains both available to the right role and protected from unnecessary exposure.
 ## Additional review note
 
 A retention handoff should also state how the next reviewer can verify that a link still works without copying the underlying record. Record the approved repository, access owner, reference convention, and review date. If a source is scheduled for disposition, retain the disposition instruction and approval before action. A handoff that preserves context while respecting least access is more useful than a large uncontrolled archive.

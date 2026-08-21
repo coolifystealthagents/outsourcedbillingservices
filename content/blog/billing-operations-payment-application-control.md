@@ -85,6 +85,10 @@ Reconcile every batch line and remainder. Retain rejected candidates and later r
 +29. Escalate contradictions early, because a confident summary built on conflicting sources is harder to repair than an explicit unresolved state.
 
 +30. Make the handoff useful to a new shift: source, current state, evidence, owner, question, deadline, and next review should be findable together.
+
+## Reconcile the unapplied queue
+
+After matching payments, review what remains unapplied and explain the balance by cause. A missing remittance, an identifier mismatch, a duplicate receipt, and an amount that needs owner review require different next actions. Preserve the candidate matches that were rejected and the evidence supporting the chosen match. The preparer may compare identifiers and amounts, but an owner should approve uncertain applications, reversals, write-offs, or communications about a disputed balance. This makes the control useful at the queue level without hiding unresolved risk inside a clean-looking posting report.
 ## Additional review note
 
 For split payments, document the allocation candidates and the reason one was selected or left pending. For reversals, connect the reversal to the original application and preserve both event dates. For unapplied amounts, record the exact source needed next. These distinctions make the control auditable across shifts and prevent a balanced batch from masking an unsupported destination.
