@@ -1,0 +1,74 @@
+[
+  {
+    "route": "/blog/aug21-medical-billing-charge-capture-gap-review",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/charge-capture-gap-review.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/charge-capture-gap-review.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-eligibility-response-aging",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/eligibility-response-aging.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/eligibility-response-aging.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-coding-query-handoff",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/coding-query-handoff.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/coding-query-handoff.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-payer-portal-access-log",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/payer-portal-access-log.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/payer-portal-access-log.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-unposted-remittance-review",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/unposted-remittance-review.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/unposted-remittance-review.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-patient-balance-dispute-intake",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/patient-balance-dispute-intake.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/patient-balance-dispute-intake.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-claim-rejection-rework-loop",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/claim-rejection-rework-loop.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/claim-rejection-rework-loop.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-authorization-document-expiry",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/authorization-document-expiry.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/authorization-document-expiry.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-refund-request-evidence-packet",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/refund-request-evidence-packet.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/refund-request-evidence-packet.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-denial-deadline-control",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/denial-deadline-control.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/denial-deadline-control.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-month-end-open-item-aging",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/month-end-open-item-aging.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/month-end-open-item-aging.txt"
+  },
+  {
+    "route": "/blog/aug21-medical-billing-claim-status-contact-record",
+    "sourcePath": "app/aug21-blog.ts",
+    "imagePath": "public/aug21-heroes/claim-status-contact-record.svg",
+    "promptReceipt": ".paperclip/daily-content/2026-08-21/prompts/claim-status-contact-record.txt"
+  }
+]
