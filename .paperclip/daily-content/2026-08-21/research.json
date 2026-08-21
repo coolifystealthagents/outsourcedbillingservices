@@ -1,0 +1,7 @@
+[
+  {"route":"/research/research-medical-billing-authorization-expiry-cohort-2026","sourcePaths":["app/aug21-research.ts","app/research-sources/authorization-expiry-cohort-2026.ts"],"imagePath":"public/aug21-research-heroes/authorization-expiry-cohort.svg"},
+  {"route":"/research/research-medical-billing-coordination-benefits-sequencing-2026","sourcePaths":["app/aug21-research.ts","app/research-sources/coordination-benefits-sequencing-2026.ts"],"imagePath":"public/aug21-research-heroes/coordination-benefits-sequencing.svg"},
+  {"route":"/research/research-medical-billing-timely-filing-evidence-chain-2026","sourcePaths":["app/aug21-research.ts","app/research-sources/timely-filing-evidence-chain-2026.ts"],"imagePath":"public/aug21-research-heroes/timely-filing-evidence-chain.svg"},
+  {"route":"/research/research-medical-billing-telehealth-place-service-evidence-2026","sourcePaths":["app/aug21-research.ts","app/research-sources/telehealth-place-service-evidence-2026.ts"],"imagePath":"public/aug21-research-heroes/telehealth-place-service-evidence.svg"},
+  {"route":"/research/research-medical-billing-recoupment-notice-lineage-2026","sourcePaths":["app/aug21-research.ts","app/research-sources/recoupment-notice-lineage-2026.ts"],"imagePath":"public/aug21-research-heroes/recoupment-notice-lineage.svg"}
+]

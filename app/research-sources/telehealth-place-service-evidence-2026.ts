@@ -1,0 +1,2 @@
+import { aug21Research } from '../aug21-research';
+export const telehealthPlaceServiceEvidence2026 = { route:'/research/research-medical-billing-telehealth-place-service-evidence-2026', slug:'research-medical-billing-telehealth-place-service-evidence-2026', published:'2026-08-21', datePublished:'2026-08-21', sourceDate:'2026-08-21', record:aug21Research.find(x=>x.slug==='research-medical-billing-telehealth-place-service-evidence-2026')! };
