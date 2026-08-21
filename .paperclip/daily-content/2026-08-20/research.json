@@ -1,0 +1,11 @@
+{
+  "campaignDate": "2026-08-20",
+  "family": "research",
+  "entries": [
+    {"route":"/research/research-medical-billing-claim-evidence-lineage","sourcePaths":["app/aug20-research.ts"]},
+    {"route":"/research/research-medical-billing-remittance-batch-reconciliation","sourcePaths":["app/aug20-research.ts"]},
+    {"route":"/research/research-medical-billing-denial-response-evidence","sourcePaths":["app/aug20-research.ts"]},
+    {"route":"/research/research-medical-billing-queue-exception-sampling","sourcePaths":["app/aug20-research.ts"]},
+    {"route":"/research/research-medical-billing-access-recertification","sourcePaths":["app/aug20-research.ts"]}
+  ]
+}
