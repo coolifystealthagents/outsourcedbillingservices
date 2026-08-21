@@ -88,3 +88,9 @@ Review category drift and unexplained “other” use. Preserve prior category a
 ## Additional review note
 
 The taxonomy should be tested with mixed examples before it becomes a reporting standard. Include a missing source, a conflicting source, an access block, an owner-only decision, a duplicate candidate, and a reopened item. Ask whether two reviewers would assign the same category from the written rule. Revise ambiguous definitions before using category counts as a performance signal. Classification quality is part of queue quality.
+
+## A practical review sequence
+
+Start a taxonomy review with a small, known set of recently handled billing exceptions rather than with an empty spreadsheet. Choose examples that include a clean resolution, an unresolved item, a reopened item, and at least one case where the first label changed. For each example, ask a reviewer who was not involved in the original classification to assign a category from the written definitions. Record the assigned label, the evidence they used, the question they believed they were answering, and the point at which they hesitated. This exercise exposes categories that sound precise but still depend on private knowledge.
+
+When two reviewers disagree, do not settle the difference by averaging labels or selecting the more familiar term. Identify whether the disagreement concerns the evidence condition, the decision authority, the stage of work, or the desired outcome. A source gap may remain a source gap even when a specialist later decides how to proceed. Update the definition only when the intended boundary is clear, then retest the original examples and a fresh sample. Keep the previous wording and effective date with the change record so trend reports can explain why category counts moved. A taxonomy is useful when it makes the next permitted action easier to see, not when it creates the longest possible list.
