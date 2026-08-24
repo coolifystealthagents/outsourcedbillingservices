@@ -3,13 +3,16 @@ import { notFound } from 'next/navigation';
 import { Header, Footer, CTA, JsonLd } from '../../components';
 import { blogPosts, site } from '../../data';
 import { aug21BlogBatch, aug21Slugs } from '../../aug21-blog';
+import { aug23BlogBatch, aug23Slugs } from '../../aug23-blog';
 
 export function generateStaticParams() {
-  return [...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug }))];
+  return [...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug }))];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const aug23 = aug23BlogBatch.find((item) => item.slug === slug);
+  if (aug23) return { title: aug23.title, description: aug23.description, alternates: { canonical: `https://${String(site.domain).toLowerCase()}/blog/${aug23.slug}` }, openGraph: { title: aug23.title, description: aug23.description, type: 'article', url: `https://${String(site.domain).toLowerCase()}/blog/${aug23.slug}` } };
   const aug21 = aug21BlogBatch.find((item) => item.slug === slug);
   if (aug21) return { title: aug21.title, description: aug21.description, alternates: { canonical: `https://${String(site.domain).toLowerCase()}/blog/${aug21.slug}` }, openGraph: { title: aug21.title, description: aug21.description, type: 'article', url: `https://${String(site.domain).toLowerCase()}/blog/${aug21.slug}` } };
   const post = blogPosts.find((item) => item.slug === slug);
@@ -29,6 +32,15 @@ function Aug21Article({ article }: { article: (typeof aug21BlogBatch)[number] })
     <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,dateModified:article.published,mainEntityOfPage:canonical,image:`${canonical}${article.hero}`}} />
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime="2026-08-21">August 21, 2026</time></p>
     <img src={article.hero} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
+    <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+  </article><CTA /></main><Footer hidePricing /></>;
+}
+
+function Aug23Article({ article }: { article: (typeof aug23BlogBatch)[number] }) {
+  const canonical = `https://${String(site.domain).toLowerCase()}/blog/${article.slug}`;
+  return <><Header hidePricing /><main className="article-shell"><article>
+    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,dateModified:article.published,mainEntityOfPage:canonical}} />
+    <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime="2026-08-23">August 23, 2026</time></p>
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
   </article><CTA /></main><Footer hidePricing /></>;
 }
@@ -183,6 +195,8 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
 
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const aug23 = aug23BlogBatch.find((item) => item.slug === slug);
+  if (aug23) return <Aug23Article article={aug23} />;
   const aug21 = aug21BlogBatch.find((item) => item.slug === slug);
   if (aug21) return <Aug21Article article={aug21} />;
   const post = blogPosts.find((item) => item.slug === slug);
