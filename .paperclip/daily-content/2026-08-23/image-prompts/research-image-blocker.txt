@@ -1,0 +1,3 @@
+Campaign date: 2026-08-23
+Family: research
+Gemini image status: unavailable in this execution environment. No Gemini image-generation capability was available, so the contract's explicit text-complete fallback was used. No stock, template, or retained image was substituted. Existing route imagery was not modified.

@@ -1,0 +1,7 @@
+[
+  {"route":"/research/research-medical-billing-remittance-adjustment-lineage-2026","sourcePaths":["app/aug23-research.ts"]},
+  {"route":"/research/research-medical-billing-claim-receipt-cohort-2026","sourcePaths":["app/aug23-research.ts"]},
+  {"route":"/research/research-medical-billing-service-date-cohort-2026","sourcePaths":["app/aug23-research.ts"]},
+  {"route":"/research/research-medical-billing-payer-message-history-2026","sourcePaths":["app/aug23-research.ts"]},
+  {"route":"/research/research-medical-billing-document-version-lineage-2026","sourcePaths":["app/aug23-research.ts"]}
+]
