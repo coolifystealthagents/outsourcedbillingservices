@@ -26,6 +26,8 @@
 3. Before a reader-facing link change, verify the exact source and destination routes, search the source model for an existing equivalent href, refresh the source date, then check the emitted HTML, canonical, Article date, and sitemap record.
 4. Keep the Philippines-based staffing boundary explicit. Do not claim staff can make clinical, coding, financial, legal, policy, or final-release decisions.
 
-## Next controlled candidate
+## Reconciled service handoff
 
-Review `/research/research-medical-billing-remittance-review` for a single visible, reader-useful handoff to `/services/payment-posting`. The typed `serviceCta` already declares that relation, so first inspect the rendered route and existing CTA before changing any reader-facing copy. Do not add a duplicate link if that CTA is already sufficient.
+`/research/research-medical-billing-remittance-review` already has one route-local next-step link to `/services/payment-posting`. The rendered research route has its H1 and canonical URL, the service href appears once inside `<main>`, and both routes are in the generated sitemap. Treat this pair as delivered and non-duplicable; do not add another CTA for the same handoff.
+
+No new reader-facing handoff is selected from this map until a separate review confirms a useful, currently absent source-to-service pair.
