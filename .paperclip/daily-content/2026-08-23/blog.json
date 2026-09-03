@@ -1,5 +1,5 @@
 {
-  "campaignDate": "2026-08-24",
+  "campaignDate": "2026-08-23",
   "family": "blog",
   "imageGeneration": "Gemini unavailable in execution workspace; text-complete fallback used; no stock or retained image substituted.",
   "entries": [
@@ -9,11 +9,11 @@
     {"route":"/blog/medical-billing-payer-portal-access-recertification","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"},
     {"route":"/blog/medical-billing-unapplied-cash-source-match","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"},
     {"route":"/blog/medical-billing-coding-query-handoff-record","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"},
-    {"route":"/blog/medical-billing-patient-balance-dispute-intake","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/medical-billing-patient-statement-question-routing-ledger","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"},
     {"route":"/blog/medical-billing-charge-capture-cutoff-reconciliation","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"},
     {"route":"/blog/medical-billing-appeal-packet-version-control","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"},
     {"route":"/blog/medical-billing-month-end-exception-aging-bridge","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"},
     {"route":"/blog/medical-billing-payer-response-conflict-matrix","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"},
-    {"route":"/blog/medical-billing-refund-request-evidence-packet","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"}
+    {"route":"/blog/medical-billing-refund-authorization-completion-crosscheck","sourcePaths":["app/aug23-blog.ts"],"imageStatus":"gemini-unavailable"}
   ]
 }
