@@ -76,6 +76,13 @@ const aug23ResearchRank = new Map([
   ['research-medical-billing-payer-message-history-2026', 3],
   ['research-medical-billing-document-version-lineage-2026', 4],
 ]);
+const sep3ResearchRank = new Map([
+  ['research-medical-billing-clearinghouse-enrollment-change-lag-2026', 0],
+  ['research-medical-billing-secondary-claim-crossover-breakpoint-2026', 1],
+  ['research-medical-billing-statement-hold-release-evidence-2026', 2],
+  ['research-medical-billing-portal-export-reproducibility-2026', 3],
+  ['research-medical-billing-credit-balance-cause-drift-2026', 4],
+]);
 
 export const metadata = {title: `Research | ${site.brand}`, description: 'Research notes for Philippines-based staffing decisions.'};
 
@@ -83,6 +90,13 @@ export default function Research() {
   const posts = [...researchPosts].sort((a, b) => {
     const dateOrder = (b.published ?? '').localeCompare(a.published ?? '');
     if (dateOrder !== 0) return dateOrder;
+    const as3 = sep3ResearchRank.get(a.slug);
+    const bs3 = sep3ResearchRank.get(b.slug);
+    if (as3 !== undefined || bs3 !== undefined) {
+      if (as3 === undefined) return 1;
+      if (bs3 === undefined) return -1;
+      return as3 - bs3;
+    }
     const ar23 = aug23ResearchRank.get(a.slug);
     const br23 = aug23ResearchRank.get(b.slug);
     if (ar23 !== undefined || br23 !== undefined) {

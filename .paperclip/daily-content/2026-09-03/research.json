@@ -1,0 +1,7 @@
+[
+  {"route":"/research/research-medical-billing-clearinghouse-enrollment-change-lag-2026","sourcePaths":["app/sep3-research.ts"]},
+  {"route":"/research/research-medical-billing-secondary-claim-crossover-breakpoint-2026","sourcePaths":["app/sep3-research.ts"]},
+  {"route":"/research/research-medical-billing-statement-hold-release-evidence-2026","sourcePaths":["app/sep3-research.ts"]},
+  {"route":"/research/research-medical-billing-portal-export-reproducibility-2026","sourcePaths":["app/sep3-research.ts"]},
+  {"route":"/research/research-medical-billing-credit-balance-cause-drift-2026","sourcePaths":["app/sep3-research.ts"]}
+]
