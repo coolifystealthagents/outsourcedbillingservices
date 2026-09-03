@@ -1,10 +1,10 @@
 import { FeaturedComparison } from '../../FeaturedComparison';
-import {notFound,redirect} from 'next/navigation';import {Header,Footer} from '../../../components';import {blogPosts} from '../../../data';import aug20Meta from '../../../aug20-meta.json';import aug21Meta from '../../../aug21-meta.json';import {aug23BlogBatch} from '../../../aug23-blog';
+import {notFound,redirect} from 'next/navigation';import {Header,Footer} from '../../../components';import {blogPosts} from '../../../data';import aug20Meta from '../../../aug20-meta.json';import aug21Meta from '../../../aug21-meta.json';import {aug23BlogBatch} from '../../../aug23-blog';import {sep3BlogBatch} from '../../../sep3-blog';
 
-const daily=[...aug23BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...Object.entries(aug21Meta),...Object.entries(aug20Meta)].map(([slug,p])=>({slug,title:p.title,excerpt:p.description}));
+const daily=[...sep3BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...aug23BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...Object.entries(aug21Meta),...Object.entries(aug20Meta)].map(([slug,p])=>({slug,title:p.title,excerpt:p.description}));
 const latest=blogPosts.filter(p=>p.detail?.published==='2026-09-02');
 const earlier=blogPosts.filter(p=>p.detail?.published!=='2026-09-02');
-const allPosts=[...latest,...daily,...earlier];
+const allPosts=[...daily.slice(0,12),...latest,...daily.slice(12),...earlier];
 
 export function generateStaticParams(){const n=Math.max(1,Math.ceil(allPosts.length/20));return Array.from({length:n},(_,i)=>({page:String(i+1)}))}
 

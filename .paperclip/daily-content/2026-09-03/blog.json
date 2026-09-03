@@ -1,0 +1,19 @@
+{
+  "campaignDate": "2026-09-03",
+  "family": "blog",
+  "imageGeneration": "Gemini unavailable in execution workspace; text-complete fallback used; no stock or retained image substituted.",
+  "entries": [
+    {"route":"/blog/sep3-medical-billing-zero-pay-remittance-investigation-docket","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-claim-control-number-lineage-board","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-secondary-claim-release-readiness-gate","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-referral-source-expiry-watchlist","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-deposit-to-remittance-gap-register","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-void-replacement-claim-sequence-map","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-patient-credit-origin-trace","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-document-request-response-clock","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-payer-call-reference-audit-trail","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-service-line-balance-reconciliation-grid","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-returned-mail-account-routing-log","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"},
+    {"route":"/blog/sep3-medical-billing-weekend-cutoff-carryforward-sheet","sourcePaths":["app/sep3-blog.ts"],"imageStatus":"gemini-unavailable"}
+  ]
+}

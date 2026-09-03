@@ -1,0 +1,3 @@
+Campaign date: 2026-09-03
+Family: blog
+Gemini image status: unavailable in this execution environment. No Gemini-specific image-generation capability was available, so the contract's text-complete fallback was used. No stock, template, or retained image was substituted.
