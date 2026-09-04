@@ -5,13 +5,16 @@ import { blogPosts, site } from '../../data';
 import { aug21BlogBatch, aug21Slugs } from '../../aug21-blog';
 import { aug23BlogBatch, aug23Slugs } from '../../aug23-blog';
 import { sep3BlogBatch, sep3Slugs } from '../../sep3-blog';
+import { sep4BlogBatch, sep4BlogSlugs } from '../../sep4-content';
 
 export function generateStaticParams() {
-  return [...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug }))];
+  return [...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug }))];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const sep4 = sep4BlogBatch.find((item) => item.slug === slug);
+  if (sep4) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep4.slug}`; return { title: sep4.title, description: sep4.description, alternates: { canonical }, openGraph: { title: sep4.title, description: sep4.description, type: 'article', url: canonical, images: [sep4.featuredImage] } }; }
   const sep3 = sep3BlogBatch.find((item) => item.slug === slug);
   if (sep3) return { title: sep3.title, description: sep3.description, alternates: { canonical: `https://${String(site.domain).toLowerCase()}/blog/${sep3.slug}` }, openGraph: { title: sep3.title, description: sep3.description, type: 'article', url: `https://${String(site.domain).toLowerCase()}/blog/${sep3.slug}` } };
   const aug23 = aug23BlogBatch.find((item) => item.slug === slug);
@@ -44,6 +47,17 @@ function Aug23Article({ article }: { article: (typeof aug23BlogBatch)[number] })
   return <><Header hidePricing /><main className="article-shell"><article>
     <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,dateModified:article.published,mainEntityOfPage:canonical}} />
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime="2026-08-23">August 23, 2026</time></p>
+    <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+  </article><CTA /></main><Footer hidePricing /></>;
+}
+
+function Sep4Article({ article }: { article: (typeof sep4BlogBatch)[number] }) {
+  const canonical = `https://${String(site.domain).toLowerCase()}/blog/${article.slug}`;
+  const image = `https://${String(site.domain).toLowerCase()}${article.featuredImage}`;
+  return <><Header hidePricing /><main className="article-shell"><article>
+    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,dateModified:article.published,mainEntityOfPage:canonical,image}} />
+    <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 4, 2026</time></p>
+    <img src={article.featuredImage} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
   </article><CTA /></main><Footer hidePricing /></>;
 }
@@ -207,6 +221,8 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
 
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const sep4 = sep4BlogBatch.find((item) => item.slug === slug);
+  if (sep4) return <Sep4Article article={sep4} />;
   const sep3 = sep3BlogBatch.find((item) => item.slug === slug);
   if (sep3) return <Sep3Article article={sep3} />;
   const aug23 = aug23BlogBatch.find((item) => item.slug === slug);
