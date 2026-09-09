@@ -7,12 +7,16 @@ import { sep3BlogBatch } from "../sep3-blog";
 import { sep4BlogBatch } from "../sep4-content";
 import { sep7BlogBatch } from "../sep7-content";
 import { sep8BlogBatch } from "../sep8-content";
+import { sep9BlogBatch } from "../sep9-content";
 export const metadata = {
   title: `Blog | ${site.brand}`,
   description: "Practical Philippines staffing guides.",
 };
 export default function Blog() {
   const daily = [
+    ...sep9BlogBatch.map(
+      (p) => [p.slug, { title: p.title, description: p.description }] as const,
+    ),
     ...sep8BlogBatch.map(
       (p) => [p.slug, { title: p.title, description: p.description }] as const,
     ),

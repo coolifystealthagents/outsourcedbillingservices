@@ -6,6 +6,7 @@ import { sep3Slugs } from "../sep3-blog";
 import { sep4BlogSlugs } from "../sep4-content";
 import { sep7BlogSlugs } from "../sep7-content";
 import { sep8BlogSlugs } from "../sep8-content";
+import { sep9BlogSlugs } from "../sep9-content";
 import { site, services, blogPosts, researchPosts } from "../data";
 export function GET() {
   const base = `https://${String(site.domain).toLowerCase()}`;
@@ -16,7 +17,8 @@ export function GET() {
         sep3Slugs.length +
         sep4BlogSlugs.length +
         sep7BlogSlugs.length +
-        sep8BlogSlugs.length) /
+        sep8BlogSlugs.length +
+        sep9BlogSlugs.length) /
         20,
     ),
   );
@@ -29,6 +31,7 @@ export function GET() {
   const sep3Paths = sep3Slugs.map((slug) => `/blog/${slug}`);
   const sep7Paths = sep7BlogSlugs.map((slug) => `/blog/${slug}`);
   const sep8Paths = sep8BlogSlugs.map((slug) => `/blog/${slug}`);
+  const sep9Paths = sep9BlogSlugs.map((slug) => `/blog/${slug}`);
   const sep4Paths = sep4BlogSlugs.map((slug) => `/blog/${slug}`);
   const paths = [
     "",
@@ -55,6 +58,7 @@ export function GET() {
     ...sep4Paths,
     ...sep7Paths,
     ...sep8Paths,
+    ...sep9Paths,
   ];
   const body = Array.from(new Set(paths))
     .map((x) => `<url><loc>${base}${x}</loc></url>`)
