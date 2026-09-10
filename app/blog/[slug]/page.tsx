@@ -9,13 +9,16 @@ import { sep4BlogBatch, sep4BlogSlugs } from '../../sep4-content';
 import { sep7BlogBatch, sep7BlogSlugs } from '../../sep7-content';
 import { sep8BlogBatch, sep8BlogSlugs } from '../../sep8-content';
 import { sep9BlogBatch, sep9BlogSlugs } from '../../sep9-content';
+import { sep10BlogBatch, sep10BlogSlugs } from '../../sep10-content';
 
 export function generateStaticParams() {
-  return [...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
+  return [...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
+  if (sep10) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep10.slug}`; return { title: sep10.title, description: sep10.description, alternates: { canonical }, openGraph: { title: sep10.title, description: sep10.description, type: 'article', url: canonical, images: [sep10.featuredImage] } }; }
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);
   if (sep9) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep9.slug}`; return { title: sep9.title, description: sep9.description, alternates: { canonical }, openGraph: { title: sep9.title, description: sep9.description, type: 'article', url: canonical, images: [sep9.featuredImage] } }; }
   const sep8 = sep8BlogBatch.find((item) => item.slug === slug);
@@ -99,6 +102,17 @@ function Sep9Article({ article }: { article: (typeof sep9BlogBatch)[number] }) {
   return <><Header hidePricing /><main className="article-shell"><article>
     <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,dateModified:article.published,mainEntityOfPage:canonical,image}} />
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 9, 2026</time></p>
+    <img src={article.featuredImage} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
+    <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+  </article><CTA /></main><Footer hidePricing /></>;
+}
+
+function Sep10Article({ article }: { article: (typeof sep10BlogBatch)[number] }) {
+  const canonical = `https://${String(site.domain).toLowerCase()}/blog/${article.slug}`;
+  const image = `https://${String(site.domain).toLowerCase()}${article.featuredImage}`;
+  return <><Header hidePricing /><main className="article-shell"><article>
+    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,dateModified:article.published,mainEntityOfPage:canonical,image}} />
+    <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 10, 2026</time></p>
     <img src={article.featuredImage} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
   </article><CTA /></main><Footer hidePricing /></>;
@@ -263,6 +277,8 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
 
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
+  if (sep10) return <Sep10Article article={sep10} />;
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);
   if (sep9) return <Sep9Article article={sep9} />;
   const sep8 = sep8BlogBatch.find((item) => item.slug === slug);
