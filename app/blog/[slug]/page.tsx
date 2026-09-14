@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { notFound, redirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { Header, Footer, CTA, JsonLd } from '../../components';
 import { blogPosts, site } from '../../data';
 import { aug21BlogBatch, aug21Slugs } from '../../aug21-blog';
@@ -21,7 +21,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const alias=duplicateAliases[slug]; if(alias) redirect(`/blog/${alias}`);
+  const alias=duplicateAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
   const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
   if (sep10) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep10.slug}`; return { title: seoTitle(sep10.title), description: seoDescription(sep10.description), alternates: { canonical }, openGraph: { title: seoTitle(sep10.title), description: seoDescription(sep10.description), type: 'article', url: canonical, images: [sep10.featuredImage] } }; }
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const aug21 = aug21BlogBatch.find((item) => item.slug === slug);
   if (aug21) return { title: seoTitle(aug21.title), description: seoDescription(aug21.description), alternates: { canonical: `https://${String(site.domain).toLowerCase()}/blog/${aug21.slug}` }, openGraph: { title: seoTitle(aug21.title), description: seoDescription(aug21.description), type: 'article', url: `https://${String(site.domain).toLowerCase()}/blog/${aug21.slug}` } };
   const post = blogPosts.find((item) => item.slug === slug);
-  if (!post) { const suffix=slug.replace(/^philippines-medical-billing-/,''); const target=blogPosts.find((item)=>item.slug!==slug&&item.slug.endsWith(`-${suffix}`)); if(target) redirect(`/blog/${target.slug}`); return {}; }
+  if (!post) { const suffix=slug.replace(/^philippines-medical-billing-/,''); const target=blogPosts.find((item)=>item.slug!==slug&&item.slug.endsWith(`-${suffix}`)); if(target) permanentRedirect(`/blog/${target.slug}`); return {}; }
   const canonical = `https://${String(site.domain).toLowerCase()}/blog/${post.slug}`;
   return {
     title: seoTitle(post.title),
@@ -282,7 +282,7 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
 
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const alias=duplicateAliases[slug]; if(alias) redirect(`/blog/${alias}`);
+  const alias=duplicateAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
   const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
   if (sep10) return <Sep10Article article={sep10} />;
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);
