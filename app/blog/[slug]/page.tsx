@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { Header, Footer, CTA, JsonLd } from '../../components';
 import { blogPosts, site } from '../../data';
 import { aug21BlogBatch, aug21Slugs } from '../../aug21-blog';
@@ -11,34 +11,39 @@ import { sep8BlogBatch, sep8BlogSlugs } from '../../sep8-content';
 import { sep9BlogBatch, sep9BlogSlugs } from '../../sep9-content';
 import { sep10BlogBatch, sep10BlogSlugs } from '../../sep10-content';
 
+const duplicateAliases: Record<string,string> = {'aug13-philippines-medical-billing-claim-status-contact-log':'aug18-philippines-medical-billing-claim-status-contact-log'};
+const seoTitle=(value:string)=>{const concise=value.replace(/^Philippines medical billing /i,'');return concise.length<=58?concise:`${concise.slice(0,55).replace(/\s+\S*$/,'')}…`};
+const seoDescription=(value:string)=>value.length<=155?value:`${value.slice(0,152).replace(/\s+\S*$/,'')}…`;
+
 export function generateStaticParams() {
   return [...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const alias=duplicateAliases[slug]; if(alias) redirect(`/blog/${alias}`);
   const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
-  if (sep10) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep10.slug}`; return { title: sep10.title, description: sep10.description, alternates: { canonical }, openGraph: { title: sep10.title, description: sep10.description, type: 'article', url: canonical, images: [sep10.featuredImage] } }; }
+  if (sep10) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep10.slug}`; return { title: seoTitle(sep10.title), description: seoDescription(sep10.description), alternates: { canonical }, openGraph: { title: seoTitle(sep10.title), description: seoDescription(sep10.description), type: 'article', url: canonical, images: [sep10.featuredImage] } }; }
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);
-  if (sep9) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep9.slug}`; return { title: sep9.title, description: sep9.description, alternates: { canonical }, openGraph: { title: sep9.title, description: sep9.description, type: 'article', url: canonical, images: [sep9.featuredImage] } }; }
+  if (sep9) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep9.slug}`; return { title: seoTitle(sep9.title), description: seoDescription(sep9.description), alternates: { canonical }, openGraph: { title: seoTitle(sep9.title), description: seoDescription(sep9.description), type: 'article', url: canonical, images: [sep9.featuredImage] } }; }
   const sep8 = sep8BlogBatch.find((item) => item.slug === slug);
-  if (sep8) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep8.slug}`; return { title: sep8.title, description: sep8.description, alternates: { canonical }, openGraph: { title: sep8.title, description: sep8.description, type: 'article', url: canonical, images: [sep8.featuredImage] } }; }
+  if (sep8) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep8.slug}`; return { title: seoTitle(sep8.title), description: seoDescription(sep8.description), alternates: { canonical }, openGraph: { title: seoTitle(sep8.title), description: seoDescription(sep8.description), type: 'article', url: canonical, images: [sep8.featuredImage] } }; }
   const sep7 = sep7BlogBatch.find((item) => item.slug === slug);
-  if (sep7) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep7.slug}`; return { title: sep7.title, description: sep7.description, alternates: { canonical }, openGraph: { title: sep7.title, description: sep7.description, type: 'article', url: canonical, images: [sep7.featuredImage] } }; }
+  if (sep7) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep7.slug}`; return { title: seoTitle(sep7.title), description: seoDescription(sep7.description), alternates: { canonical }, openGraph: { title: seoTitle(sep7.title), description: seoDescription(sep7.description), type: 'article', url: canonical, images: [sep7.featuredImage] } }; }
   const sep4 = sep4BlogBatch.find((item) => item.slug === slug);
-  if (sep4) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep4.slug}`; return { title: sep4.title, description: sep4.description, alternates: { canonical }, openGraph: { title: sep4.title, description: sep4.description, type: 'article', url: canonical, images: [sep4.featuredImage] } }; }
+  if (sep4) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep4.slug}`; return { title: seoTitle(sep4.title), description: seoDescription(sep4.description), alternates: { canonical }, openGraph: { title: seoTitle(sep4.title), description: seoDescription(sep4.description), type: 'article', url: canonical, images: [sep4.featuredImage] } }; }
   const sep3 = sep3BlogBatch.find((item) => item.slug === slug);
-  if (sep3) return { title: sep3.title, description: sep3.description, alternates: { canonical: `https://${String(site.domain).toLowerCase()}/blog/${sep3.slug}` }, openGraph: { title: sep3.title, description: sep3.description, type: 'article', url: `https://${String(site.domain).toLowerCase()}/blog/${sep3.slug}` } };
+  if (sep3) return { title: seoTitle(sep3.title), description: seoDescription(sep3.description), alternates: { canonical: `https://${String(site.domain).toLowerCase()}/blog/${sep3.slug}` }, openGraph: { title: seoTitle(sep3.title), description: seoDescription(sep3.description), type: 'article', url: `https://${String(site.domain).toLowerCase()}/blog/${sep3.slug}` } };
   const aug23 = aug23BlogBatch.find((item) => item.slug === slug);
-  if (aug23) return { title: aug23.title, description: aug23.description, alternates: { canonical: `https://${String(site.domain).toLowerCase()}/blog/${aug23.slug}` }, openGraph: { title: aug23.title, description: aug23.description, type: 'article', url: `https://${String(site.domain).toLowerCase()}/blog/${aug23.slug}` } };
+  if (aug23) return { title: seoTitle(aug23.title), description: seoDescription(aug23.description), alternates: { canonical: `https://${String(site.domain).toLowerCase()}/blog/${aug23.slug}` }, openGraph: { title: seoTitle(aug23.title), description: seoDescription(aug23.description), type: 'article', url: `https://${String(site.domain).toLowerCase()}/blog/${aug23.slug}` } };
   const aug21 = aug21BlogBatch.find((item) => item.slug === slug);
-  if (aug21) return { title: aug21.title, description: aug21.description, alternates: { canonical: `https://${String(site.domain).toLowerCase()}/blog/${aug21.slug}` }, openGraph: { title: aug21.title, description: aug21.description, type: 'article', url: `https://${String(site.domain).toLowerCase()}/blog/${aug21.slug}` } };
+  if (aug21) return { title: seoTitle(aug21.title), description: seoDescription(aug21.description), alternates: { canonical: `https://${String(site.domain).toLowerCase()}/blog/${aug21.slug}` }, openGraph: { title: seoTitle(aug21.title), description: seoDescription(aug21.description), type: 'article', url: `https://${String(site.domain).toLowerCase()}/blog/${aug21.slug}` } };
   const post = blogPosts.find((item) => item.slug === slug);
-  if (!post) return {};
+  if (!post) { const suffix=slug.replace(/^philippines-medical-billing-/,''); const target=blogPosts.find((item)=>item.slug!==slug&&item.slug.endsWith(`-${suffix}`)); if(target) redirect(`/blog/${target.slug}`); return {}; }
   const canonical = `https://${String(site.domain).toLowerCase()}/blog/${post.slug}`;
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: seoTitle(post.title),
+    description: seoDescription(post.excerpt),
     alternates: { canonical },
     openGraph: { title: post.title, description: post.excerpt, type: 'article', url: canonical },
   };
@@ -277,6 +282,7 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
 
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const alias=duplicateAliases[slug]; if(alias) redirect(`/blog/${alias}`);
   const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
   if (sep10) return <Sep10Article article={sep10} />;
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);

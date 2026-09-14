@@ -1,6 +1,8 @@
 import { blogPosts, services, site, staffingOffer } from './data';
 import { Footer, Header, JsonLd } from './components';
 
+export const metadata = { alternates: { canonical: '/' } };
+
 const queue = [
   { item: 'Invoice batch', owner: 'Billing desk', state: 'Ready for review', tone: 'mint' },
   { item: 'Missing PO', owner: 'Client owner', state: 'Approval needed', tone: 'amber' },

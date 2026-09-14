@@ -10,8 +10,9 @@ import { sep8BlogBatch } from "../sep8-content";
 import { sep9BlogBatch } from "../sep9-content";
 import { sep10BlogBatch } from "../sep10-content";
 export const metadata = {
-  title: `Blog | ${site.brand}`,
-  description: "Practical Philippines staffing guides.",
+  title: "Billing Operations Blog",
+  description: "Practical guides for scoping Philippines-based billing support, documenting handoffs, controlling exceptions, and reviewing recurring work.",
+  alternates: { canonical: "/blog" },
 };
 export default function Blog() {
   const daily = [
