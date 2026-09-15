@@ -16,6 +16,7 @@ Outsourced Billing Services serves teams that need Philippines-based billing sup
 | Subscription billing | `/services/subscription-billing-support` | `/research/research-medical-billing-subscription-billing-review` | How should a recurring-charge queue handle plan changes, pauses, and credits without assuming approval? | Delivered locally: one route-local link in the verified built main content. | Preserve rendered-source commit `efd1ac6cfa0a8c865161b544bf1ea73ca73724ed`; deployment and public verification remain unavailable under the repository routine policy. |
 | Usage billing | `/services/usage-billing-administration` | `/research/research-medical-billing-usage-billing-reconciliation` | How can a team reconcile activity evidence with a draft usage charge? | Delivered locally: one route-local link in the verified built main content. | Preserve rendered-source commit `28df26082c67cc945dc40901ecced87589d635d2`; deployment and public verification remain unavailable under the repository routine policy. |
 | Credit memo administration | `/services/credit-memo-administration` | `/research/research-medical-billing-credit-memo-governance` | What evidence and approval should be visible before a credit memo changes an account balance? | Delivered locally: one route-local link in the verified built main content. | Preserve rendered-source commit `de1262931343d2c5168c8658f69c657801134706`; deployment and public verification remain unavailable under the repository routine policy. |
+| Collections follow-up | `/services/collections-follow-up` | `/research/research-medical-billing-collections-follow-up` | How can approved follow-up preserve account facts and hand off exceptions? | Delivered locally: one route-local link in the verified built main content. | Preserve rendered-source commit `d94ec962d2ac53f96bb473fe2453e9c564cd18c9`; deployment and public verification remain unavailable under the repository routine policy. |
 
 ## Evidence captured on 2026-08-27
 
@@ -56,3 +57,10 @@ Any future CTA must use the existing `researchPosts` `serviceCta` field instead 
 - Local artifact proof: the research route has its expected H1 and canonical, exactly one `/services/credit-memo-administration` link inside main, Article and Open Graph modified date `2026-09-12`, and a sitemap `<loc>`; the repository sitemap intentionally emits no `<lastmod>`.
 - Deployment policy: `ops/recurring-routines.json` prohibits Coolify API/deploy, deployment monitoring, and live-site verification for its approved publishing routines. No deployment or public request was made.
 - Preserve rendered-source commit `de1262931343d2c5168c8658f69c657801134706`; this status-only record does not claim public rollout.
+
+## Release status — 2026-09-15
+
+- Rendered source: `d94ec962d2ac53f96bb473fe2453e9c564cd18c9` added the collections-follow-up next step and set this record's modified date to 2026-09-15.
+- Local artifact proof: the research route has its expected H1 and canonical, exactly one `/services/collections-follow-up` link inside main, the visible `Prepare a controlled follow-up queue` marker, Article and Open Graph modified date `2026-09-15`, and a sitemap `<loc>`; the repository sitemap intentionally emits no `<lastmod>`.
+- Deployment policy: `ops/recurring-routines.json` prohibits Coolify API/deploy, deployment monitoring, and live-site verification for its approved publishing routines. No deployment or public request was made.
+- Preserve rendered-source commit `d94ec962d2ac53f96bb473fe2453e9c564cd18c9`; this status-only record does not claim public rollout.
