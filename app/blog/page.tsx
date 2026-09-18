@@ -9,7 +9,6 @@ import { sep7BlogBatch } from "../sep7-content";
 import { sep8BlogBatch } from "../sep8-content";
 import { sep9BlogBatch } from "../sep9-content";
 import { sep10BlogBatch } from "../sep10-content";
-import { sep18BlogBatch } from "../sep18-content";
 import { sep18bBlogBatch } from "../sep18b-content";
 export const metadata = {
   title: "Billing Operations Blog",
@@ -19,9 +18,6 @@ export const metadata = {
 export default function Blog() {
   const daily = [
     ...sep18bBlogBatch.map(
-      (p) => [p.slug, { title: p.title, description: p.description }] as const,
-    ),
-    ...sep18BlogBatch.map(
       (p) => [p.slug, { title: p.title, description: p.description }] as const,
     ),
     ...sep10BlogBatch.map(

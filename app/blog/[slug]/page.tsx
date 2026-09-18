@@ -10,7 +10,6 @@ import { sep7BlogBatch, sep7BlogSlugs } from '../../sep7-content';
 import { sep8BlogBatch, sep8BlogSlugs } from '../../sep8-content';
 import { sep9BlogBatch, sep9BlogSlugs } from '../../sep9-content';
 import { sep10BlogBatch, sep10BlogSlugs } from '../../sep10-content';
-import { sep18BlogBatch, sep18BlogSlugs } from '../../sep18-content';
 import { sep18bBlogBatch, sep18bBlogSlugs } from '../../sep18b-content';
 
 const duplicateAliases: Record<string,string> = {'aug13-philippines-medical-billing-claim-status-contact-log':'aug18-philippines-medical-billing-claim-status-contact-log'};
@@ -18,7 +17,7 @@ const seoTitle=(value:string)=>{const concise=value.replace(/^Philippines medica
 const seoDescription=(value:string)=>value.length<=155?value:`${value.slice(0,152).replace(/\s+\S*$/,'')}…`;
 
 export function generateStaticParams() {
-  return [...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep18BlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
+  return [...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -26,8 +25,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const alias=duplicateAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
   const sep18b = sep18bBlogBatch.find((item) => item.slug === slug);
   if (sep18b) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep18b.slug}`; return { title: seoTitle(sep18b.title), description: seoDescription(sep18b.description), alternates: { canonical }, openGraph: { title: seoTitle(sep18b.title), description: seoDescription(sep18b.description), type: 'article', url: canonical, images: [sep18b.featuredImage] } }; }
-  const sep18 = sep18BlogBatch.find((item) => item.slug === slug);
-  if (sep18) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep18.slug}`; return { title: seoTitle(sep18.title), description: seoDescription(sep18.description), alternates: { canonical }, openGraph: { title: seoTitle(sep18.title), description: seoDescription(sep18.description), type: 'article', url: canonical, images: [sep18.featuredImage] } }; }
   const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
   if (sep10) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep10.slug}`; return { title: seoTitle(sep10.title), description: seoDescription(sep10.description), alternates: { canonical }, openGraph: { title: seoTitle(sep10.title), description: seoDescription(sep10.description), type: 'article', url: canonical, images: [sep10.featuredImage] } }; }
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);
@@ -129,7 +126,7 @@ function Sep10Article({ article }: { article: (typeof sep10BlogBatch)[number] })
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
-function Sep18Article({ article }: { article: (typeof sep18BlogBatch)[number] | (typeof sep18bBlogBatch)[number] }) {
+function Sep18bArticle({ article }: { article: (typeof sep18bBlogBatch)[number] }) {
   const canonical = `https://${String(site.domain).toLowerCase()}/blog/${article.slug}`;
   const image = `https://${String(site.domain).toLowerCase()}${article.featuredImage}`;
   return <><Header hidePricing /><main className="article-shell"><article>
@@ -302,9 +299,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const alias=duplicateAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
   const sep18b = sep18bBlogBatch.find((item) => item.slug === slug);
-  if (sep18b) return <Sep18Article article={sep18b} />;
-  const sep18 = sep18BlogBatch.find((item) => item.slug === slug);
-  if (sep18) return <Sep18Article article={sep18} />;
+  if (sep18b) return <Sep18bArticle article={sep18b} />;
   const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
   if (sep10) return <Sep10Article article={sep10} />;
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);
