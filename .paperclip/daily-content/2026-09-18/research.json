@@ -1,0 +1,16 @@
+{
+  "run": "OUTAAAAAAAAAAAAA-71",
+  "family": "research",
+  "required": 5,
+  "publicationTimezone": "UTC",
+  "productionBranch": "main",
+  "contentCommit": "8dcde011c1b436f1ffa66b4b2d6a34ceb577a7ee",
+  "status": "awaiting_live_verification",
+  "articles": [
+    {"topic":"invoice approval latency","slug":"research-outsourced-billing-invoice-approval-latency-2026","sources":["https://www.gao.gov/greenbook","https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://www.ftc.gov/business-guidance/privacy-security/data-security"],"contentHash":"26716160104e9820ed388ec474d7eb2a15cbbfc96e60678f86d10a890d6779e9","publicationDate":"2026-09-18","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-invoice-approval-latency-2026","verificationTime":null},
+    {"topic":"usage event completeness","slug":"research-outsourced-billing-usage-event-completeness-2026","sources":["https://www.nist.gov/cyberframework","https://www.gao.gov/greenbook","https://www.ftc.gov/business-guidance/privacy-security/data-security"],"contentHash":"d246dd3a44c056488de40ac500f4a0de765e28dfb1cefd4584e3a56cf668e8e2","publicationDate":"2026-09-18","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-usage-event-completeness-2026","verificationTime":null},
+    {"topic":"subscription change cutoff","slug":"research-outsourced-billing-subscription-change-cutoff-2026","sources":["https://www.ftc.gov/business-guidance/resources/negative-option-rule","https://www.ftc.gov/business-guidance/privacy-security/data-security","https://www.gao.gov/greenbook"],"contentHash":"82cced35415fc6fd1a84cf8a23df8b2acaec55134e2ce168528c4111af26a17d","publicationDate":"2026-09-18","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-subscription-change-cutoff-2026","verificationTime":null},
+    {"topic":"revenue schedule source lineage","slug":"research-outsourced-billing-revenue-schedule-source-lineage-2026","sources":["https://www.fasb.org/page/PageContent?pageId=/standards/accounting-standards-codification.html","https://www.gao.gov/greenbook","https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"],"contentHash":"4665c3b46b5a1fd9e3fa0695fbc049c921ea09084b0cfaae222218d346dc5ad8","publicationDate":"2026-09-18","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-revenue-schedule-source-lineage-2026","verificationTime":null},
+    {"topic":"billing inquiry evidence completeness","slug":"research-outsourced-billing-inquiry-evidence-completeness-2026","sources":["https://www.ftc.gov/business-guidance/privacy-security/data-security","https://www.nist.gov/privacy-framework","https://www.gao.gov/greenbook"],"contentHash":"654d3f8e21a314b8e82840cfa4bbfd57f5f45851dc737665c560e00a021094b6","publicationDate":"2026-09-18","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-inquiry-evidence-completeness-2026","verificationTime":null}
+  ]
+}

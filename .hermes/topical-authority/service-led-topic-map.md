@@ -31,3 +31,13 @@
 `/research/research-medical-billing-remittance-review` already has one route-local next-step link to `/services/payment-posting`. The rendered research route has its H1 and canonical URL, the service href appears once inside `<main>`, and both routes are in the generated sitemap. Treat this pair as delivered and non-duplicable; do not add another CTA for the same handoff.
 
 No new reader-facing handoff is selected from this map until a separate review confirms a useful, currently absent source-to-service pair.
+
+## 2026-09-18 Research publication ledger
+
+| Service pillar | New Research route | Distinct reader decision | Status |
+| --- | --- | --- | --- |
+| `/services/invoice-preparation` | `/research/research-outsourced-billing-invoice-approval-latency-2026` | Is delay in source intake, draft preparation, owner review, correction, or release? | Awaiting live verification |
+| `/services/usage-billing-administration` | `/research/research-outsourced-billing-usage-event-completeness-2026` | Can source usage reach draft quantities without silent loss, duplication, or period shift? | Awaiting live verification |
+| `/services/subscription-billing-support` | `/research/research-outsourced-billing-subscription-change-cutoff-2026` | Which approved subscription version governed a cycle-boundary charge? | Awaiting live verification |
+| `/services/revenue-schedule-preparation` | `/research/research-outsourced-billing-revenue-schedule-source-lineage-2026` | Can an authorized reviewer rebuild every prepared schedule row? | Awaiting live verification |
+| `/services/customer-billing-support` | `/research/research-outsourced-billing-inquiry-evidence-completeness-2026` | Is an inquiry supported and routed well enough for an owner decision? | Awaiting live verification |
