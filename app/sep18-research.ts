@@ -1,6 +1,6 @@
 const published = '2026-09-18' as const;
 const checked = 'September 18, 2026';
-const featuredImage = '/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp';
+const featuredImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png';
 
 type Seed = {
   slug: string;
