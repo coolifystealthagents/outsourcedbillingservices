@@ -10,18 +10,21 @@ import { sep7BlogBatch, sep7BlogSlugs } from '../../sep7-content';
 import { sep8BlogBatch, sep8BlogSlugs } from '../../sep8-content';
 import { sep9BlogBatch, sep9BlogSlugs } from '../../sep9-content';
 import { sep10BlogBatch, sep10BlogSlugs } from '../../sep10-content';
+import { sep18BlogBatch, sep18BlogSlugs } from '../../sep18-content';
 
 const duplicateAliases: Record<string,string> = {'aug13-philippines-medical-billing-claim-status-contact-log':'aug18-philippines-medical-billing-claim-status-contact-log'};
 const seoTitle=(value:string)=>{const concise=value.replace(/^Philippines medical billing /i,'');return concise.length<=58?concise:`${concise.slice(0,55).replace(/\s+\S*$/,'')}…`};
 const seoDescription=(value:string)=>value.length<=155?value:`${value.slice(0,152).replace(/\s+\S*$/,'')}…`;
 
 export function generateStaticParams() {
-  return [...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
+  return [...sep18BlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const alias=duplicateAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
+  const sep18 = sep18BlogBatch.find((item) => item.slug === slug);
+  if (sep18) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep18.slug}`; return { title: seoTitle(sep18.title), description: seoDescription(sep18.description), alternates: { canonical }, openGraph: { title: seoTitle(sep18.title), description: seoDescription(sep18.description), type: 'article', url: canonical, images: [sep18.featuredImage] } }; }
   const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
   if (sep10) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep10.slug}`; return { title: seoTitle(sep10.title), description: seoDescription(sep10.description), alternates: { canonical }, openGraph: { title: seoTitle(sep10.title), description: seoDescription(sep10.description), type: 'article', url: canonical, images: [sep10.featuredImage] } }; }
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);
@@ -120,6 +123,18 @@ function Sep10Article({ article }: { article: (typeof sep10BlogBatch)[number] })
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 10, 2026</time></p>
     <img src={article.featuredImage} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+  </article><CTA /></main><Footer hidePricing /></>;
+}
+
+function Sep18Article({ article }: { article: (typeof sep18BlogBatch)[number] }) {
+  const canonical = `https://${String(site.domain).toLowerCase()}/blog/${article.slug}`;
+  const image = `https://${String(site.domain).toLowerCase()}${article.featuredImage}`;
+  return <><Header hidePricing /><main className="article-shell"><article>
+    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,mainEntityOfPage:canonical,image,author:{'@type':'Organization',name:site.brand},publisher:{'@type':'Organization',name:site.brand,url:`https://${String(site.domain).toLowerCase()}`}}} />
+    <p className="eyebrow">Billing operations guide</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 18, 2026</time></p>
+    <img src={article.featuredImage} alt="Billing specialist reviewing a structured billing operations dashboard" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
+    <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
@@ -283,6 +298,8 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const alias=duplicateAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
+  const sep18 = sep18BlogBatch.find((item) => item.slug === slug);
+  if (sep18) return <Sep18Article article={sep18} />;
   const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
   if (sep10) return <Sep10Article article={sep10} />;
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);
