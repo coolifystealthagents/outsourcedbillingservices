@@ -4,6 +4,7 @@ import StandardContactForm from "./StandardContactForm";
 import "./contact.css";
 import "./image-fix.css";
 
+
 export const metadata: Metadata = { title: "Contact Us | Outsourced Billing Support", description: "Book a free consultation to scope accountable outsourced billing support for your business.", alternates: { canonical: "/contact-us" }, robots: { index: true, follow: true } };
 const services = [
   ["Invoice preparation", "Prepare complete, review-ready invoices from approved terms, time, usage, or delivery records."],
@@ -17,6 +18,7 @@ const reviewPriorities = [
   ["Controlled authority", "Your designated finance owner retains approval, credit, and payment-release decisions."],
 ];
 
+
 export default function ContactUsPage(){return <>
   <Header/>
   <main className="trusted-contact tc-legal">
@@ -29,7 +31,8 @@ export default function ContactUsPage(){return <>
     <section className="tc-testimonials"><div className="container"><p className="tc-kicker">Billing review priorities</p><h2>A billing desk that makes the queue visible.</h2><div className="tc-quote-grid">{reviewPriorities.map(([title,body])=><article key={title}><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
     <section className="tc-section"><div className="container tc-check-grid"><div><p className="tc-kicker">Capability checklist</p><h2>Controls turn activity into cash flow.</h2><p>We’ll map the operating conditions that help outsourced billing stay accurate, responsive, and easy to review.</p></div><ul><li>Billing sources and invoice decision rules</li><li>ERP, payment, CRM, and access boundaries</li><li>Approval owners and weekly review cadence</li><li>Dispute, credit, and short-pay escalation</li><li>Account notes and source-evidence requirements</li><li>Aging targets and first-month scorecard</li></ul></div></section>
     <section className="tc-why"><div className="container tc-why-grid"><img src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" width="1400" height="1400" alt="Billing specialists reviewing an organized invoice and payment dashboard"/><div><p className="tc-kicker">Why structure matters</p><h2>Every billing action should leave a decision trail.</h2><p>We shape billing support around approved inputs, named owners, secure access, and unmistakable escalation points—so throughput grows without weakening financial control.</p><a href="#contactPageForm">Scope my billing desk →</a></div></div></section>
-    <section className="tc-about"><div className="container tc-about-grid"><div><p className="tc-kicker">Powered by a proven team</p><h2>About Stealth Agents</h2><p>Stealth Agents works with over 35+ different industries. We're featured on Forbes as the top rated virtual assistant company.</p></div><a href="https://stealthagents.com" rel="noopener noreferrer">Powered by Stealth Agents</a></div></section>
+    <section className="tc-about"><div className="container tc-about-grid"><div><p className="tc-kicker">Powered by a proven team</p><h2>About Stealth Agents</h2><p>Stealth Agents works with over 35+ different industries. We're featured on Forbes as the top rated virtual assistant company.</p></div><a href="https://stealthagents.com" rel="noopener noreferrer">Powered by StealthAgents</a></div></section>
     <section className="container tc-final"><div><p className="tc-kicker">A better billing brief</p><h2>Build billing support your finance team can confidently review.</h2><p>Share your billing queue, systems, approval rules, and goals. We’ll help define the desk and next steps.</p></div><a href="#contactPageForm">Book a free consultation</a></section>
   </main><Footer/>
 </>}
+
