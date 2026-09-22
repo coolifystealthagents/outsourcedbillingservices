@@ -1,0 +1,37 @@
+{
+  "routine": "daily-blog-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-77",
+  "requiredCount": 12,
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-09-22",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "sourceCommit": "c69eb3fb0b9d28d5ac1b3861f01bd4a29ba79599",
+  "sources": [
+    "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+    "https://www.nist.gov/cyberframework"
+  ],
+  "validation": {
+    "typescript": "passed",
+    "productionBuild": "passed; 590 static pages generated",
+    "humanizer": "passed; no em/en dashes or flagged formulaic phrases",
+    "renderedRoutes": 12,
+    "sitemapEntries": 12
+  },
+  "articles": [
+    ["invoice preparation","invoice release approval","invoice-release-approval-log","4170e4ab47f6f33d239f9bee1a80555d2429b45a22e5a3e9b86c83a49cf6cf4e"],
+    ["usage billing administration","usage meter reconciliation","usage-meter-source-reconciliation","8e3dc1137f25db35fb942f6e891f136ae41c9c16685fd8f701f735bf9d2b8843"],
+    ["subscription billing support","subscription proration","subscription-proration-review","57674fba1faf91fe00842952f10643afa78ad599f2c9693ce44e09fbd2ab8ec6"],
+    ["billing reconciliation","payment batch reconciliation","payment-batch-to-bank-reconciliation","cbe75ca713ec0e99b85ca244f91214afdf2d011d485c984dcf6c8db984045cff"],
+    ["credit memo administration","credit memo intake","credit-memo-request-intake","2fb4e051c692c0f917f5d2b59b7ac686bb601e862e701bab26702fb3da282960"],
+    ["collections follow-up","promise to pay tracking","collections-promise-to-pay-log","3305bb90849bb8c17127feb7010f03d7a87e5bc3a4b3a960da6adf4a052f86f5"],
+    ["customer billing support","billing inquiry routing","customer-billing-inquiry-routing","9959fed8c9e7a1aca75309fe0762fa1e75d3b6ffa9918b38676ec4117da69ab7"],
+    ["revenue schedule preparation","schedule change control","revenue-schedule-change-control","07c5087cc1b245f21a8bd1930bcd07ecdb2074725e72fdf935881993f5dd1d34"],
+    ["billing data quality review","import reject queue","billing-import-reject-queue","09ddaf4192a2adce57c281dee3ddadbe48aea52039a0395e932470f873c955b4"],
+    ["dispute documentation","invoice dispute evidence","invoice-dispute-evidence-file","dadd3cd160af38698b55b84ea9cae5f94c6920a5de90bfc85f18d26983fe9ea3"],
+    ["month-end billing support","billing cutoff calendar","month-end-billing-cutoff-calendar","d3798d21990175ed293c5e2a178f7c256a8e1ce78608b69e19aad07aaaba562b"],
+    ["subscription billing support","recurring renewal check","recurring-billing-renewal-check","99d53cb2936d7ec0d8e3dfa4cf84c6f6e49c2b38134829fd86ddea896fed9fcb"]
+  ],
+  "articleTupleFields": ["family","topic","slug","renderedContentSha256"],
+  "liveVerification": []
+}
