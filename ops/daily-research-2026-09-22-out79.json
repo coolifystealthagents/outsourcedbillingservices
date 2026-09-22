@@ -1,0 +1,36 @@
+{
+  "routine": "daily-research-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-79",
+  "runId": "af2dcffe-831",
+  "timezone": "UTC",
+  "required": 5,
+  "prepared": 5,
+  "verified": 0,
+  "publicationDate": "2026-09-22",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "6ab0ef7fb52a4393a1f7fdcf8cfec9d5b575690d",
+  "contentCommit": "184cec6224bd38210bea8b89131b56ac606f570f",
+  "status": "awaiting-production-deployment",
+  "validation": {
+    "typecheck": "passed",
+    "tests": "passed: 7 suites",
+    "productionBuild": "passed: 600 static pages",
+    "renderedChecks": "passed: five HTML routes, canonicals, Article dates, and sitemap entries",
+    "buildWarning": "Existing CSS autoprefixer warning for mixed support of start; unrelated to this batch."
+  },
+  "sourcesChecked": [
+    {"title":"Standards for Internal Control in the Federal Government: 2025 Revision","publisher":"U.S. Government Accountability Office","url":"https://www.gao.gov/greenbook","checked":"2026-09-22"},
+    {"title":"Security and Privacy Controls for Information Systems and Organizations, SP 800-53 Revision 5","publisher":"National Institute of Standards and Technology","url":"https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","checked":"2026-09-22"},
+    {"title":"Protecting Personal Information: A Guide for Business","publisher":"U.S. Federal Trade Commission","url":"https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business","checked":"2026-09-22"},
+    {"title":"Revenue Recognition: ASU 2014-09, Revenue from Contracts with Customers (Topic 606)","publisher":"Financial Accounting Standards Board","url":"https://fasb.org/projects/recently-completed-projects/revenue-recognition-summary","checked":"2026-09-22"},
+    {"title":"Use Logging on Business Systems","publisher":"Cybersecurity and Infrastructure Security Agency","url":"https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/use-logging-on-business-systems","checked":"2026-09-22"}
+  ],
+  "articles": [
+    {"family":"usage-billing-administration","topic":"usage event to invoice lineage","slug":"research-outsourced-billing-usage-event-to-invoice-lineage-2026","contentHash":"sha256:8b341bccd0d5d22e84b9e230aaa54ba75a362cc2eb25209e0586031aa61174c6","publicationDate":"2026-09-22","commitSha":"184cec6224bd38210bea8b89131b56ac606f570f","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-usage-event-to-invoice-lineage-2026","verificationTime":null},
+    {"family":"subscription-billing-support","topic":"subscription change effective-date lineage","slug":"research-outsourced-billing-subscription-change-effective-date-lineage-2026","contentHash":"sha256:f59b80d3764d61b8fa24df06302a50b2d8f89b962b4e98ed512bcc59926509b3","publicationDate":"2026-09-22","commitSha":"184cec6224bd38210bea8b89131b56ac606f570f","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-subscription-change-effective-date-lineage-2026","verificationTime":null},
+    {"family":"payment-posting","topic":"payment application suspense aging","slug":"research-outsourced-billing-payment-application-suspense-aging-2026","contentHash":"sha256:fbf0da84b478f34d2a7739589157912ec1c56704e4acf257850cc3d3496fbbb3","publicationDate":"2026-09-22","commitSha":"184cec6224bd38210bea8b89131b56ac606f570f","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-payment-application-suspense-aging-2026","verificationTime":null},
+    {"family":"invoice-preparation","topic":"invoice preparation and release segregation","slug":"research-outsourced-billing-invoice-release-segregation-2026","contentHash":"sha256:71033954bd04df7136a02764676ffb5beb75aab687081993015383f26691182b","publicationDate":"2026-09-22","commitSha":"184cec6224bd38210bea8b89131b56ac606f570f","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-invoice-release-segregation-2026","verificationTime":null},
+    {"family":"revenue-schedule-preparation","topic":"revenue schedule source change control","slug":"research-outsourced-billing-revenue-schedule-source-change-control-2026","contentHash":"sha256:6355de34c23faeeb1741023faa74917d164819c4706f40997933311ad39f32d6","publicationDate":"2026-09-22","commitSha":"184cec6224bd38210bea8b89131b56ac606f570f","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-revenue-schedule-source-change-control-2026","verificationTime":null}
+  ]
+}
