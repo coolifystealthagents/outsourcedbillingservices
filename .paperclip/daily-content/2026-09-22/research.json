@@ -1,0 +1,20 @@
+{
+  "run": "OUTAAAAAAAAAAAAA-78",
+  "family": "research",
+  "required": 5,
+  "publicationTimezone": "UTC",
+  "productionBranch": "main",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "contentCommit": null,
+  "remoteSha": null,
+  "status": "prepared",
+  "validation": {"content": "passed", "build": "passed"},
+  "deployment": null,
+  "articles": [
+    {"topic":"credit memo approval evidence","slug":"research-outsourced-billing-credit-memo-approval-evidence-2026","sources":["https://www.gao.gov/greenbook","https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"],"contentHash":"58ac3deb564baf4c6e59ea70de2616f347c9882407adc3d3ecb01296add179f3","publicationDate":"2026-09-22","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-credit-memo-approval-evidence-2026","verificationTime":null},
+    {"topic":"month-end billing cutoff completeness","slug":"research-outsourced-billing-month-end-cutoff-completeness-2026","sources":["https://www.gao.gov/greenbook","https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"],"contentHash":"60b3e32e600e8985f1d486708196fbd7c7fa57af988de630d3a0311a8a88516c","publicationDate":"2026-09-22","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-month-end-cutoff-completeness-2026","verificationTime":null},
+    {"topic":"billing dispute evidence chain","slug":"research-outsourced-billing-dispute-evidence-chain-2026","sources":["https://www.gao.gov/greenbook","https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business","https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/debt-collection/"],"contentHash":"fbe2197f9382d3d6453081f1819b6c8e251ba2d5b49ed8404c661a1bb162de86","publicationDate":"2026-09-22","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-dispute-evidence-chain-2026","verificationTime":null},
+    {"topic":"collections promise-to-pay authority","slug":"research-outsourced-billing-promise-to-pay-authority-2026","sources":["https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/debt-collection/","https://www.gao.gov/greenbook","https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"],"contentHash":"e22db31be8a38082643e093fb1917dc10671711e518dd2b296a8328cd346ff79","publicationDate":"2026-09-22","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-promise-to-pay-authority-2026","verificationTime":null},
+    {"topic":"billing reconciliation control total provenance","slug":"research-outsourced-billing-reconciliation-control-total-provenance-2026","sources":["https://www.gao.gov/greenbook","https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"],"contentHash":"4ae1de47396b219340b0d2772458a1b7800f32c443fb0d803edbfc66b4dc19dd","publicationDate":"2026-09-22","liveUrl":"https://outsourcedbillingservices.com/research/research-outsourced-billing-reconciliation-control-total-provenance-2026","verificationTime":null}
+  ]
+}

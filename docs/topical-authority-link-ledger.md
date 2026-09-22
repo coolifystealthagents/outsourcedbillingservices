@@ -64,3 +64,12 @@ Any future CTA must use the existing `researchPosts` `serviceCta` field instead 
 - Local artifact proof: the research route has its expected H1 and canonical, exactly one `/services/collections-follow-up` link inside main, the visible `Prepare a controlled follow-up queue` marker, Article and Open Graph modified date `2026-09-15`, and a sitemap `<loc>`; the repository sitemap intentionally emits no `<lastmod>`.
 - Deployment policy: `ops/recurring-routines.json` prohibits Coolify API/deploy, deployment monitoring, and live-site verification for its approved publishing routines. No deployment or public request was made.
 - Preserve rendered-source commit `d94ec962d2ac53f96bb473fe2453e9c564cd18c9`; this status-only record does not claim public rollout.
+## 2026-09-22 Research batch (OUTAAAAAAAAAAAAA-78)
+
+| Topic | Research URL | Conversion path |
+| --- | --- | --- |
+| Credit memo approval evidence | `/research/research-outsourced-billing-credit-memo-approval-evidence-2026` | `/services/credit-memo-administration` |
+| Month-end billing cutoff completeness | `/research/research-outsourced-billing-month-end-cutoff-completeness-2026` | `/services/month-end-billing-support` |
+| Billing dispute evidence chain | `/research/research-outsourced-billing-dispute-evidence-chain-2026` | `/services/dispute-documentation` |
+| Collections promise-to-pay authority | `/research/research-outsourced-billing-promise-to-pay-authority-2026` | `/services/collections-follow-up` |
+| Billing reconciliation control total provenance | `/research/research-outsourced-billing-reconciliation-control-total-provenance-2026` | `/services/billing-reconciliation` |
