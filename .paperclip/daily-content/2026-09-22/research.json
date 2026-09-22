@@ -5,7 +5,7 @@
   "publicationTimezone": "UTC",
   "productionBranch": "main",
   "repository": "coolifystealthagents/outsourcedbillingservices",
-  "contentCommit": "819a5ca4cc50927f8ea3e94f1f375720a04a9b88",
+  "contentCommit": "819a5ca50d243490418f513a9916195860cf3d86",
   "remoteSha": "4b32f920c6312a8547d365d2f2c93269c1e33ef9",
   "status": "deployment_queued",
   "validation": {"content": "passed", "build": "passed"},
