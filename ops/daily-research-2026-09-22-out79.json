@@ -11,7 +11,21 @@
   "productionBranch": "main",
   "baseSha": "6ab0ef7fb52a4393a1f7fdcf8cfec9d5b575690d",
   "contentCommit": "184cec6224bd38210bea8b89131b56ac606f570f",
-  "status": "awaiting-production-deployment",
+  "status": "blocked-production-deployment",
+  "remoteSha": "5abe90f7e66c0aebd3ecd97b2c54b77b4aa2f6fa",
+  "deploymentEvidence": {
+    "applicationUuid": "p134b2omci9euwptg3jkjygg",
+    "resourceUuid": "l13ylpiz5n7x3du8pnr1cdlx",
+    "managementApi": "authenticated requests redirected to login; status unavailable",
+    "publicChecks": [
+      {"attempt":1,"result":"five HTTP 404 responses"},
+      {"attempt":2,"result":"five HTTP 404 responses"},
+      {"attempt":3,"result":"five HTTP 404 responses; no matching sitemap entries"}
+    ],
+    "blocker": "The existing Git-to-Coolify path has not published the pushed production commit, and the configured Coolify API does not accept the routine credential through the configured endpoint.",
+    "unblockOwner": "Coolify3 administrator",
+    "recoveryAction": "Restore API authentication or trigger deployment of main at the recorded remote SHA, then rerun exact URL, title, unique-content, canonical, structured-data, asset, and sitemap verification."
+  },
   "validation": {
     "typecheck": "passed",
     "tests": "passed: 7 suites",
