@@ -1,0 +1,40 @@
+{
+  "routine": "daily-blog-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-80",
+  "requiredCount": 12,
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-09-23",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "sourceCommit": "b5e5d1a7aee17a67a050e50a58d2fd57630b1228",
+  "sources": [
+    "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+    "https://www.nist.gov/cyberframework"
+  ],
+  "validation": {
+    "typescript": "passed",
+    "productionBuild": "passed; 612 static pages generated",
+    "humanizer": "passed; technical prose retained, no em/en dashes or flagged promotional and formulaic phrases",
+    "minimumSubstantiveWords": 954,
+    "renderedRoutes": 12,
+    "canonicalUrls": 12,
+    "datePublishedMatches": 12,
+    "sitemapEntries": 12
+  },
+  "articleTupleFields": ["family", "topic", "slug", "renderedContentSha256"],
+  "articles": [
+    ["invoice preparation", "account onboarding control", "billing-account-onboarding-control", "67168a764ae31507a40d3376eeda7f6839018161423ca337db9f1f11579600df"],
+    ["billing data quality review", "customer master data changes", "customer-master-data-change-log", "f66978880fa2beafba3df3ce14dfea26a0469b2af3cc01230041202e5e2d71ca"],
+    ["invoice preparation", "invoice delivery confirmation", "invoice-delivery-confirmation-workflow", "0301cbd495537cd58c300b6ea0f8fd7c4fa75c98135b945ff94f3732c722ebb6"],
+    ["payment posting", "unapplied cash research", "unapplied-cash-research-queue", "cf48a80ae18d2b73caeb72f219f626561e280aeef2dfa4bafcebfd4fbd8ae339"],
+    ["credit memo administration", "customer refund preparation", "customer-refund-preparation-packet", "7a7b76ce1fa438911ecc613ce74278ce2b84db11c6a428aebd21db5dae29b8b4"],
+    ["collections follow-up", "dunning suppression review", "dunning-suppression-review-register", "cac63753d50a8101b22d234c5ecbc77ea0767a29dcbcebfc31b79f5d2ecf512e"],
+    ["billing reconciliation", "accounts receivable aging rollforward", "accounts-receivable-aging-rollforward", "e38a796a6d04b4f5c49322abe9b6f57235ea4059f21653a8dd33cf2dc57ae367"],
+    ["billing data quality review", "rate card change control", "billing-rate-card-change-control", "ea82cfbb7fffec4330e895aa5788b5f42b1d67b5cfd399bbe0eaee963c210731"],
+    ["invoice preparation", "tax data handoff", "billing-tax-data-handoff-checklist", "950fa5174bc988180e94702985ea12ca0a5fe2fff99fa2a64390e6f36540c02a"],
+    ["customer billing support", "billing contact change verification", "billing-contact-change-verification", "42d90dbe00127dc0fb87f377394a7a61dda60a8c8dc4a888692f0f94626e0b9b"],
+    ["billing operations support", "process offboarding", "billing-process-offboarding-checklist", "7afec861686e4e36d77e8187a999725a4d6ae7d9fcca8366bd2e2822a04491b4"],
+    ["billing operations support", "KPI definition governance", "billing-kpi-definition-register", "8c49c952707037a9f2fb73817a46ca40e4e40b2a24efa1111da6cfdfd9a93d2a"]
+  ],
+  "liveVerification": []
+}
