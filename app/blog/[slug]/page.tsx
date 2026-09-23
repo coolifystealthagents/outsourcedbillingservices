@@ -12,18 +12,21 @@ import { sep9BlogBatch, sep9BlogSlugs } from '../../sep9-content';
 import { sep10BlogBatch, sep10BlogSlugs } from '../../sep10-content';
 import { sep18bBlogBatch, sep18bBlogSlugs } from '../../sep18b-content';
 import { sep22BlogBatch, sep22BlogSlugs } from '../../sep22-content';
+import { sep23BlogBatch, sep23BlogSlugs } from '../../sep23-content';
 
 const duplicateAliases: Record<string,string> = {'aug13-philippines-medical-billing-claim-status-contact-log':'aug18-philippines-medical-billing-claim-status-contact-log'};
 const seoTitle=(value:string)=>{const concise=value.replace(/^Philippines medical billing /i,'');return concise.length<=58?concise:`${concise.slice(0,55).replace(/\s+\S*$/,'')}…`};
 const seoDescription=(value:string)=>value.length<=155?value:`${value.slice(0,152).replace(/\s+\S*$/,'')}…`;
 
 export function generateStaticParams() {
-  return [...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
+  return [...sep23BlogSlugs.map((slug) => ({ slug })), ...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const alias=duplicateAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
+  const sep23 = sep23BlogBatch.find((item) => item.slug === slug);
+  if (sep23) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep23.slug}`; return { title: seoTitle(sep23.title), description: seoDescription(sep23.description), alternates: { canonical }, openGraph: { title: seoTitle(sep23.title), description: seoDescription(sep23.description), type: 'article', url: canonical, images: [sep23.featuredImage], publishedTime: sep23.published } }; }
   const sep22 = sep22BlogBatch.find((item) => item.slug === slug);
   if (sep22) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${sep22.slug}`; return { title: seoTitle(sep22.title), description: seoDescription(sep22.description), alternates: { canonical }, openGraph: { title: seoTitle(sep22.title), description: seoDescription(sep22.description), type: 'article', url: canonical, images: [sep22.featuredImage], publishedTime: sep22.published } }; }
   const sep18b = sep18bBlogBatch.find((item) => item.slug === slug);
@@ -148,6 +151,19 @@ function Sep22Article({ article }: { article: (typeof sep22BlogBatch)[number] })
     <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,mainEntityOfPage:canonical,image,author:{'@type':'Organization',name:site.brand},publisher:{'@type':'Organization',name:site.brand,url:`https://${String(site.domain).toLowerCase()}`},citation:article.sourcesList.map((source) => source.url)}} />
     <p className="eyebrow">Billing operations guide</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 22, 2026</time></p>
     <img src={article.featuredImage} alt="Billing team reviewing a structured work queue and approval record" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
+    <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+    <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
+    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact">request a billing role plan</a>.</p>
+  </article><CTA /></main><Footer hidePricing /></>;
+}
+
+function Sep23Article({ article }: { article: (typeof sep23BlogBatch)[number] }) {
+  const canonical = `https://${String(site.domain).toLowerCase()}/blog/${article.slug}`;
+  const image = `https://${String(site.domain).toLowerCase()}${article.featuredImage}`;
+  return <><Header hidePricing /><main className="article-shell"><article>
+    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,mainEntityOfPage:canonical,image,author:{'@type':'Organization',name:site.brand},publisher:{'@type':'Organization',name:site.brand,url:`https://${String(site.domain).toLowerCase()}`},citation:article.sourcesList.map((source) => source.url)}} />
+    <p className="eyebrow">Billing operations guide</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 23, 2026</time></p>
+    <img src={article.featuredImage} alt="Billing specialist reviewing a controlled billing workflow" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact">request a billing role plan</a>.</p>
@@ -316,6 +332,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const alias=duplicateAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
   const sep22 = sep22BlogBatch.find((item) => item.slug === slug);
   if (sep22) return <Sep22Article article={sep22} />;
+  const sep23 = sep23BlogBatch.find((item) => item.slug === slug);
+  if (sep23) return <Sep23Article article={sep23} />;
   const sep18b = sep18bBlogBatch.find((item) => item.slug === slug);
   if (sep18b) return <Sep18bArticle article={sep18b} />;
   const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
