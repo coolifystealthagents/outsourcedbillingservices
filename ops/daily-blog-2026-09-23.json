@@ -7,6 +7,14 @@
   "repository": "coolifystealthagents/outsourcedbillingservices",
   "productionBranch": "main",
   "sourceCommit": "b5e5d1a7aee17a67a050e50a58d2fd57630b1228",
+  "deployedProductionCommit": "2404345cfe6f9e90fe234fdd8c0f801df9b2f2f4",
+  "deploymentEvidence": {
+    "provider": "Coolify3",
+    "applicationUuid": "p134b2omci9euwptg3jkjygg",
+    "deploymentUuid": "uhxj2csddzfz3t6mlrrt7oxt",
+    "status": "finished",
+    "finishedAt": "2026-09-23T17:45:47Z"
+  },
   "sources": [
     "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
     "https://www.nist.gov/cyberframework"
@@ -36,5 +44,18 @@
     ["billing operations support", "process offboarding", "billing-process-offboarding-checklist", "7afec861686e4e36d77e8187a999725a4d6ae7d9fcca8366bd2e2822a04491b4"],
     ["billing operations support", "KPI definition governance", "billing-kpi-definition-register", "8c49c952707037a9f2fb73817a46ca40e4e40b2a24efa1111da6cfdfd9a93d2a"]
   ],
-  "liveVerification": []
+  "liveVerification": [
+    {"slug":"billing-account-onboarding-control","url":"https://outsourcedbillingservices.com/blog/billing-account-onboarding-control","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"customer-master-data-change-log","url":"https://outsourcedbillingservices.com/blog/customer-master-data-change-log","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"invoice-delivery-confirmation-workflow","url":"https://outsourcedbillingservices.com/blog/invoice-delivery-confirmation-workflow","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"unapplied-cash-research-queue","url":"https://outsourcedbillingservices.com/blog/unapplied-cash-research-queue","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"customer-refund-preparation-packet","url":"https://outsourcedbillingservices.com/blog/customer-refund-preparation-packet","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"dunning-suppression-review-register","url":"https://outsourcedbillingservices.com/blog/dunning-suppression-review-register","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"accounts-receivable-aging-rollforward","url":"https://outsourcedbillingservices.com/blog/accounts-receivable-aging-rollforward","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"billing-rate-card-change-control","url":"https://outsourcedbillingservices.com/blog/billing-rate-card-change-control","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"billing-tax-data-handoff-checklist","url":"https://outsourcedbillingservices.com/blog/billing-tax-data-handoff-checklist","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"billing-contact-change-verification","url":"https://outsourcedbillingservices.com/blog/billing-contact-change-verification","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"billing-process-offboarding-checklist","url":"https://outsourcedbillingservices.com/blog/billing-process-offboarding-checklist","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"},
+    {"slug":"billing-kpi-definition-register","url":"https://outsourcedbillingservices.com/blog/billing-kpi-definition-register","publicationDate":"2026-09-23","verifiedAt":"2026-09-23T19:33:13Z"}
+  ]
 }

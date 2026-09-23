@@ -74,3 +74,22 @@ Any future CTA must use the existing `researchPosts` `serviceCta` field instead 
 | Billing dispute evidence chain | `/research/research-outsourced-billing-dispute-evidence-chain-2026` | `/services/dispute-documentation` |
 | Collections promise-to-pay authority | `/research/research-outsourced-billing-promise-to-pay-authority-2026` | `/services/collections-follow-up` |
 | Billing reconciliation control total provenance | `/research/research-outsourced-billing-reconciliation-control-total-provenance-2026` | `/services/billing-reconciliation` |
+
+## 2026-09-23 Blog batch (OUTAAAAAAAAAAAAA-80)
+
+Deployment `uhxj2csddzfz3t6mlrrt7oxt` finished against production commit `2404345cfe6f9e90fe234fdd8c0f801df9b2f2f4`. All 12 routes were publicly verified at `2026-09-23T19:33:13Z`; each returned HTTP 200 with its unique H1, canonical URL, visible September 23 date, matching `datePublished`, BlogPosting schema, image, service/contact path, blog-index entry, and sitemap entry.
+
+| Topic | Live URL | Conversion path |
+| --- | --- | --- |
+| Account onboarding control | `/blog/billing-account-onboarding-control` | `/services/invoice-preparation` |
+| Customer master data changes | `/blog/customer-master-data-change-log` | `/services/billing-data-quality-review` |
+| Invoice delivery confirmation | `/blog/invoice-delivery-confirmation-workflow` | `/services/invoice-preparation` |
+| Unapplied cash research | `/blog/unapplied-cash-research-queue` | `/services/payment-posting` |
+| Customer refund preparation | `/blog/customer-refund-preparation-packet` | `/services/credit-memo-administration` |
+| Dunning suppression review | `/blog/dunning-suppression-review-register` | `/services/collections-follow-up` |
+| Accounts receivable aging rollforward | `/blog/accounts-receivable-aging-rollforward` | `/services/billing-reconciliation` |
+| Rate card change control | `/blog/billing-rate-card-change-control` | `/services/billing-data-quality-review` |
+| Tax data handoff | `/blog/billing-tax-data-handoff-checklist` | `/services/invoice-preparation` |
+| Billing contact change verification | `/blog/billing-contact-change-verification` | `/services/customer-billing-support` |
+| Billing process offboarding | `/blog/billing-process-offboarding-checklist` | `/services` |
+| KPI definition governance | `/blog/billing-kpi-definition-register` | `/services` |
