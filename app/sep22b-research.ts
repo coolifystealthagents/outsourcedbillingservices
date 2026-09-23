@@ -2,13 +2,16 @@ const published = '2026-09-22' as const;
 const checked = 'September 22, 2026';
 const featuredImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png';
 
-type Source = { title: string; publisher: string; url: string; use: string };
-type Seed = {
+export type ResearchSource = { title: string; publisher: string; url: string; use: string };
+export type ResearchSeed = {
   slug: string; topic: string; title: string; excerpt: string; question: string;
   decision: string; unit: string; population: string; evidence: string; states: string;
   tests: string; interpretation: string; limitations: string; service: string;
-  serviceLabel: string; sources: Source[];
+  serviceLabel: string; sources: ResearchSource[];
 };
+
+type Source = ResearchSource;
+type Seed = ResearchSeed;
 
 const greenBook: Source = { title: 'Standards for Internal Control in the Federal Government: 2025 Revision', publisher: 'U.S. Government Accountability Office', url: 'https://www.gao.gov/greenbook', use: 'quality information, control activities, segregation of duties, and monitoring' };
 const nist: Source = { title: 'Security and Privacy Controls for Information Systems and Organizations, SP 800-53 Revision 5', publisher: 'National Institute of Standards and Technology', url: 'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final', use: 'least privilege, audit records, change control, and information integrity' };
@@ -94,7 +97,7 @@ const seeds: Seed[] = [
   },
 ];
 
-const body = (x: Seed): string[] => [
+export const buildDecisionResearchBody = (x: ResearchSeed): string[] => [
   `Research question. ${x.question} The buyer decision is ${x.decision}. This is a prospective research design, not a report of client results. It keeps source facts, calculations, analysis, owner interpretation, and uncertainty distinct so a buyer can see what the proposed evidence would and would not establish.`,
   `Why this matters for Outsourced Billing Services. A Philippines-based billing specialist can prepare records, compare approved fields, reproduce documented calculations, maintain an exception queue, and assemble a review packet. Delegation does not transfer authority over contracts, accounting, money movement, customer commitments, privacy, legal positions, access administration, or final release. The research tests whether daily records preserve that line.`,
   `Unit of analysis. Use ${x.unit}. Assign a stable, privacy-safe identifier and preserve each corrected, reopened, cancelled, or superseded version. Do not combine events, accounts, invoices, people, and balances in one denominator. If the operation aggregates records, retain the member list or document why a lower level is unavailable.`,
@@ -117,7 +120,7 @@ const body = (x: Seed): string[] => [
 
 export const sep22bResearchBatch = seeds.map((x) => ({
   slug: x.slug, title: x.title, excerpt: x.excerpt, published, datePublished: published,
-  updated: published, featuredImage, body: body(x), serviceCta: {
+  updated: published, featuredImage, body: buildDecisionResearchBody(x), serviceCta: {
     href: x.service, label: x.serviceLabel, title: 'Turn the research question into a bounded billing role',
     body: 'Define sources, required evidence, access, exception ownership, review, and reserved decisions before handing off the queue.',
   },
