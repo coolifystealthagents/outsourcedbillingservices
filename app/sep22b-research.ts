@@ -97,7 +97,7 @@ const seeds: Seed[] = [
   },
 ];
 
-export const buildDecisionResearchBody = (x: ResearchSeed): string[] => [
+export const buildDecisionResearchBody = (x: ResearchSeed, checkedDate = checked): string[] => [
   `Research question. ${x.question} The buyer decision is ${x.decision}. This is a prospective research design, not a report of client results. It keeps source facts, calculations, analysis, owner interpretation, and uncertainty distinct so a buyer can see what the proposed evidence would and would not establish.`,
   `Why this matters for Outsourced Billing Services. A Philippines-based billing specialist can prepare records, compare approved fields, reproduce documented calculations, maintain an exception queue, and assemble a review packet. Delegation does not transfer authority over contracts, accounting, money movement, customer commitments, privacy, legal positions, access administration, or final release. The research tests whether daily records preserve that line.`,
   `Unit of analysis. Use ${x.unit}. Assign a stable, privacy-safe identifier and preserve each corrected, reopened, cancelled, or superseded version. Do not combine events, accounts, invoices, people, and balances in one denominator. If the operation aggregates records, retain the member list or document why a lower level is unavailable.`,
@@ -114,8 +114,8 @@ export const buildDecisionResearchBody = (x: ResearchSeed): string[] => [
   `Decision use. The findings can show whether work stops at intake, mapping, source access, calculation, exception instructions, reviewer capacity, owner judgment, or system completion. A buyer can then narrow the role, improve a required field, adjust a review cadence, or fix a source handoff. The study cannot show that outsourcing caused a pattern or guarantee that staffing will correct it.`,
   `Limitations. ${x.limitations} Non-random missing records, mutable reports, local procedures, short observation windows, and incomplete retention also restrict generalization. Outsourced Billing Services does not claim to have conducted this study for a client, achieved a measured result, or guaranteed an operational or financial outcome.`,
   `Niche conclusion. The useful outsourcing question is not whether a queue can be made to look complete. It is whether another authorized person can reproduce the prepared work, see unresolved evidence, and make the reserved decision from a controlled record. This design gives a buyer a practical way to test that condition before expanding scope or access.`,
-  `Source method. We reviewed the publisher pages below on ${checked}. They supply control, security, privacy, logging, or accounting context, not performance data about Outsourced Billing Services or a client. Their application depends on the buyer's facts and should be assessed by qualified accounting, legal, privacy, security, tax, or compliance owners when needed.`,
-  ...x.sources.map((source) => `${source.title}. ${source.publisher}. ${source.url}. Checked ${checked}. Used for ${source.use}.`),
+  `Source method. We reviewed the publisher pages below on ${checkedDate}. They supply control, security, privacy, logging, or accounting context, not performance data about Outsourced Billing Services or a client. Their application depends on the buyer's facts and should be assessed by qualified accounting, legal, privacy, security, tax, or compliance owners when needed.`,
+  ...x.sources.map((source) => `${source.title}. ${source.publisher}. ${source.url}. Checked ${checkedDate}. Used for ${source.use}.`),
 ];
 
 export const sep22bResearchBatch = seeds.map((x) => ({
