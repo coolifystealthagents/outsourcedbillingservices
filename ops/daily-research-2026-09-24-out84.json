@@ -1,0 +1,41 @@
+{
+  "routine": "daily-research-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-84",
+  "timezone": "UTC",
+  "required": 5,
+  "prepared": 5,
+  "verified": 0,
+  "intendedPublicationDate": "2026-09-24",
+  "actualPublicationDate": null,
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "11ae74a50c24ac4261cb81e43da8dfa534c822b1",
+  "contentCommit": "a02ada77f9bd3412c183d89c61265bcec5733385",
+  "remoteShaAtLastCheck": "a02ada77f9bd3412c183d89c61265bcec5733385",
+  "status": "deployment-blocked-not-live",
+  "deploymentEvidence": {
+    "provider": "Coolify3",
+    "applicationUuid": "p134b2omci9euwptg3jkjygg",
+    "authenticatedStatus": "unavailable: configured API token returned HTTP 401",
+    "publicChecks": ["2026-09-24T14:37:09Z", "2026-09-24T14:37:33Z", "2026-09-24T14:37:58Z"],
+    "result": "All five canonical URLs returned HTTP 404 on all three bounded checks after the production push."
+  },
+  "validation": {
+    "typecheck": "passed",
+    "tests": "passed: 7 suites",
+    "productionBuild": "passed: 622 static pages",
+    "renderedChecks": "passed locally: five HTML routes, canonicals, 2026-09-24 visible and structured dates, image asset, and sitemap generation",
+    "buildWarning": "Existing CSS autoprefixer warning for mixed support of start; unrelated to this batch."
+  },
+  "articles": [
+    {"family":"billing-data-quality-review","topic":"eligibility response service-type drift","slug":"research-medical-billing-eligibility-response-service-type-drift-2026","contentHash":"sha256:79c73127b3d56565e37cadd9b2208b7fa64261fb970ce9367e1df29dc2ec2f51","publicationDate":null,"commitSha":"a02ada77f9bd3412c183d89c61265bcec5733385","liveUrl":"https://outsourcedbillingservices.com/research/research-medical-billing-eligibility-response-service-type-drift-2026","verificationTime":null},
+    {"family":"collections-follow-up","topic":"claim status response identity chain","slug":"research-medical-billing-claim-status-response-identity-chain-2026","contentHash":"sha256:f2d4723be0f87b9b9928ee988000c8f12a25c34ad65fc51bbfc13aaf6dc7bc2a","publicationDate":null,"commitSha":"a02ada77f9bd3412c183d89c61265bcec5733385","liveUrl":"https://outsourcedbillingservices.com/research/research-medical-billing-claim-status-response-identity-chain-2026","verificationTime":null},
+    {"family":"collections-follow-up","topic":"secondary payer questionnaire version lineage","slug":"research-medical-billing-secondary-payer-questionnaire-version-lineage-2026","contentHash":"sha256:39f464e0008e467f6db131551d2b588b578d52988b1c39c537dbc7b338ecea52","publicationDate":null,"commitSha":"a02ada77f9bd3412c183d89c61265bcec5733385","liveUrl":"https://outsourcedbillingservices.com/research/research-medical-billing-secondary-payer-questionnaire-version-lineage-2026","verificationTime":null},
+    {"family":"collections-follow-up","topic":"payer portal outage queue recovery","slug":"research-medical-billing-payer-portal-outage-queue-recovery-2026","contentHash":"sha256:7e46487e83d3023675f8785fbd36900206bffe3b88059ff7bc5cda0014c16010","publicationDate":null,"commitSha":"a02ada77f9bd3412c183d89c61265bcec5733385","liveUrl":"https://outsourcedbillingservices.com/research/research-medical-billing-payer-portal-outage-queue-recovery-2026","verificationTime":null},
+    {"family":"billing-data-quality-review","topic":"payer control number propagation","slug":"research-medical-billing-payer-control-number-propagation-2026","contentHash":"sha256:c7d7adb4e3a110775340ed93ba9f25cb5bc2388b89585e8a8120342a41b311c8","publicationDate":null,"commitSha":"a02ada77f9bd3412c183d89c61265bcec5733385","liveUrl":"https://outsourcedbillingservices.com/research/research-medical-billing-payer-control-number-propagation-2026","verificationTime":null}
+  ],
+  "blocker": {
+    "owner": "Coolify3 deployment administrator",
+    "action": "Restore authenticated API access or confirm the Git-triggered deployment for production main at a02ada77f9bd3412c183d89c61265bcec5733385, then rerun live verification. If verification occurs after UTC midnight, update all five source and metadata dates to that actual date before counting them."
+  }
+}
