@@ -16,9 +16,11 @@
   "deploymentEvidence": {
     "provider": "Coolify3",
     "applicationUuid": "p134b2omci9euwptg3jkjygg",
+    "expectedProductionBranch": "main",
+    "configuredCoolifyBranch": "master",
     "authenticatedStatus": "unavailable: configured API token returned HTTP 401",
     "publicChecks": ["2026-09-24T14:37:09Z", "2026-09-24T14:37:33Z", "2026-09-24T14:37:58Z", "2026-09-24T14:40:34Z", "2026-09-24T14:47:07Z"],
-    "result": "All five canonical URLs returned HTTP 404 on every bounded check after the production push; the latest remote main still contains the content commit."
+    "result": "The consolidated production main contains both September 24 batches, but Coolify is configured for master rather than main. All 12 Blog and all 5 Research canonical URLs returned HTTP 404 in the consolidation audit; authenticated deployment inspection and queueing are unavailable because the configured token returns HTTP 401."
   },
   "validation": {
     "typecheck": "passed",
@@ -36,6 +38,6 @@
   ],
   "blocker": {
     "owner": "Coolify3 deployment administrator",
-    "action": "Restore authenticated API access or deploy the current production main, which contains content commit a02ada77f9bd3412c183d89c61265bcec5733385, then rerun live verification. If verification occurs after UTC midnight, update all five source and metadata dates to that actual date before counting them."
+    "action": "Coolify3 deployment administrator must point application p134b2omci9euwptg3jkjygg at production branch main, restore authenticated API access, cancel only this application's stale or redundant deployment if one exists, and retain or queue exactly one deployment of the consolidated main. Then rerun Blog 12/12 and Research 5/5 live verification. If verification occurs after UTC midnight, update all source and metadata dates to that actual date before counting them."
   }
 }
