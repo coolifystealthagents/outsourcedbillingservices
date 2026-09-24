@@ -1,0 +1,40 @@
+{
+  "routine": "daily-blog-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-83",
+  "requiredCount": 12,
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-09-24",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "sourceCommit": null,
+  "deployedProductionCommit": null,
+  "deploymentEvidence": null,
+  "sources": [
+    "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+    "https://www.nist.gov/cyberframework"
+  ],
+  "validation": {
+    "typescript": "passed",
+    "productionBuild": "passed; 630 static pages generated",
+    "minimumSubstantiveWords": 1050,
+    "renderedRoutes": 12,
+    "canonicalUrls": 12,
+    "datePublishedMatches": 12,
+    "sitemapEntries": 12
+  },
+  "articles": [
+    {"family":"invoice preparation","topic":"invoice approval SLA escalation","slug":"invoice-approval-sla-escalation","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"972cc5ecaac40547262ad1c0f0cc70ec6681cc7db55794d2fc68a9b3f39abd50","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/invoice-approval-sla-escalation"},
+    {"family":"invoice preparation","topic":"purchase order consumption tracking","slug":"purchase-order-consumption-tracker","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"9cc8cc490fd21633ddd60ae5489b69fcb6eaa761bd6b4942ec58f4621eb405a7","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/purchase-order-consumption-tracker"},
+    {"family":"subscription billing support","topic":"subscription pause and resume control","slug":"subscription-pause-resume-billing-control","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"deec209a7342eeea3ca1c64364eb9d38f53aa19fce8fedf36d586bb66e3ab238","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/subscription-pause-resume-billing-control"},
+    {"family":"usage billing administration","topic":"usage billing cutoff control","slug":"usage-billing-cutoff-control","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"e8704e82c3b256d7c5af7ab5f3ce2b6a64d7219f029c5c3adc804852a1834ff7","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/usage-billing-cutoff-control"},
+    {"family":"credit memo administration","topic":"credit memo reason code governance","slug":"credit-memo-reason-code-governance","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"2bb21ccb56c4bb577ff7a8c2029fd2b3e910f9c02c12d7ca35dc02fa0c021725","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/credit-memo-reason-code-governance"},
+    {"family":"collections follow-up","topic":"promise to pay follow-up","slug":"promise-to-pay-follow-up-register","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"e15640b380a72bf1ebd950e61d99c8316a9f480e2aaa7679f17559bd3afc907e","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/promise-to-pay-follow-up-register"},
+    {"family":"billing reconciliation","topic":"payment processing fee reconciliation","slug":"payment-processing-fee-reconciliation","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"764dd732083cb89faa2af1fa9e498124176407a303e876fba47dd70029bd8d9e","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/payment-processing-fee-reconciliation"},
+    {"family":"payment posting","topic":"lockbox payment exceptions","slug":"lockbox-payment-exception-workflow","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"e9eb983fdde166f350b04ae3aadca8ba79bf3e885b699df1abcf3a64e399c4a8","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/lockbox-payment-exception-workflow"},
+    {"family":"revenue schedule preparation","topic":"billing to revenue schedule handoff","slug":"billing-to-revenue-schedule-handoff","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"034943a64ecc4144a04a5cac8d8bc58664f374b3e8d801535c1530da2501d9cb","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/billing-to-revenue-schedule-handoff"},
+    {"family":"customer billing support","topic":"customer billing portal access review","slug":"customer-billing-portal-access-review","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"b6ad765c930ef8cd0b0dfd87878390e4684f31f63643743e49399044b2cc4b57","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/customer-billing-portal-access-review"},
+    {"family":"dispute documentation","topic":"invoice dispute root cause register","slug":"invoice-dispute-root-cause-register","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"24fc23d75bf794daba7136a94bfbb493f311547ae5db08dfde7177e42e0834c8","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/invoice-dispute-root-cause-register"},
+    {"family":"month end billing support","topic":"month end billing freeze calendar","slug":"month-end-billing-freeze-calendar","sources":["FTC data protection guide","NIST CSF 2.0"],"contentHash":"f4f71d9d18b3819b920944dd14e1fc83ab4378305c4617edc19b316d5fbf1068","publicationDate":"2026-09-24","liveUrl":"https://outsourcedbillingservices.com/blog/month-end-billing-freeze-calendar"}
+  ],
+  "liveVerification": []
+}
