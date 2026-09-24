@@ -11,14 +11,14 @@
   "productionBranch": "main",
   "baseSha": "11ae74a50c24ac4261cb81e43da8dfa534c822b1",
   "contentCommit": "a02ada77f9bd3412c183d89c61265bcec5733385",
-  "remoteShaAtLastCheck": "a02ada77f9bd3412c183d89c61265bcec5733385",
+  "remoteShaAtLastCheck": "61d3eaaea4f6ea726f619ea37933c34c18a10379",
   "status": "deployment-blocked-not-live",
   "deploymentEvidence": {
     "provider": "Coolify3",
     "applicationUuid": "p134b2omci9euwptg3jkjygg",
     "authenticatedStatus": "unavailable: configured API token returned HTTP 401",
-    "publicChecks": ["2026-09-24T14:37:09Z", "2026-09-24T14:37:33Z", "2026-09-24T14:37:58Z"],
-    "result": "All five canonical URLs returned HTTP 404 on all three bounded checks after the production push."
+    "publicChecks": ["2026-09-24T14:37:09Z", "2026-09-24T14:37:33Z", "2026-09-24T14:37:58Z", "2026-09-24T14:40:34Z", "2026-09-24T14:47:07Z"],
+    "result": "All five canonical URLs returned HTTP 404 on every bounded check after the production push; the latest remote main still contains the content commit."
   },
   "validation": {
     "typecheck": "passed",
@@ -36,6 +36,6 @@
   ],
   "blocker": {
     "owner": "Coolify3 deployment administrator",
-    "action": "Restore authenticated API access or confirm the Git-triggered deployment for production main at a02ada77f9bd3412c183d89c61265bcec5733385, then rerun live verification. If verification occurs after UTC midnight, update all five source and metadata dates to that actual date before counting them."
+    "action": "Restore authenticated API access or deploy the current production main, which contains content commit a02ada77f9bd3412c183d89c61265bcec5733385, then rerun live verification. If verification occurs after UTC midnight, update all five source and metadata dates to that actual date before counting them."
   }
 }
