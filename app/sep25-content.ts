@@ -1,4 +1,5 @@
 import { sep25Seeds } from './sep25-seeds';
+import { sep25ReplacementSeeds } from './sep25-replacement-seeds';
 
 const published = '2026-09-25' as const;
 const featuredImage = '/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp';
@@ -20,7 +21,8 @@ const priorSeeds: Seed[] = [
   {slug:'month-end-billing-freeze-calendar',title:'Month-End Billing Freeze Calendar and Late-Change Protocol',description:'A close calendar for billing cutoffs, approved late changes, reruns, reconciliations, and final handoff evidence.',service:'billing reconciliation',serviceHref:'/services/billing-reconciliation',trigger:'the monthly close approaches and billing changes need controlled cutoff and reporting rules',records:'the close calendar, invoice run schedule, approval matrix, open billing changes, usage cutoffs, payment files, credit requests, system maintenance, and prior close issues',check:'publish the freeze points, identify affected queues, record authorized late changes, rerun only required controls, and preserve the final population',exception:'close deadlines, materiality, reopening periods, accounting policy, emergency releases, journal entries, executive reporting, and system overrides',example:'an approved credit arrives after the invoice freeze but before the ledger handoff. The protocol records who authorized the late change and which reconciliation must run again',fields:'period, milestone, timezone, cutoff, system, queue, owner, dependency, completion evidence, late-change ID, rerun control, acceptance, and final timestamp',balance:'items open at freeze plus approved late additions must equal completed items, carried-forward items, rejected items, and unresolved exceptions',measure:'late changes, missed milestones, reruns, reconciliation differences, carried items, owner response time, and post-close corrections',owner:'the client billing or accounting close owner'}
 ];
 
-const seeds: Seed[] = sep25Seeds;
+const replacedSlugs = new Set(['customer-master-bill-to-change-review', 'collections-contact-suppression-control', 'refund-request-evidence-packet', 'invoice-delivery-failure-queue']);
+const seeds: Seed[] = [...sep25Seeds.filter((seed) => !replacedSlugs.has(seed.slug)), ...sep25ReplacementSeeds];
 
 const body = (s: Seed) => [
   `${s.title} works best as an operating control, not as a collection of reminders. It begins when ${s.trigger}. The goal is a traceable result that a reviewer can reproduce from approved records. That matters when a Philippines-based billing specialist supports a client team across time zones: the specialist needs a bounded queue, while the client retains decisions that change money, policy, access, or customer commitments.`,
