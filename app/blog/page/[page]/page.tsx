@@ -1,13 +1,15 @@
 import { FeaturedComparison } from '../../FeaturedComparison';
 import type {Metadata} from 'next';
 import {sep24BlogBatch} from '../../../sep24-content';
+import {sep25BlogBatch} from '../../../sep25-content';
 import {notFound,permanentRedirect} from 'next/navigation';import {Header,Footer} from '../../../components';import {blogPosts} from '../../../data';import aug20Meta from '../../../aug20-meta.json';import aug21Meta from '../../../aug21-meta.json';import {aug23BlogBatch} from '../../../aug23-blog';import {sep3BlogBatch} from '../../../sep3-blog';import {sep4BlogBatch} from '../../../sep4-content';import {sep7BlogBatch} from '../../../sep7-content';import {sep8BlogBatch} from '../../../sep8-content';import {sep9BlogBatch} from '../../../sep9-content';import {sep10BlogBatch} from '../../../sep10-content';import {sep18bBlogBatch} from '../../../sep18b-content';import {sep22BlogBatch} from '../../../sep22-content';
 
 const daily=[...sep22BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...sep18bBlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...sep10BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...sep9BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...sep8BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...sep7BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...sep4BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...sep3BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...aug23BlogBatch.map(p=>[p.slug,{title:p.title,description:p.description}] as const),...Object.entries(aug21Meta),...Object.entries(aug20Meta)].map(([slug,p])=>({slug,title:p.title,excerpt:p.description}));
 const latest=blogPosts.filter(p=>p.detail?.published==='2026-09-02');
 const earlier=blogPosts.filter(p=>p.detail?.published!=='2026-09-02');
 const sep24Posts=sep24BlogBatch.map(p=>({slug:p.slug,title:p.title,excerpt:p.description}));
-const allPosts=[...sep24Posts,...daily.slice(0,24),...latest,...daily.slice(24),...earlier];
+const sep25Posts=sep25BlogBatch.map(p=>({slug:p.slug,title:p.title,excerpt:p.description}));
+const allPosts=[...sep25Posts,...sep24Posts,...daily.slice(0,24),...latest,...daily.slice(24),...earlier];
 
 export function generateStaticParams(){const n=Math.max(1,Math.ceil(allPosts.length/20));return Array.from({length:n},(_,i)=>({page:String(i+1)}))}
 
