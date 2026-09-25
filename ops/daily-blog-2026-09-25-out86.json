@@ -1,0 +1,200 @@
+{
+  "routine": "daily-blog-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-86",
+  "requiredCount": 12,
+  "preparedCount": 12,
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-09-25",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "9ca701e52bd323248953c4e135b9a4637d14a022",
+  "combinedBranch": "content/out-86-combined-20260925",
+  "combinedContentHead": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+  "remoteSha": null,
+  "deploymentEvidence": {
+    "owner": "browser operator",
+    "applicationUuid": "p134b2omci9euwptg3jkjygg",
+    "deploymentId": null,
+    "status": "not submitted by task; browser operator owns the single deployment"
+  },
+  "liveVerification": {
+    "owner": "user",
+    "status": "not performed by task under explicit override"
+  },
+  "validation": {
+    "typecheck": "passed",
+    "tests": "passed: 7 suites",
+    "productionBuild": "passed: 652 static pages",
+    "renderedChecks": "passed for exact counts, canonical URLs, dates, substantive word minimums, and sitemap entries"
+  },
+  "articles": [
+    {
+      "family": "billing operations guide",
+      "topic": "invoice number sequence gap review",
+      "slug": "invoice-number-sequence-gap-review",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:210dd604fe2658589d28c8bbb35e5a9611e09fdd8a9f341d7cb917c82b56841b",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/invoice-number-sequence-gap-review",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "contract renewal billing readiness checklist",
+      "slug": "contract-renewal-billing-readiness-checklist",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:ac5cf69b32faf5d1776bea1b82a698f8138c4f55af25e0bf14f1d2ad7bfa9aec",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/contract-renewal-billing-readiness-checklist",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "usage meter mapping change control",
+      "slug": "usage-meter-mapping-change-control",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:a856a35044e03edaed8bcf6e71670c71e0ba0c7fd2bae8486019ca84e8672230",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/usage-meter-mapping-change-control",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "partial payment allocation review",
+      "slug": "partial-payment-allocation-review",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:e7d5daff10d7890a0df0cf29574e18ee45dbd8571458e4d4d788d01f4cb5ae38",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/partial-payment-allocation-review",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "credit memo invoice linkage audit",
+      "slug": "credit-memo-invoice-linkage-audit",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:2e5e82c540e102951b213d15cd672b136ed2be63e7881d037e0aee400ecfe272",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/credit-memo-invoice-linkage-audit",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "revenue schedule change input register",
+      "slug": "revenue-schedule-change-input-register",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:8fc1b4a8653f0fc7f3efe537e3614af05e6fae22631d2a5a8567ea976e324f4b",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/revenue-schedule-change-input-register",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "billing interface file completeness check",
+      "slug": "billing-interface-file-completeness-check",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:8e642c02267634cf68cbc0b60180d395d5d0d582c3dcccbf638383f2f6b91cc9",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/billing-interface-file-completeness-check",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "month end unbilled work register",
+      "slug": "month-end-unbilled-work-register",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:b36750998bd57fcbfd8389ac5647fd0b850823380ece45e4f11c537f1279339a",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/month-end-unbilled-work-register",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "failed autopay billing handoff",
+      "slug": "failed-autopay-billing-handoff",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:80b46d0dab2076469e9f1ad800675f13d0b7801d3ac081a922bf945e45acef06",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/failed-autopay-billing-handoff",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "payment processor reserve release reconciliation",
+      "slug": "payment-processor-reserve-release-reconciliation",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:2fcbabdc06cd6f2e8057724c82b8013cd79df541594b3822cc8b5ee4b0713615",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/payment-processor-reserve-release-reconciliation",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "invoice supporting document index",
+      "slug": "invoice-supporting-document-index",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:2c9252d8dddb58bafb05c0f5a2e2332a83bea077bf9352a104dbfe4df9602116",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/invoice-supporting-document-index",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations guide",
+      "topic": "minimum commitment billing true up",
+      "slug": "minimum-commitment-billing-true-up",
+      "sources": [
+        "FTC business data-protection guidance",
+        "NIST Cybersecurity Framework 2.0"
+      ],
+      "contentHash": "sha256:026179b69b39df92b307e9f2eb5f37d06d0bab9359d2f42a7bb4a26035cfd729",
+      "publicationDate": "2026-09-25",
+      "commitSha": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+      "liveUrl": "https://outsourcedbillingservices.com/blog/minimum-commitment-billing-true-up",
+      "verificationTime": null
+    }
+  ]
+}

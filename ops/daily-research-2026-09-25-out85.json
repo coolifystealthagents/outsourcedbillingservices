@@ -1,0 +1,108 @@
+{
+  "routine": "daily-research-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-85",
+  "requiredCount": 5,
+  "preparedCount": 5,
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-09-25",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "9ca701e52bd323248953c4e135b9a4637d14a022",
+  "combinedBranch": "content/out-86-combined-20260925",
+  "combinedContentHead": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+  "remoteSha": null,
+  "deploymentEvidence": {
+    "owner": "browser operator",
+    "applicationUuid": "p134b2omci9euwptg3jkjygg",
+    "deploymentId": null,
+    "status": "not submitted by task; browser operator owns the single deployment"
+  },
+  "liveVerification": {
+    "owner": "user",
+    "status": "not performed by task under explicit override"
+  },
+  "validation": {
+    "typecheck": "passed",
+    "tests": "passed: 7 suites",
+    "productionBuild": "passed: 652 static pages",
+    "renderedChecks": "passed for exact counts, canonical URLs, dates, substantive word minimums, and sitemap entries"
+  },
+  "researchCommit": "79425c77ca063e06e2f1457d58fdb2a1695def49",
+  "articles": [
+    {
+      "family": "billing operations research",
+      "topic": "invoice sequence integrity",
+      "slug": "research-medical-billing-invoice-sequence-integrity-2026",
+      "sources": [
+        "CMS Medicare Claims Processing Manual",
+        "HHS HIPAA Security Rule summary",
+        "NIST SP 800-53 Revision 5"
+      ],
+      "contentHash": "sha256:952b172cf85a7b1c360d159b3f04cb3d1ca4fd98d062290f1fa812072e04c654",
+      "publicationDate": "2026-09-25",
+      "commitSha": "79425c77ca063e06e2f1457d58fdb2a1695def49",
+      "liveUrl": "https://outsourcedbillingservices.com/research/research-medical-billing-invoice-sequence-integrity-2026",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations research",
+      "topic": "delivery failure layer",
+      "slug": "research-medical-billing-delivery-failure-layer-2026",
+      "sources": [
+        "CMS Medicare Claims Processing Manual",
+        "HHS HIPAA Security Rule summary",
+        "NIST SP 800-53 Revision 5"
+      ],
+      "contentHash": "sha256:c7d59397e68ec1fe865ed035684c00ef4a5d846fa0626b6249d66d4dbd041132",
+      "publicationDate": "2026-09-25",
+      "commitSha": "79425c77ca063e06e2f1457d58fdb2a1695def49",
+      "liveUrl": "https://outsourcedbillingservices.com/research/research-medical-billing-delivery-failure-layer-2026",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations research",
+      "topic": "partial payment allocation lineage",
+      "slug": "research-medical-billing-partial-payment-allocation-lineage-2026",
+      "sources": [
+        "CMS Medicare Claims Processing Manual",
+        "HHS HIPAA Security Rule summary",
+        "NIST SP 800-53 Revision 5"
+      ],
+      "contentHash": "sha256:c6c8f87ae1e56eb4214627e141c65ab4fd2387782030da579edde976798b2716",
+      "publicationDate": "2026-09-25",
+      "commitSha": "79425c77ca063e06e2f1457d58fdb2a1695def49",
+      "liveUrl": "https://outsourcedbillingservices.com/research/research-medical-billing-partial-payment-allocation-lineage-2026",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations research",
+      "topic": "interface schema drift",
+      "slug": "research-medical-billing-interface-schema-drift-2026",
+      "sources": [
+        "CMS Medicare Claims Processing Manual",
+        "HHS HIPAA Security Rule summary",
+        "NIST SP 800-53 Revision 5"
+      ],
+      "contentHash": "sha256:8f393a05a3abd8e5c259d0c82812c1a3123f57e9c55c8ae2909a07624278e357",
+      "publicationDate": "2026-09-25",
+      "commitSha": "79425c77ca063e06e2f1457d58fdb2a1695def49",
+      "liveUrl": "https://outsourcedbillingservices.com/research/research-medical-billing-interface-schema-drift-2026",
+      "verificationTime": null
+    },
+    {
+      "family": "billing operations research",
+      "topic": "unbilled work completeness",
+      "slug": "research-medical-billing-unbilled-work-completeness-2026",
+      "sources": [
+        "CMS Medicare Claims Processing Manual",
+        "HHS HIPAA Security Rule summary",
+        "NIST SP 800-53 Revision 5"
+      ],
+      "contentHash": "sha256:bc31044e300b19a28ab7993f8e855232c127f362e058cd5dcd27ccd679ea7f0a",
+      "publicationDate": "2026-09-25",
+      "commitSha": "79425c77ca063e06e2f1457d58fdb2a1695def49",
+      "liveUrl": "https://outsourcedbillingservices.com/research/research-medical-billing-unbilled-work-completeness-2026",
+      "verificationTime": null
+    }
+  ]
+}

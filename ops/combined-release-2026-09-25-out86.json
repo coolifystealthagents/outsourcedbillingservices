@@ -1,0 +1,66 @@
+{
+  "routine": "combined-blog-research-release",
+  "issues": [
+    "OUTAAAAAAAAAAAAA-86",
+    "OUTAAAAAAAAAAAAA-85"
+  ],
+  "required": {
+    "blog": 12,
+    "research": 5,
+    "total": 17
+  },
+  "prepared": {
+    "blog": 12,
+    "research": 5,
+    "total": 17
+  },
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-09-25",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "9ca701e52bd323248953c4e135b9a4637d14a022",
+  "combinedBranch": "content/out-86-combined-20260925",
+  "combinedContentHead": "35430b96f00993bcf573ca7988d4a0340c42aaa7",
+  "remoteSha": null,
+  "deploymentEvidence": {
+    "owner": "browser operator",
+    "applicationUuid": "p134b2omci9euwptg3jkjygg",
+    "deploymentId": null,
+    "status": "not submitted by task; browser operator owns the single deployment"
+  },
+  "liveVerification": {
+    "owner": "user",
+    "status": "not performed by task under explicit override"
+  },
+  "validation": {
+    "typecheck": "passed",
+    "tests": "passed: 7 suites",
+    "productionBuild": "passed: 652 static pages",
+    "renderedChecks": "passed for exact counts, canonical URLs, dates, substantive word minimums, and sitemap entries"
+  },
+  "manifests": [
+    "ops/daily-blog-2026-09-25-out86.json",
+    "ops/daily-research-2026-09-25-out85.json"
+  ],
+  "blogUrls": [
+    "https://outsourcedbillingservices.com/blog/invoice-number-sequence-gap-review",
+    "https://outsourcedbillingservices.com/blog/contract-renewal-billing-readiness-checklist",
+    "https://outsourcedbillingservices.com/blog/usage-meter-mapping-change-control",
+    "https://outsourcedbillingservices.com/blog/partial-payment-allocation-review",
+    "https://outsourcedbillingservices.com/blog/credit-memo-invoice-linkage-audit",
+    "https://outsourcedbillingservices.com/blog/revenue-schedule-change-input-register",
+    "https://outsourcedbillingservices.com/blog/billing-interface-file-completeness-check",
+    "https://outsourcedbillingservices.com/blog/month-end-unbilled-work-register",
+    "https://outsourcedbillingservices.com/blog/failed-autopay-billing-handoff",
+    "https://outsourcedbillingservices.com/blog/payment-processor-reserve-release-reconciliation",
+    "https://outsourcedbillingservices.com/blog/invoice-supporting-document-index",
+    "https://outsourcedbillingservices.com/blog/minimum-commitment-billing-true-up"
+  ],
+  "researchUrls": [
+    "https://outsourcedbillingservices.com/research/research-medical-billing-invoice-sequence-integrity-2026",
+    "https://outsourcedbillingservices.com/research/research-medical-billing-delivery-failure-layer-2026",
+    "https://outsourcedbillingservices.com/research/research-medical-billing-partial-payment-allocation-lineage-2026",
+    "https://outsourcedbillingservices.com/research/research-medical-billing-interface-schema-drift-2026",
+    "https://outsourcedbillingservices.com/research/research-medical-billing-unbilled-work-completeness-2026"
+  ]
+}

@@ -93,3 +93,14 @@ Deployment `uhxj2csddzfz3t6mlrrt7oxt` finished against production commit `240434
 | Billing contact change verification | `/blog/billing-contact-change-verification` | `/services/customer-billing-support` |
 | Billing process offboarding | `/blog/billing-process-offboarding-checklist` | `/services` |
 | KPI definition governance | `/blog/billing-kpi-definition-register` | `/services` |
+
+## 2026-09-25 combined recovery batch (OUTAAAAAAAAAAAAA-86 + OUTAAAAAAAAAAAAA-85)
+
+Exactly 12 new Blog guides and 5 new Research studies were prepared together from production base `9ca701e52bd323248953c4e135b9a4637d14a022`. The Blog topics extend invoice integrity, subscription and usage controls, cash application, reconciliation, credit linkage, data quality, revenue-schedule handoff, and close readiness. The Research studies test invoice-sequence integrity, delivery-failure layers, partial-payment lineage, interface schema drift, and unbilled-work completeness. Each route uses a relevant service CTA and the shared contact path.
+
+- Publication date and timezone: `2026-09-25`, UTC.
+- Blog manifest: `ops/daily-blog-2026-09-25-out86.json` (12 entries).
+- Research manifest: `ops/daily-research-2026-09-25-out85.json` (5 entries).
+- Combined release manifest: `ops/combined-release-2026-09-25-out86.json` (17 entries).
+- Local evidence: typecheck passed, 7 test suites passed, production build passed with 652 static pages, and all 17 rendered routes passed canonical, structured-date, substantive-word, image, and sitemap checks.
+- Release boundary: browser operator owns the single Coolify3 deployment for application `p134b2omci9euwptg3jkjygg`; the user owns article-by-article public-route verification. This ledger does not claim deployment or live verification.
