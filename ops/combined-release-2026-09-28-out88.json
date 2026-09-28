@@ -1,0 +1,32 @@
+{
+  "cycle": "September28",
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-09-28",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "90e77af996432cdc3a0014e32092e9d8dfa9b2cc",
+  "integrationBranch": "content/out-88-blog-20260928",
+  "blogIssue": "OUTAAAAAAAAAAAAA-88",
+  "researchIssue": "OUTAAAAAAAAAAAAA-87",
+  "researchHandoffHead": "c4a5d6c9bfacea3c42a137444d9bda49e29fd61b",
+  "combinedContentHeadBeforeEvidence": "f491e535bbf7f5623548244fdc9097f82bdb6a69",
+  "counts": {"blog":12,"research":5},
+  "validation": {
+    "typecheck":"passed",
+    "tests":"passed: 8 suites",
+    "cleanCombinedBuild":"passed: 670 static pages",
+    "blogWords":[1050,1032,998,981,968,970,983,974,1000,1004,976,999],
+    "blogMaxFiveWordShingleJaccard":0.4711,
+    "researchWords":[1423,1410,1438,1410,1428],
+    "researchMaxFiveWordShingleJaccard":0.3997,
+    "renderedRoutesCanonicalsDatesSchemaAssetsSitemap":"passed"
+  },
+  "blogSlugs":[
+    "bill-to-address-effective-date-control","tiered-pricing-calculation-review","late-usage-correction-register","unapplied-cash-aging-owner-review","billing-write-off-request-packet","customer-refund-status-control","invoice-pdf-version-release-control","dunning-queue-eligibility-review","multi-currency-invoice-payment-mismatch","tax-exemption-expiry-billing-review","billing-access-offboarding-checklist","customer-statement-open-item-reconciliation"
+  ],
+  "researchSlugs":[
+    "research-outsourced-billing-invoice-delivery-acknowledgment-integrity-2026","research-outsourced-billing-subscription-retry-authorization-state-2026","research-outsourced-billing-usage-late-arrival-cutoff-cohort-2026","research-outsourced-billing-credit-memo-downstream-propagation-2026","research-outsourced-billing-collections-contact-restriction-lineage-2026"
+  ],
+  "deployment":{"owner":"browser operator","applicationUuid":"p134b2omci9euwptg3jkjygg","status":"not submitted by Blog or Research"},
+  "publicVerification":{"owner":"user","status":"not performed; repository handoff only"}
+}
