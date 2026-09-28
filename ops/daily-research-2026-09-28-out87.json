@@ -1,0 +1,33 @@
+{
+  "routine": "daily-research-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-87",
+  "runId": "1a099ce2-846e-4a28-b7e7-1d3feb3fad5a",
+  "requiredCount": 5,
+  "preparedCount": 5,
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-09-28",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "90e77af996432cdc3a0014e32092e9d8dfa9b2cc",
+  "researchBranch": "content/out-87-research-20260928",
+  "researchContentCommit": "8c2a7f906564bde5d5727f0335853f8d71428b46",
+  "handoffIssue": "OUTAAAAAAAAAAAAA-88",
+  "remoteSha": null,
+  "deploymentEvidence": { "owner": "browser operator", "applicationUuid": "p134b2omci9euwptg3jkjygg", "deploymentId": null, "status": "not submitted; Research is local-handoff only" },
+  "liveVerification": { "owner": "user", "status": "not performed; prepared routes are not described as live" },
+  "validation": {
+    "typecheck": "passed",
+    "tests": "passed: 8 suites",
+    "productionBuild": "passed: 657 static pages",
+    "renderedChecks": "passed: exact count, canonical URLs, 2026-09-28 visible/schema dates, reused repository image, service links, index and sitemap entries",
+    "substantiveWordCounts": [1423, 1410, 1438, 1410, 1428],
+    "maximumPairwiseFiveWordShingleJaccard": 0.399701
+  },
+  "articles": [
+    { "family": "billing operations research", "topic": "invoice delivery acknowledgment integrity", "slug": "research-outsourced-billing-invoice-delivery-acknowledgment-integrity-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "CISA Use Logging on Business Systems", "FTC Protecting Personal Information: A Guide for Business"], "contentHash": "sha256:96141fd454898d0f6a7acb4221a38b8c6200fa0b340fe4b189629796f3000aa5", "publicationDate": "2026-09-28", "commitSha": "8c2a7f906564bde5d5727f0335853f8d71428b46", "liveUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-invoice-delivery-acknowledgment-integrity-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "subscription payment retry authorization state", "slug": "research-outsourced-billing-subscription-retry-authorization-state-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FTC Protecting Personal Information: A Guide for Business", "CISA Use Logging on Business Systems"], "contentHash": "sha256:a4377550fc909608cac175563479f921a04a43c290790e6cb5e84ef810599f38", "publicationDate": "2026-09-28", "commitSha": "8c2a7f906564bde5d5727f0335853f8d71428b46", "liveUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-subscription-retry-authorization-state-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "usage event late-arrival cutoff cohort", "slug": "research-outsourced-billing-usage-late-arrival-cutoff-cohort-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "CISA Use Logging on Business Systems", "FASB Revenue Recognition: ASU 2014-09"], "contentHash": "sha256:04eaebcec2e43208991ea1eaca2b91e52154181ce2f984895f565327c4549fff", "publicationDate": "2026-09-28", "commitSha": "8c2a7f906564bde5d5727f0335853f8d71428b46", "liveUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-usage-late-arrival-cutoff-cohort-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "credit memo downstream propagation", "slug": "research-outsourced-billing-credit-memo-downstream-propagation-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FASB Revenue Recognition: ASU 2014-09", "CISA Use Logging on Business Systems"], "contentHash": "sha256:488ddd99c698bd755a4286aa0cb838983423ecd8f5b7cf96ac4d0c454d1f3287", "publicationDate": "2026-09-28", "commitSha": "8c2a7f906564bde5d5727f0335853f8d71428b46", "liveUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-credit-memo-downstream-propagation-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "collections contact restriction lineage", "slug": "research-outsourced-billing-collections-contact-restriction-lineage-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "FTC Protecting Personal Information: A Guide for Business", "NIST SP 800-53 Revision 5", "CISA Use Logging on Business Systems"], "contentHash": "sha256:be187a1bdca4c768c4aa5f1df13b790eab7a7a96bf4375f26eb6a2c5fc3d1124", "publicationDate": "2026-09-28", "commitSha": "8c2a7f906564bde5d5727f0335853f8d71428b46", "liveUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-collections-contact-restriction-lineage-2026", "verificationTime": null }
+  ]
+}

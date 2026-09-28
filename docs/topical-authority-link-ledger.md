@@ -104,3 +104,17 @@ Exactly 12 new Blog guides and 5 new Research studies were prepared together fro
 - Combined release manifest: `ops/combined-release-2026-09-25-out86.json` (17 entries).
 - Local evidence: typecheck passed, 7 test suites passed, production build passed with 652 static pages, and all 17 rendered routes passed canonical, structured-date, substantive-word, image, and sitemap checks.
 - Release boundary: browser operator owns the single Coolify3 deployment for application `p134b2omci9euwptg3jkjygg`; the user owns article-by-article public-route verification. This ledger does not claim deployment or live verification.
+
+## 2026-09-28 Research handoff (OUTAAAAAAAAAAAAA-87)
+
+Five new Research studies were prepared from baseline `90e77af996432cdc3a0014e32092e9d8dfa9b2cc` for the combined release owned by Blog issue `OUTAAAAAAAAAAAAA-88`. Content commit `8c2a7f906564bde5d5727f0335853f8d71428b46` remains local on `content/out-87-research-20260928`; Research did not push or deploy.
+
+| Topic | Prepared route | Conversion path | Substantive words |
+| --- | --- | --- | ---: |
+| Invoice delivery acknowledgment integrity | `/research/research-outsourced-billing-invoice-delivery-acknowledgment-integrity-2026` | `/services/invoice-preparation` | 1,423 |
+| Subscription payment retry authorization state | `/research/research-outsourced-billing-subscription-retry-authorization-state-2026` | `/services/subscription-billing-support` | 1,410 |
+| Usage event late-arrival cutoff cohort | `/research/research-outsourced-billing-usage-late-arrival-cutoff-cohort-2026` | `/services/usage-billing-administration` | 1,438 |
+| Credit memo downstream propagation | `/research/research-outsourced-billing-credit-memo-downstream-propagation-2026` | `/services/credit-memo-administration` | 1,410 |
+| Collections contact restriction lineage | `/research/research-outsourced-billing-collections-contact-restriction-lineage-2026` | `/services/collections-follow-up` | 1,428 |
+
+Rendered body audit excludes shared navigation, CTA, source appendix, and layout. Maximum pairwise five-word-shingle Jaccard overlap is 39.97%. The manifest is `ops/daily-research-2026-09-28-out87.json`. Dates are release-intent metadata for the September 28 UTC combined cycle and must be reconciled by the Blog integrator if first publication crosses local midnight. No route is represented as live or publicly verified.
