@@ -1,0 +1,44 @@
+{
+  "routine": "daily-blog-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-88",
+  "runId": "9f692b24-65b8-45ac-bed6-5d1b41b11b8d",
+  "requiredCount": 12,
+  "preparedCount": 12,
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-09-28",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "90e77af996432cdc3a0014e32092e9d8dfa9b2cc",
+  "blogBranch": "content/out-88-blog-20260928",
+  "blogContentCommit": "c6547061b06725d5a4d4af09525950d0c6e05b00",
+  "worktree": ".paperclip/worktrees/out-88-20260928",
+  "combinedPush": null,
+  "deployment": {"owner":"browser operator","applicationUuid":"p134b2omci9euwptg3jkjygg","status":"not submitted; waiting for combined Blog + Research integration"},
+  "liveVerification": {"owner":"user","status":"not performed; content is not represented as live"},
+  "validation": {
+    "typecheck": "passed",
+    "tests": "passed: 8 suites",
+    "cleanProductionBuild": "passed: 665 static pages",
+    "substantiveWordCounts": [1050,1032,998,981,968,970,983,974,1000,1004,976,999],
+    "maxPairwiseFiveWordShingleJaccard": 0.4711,
+    "maxOverlapPair": ["customer-refund-status-control","dunning-queue-eligibility-review"]
+  },
+  "sources": [
+    "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+    "https://www.nist.gov/cyberframework"
+  ],
+  "articles": [
+    {"slug":"bill-to-address-effective-date-control","words":1050,"contentHash":"sha256:f13fe1b8be8a5197b07ff772cb74db2d04ed54b1175a1497b86141ee9b553bd6"},
+    {"slug":"tiered-pricing-calculation-review","words":1032,"contentHash":"sha256:bd650345b47b89636c9f62ae89db6475df51b6fa0adf39ffb2eff9b32de847c9"},
+    {"slug":"late-usage-correction-register","words":998,"contentHash":"sha256:0bb43555e843118093347f27633bd4d8023a82cd48068e18d1d63c3c74b57950"},
+    {"slug":"unapplied-cash-aging-owner-review","words":981,"contentHash":"sha256:f3e5fdb585d9fcfe663ce432970cdfbe0dc36a7e335c3dd0049c12e1675edf65"},
+    {"slug":"billing-write-off-request-packet","words":968,"contentHash":"sha256:d423f61fa65ce316aec4dabd9c274a0ddaa09c2830f26a7b2f0f904a6c0eb6e8"},
+    {"slug":"customer-refund-status-control","words":970,"contentHash":"sha256:f684c05b96c159ca6ceb20ae5e33aa1eb495cd1dd64cdae6f032245faa62ea52"},
+    {"slug":"invoice-pdf-version-release-control","words":983,"contentHash":"sha256:f09957114702bf54c5aedd9814215dc2594fdc7c5ae249173f1bd0a282cff7d7"},
+    {"slug":"dunning-queue-eligibility-review","words":974,"contentHash":"sha256:ab007b222d3816f79007d63f3d19a6ff1470bc6ce4bfda6e78247a4120ae7f19"},
+    {"slug":"multi-currency-invoice-payment-mismatch","words":1000,"contentHash":"sha256:c19767ecbfbdd4facf13bc63fed6a07a54537304f301ce7841ccd15d8d82f025"},
+    {"slug":"tax-exemption-expiry-billing-review","words":1004,"contentHash":"sha256:ac145f8b9c8a6637e8c96fb3f78fd52cc0ef005846e3581f8126bc4a8e538911"},
+    {"slug":"billing-access-offboarding-checklist","words":976,"contentHash":"sha256:5de0fe9c271df637ab18a53ee4881159752928a478637ef73a9d9c23e5137013"},
+    {"slug":"customer-statement-open-item-reconciliation","words":999,"contentHash":"sha256:4825d450e0ae4f537aed478aa7e7b71fee10409f3d5b0ecba2e1533d980a4a1b"}
+  ]
+}
