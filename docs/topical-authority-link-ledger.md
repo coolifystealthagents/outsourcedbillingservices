@@ -118,3 +118,17 @@ Five new Research studies were prepared from baseline `90e77af996432cdc3a0014e32
 | Collections contact restriction lineage | `/research/research-outsourced-billing-collections-contact-restriction-lineage-2026` | `/services/collections-follow-up` | 1,428 |
 
 Rendered body audit excludes shared navigation, CTA, source appendix, and layout. Maximum pairwise five-word-shingle Jaccard overlap is 39.97%. The manifest is `ops/daily-research-2026-09-28-out87.json`. Dates are release-intent metadata for the September 28 UTC combined cycle and must be reconciled by the Blog integrator if first publication crosses local midnight. No route is represented as live or publicly verified.
+
+## 2026-10-02 Research handoff (OUTAAAAAAAAAAAAA-89)
+
+Five new Research studies were prepared from production base `7e17e95875cdc45759abf589e0f4bc897bfd20af` for the combined release owned by Blog issue `OUTAAAAAAAAAAAAA-90`. Content commit `90e05f061d1a0e5668fc400e1b527f7edfc7e5e3` remains local on `content/out-89-research-20261002`; Research did not push or deploy.
+
+| Topic | Prepared route | Conversion path | Substantive words |
+| --- | --- | --- | ---: |
+| Consolidated invoice entity allocation | `/research/research-outsourced-billing-consolidated-invoice-entity-allocation-2026` | `/services/invoice-preparation` | 1,549 |
+| Invoice number collision control | `/research/research-outsourced-billing-invoice-number-collision-control-2026` | `/services/billing-data-quality-review` | 1,562 |
+| Foreign exchange rate input lineage | `/research/research-outsourced-billing-foreign-exchange-rate-input-lineage-2026` | `/services/billing-reconciliation` | 1,527 |
+| Billing hold release evidence | `/research/research-outsourced-billing-hold-release-evidence-2026` | `/services/customer-billing-support` | 1,541 |
+| Chargeback receivable reinstatement lineage | `/research/research-outsourced-billing-chargeback-receivable-reinstatement-2026` | `/services/dispute-documentation` | 1,546 |
+
+The rendered body audit excludes shared navigation, CTA, source appendix, and layout. Maximum pairwise five-word-shingle Jaccard overlap is 34.56%; no identical substantive paragraph appears across the five articles. The five studies use distinct units, populations, state models, tests, scenarios, owner decisions, and service paths. Manifest: `ops/daily-research-2026-10-02-out89.json`. October 2 is release-intent metadata and must be reconciled by the Blog integrator to actual first publication before the sole combined push if timing changes. No prepared route is represented as live or publicly verified.

@@ -1,0 +1,36 @@
+{
+  "routine": "daily-research-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-89",
+  "runId": "dc8a99ba-fe33-4960-95b8-f2ca653d1d38",
+  "requiredCount": 5,
+  "preparedCount": 5,
+  "publicationTimezone": "UTC",
+  "intendedPublicationDate": "2026-10-02",
+  "dateReconciliation": "Blog integrator must reconcile all visible and structured dates to actual first publication before the sole combined push if release timing changes",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "7e17e95875cdc45759abf589e0f4bc897bfd20af",
+  "researchBranch": "content/out-89-research-20261002",
+  "researchContentCommit": "90e05f061d1a0e5668fc400e1b527f7edfc7e5e3",
+  "handoffIssue": "OUTAAAAAAAAAAAAA-90",
+  "remoteSha": null,
+  "deploymentEvidence": { "owner": "browser operator", "applicationUuid": "p134b2omci9euwptg3jkjygg", "deploymentId": null, "status": "not submitted; Research is local-handoff only" },
+  "liveVerification": { "owner": "user", "status": "not performed; prepared routes are not described as live" },
+  "validation": {
+    "typecheck": "passed",
+    "tests": "passed: 8 suites",
+    "cleanProductionBuild": "passed: 675 static pages",
+    "renderedChecks": "passed: exact count, canonical URLs, 2026-10-02 visible/schema dates, reused repository image, service links, index and sitemap entries",
+    "repeatedParagraphs": "passed: zero identical substantive paragraphs across the five articles",
+    "qualitativeIndependence": "passed: distinct units, populations, state models, tests, scenarios, owner decisions, and service paths",
+    "substantiveWordCounts": [1549, 1562, 1527, 1541, 1546],
+    "maximumPairwiseFiveWordShingleJaccard": 0.3456
+  },
+  "articles": [
+    { "family": "billing operations research", "topic": "consolidated invoice entity allocation", "slug": "research-outsourced-billing-consolidated-invoice-entity-allocation-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FASB Revenue Recognition: ASU 2014-09", "CISA Use Logging on Business Systems"], "contentHash": "sha256:aeafa7103965638a68b1a786488d7bd521592d6ec1772e2ca3868453d1582fe4", "intendedPublicationDate": "2026-10-02", "commitSha": "90e05f061d1a0e5668fc400e1b527f7edfc7e5e3", "preparedUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-consolidated-invoice-entity-allocation-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "invoice number collision control", "slug": "research-outsourced-billing-invoice-number-collision-control-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "CISA Use Logging on Business Systems", "FTC Protecting Personal Information: A Guide for Business"], "contentHash": "sha256:95e8b6a6d2c58dd38047577675a08021e5c39658e9f69a4b142204ae1abc3578", "intendedPublicationDate": "2026-10-02", "commitSha": "90e05f061d1a0e5668fc400e1b527f7edfc7e5e3", "preparedUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-invoice-number-collision-control-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "foreign exchange rate input lineage", "slug": "research-outsourced-billing-foreign-exchange-rate-input-lineage-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FASB Revenue Recognition: ASU 2014-09", "CISA Use Logging on Business Systems"], "contentHash": "sha256:5326db063e21f9b526f6fbee606702a083fc94049fbac0b6ed2d2d05714d7719", "intendedPublicationDate": "2026-10-02", "commitSha": "90e05f061d1a0e5668fc400e1b527f7edfc7e5e3", "preparedUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-foreign-exchange-rate-input-lineage-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "billing hold release evidence", "slug": "research-outsourced-billing-hold-release-evidence-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FTC Protecting Personal Information: A Guide for Business", "CISA Use Logging on Business Systems"], "contentHash": "sha256:38175f81ef0e37b5277d926b6ccc10432f491b147511a91c619a25c2ca7c74d4", "intendedPublicationDate": "2026-10-02", "commitSha": "90e05f061d1a0e5668fc400e1b527f7edfc7e5e3", "preparedUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-hold-release-evidence-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "chargeback receivable reinstatement lineage", "slug": "research-outsourced-billing-chargeback-receivable-reinstatement-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FTC Protecting Personal Information: A Guide for Business", "CISA Use Logging on Business Systems"], "contentHash": "sha256:4523999dffb75b91cf47d7527d1009e063d05dd8bcb4f062de12911d02d109fe", "intendedPublicationDate": "2026-10-02", "commitSha": "90e05f061d1a0e5668fc400e1b527f7edfc7e5e3", "preparedUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-chargeback-receivable-reinstatement-2026", "verificationTime": null }
+  ]
+}
