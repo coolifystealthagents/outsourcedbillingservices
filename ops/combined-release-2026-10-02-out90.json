@@ -1,0 +1,59 @@
+{
+  "cycle": "2026-10-02",
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-10-02",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "7e17e95875cdc45759abf589e0f4bc897bfd20af",
+  "integrationBranch": "content/out-90-blog-20261002",
+  "blogIssue": "OUTAAAAAAAAAAAAA-90",
+  "researchIssue": "OUTAAAAAAAAAAAAA-89",
+  "blogContentCommit": "6f58cc3906258056fe3e43b3c2cff0a2aca6ec2b",
+  "researchHandoffHead": "7cb422d0b6151672f9e047c86d34227a9e71b072",
+  "combinedContentHeadBeforeEvidence": "6f84c78b8f471666cd6f7765997cf03e876ef607",
+  "counts": {"blog": 12, "research": 5, "combined": 17},
+  "validation": {
+    "typecheck": "passed",
+    "tests": "passed: 8 suites",
+    "cleanCombinedBuild": "passed: 687 static pages",
+    "blogWords": [1018, 985, 967, 942, 968, 953, 932, 929, 936, 954, 932, 921],
+    "blogMaximumFiveWordShingleJaccard": 0.3791,
+    "blogRepeatedParagraphs": 0,
+    "researchWords": [1549, 1562, 1527, 1541, 1546],
+    "researchMaximumFiveWordShingleJaccard": 0.3456,
+    "researchRepeatedParagraphs": 0,
+    "qualitativeOriginality": "passed: each article has a distinct topic-specific structure, evidence population, scenario, argument, method, and reader outcome",
+    "renderedRoutesTitlesDatesCanonicalsSchemaImagesIndexesSitemap": "passed for all 17"
+  },
+  "blogSlugs": [
+    "invoice-dispute-intake-triage",
+    "billing-cutoff-change-impact-review",
+    "failed-autopay-exception-review",
+    "duplicate-customer-account-review",
+    "partial-payment-allocation-handoff",
+    "recurring-invoice-suspension-control",
+    "usage-source-completeness-review",
+    "credit-memo-application-sequencing",
+    "duplicate-refund-prevention-review",
+    "promise-to-pay-monitoring-handoff",
+    "invoice-supporting-attachment-control",
+    "billing-kpi-definition-dictionary"
+  ],
+  "researchSlugs": [
+    "research-outsourced-billing-consolidated-invoice-entity-allocation-2026",
+    "research-outsourced-billing-invoice-number-collision-control-2026",
+    "research-outsourced-billing-foreign-exchange-rate-input-lineage-2026",
+    "research-outsourced-billing-hold-release-evidence-2026",
+    "research-outsourced-billing-chargeback-receivable-reinstatement-2026"
+  ],
+  "deployment": {
+    "owner": "browser operator",
+    "applicationUuid": "p134b2omci9euwptg3jkjygg",
+    "status": "awaiting exact combined pushed SHA"
+  },
+  "publicVerification": {
+    "owner": "existing company agent after browser-operator deployment evidence",
+    "requiredCount": 17,
+    "status": "pending deployment"
+  }
+}
