@@ -1,0 +1,44 @@
+{
+  "cycle": "2026-10-02",
+  "family": "blog",
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-10-02",
+  "status": "staged-awaiting-research-handoff-and-combined-push",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "7e17e95875cdc45759abf589e0f4bc897bfd20af",
+  "integrationBranch": "content/out-90-blog-20261002",
+  "blogIssue": "OUTAAAAAAAAAAAAA-90",
+  "researchIssue": "OUTAAAAAAAAAAAAA-89",
+  "count": 12,
+  "validation": {
+    "typecheck": "passed",
+    "tests": "passed: 8 suites",
+    "cleanBuild": "passed: 682 static pages",
+    "bodyWords": [1018, 985, 967, 942, 968, 953, 932, 929, 936, 954, 932, 921],
+    "maximumPairwiseFiveWordShingleJaccard": 0.3791,
+    "repeatedParagraphs": 0,
+    "sharedArgumentReview": "passed; each guide has a distinct operational question, evidence model, scenario, method, and reader outcome",
+    "routesMetadataCanonicalsSchemaImageIndexSitemap": "passed by typecheck and clean static build"
+  },
+  "sources": [
+    "https://www.nist.gov/cyberframework",
+    "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"
+  ],
+  "articles": [
+    {"slug":"invoice-dispute-intake-triage","words":1018,"contentHash":"27c61f8cfedc413f57e1e85c993ae97fea70d6e3d334cac2ac555a6ae9f70266","liveUrl":"https://outsourcedbillingservices.com/blog/invoice-dispute-intake-triage"},
+    {"slug":"billing-cutoff-change-impact-review","words":985,"contentHash":"88d39b8f2b31ea6db49bc8a0dd9c72c13694e62d047b634e5436be73c123650d","liveUrl":"https://outsourcedbillingservices.com/blog/billing-cutoff-change-impact-review"},
+    {"slug":"failed-autopay-exception-review","words":967,"contentHash":"76eca1d65f3278b680ceeffc13cc20d272f29ecce4b23ec7ba4202ca5e36b5a4","liveUrl":"https://outsourcedbillingservices.com/blog/failed-autopay-exception-review"},
+    {"slug":"duplicate-customer-account-review","words":942,"contentHash":"d707d2e1e6e9f3feb9f924642c35d693ed4a7c87b5680dc90448c335d2ec4a1b","liveUrl":"https://outsourcedbillingservices.com/blog/duplicate-customer-account-review"},
+    {"slug":"partial-payment-allocation-handoff","words":968,"contentHash":"08d3e665f5ecf67138e5ae80fa9eabce07eb70dfbe5a0b34b5fef563154e47e7","liveUrl":"https://outsourcedbillingservices.com/blog/partial-payment-allocation-handoff"},
+    {"slug":"recurring-invoice-suspension-control","words":953,"contentHash":"54cb9fe9365538ac6cb9fe62a3a439473abd22ac112874ec4bc572cfa5f936ba","liveUrl":"https://outsourcedbillingservices.com/blog/recurring-invoice-suspension-control"},
+    {"slug":"usage-source-completeness-review","words":932,"contentHash":"edd169bcb5e724d5020fe37606419d674f6e18681a82a1e19de6c1afaa3b0c92","liveUrl":"https://outsourcedbillingservices.com/blog/usage-source-completeness-review"},
+    {"slug":"credit-memo-application-sequencing","words":929,"contentHash":"59b715bb422a61d9b93a4b8c4af260288420c0fd842e9f0e2e8febd280cc743e","liveUrl":"https://outsourcedbillingservices.com/blog/credit-memo-application-sequencing"},
+    {"slug":"duplicate-refund-prevention-review","words":936,"contentHash":"cfdc2b45c2377746e94ce5273d0378c0d7aa58799999e44df472ffbede017a02","liveUrl":"https://outsourcedbillingservices.com/blog/duplicate-refund-prevention-review"},
+    {"slug":"promise-to-pay-monitoring-handoff","words":954,"contentHash":"8236a5203224a8296b6d966d1262bd4d254d6bdbbbcfeea2332ff17be3966039","liveUrl":"https://outsourcedbillingservices.com/blog/promise-to-pay-monitoring-handoff"},
+    {"slug":"invoice-supporting-attachment-control","words":932,"contentHash":"a33d9d1c155241a9d28352be69e4e8c496f6518fbe7ce91d0bcbc8e0f9cd32c3","liveUrl":"https://outsourcedbillingservices.com/blog/invoice-supporting-attachment-control"},
+    {"slug":"billing-kpi-definition-dictionary","words":921,"contentHash":"2b296348f73f5ec1cff9ac5b79080bb0bd19e3fde18f8cab2b3da70f86baac47","liveUrl":"https://outsourcedbillingservices.com/blog/billing-kpi-definition-dictionary"}
+  ],
+  "deployment": {"owner":"browser operator","applicationUuid":"p134b2omci9euwptg3jkjygg","status":"not requested; combined 17-article SHA not yet available"},
+  "publicVerification": {"status":"not eligible until Research handoff, combined push, and exact-SHA deployment"}
+}
