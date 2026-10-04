@@ -45,3 +45,17 @@ No new reader-facing handoff is selected from this map until a separate review c
 ## 2026-10-02 local-artifact reconciliation
 
 A fresh 670-page production build found each September 18 research route and its matching existing service in the generated sitemap. The shared research renderer emits the record-owned service CTA once inside route-local `<main>`, so these five pairs are delivered and non-duplicable. This source-only map correction does not claim deployment or public rollout: `ops/recurring-routines.json` assigns live verification outside this routine.
+
+## 2026-10-04 October research handoff reconciliation
+
+A fresh 687-page production build selected the five October 2 research routes by their exact self-canonical links. Each route is in the sitemap and has exactly one record-owned service link inside its route-local `<main>`, so the following pairs are delivered and non-duplicable:
+
+| Supporting research | Existing service pillar | Reader decision |
+| --- | --- | --- |
+| `/research/research-outsourced-billing-consolidated-invoice-entity-allocation-2026` | `/services/invoice-preparation` | Can each source charge be traced to the correct entity before an authorized owner releases a consolidated invoice? |
+| `/research/research-outsourced-billing-invoice-number-collision-control-2026` | `/services/billing-data-quality-review` | Can staff distinguish duplicate-looking invoice references without changing a sequence or guessing at a document? |
+| `/research/research-outsourced-billing-foreign-exchange-rate-input-lineage-2026` | `/services/billing-reconciliation` | Can a reviewer reproduce the rate input and calculation while owners retain rate-selection and release decisions? |
+| `/research/research-outsourced-billing-hold-release-evidence-2026` | `/services/customer-billing-support` | What evidence shows a scoped billing hold changed before any work resumed? |
+| `/research/research-outsourced-billing-chargeback-receivable-reinstatement-2026` | `/services/dispute-documentation` | Can a chargeback packet trace the payment event without deciding a balance, dispute, or collection outcome? |
+
+This map update prevents duplicate CTAs. It changes no rendered route, schema, sitemap output, deployment state, or public-release claim.
