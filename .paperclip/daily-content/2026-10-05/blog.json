@@ -124,6 +124,28 @@
       "publicationDate": null,
       "liveUrl": null,
       "verificationTime": null
+    },
+    {
+      "slug": "billing-operations-credit-memo-application-review",
+      "title": "Credit Memo Application Review: Trace the Value to the Intended Invoice",
+      "sourcePath": "content/blog/billing-operations-credit-memo-application-review.md",
+      "status": "source-draft",
+      "wordCount": 959,
+      "contentHash": "297d930a8221e121e0e937336c80a710631a16297430bb7c14cf2c514ac44bec",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
+    },
+    {
+      "slug": "billing-operations-close-reopen-decision-packet",
+      "title": "Close-Reopen Decision Packet for Late Billing Evidence",
+      "sourcePath": "content/blog/billing-operations-close-reopen-decision-packet.md",
+      "status": "source-draft",
+      "wordCount": 1030,
+      "contentHash": "e1410e1a5a44ba435aa3c4128fce7eb8eca3a041c11668889679b738a4886028",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
     }
   ],
   "checks": {
