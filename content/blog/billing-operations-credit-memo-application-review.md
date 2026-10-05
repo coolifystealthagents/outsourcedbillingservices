@@ -44,6 +44,8 @@ Automation should stop when scope, currency, account, invoice version, or disput
 
 Sample fully consumed credits as well as open ones. Open residuals are visible; wrong-target applications often disappear from exception reports once the memo reaches zero.
 
+Test automated rules against an event-time invoice population rather than today’s open items. Preserve the eligible invoices, ordering rule, exclusion flags, application limit, and rule version that existed when the credit moved. Recreate the expected selection, then compare it with the actual target. A later payment or invoice correction can make today’s account screen support a target that was not eligible at application time. When the reconstructed population differs, keep the rule result, actual event, and later account movement as separate evidence for the owner.
+
 ## Connect the result to the customer account
 
 After an authorized application, inspect the invoice balance, aging bucket, statement, collection queue, portal, and customer-facing document where applicable. Confirm that the credit appears once and with an approved description. Check whether automated reminders or service actions still use a stale balance.
