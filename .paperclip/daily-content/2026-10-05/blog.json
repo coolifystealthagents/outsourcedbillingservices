@@ -80,6 +80,28 @@
       "publicationDate": null,
       "liveUrl": null,
       "verificationTime": null
+    },
+    {
+      "slug": "billing-operations-payment-reversal-customer-handoff",
+      "title": "Payment Reversal Customer Handoff: What Billing Support Should Confirm Before Contact",
+      "sourcePath": "content/blog/billing-operations-payment-reversal-customer-handoff.md",
+      "status": "source-draft",
+      "wordCount": 1157,
+      "contentHash": "560ad9513f0bc7ffb401312fec5304920bcbb5a573bff9baf4d9f08abb221bf4",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
+    },
+    {
+      "slug": "billing-operations-proration-input-review",
+      "title": "Proration Input Review Before a Subscription Invoice Is Released",
+      "sourcePath": "content/blog/billing-operations-proration-input-review.md",
+      "status": "source-draft",
+      "wordCount": 1167,
+      "contentHash": "39d94db7f5b580020499d04173dd9b1d191af9c24053c9d6a481ae735406a5a2",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
     }
   ],
   "checks": {
