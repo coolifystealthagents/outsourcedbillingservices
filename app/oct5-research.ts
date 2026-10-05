@@ -1,4 +1,5 @@
 import { buildDecisionResearchBody, type ResearchSeed, type ResearchSource } from './sep22b-research';
+import { oct5LiteralResearchBodies } from './oct5-research-literal-bodies';
 
 const published = '2026-10-05' as const;
 const checked = 'October 5, 2026';
@@ -116,6 +117,8 @@ const fieldNotes: Record<string, string[]> = {
 };
 
 const buildBody = (seed: ResearchSeed) => {
+  const literalBody = oct5LiteralResearchBodies[seed.slug];
+  if (literalBody) return literalBody;
   const base = buildDecisionResearchBody(seed, checked);
   const sourceAppendixLength = seed.sources.length + 1;
   const contextualCore = base.slice(0, -sourceAppendixLength).map((paragraph, index) => `${paragraph} For ${seed.topic}, methodology checkpoint ${index + 1} is evaluated against the article-specific unit, evidence states, and reserved owner decision stated above.`);
