@@ -36,6 +36,17 @@
       "publicationDate": null,
       "liveUrl": null,
       "verificationTime": null
+    },
+    {
+      "slug": "billing-operations-contract-renewal-billing-handoff",
+      "title": "Contract Renewal Billing Handoff Without Guessing at Commercial Terms",
+      "sourcePath": "content/blog/billing-operations-contract-renewal-billing-handoff.md",
+      "status": "source-draft",
+      "wordCount": 1332,
+      "contentHash": "c3c21cec9e56c087b2843472a86a7211d4f62639f03ee8fbf53a56a290ba7e81",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
     }
   ],
   "checks": {
