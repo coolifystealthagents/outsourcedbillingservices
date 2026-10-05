@@ -64,4 +64,4 @@ Strong customer-master control makes later billing work easier to trust. If your
 
 - [NIST SP 800-53 Revision 5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)
 - [FTC: Protecting Personal Information, A Guide for Business](https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business-0)
-- [CISA Identity and Access Management guidance](https://www.cisa.gov/topics/cybersecurity-best-practices/identity-and-access-management)
+- [CISA Identity and Access Management: Recommended Best Practices for Administrators](https://www.cisa.gov/sites/default/files/2023-12/ESF%20IDENTITY%20AND%20ACCESS%20MANAGEMENT%20RECOMMENDED%20BEST%20PRACTICES%20FOR%20ADMINISTRATORS%20PP-23-0248_508C.pdf)
