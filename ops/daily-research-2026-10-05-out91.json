@@ -1,0 +1,38 @@
+{
+  "routine": "daily-research-publishing",
+  "issue": "OUTAAAAAAAAAAAAA-91",
+  "runId": "246b5e8c-6626-4b66-8bcd-92978b468002",
+  "requiredCount": 5,
+  "preparedCount": 5,
+  "publicationTimezone": "UTC",
+  "intendedPublicationDate": "2026-10-05",
+  "dateReconciliation": "October 5 is a cycle label. Blog integrator must reconcile visible, structured, sitemap, combined-manifest, and ledger dates to each route's actual first-publication date in UTC before the sole combined push if publication occurs after 2026-10-05.",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baseSha": "df5f03d64b448b955ede9a3c39bcb5cc305c0091",
+  "researchBranch": "content/out-91-research-20261005",
+  "researchContentCommit": "6b807b0a91ac7a5014cd50e830a76345c616eb89",
+  "handoffIssue": "OUTAAAAAAAAAAAAA-92",
+  "remoteSha": null,
+  "deploymentEvidence": { "owner": "browser operator", "applicationUuid": "p134b2omci9euwptg3jkjygg", "deploymentId": null, "status": "not submitted; Research is local-handoff only" },
+  "liveVerification": { "owner": "existing company agent after operator evidence", "status": "not performed; prepared routes are not described as live" },
+  "validation": {
+    "dependencyInstall": "npm ci --include=dev completed; npm reported 4 dependency audit findings (3 high, 1 critical) in the existing lockfile and one sharp install-script approval warning",
+    "typecheck": "passed",
+    "tests": "passed: 8 suites",
+    "cleanProductionBuild": "passed: 692 static pages",
+    "renderedChecks": "passed: exact count, complete body rendering, canonical URLs, 2026-10-05 visible/schema dates, decoded 1536x1024 PNG, service links, Research index and sitemap entries",
+    "sourceChecks": "official GAO, NIST, FTC and FASB pages reviewed October 5, 2026; direct automated requests returned NIST 200 and bot-policy 403 for GAO, FTC and FASB",
+    "repeatedParagraphs": "passed: zero identical substantive paragraphs across the five articles",
+    "qualitativeIndependence": "passed: distinct artifact-comparison, dual-timeline drift, component-ledger, cross-system state-replay, and control-total dependency methods; distinct worked examples and reader outcomes",
+    "substantiveWordCounts": [1761, 1705, 1719, 1722, 1735],
+    "maximumPairwiseFiveWordShingleJaccard": 0.414
+  },
+  "articles": [
+    { "family": "billing operations research", "topic": "rendered invoice and approved source equality", "slug": "research-outsourced-billing-rendered-invoice-source-equality-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FTC Protecting Personal Information: A Guide for Business"], "contentHash": "sha256:86941d891542329bf1357a3ba6c17063ae1c9550a7787c0b8c0a5624204e3a50", "intendedPublicationDate": "2026-10-05", "commitSha": "6b807b0a91ac7a5014cd50e830a76345c616eb89", "preparedUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-rendered-invoice-source-equality-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "recurring billing schedule drift", "slug": "research-outsourced-billing-recurring-schedule-drift-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FASB Revenue Recognition: Topic 606", "FTC Protecting Personal Information: A Guide for Business"], "contentHash": "sha256:cea3fa1a55674b8f33c100964a7f3217633bfcde426f7613d49938d28f6e4dc4", "intendedPublicationDate": "2026-10-05", "commitSha": "6b807b0a91ac7a5014cd50e830a76345c616eb89", "preparedUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-recurring-schedule-drift-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "partial credit memo application lineage", "slug": "research-outsourced-billing-partial-credit-application-lineage-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FASB Revenue Recognition: Topic 606", "FTC Protecting Personal Information: A Guide for Business"], "contentHash": "sha256:7c7ed957161b4fd62a957402b8ecdf72805027ca26c4d4a2e37d44bef5ee3176", "intendedPublicationDate": "2026-10-05", "commitSha": "6b807b0a91ac7a5014cd50e830a76345c616eb89", "preparedUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-partial-credit-application-lineage-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "billing dispute hold synchronization", "slug": "research-outsourced-billing-dispute-hold-synchronization-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FTC Protecting Personal Information: A Guide for Business"], "contentHash": "sha256:1a58d5590e69b6bed03ff00e1a60240a3bb01071e7ea757f4084d2e200285b33", "intendedPublicationDate": "2026-10-05", "commitSha": "6b807b0a91ac7a5014cd50e830a76345c616eb89", "preparedUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-dispute-hold-synchronization-2026", "verificationTime": null },
+    { "family": "billing operations research", "topic": "month-end billing close package control-total integrity", "slug": "research-outsourced-billing-close-package-control-total-integrity-2026", "sources": ["GAO Standards for Internal Control in the Federal Government: 2025 Revision", "NIST SP 800-53 Revision 5", "FASB Revenue Recognition: Topic 606"], "contentHash": "sha256:7e9403b3437b70649e4352c5b8e84cd4d697ce23b915147da4982cfe61ce2a3b", "intendedPublicationDate": "2026-10-05", "commitSha": "6b807b0a91ac7a5014cd50e830a76345c616eb89", "preparedUrl": "https://outsourcedbillingservices.com/research/research-outsourced-billing-close-package-control-total-integrity-2026", "verificationTime": null }
+  ]
+}
