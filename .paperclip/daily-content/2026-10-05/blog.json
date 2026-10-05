@@ -47,6 +47,17 @@
       "publicationDate": null,
       "liveUrl": null,
       "verificationTime": null
+    },
+    {
+      "slug": "billing-operations-currency-conversion-evidence-review",
+      "title": "Currency Conversion Evidence Review for Billing Teams",
+      "sourcePath": "content/blog/billing-operations-currency-conversion-evidence-review.md",
+      "status": "source-draft",
+      "wordCount": 1272,
+      "contentHash": "0879959083822d225977d0ad9098b0644e62e15b24df5bd47e641c1cd6d7a6d4",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
     }
   ],
   "checks": {
