@@ -132,3 +132,17 @@ Five new Research studies were prepared from production base `7e17e95875cdc45759
 | Chargeback receivable reinstatement lineage | `/research/research-outsourced-billing-chargeback-receivable-reinstatement-2026` | `/services/dispute-documentation` | 1,546 |
 
 The rendered body audit excludes shared navigation, CTA, source appendix, and layout. Maximum pairwise five-word-shingle Jaccard overlap is 34.56%; no identical substantive paragraph appears across the five articles. The five studies use distinct units, populations, state models, tests, scenarios, owner decisions, and service paths. Manifest: `ops/daily-research-2026-10-02-out89.json`. October 2 is release-intent metadata and must be reconciled by the Blog integrator to actual first publication before the sole combined push if timing changes. No prepared route is represented as live or publicly verified.
+
+## Reconciliation — 2026-10-05
+
+The October 2 research batch is now present in the current generated route inventory. A fresh artifact check selected each source by its self-canonical URL, checked the matching existing service route and sitemap locations, and counted destination anchors only inside the source `<main>`. Each pair below has one matching route-local service link, so these are delivered paths rather than new CTA candidates.
+
+| Research question | Existing service path | Route-local result | Follow-up |
+| --- | --- | --- | --- |
+| Can every charge on a consolidated invoice be traced to its intended entity? | `/services/invoice-preparation` | One matching link in the research `<main>`. | Keep delivered; do not add another CTA. |
+| Can one released document be found from each invoice reference? | `/services/billing-data-quality-review` | One matching link in the research `<main>`. | Keep delivered; do not add another CTA. |
+| Which exchange-rate input reached the invoice? | `/services/billing-reconciliation` | One matching link in the research `<main>`. | Keep delivered; do not add another CTA. |
+| What evidence changed before a billing hold was released? | `/services/customer-billing-support` | One matching link in the research `<main>`. | Keep delivered; do not add another CTA. |
+| Did a disputed payment return to the right balance? | `/services/dispute-documentation` | One matching link in the research `<main>`. | Keep delivered; do not add another CTA. |
+
+This is a repository-local topical-map correction only. It does not change rendered copy, schema, route registration, sitemap data, deployment state, or public verification.
