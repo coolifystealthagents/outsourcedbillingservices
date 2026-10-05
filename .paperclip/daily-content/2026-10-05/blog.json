@@ -102,6 +102,28 @@
       "publicationDate": null,
       "liveUrl": null,
       "verificationTime": null
+    },
+    {
+      "slug": "billing-operations-bill-to-ship-to-mismatch-review",
+      "title": "Bill-To and Ship-To Mismatch Review Without Merging the Wrong Customer Records",
+      "sourcePath": "content/blog/billing-operations-bill-to-ship-to-mismatch-review.md",
+      "status": "source-draft",
+      "wordCount": 1115,
+      "contentHash": "710f4579e339bf4af85fa988186eee516ae26cdd841bacf7ece8b9c5b7480949",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
+    },
+    {
+      "slug": "billing-operations-unbilled-activity-aging-review",
+      "title": "Unbilled Activity Aging Review: Find the Decision Holding Each Charge",
+      "sourcePath": "content/blog/billing-operations-unbilled-activity-aging-review.md",
+      "status": "source-draft",
+      "wordCount": 1120,
+      "contentHash": "e04d1fe0638a1d23413f96d4466a882445d6651c0c326a4fe8b8bbfaaf5384b8",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
     }
   ],
   "checks": {
