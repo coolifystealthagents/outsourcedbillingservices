@@ -16,6 +16,7 @@ import { sep24BlogBatch } from "../sep24-content";
 import { sep25BlogBatch } from "../sep25-content";
 import { sep28BlogBatch } from "../sep28-blog";
 import { oct2BlogBatch } from "../oct2-blog";
+import { oct5BlogBatch } from "../oct5-blog";
 export const metadata = {
   title: "Billing Operations Blog",
   description: "Practical guides for scoping Philippines-based billing support, documenting handoffs, controlling exceptions, and reviewing recurring work.",
@@ -23,6 +24,9 @@ export const metadata = {
 };
 export default function Blog() {
   const daily = [
+    ...oct5BlogBatch.map(
+      (p) => [p.slug, { title: p.title, description: p.description }] as const,
+    ),
     ...oct2BlogBatch.map(
       (p) => [p.slug, { title: p.title, description: p.description }] as const,
     ),
