@@ -58,6 +58,28 @@
       "publicationDate": null,
       "liveUrl": null,
       "verificationTime": null
+    },
+    {
+      "slug": "billing-operations-customer-master-change-control",
+      "title": "Customer Master Change Control for Billing Operations",
+      "sourcePath": "content/blog/billing-operations-customer-master-change-control.md",
+      "status": "source-draft",
+      "wordCount": 1256,
+      "contentHash": "80a2f5dd1d79e88a3da393b36fd498898f747a3024d19c1b1a9401d9c1969555",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
+    },
+    {
+      "slug": "billing-operations-invoice-sequence-gap-review",
+      "title": "Invoice Sequence Gap Review: Explain Missing Numbers Without Inventing Invoices",
+      "sourcePath": "content/blog/billing-operations-invoice-sequence-gap-review.md",
+      "status": "source-draft",
+      "wordCount": 1242,
+      "contentHash": "2383076011cddc071a191d5ca96ca3b004cf683da9bf29db586e196abb487acc",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
     }
   ],
   "checks": {
