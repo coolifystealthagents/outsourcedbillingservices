@@ -1,0 +1,43 @@
+{
+  "cycleLabel": "2026-10-05",
+  "role": "Blog sole integrator",
+  "issue": "OUTAAAAAAAAAAAAA-92",
+  "pairedResearchIssue": "OUTAAAAAAAAAAAAA-91",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "productionBranch": "main",
+  "baselineSha": "df5f03d64b448b955ede9a3c39bcb5cc305c0091",
+  "draftBranch": "content/out-92-blog-20261005",
+  "siteTimezone": "pending repository verification",
+  "publicationDate": null,
+  "required": { "blog": 12, "research": 5 },
+  "status": "drafting",
+  "productionPushes": 0,
+  "deployment": { "resource": "p134b2omci9euwptg3jkjygg", "operatorOnly": true, "evidence": null },
+  "researchHandoff": null,
+  "blogArticles": [
+    {
+      "slug": "billing-operations-bank-return-reconciliation",
+      "title": "Bank Return Reconciliation for Billing Operations",
+      "sourcePath": "content/blog/billing-operations-bank-return-reconciliation.md",
+      "status": "source-draft",
+      "wordCount": 1383,
+      "contentHash": "8b3fa7470ef76a620eabb4fa866a68c6ef51ca682524eba6094cf507b0051f72",
+      "publicationDate": null,
+      "liveUrl": null,
+      "verificationTime": null
+    }
+  ],
+  "checks": {
+    "bodyLengths": null,
+    "fiveWordShingleOverlap": null,
+    "repeatedParagraphs": null,
+    "sharedArgumentSequences": null,
+    "priorCorpusCollisions": null,
+    "sourceRenderEquality": null,
+    "images": null,
+    "links": null,
+    "typecheck": null,
+    "tests": null,
+    "productionBuild": null
+  }
+}
