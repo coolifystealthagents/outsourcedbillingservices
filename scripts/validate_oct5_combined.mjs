@@ -25,7 +25,7 @@ for (const article of blogLedger.blogArticles) {
   const rendered = normalize(text(html));
   for (const block of blocks) if (!rendered.includes(normalize(block))) fail(`${article.slug} missing rendered block: ${block.slice(0, 80)}`);
   const canonical = `https://outsourcedbillingservices.com/blog/${article.slug}`;
-  for (const required of [article.title, canonical, '2026-10-05', 'October 5, 2026', 'BlogPosting']) if (!decode(html).includes(required)) fail(`${article.slug} missing ${required}`);
+  for (const required of [article.title, canonical, '2026-10-06', 'October 6, 2026', 'BlogPosting']) if (!decode(html).includes(required)) fail(`${article.slug} missing ${required}`);
   if (!html.includes('billing-dashboard.webp')) fail(`${article.slug} missing image`);
   blogResults.push({ slug: article.slug, words, sourceHash: sha(blocks.join('\n')) });
 }
@@ -43,7 +43,7 @@ for (const [slug, paragraphs] of researchEntries) {
   const rendered = normalize(text(html));
   for (const paragraph of paragraphs) if (!rendered.includes(normalize(paragraph))) fail(`${slug} missing rendered paragraph: ${paragraph.slice(0, 80)}`);
   const canonical = `https://outsourcedbillingservices.com/research/${slug}`;
-  for (const required of [canonical, '2026-10-05', 'October 5, 2026', '"@type":"Article"']) if (!decode(html).includes(required)) fail(`${slug} missing ${required}`);
+  for (const required of [canonical, '2026-10-06', 'October 6, 2026', '"@type":"Article"']) if (!decode(html).includes(required)) fail(`${slug} missing ${required}`);
   if (!html.includes('research-medical-billing-remittance-batch-reconciliation.png')) fail(`${slug} missing image`);
   researchResults.push({ slug, words, sourceHash: sha(paragraphs.join('\n')) });
 }
@@ -53,7 +53,10 @@ for (const item of blogResults) if (!blogIndex.includes(`/blog/${item.slug}`)) f
 const researchIndex = fs.readFileSync('.next/server/app/research.html', 'utf8');
 for (const item of researchResults) if (!researchIndex.includes(`/research/${item.slug}`)) fail(`Research index missing ${item.slug}`);
 const sitemap = fs.readFileSync('.next/server/app/sitemap.xml.body', 'utf8');
-for (const item of [...blogResults.map((x) => `/blog/${x.slug}`), ...researchResults.map((x) => `/research/${x.slug}`)]) if (!sitemap.includes(item)) fail(`Sitemap missing ${item}`);
+for (const item of [...blogResults.map((x) => `/blog/${x.slug}`), ...researchResults.map((x) => `/research/${x.slug}`)]) {
+  if (!sitemap.includes(item)) fail(`Sitemap missing ${item}`);
+  if (!sitemap.includes(`${item}</loc><lastmod>2026-10-06</lastmod>`)) fail(`Sitemap date mismatch for ${item}`);
+}
 
 const images = [
   ['public/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp', '52494646'],
@@ -66,4 +69,4 @@ const imageResults = images.map(([file, signature]) => {
   return { file, bytes: bytes.length, signature: bytes.slice(0, 12).toString('hex') };
 });
 
-console.log(JSON.stringify({ passed: true, publicationTimezone: 'UTC', publicationDate: '2026-10-05', blog: blogResults, research: researchResults, images: imageResults }, null, 2));
+console.log(JSON.stringify({ passed: true, publicationTimezone: 'UTC', publicationDate: '2026-10-06', blog: blogResults, research: researchResults, images: imageResults }, null, 2));

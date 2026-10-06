@@ -1,7 +1,7 @@
 import { type ResearchSeed, type ResearchSource } from './sep22b-research';
 import { oct5LiteralResearchBodies } from './oct5-research-literal-bodies';
 
-const published = '2026-10-05' as const;
+const published = '2026-10-06' as const;
 const checked = 'October 5, 2026';
 const featuredImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png';
 

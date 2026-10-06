@@ -247,7 +247,7 @@ function Oct5Article({ article }: { article: (typeof oct5BlogBatch)[number] }) {
   const image = `https://${String(site.domain).toLowerCase()}${article.featuredImage}`;
   return <><Header hidePricing /><main className="article-shell"><article>
     <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,mainEntityOfPage:canonical,image,author:{'@type':'Organization',name:site.brand},publisher:{'@type':'Organization',name:site.brand,url:`https://${String(site.domain).toLowerCase()}`},citation:article.sources.map((source) => source.url)}} />
-    <p className="eyebrow">Billing operations guide</p><h1>{article.title}</h1><p><time dateTime={article.published}>October 5, 2026</time></p>
+    <p className="eyebrow">Billing operations guide</p><h1>{article.title}</h1><p><time dateTime={article.published}>October 6, 2026</time></p>
     <img src={article.featuredImage} alt="Billing operations evidence and reconciliation workspace" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((block, index) => block.kind === 'heading' ? <h2 key={`${block.text}-${index}`}>{block.text}</h2> : <p key={`${block.text}-${index}`}><InlineLinks text={block.text} /></p>)}</div>
     <h2>Authoritative references</h2><ul>{article.sources.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>

@@ -16,6 +16,7 @@ import { sep25BlogSlugs } from "../sep25-content";
 import { sep28BlogSlugs } from "../sep28-blog";
 import { oct2BlogSlugs } from "../oct2-blog";
 import { oct5BlogSlugs } from "../oct5-blog";
+import { oct5ResearchTopics } from "../oct5-research";
 import { site, services, blogPosts, researchPosts } from "../data";
 export function GET() {
   const base = `https://${String(site.domain).toLowerCase()}`;
@@ -96,8 +97,12 @@ export function GET() {
     ...oct2Paths,
     ...oct5Paths,
   ];
+  const oct5ReleasePaths = new Set([
+    ...oct5BlogSlugs.map((slug) => `/blog/${slug}`),
+    ...oct5ResearchTopics.map(({ slug }) => `/research/${slug}`),
+  ]);
   const body = Array.from(new Set(paths))
-    .map((x) => `<url><loc>${base}${x}</loc></url>`)
+    .map((x) => `<url><loc>${base}${x}</loc>${oct5ReleasePaths.has(x) ? "<lastmod>2026-10-06</lastmod>" : ""}</url>`)
     .join("");
   return new Response(
     `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${body}</urlset>`,

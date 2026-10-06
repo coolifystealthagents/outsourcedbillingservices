@@ -6,8 +6,9 @@ const data = fs.readFileSync('app/data.ts', 'utf8');
 const slugs = [...source.matchAll(/slug: '([^']+)'/g)].map((match) => match[1]).slice(0, 5);
 if (slugs.length !== 5 || new Set(slugs).size !== 5) throw new Error(`expected exactly 5 unique slugs, found ${slugs.length}`);
 if (!data.includes("import { oct5ResearchBatch } from './oct5-research';") || !data.includes('researchPosts.push(...oct5ResearchBatch')) throw new Error('October 5 Research collection registration missing');
-if ((source.match(/published = '2026-10-05'/g) || []).length !== 1) throw new Error('publication date mismatch');
-const priorSources = fs.readdirSync('app').filter((name) => name.endsWith('.ts') || name.endsWith('.tsx')).filter((name) => name !== 'oct5-research.ts').map((name) => fs.readFileSync(path.join('app', name), 'utf8')).join('\n');
+if ((source.match(/published = '2026-10-06'/g) || []).length !== 1) throw new Error('publication date mismatch');
+const currentSources = new Set(['oct5-research.ts', 'oct5-research-literal-bodies.ts']);
+const priorSources = fs.readdirSync('app').filter((name) => name.endsWith('.ts') || name.endsWith('.tsx')).filter((name) => !currentSources.has(name)).map((name) => fs.readFileSync(path.join('app', name), 'utf8')).join('\n');
 for (const slug of slugs) if (priorSources.includes(slug)) throw new Error(`${slug}: collision with prior corpus`);
 
 const decode = (value) => value.replace(/<[^>]+>/g, ' ').replaceAll('&amp;', '&').replaceAll('&#x27;', "'").replaceAll('&quot;', '"').replaceAll('&lt;', '<').replaceAll('&gt;', '>').replace(/\s+/g, ' ').trim();
@@ -23,15 +24,15 @@ for (const slug of slugs) {
   const bodyMatch = rendered.match(/<div class="card">(.*?)<\/div><aside/s);
   if (!bodyMatch) throw new Error(`missing rendered body: ${slug}`);
   const paragraphs = [...bodyMatch[1].matchAll(/<p>(.*?)<\/p>/gs)].map((match) => decode(match[1]));
-  const substantiveParagraphs = paragraphs.filter((paragraph) => !paragraph.startsWith('Source method.') && !paragraph.includes('http'));
+  const substantiveParagraphs = paragraphs.filter((paragraph) => !paragraph.startsWith('Source method.'));
   const substantive = substantiveParagraphs.join(' ');
   const count = words(substantive).length;
   if (count < 1200) throw new Error(`${slug}: ${count} substantive words; expected at least 1200`);
   const canonical = `https://outsourcedbillingservices.com/research/${slug}`;
   if (!rendered.includes(canonical)) throw new Error(`${slug}: canonical missing`);
-  if (!rendered.includes('2026-10-05') || !rendered.includes('datePublished')) throw new Error(`${slug}: rendered date/schema missing`);
+  if (!rendered.includes('2026-10-06') || !rendered.includes('datePublished')) throw new Error(`${slug}: rendered date/schema missing`);
   if (!rendered.includes('research-medical-billing-remittance-batch-reconciliation.png')) throw new Error(`${slug}: featured image missing`);
-  if (!sitemap.includes(`/research/${slug}`)) throw new Error(`${slug}: sitemap entry missing`);
+  if (!sitemap.includes(`/research/${slug}</loc><lastmod>2026-10-06</lastmod>`)) throw new Error(`${slug}: sitemap entry/date missing`);
   if (!rendered.includes('href="/services/')) throw new Error(`${slug}: service link missing`);
   bodies.set(slug, substantive);
   for (const paragraph of substantiveParagraphs) {

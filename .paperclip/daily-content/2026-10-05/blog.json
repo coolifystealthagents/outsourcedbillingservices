@@ -7,8 +7,8 @@
   "productionBranch": "main",
   "baselineSha": "df5f03d64b448b955ede9a3c39bcb5cc305c0091",
   "draftBranch": "content/out-92-blog-20261005",
-  "siteTimezone": "pending repository verification",
-  "publicationDate": null,
+  "siteTimezone": "UTC",
+  "publicationDate": "2026-10-06",
   "required": { "blog": 12, "research": 5 },
   "status": "drafting",
   "productionPushes": 0,
@@ -22,7 +22,7 @@
       "status": "source-draft",
       "wordCount": 1383,
       "contentHash": "8b3fa7470ef76a620eabb4fa866a68c6ef51ca682524eba6094cf507b0051f72",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -33,7 +33,7 @@
       "status": "source-draft",
       "wordCount": 1431,
       "contentHash": "7b77100a4327063bf3f35f36f779fa924488f77ed05106a5c0896c41af66fcbf",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -44,7 +44,7 @@
       "status": "source-draft",
       "wordCount": 1332,
       "contentHash": "c3c21cec9e56c087b2843472a86a7211d4f62639f03ee8fbf53a56a290ba7e81",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -55,7 +55,7 @@
       "status": "source-draft",
       "wordCount": 1272,
       "contentHash": "0879959083822d225977d0ad9098b0644e62e15b24df5bd47e641c1cd6d7a6d4",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -66,7 +66,7 @@
       "status": "source-draft",
       "wordCount": 1260,
       "contentHash": "b9bff15fab9d9a5974790fd10980b34c69dbeeea79cccf8c9280530b1438fd06",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -77,7 +77,7 @@
       "status": "source-draft",
       "wordCount": 1242,
       "contentHash": "2383076011cddc071a191d5ca96ca3b004cf683da9bf29db586e196abb487acc",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -88,7 +88,7 @@
       "status": "source-draft",
       "wordCount": 1157,
       "contentHash": "560ad9513f0bc7ffb401312fec5304920bcbb5a573bff9baf4d9f08abb221bf4",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -99,7 +99,7 @@
       "status": "source-draft",
       "wordCount": 1167,
       "contentHash": "39d94db7f5b580020499d04173dd9b1d191af9c24053c9d6a481ae735406a5a2",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -110,7 +110,7 @@
       "status": "source-draft",
       "wordCount": 1115,
       "contentHash": "710f4579e339bf4af85fa988186eee516ae26cdd841bacf7ece8b9c5b7480949",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -121,7 +121,7 @@
       "status": "source-draft",
       "wordCount": 1120,
       "contentHash": "e04d1fe0638a1d23413f96d4466a882445d6651c0c326a4fe8b8bbfaaf5384b8",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -132,7 +132,7 @@
       "status": "source-draft",
       "wordCount": 1044,
       "contentHash": "9055d1e01e5cd3a09101d923a9d2c3a351482d91c86087306f1dc3e517a1276d",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     },
@@ -143,7 +143,7 @@
       "status": "source-draft",
       "wordCount": 1030,
       "contentHash": "e1410e1a5a44ba435aa3c4128fce7eb8eca3a041c11668889679b738a4886028",
-      "publicationDate": null,
+      "publicationDate": "2026-10-06",
       "liveUrl": null,
       "verificationTime": null
     }

@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const published = '2026-10-05' as const;
+const published = '2026-10-06' as const;
 const featuredImage = '/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp';
 
 const slugs = [
