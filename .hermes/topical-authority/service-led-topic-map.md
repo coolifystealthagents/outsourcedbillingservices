@@ -59,3 +59,17 @@ A fresh 687-page production build selected the five October 2 research routes by
 | `/research/research-outsourced-billing-chargeback-receivable-reinstatement-2026` | `/services/dispute-documentation` | Can a chargeback packet trace the payment event without deciding a balance, dispute, or collection outcome? |
 
 This map update prevents duplicate CTAs. It changes no rendered route, schema, sitemap output, deployment state, or public-release claim.
+
+## 2026-10-06 October research handoff reconciliation
+
+A fresh production build selected the five October 6 research routes by their self-canonical links. Each route has one record-owned service link inside its route-local `<main>`, and each source and service route is in the generated sitemap. These paths are delivered and non-duplicable:
+
+| Supporting research | Existing service pillar | Reader decision |
+| --- | --- | --- |
+| `/research/research-outsourced-billing-rendered-invoice-source-equality-2026` | `/services/invoice-preparation` | Did approved billing data survive document generation before an authorized owner releases the invoice? |
+| `/research/research-outsourced-billing-recurring-schedule-drift-2026` | `/services/subscription-billing-support` | Did the live recurring schedule depart from the approved version? |
+| `/research/research-outsourced-billing-partial-credit-application-lineage-2026` | `/services/credit-memo-administration` | Where did each approved credit component go after application or reversal? |
+| `/research/research-outsourced-billing-dispute-hold-synchronization-2026` | `/services/dispute-documentation` | Do billing and collections show the same approved dispute-hold state? |
+| `/research/research-outsourced-billing-close-package-control-total-integrity-2026` | `/services/month-end-billing-support` | Can a reviewer rebuild a month-end billing package from frozen source totals? |
+
+This is a source-only planning correction. It does not change rendered copy, schema, route registration, sitemap output, deployment state, or public-release status.
