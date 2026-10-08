@@ -104,14 +104,25 @@ export default function Blog() {
             roles. Existing article addresses remain available.
           </p>
           <div className="cards">
-            {posts.map((p) => (
-              <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
-                <h2>{p.title}</h2>
-                {'published' in p && p.published ? <time dateTime={p.published}>Published {readerDate.format(new Date(`${p.published}T00:00:00Z`))}</time> : null}
-                <p>{p.excerpt}</p>
-                <span>{p.minutes} min read</span>
-              </a>
-            ))}
+            {posts.map((p) => {
+              const published =
+                "published" in p && typeof p.published === "string"
+                  ? p.published
+                  : undefined;
+
+              return (
+                <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
+                  <h2>{p.title}</h2>
+                  {published ? (
+                    <time dateTime={published}>
+                      Published {readerDate.format(new Date(`${published}T00:00:00Z`))}
+                    </time>
+                  ) : null}
+                  <p>{p.excerpt}</p>
+                  <span>{p.minutes} min read</span>
+                </a>
+              );
+            })}
           </div>
           <nav className="pagination" aria-label="Blog pages">
             {Array.from({ length: pages }, (_, i) => (
