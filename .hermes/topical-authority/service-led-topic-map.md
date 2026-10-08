@@ -30,7 +30,11 @@
 
 `/research/research-medical-billing-remittance-review` already has one route-local next-step link to `/services/payment-posting`. The rendered research route has its H1 and canonical URL, the service href appears once inside `<main>`, and both routes are in the generated sitemap. Treat this pair as delivered and non-duplicable; do not add another CTA for the same handoff.
 
-No new reader-facing handoff is selected from this map until a separate review confirms a useful, currently absent source-to-service pair.
+## 2026-10-08 selected handoff
+
+`/research/research-medical-billing-revenue-schedule-preparation` now links once inside route-local `<main>` to `/services/revenue-schedule-preparation`. The route asks for source checks before close, and the service page gives the reader the related preparation path. The handoff keeps recognition treatment, amendments, materiality, journal entries, and close sign-off with the finance owner.
+
+Treat this pair as delivered and non-duplicable. Its source record owns the CTA and modified date; local artifact verification must confirm both routes' canonicals and sitemap entries before release.
 
 ## 2026-09-18 Research publication ledger
 
