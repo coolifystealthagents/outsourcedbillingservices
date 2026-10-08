@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-08",
+  "requiredCount": 5,
+  "entries": [
+    {
+      "slug": "research-billing-owner-decision-latency-2026",
+      "title": "How Long Do Billing Exceptions Wait for an Owner Decision?",
+      "route": "/research/research-billing-owner-decision-latency-2026",
+      "words": 1328,
+      "sources": [
+        "https://doi.org/10.6028/NIST.CSWP.29",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business-0",
+        "https://www.gao.gov/greenbook",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "slug": "research-invoice-source-lineage-completeness-2026",
+      "title": "Can Reviewers Rebuild an Invoice from Its Source Evidence?",
+      "route": "/research/research-invoice-source-lineage-completeness-2026",
+      "words": 1331,
+      "sources": [
+        "https://doi.org/10.6028/NIST.CSWP.29",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business-0",
+        "https://www.gao.gov/greenbook",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "slug": "research-payment-posting-reviewer-agreement-2026",
+      "title": "Do Reviewers Agree on Payment-Posting Exceptions?",
+      "route": "/research/research-payment-posting-reviewer-agreement-2026",
+      "words": 1326,
+      "sources": [
+        "https://doi.org/10.6028/NIST.CSWP.29",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business-0",
+        "https://www.gao.gov/greenbook",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "slug": "research-billing-customer-contact-evidence-2026",
+      "title": "Do Billing Contact Records Prove the Right Customer Was Reached?",
+      "route": "/research/research-billing-customer-contact-evidence-2026",
+      "words": 1332,
+      "sources": [
+        "https://doi.org/10.6028/NIST.CSWP.29",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business-0",
+        "https://www.gao.gov/greenbook",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "slug": "research-month-end-billing-reopen-recurrence-2026",
+      "title": "Why Do Closed Billing Items Reopen After Month End?",
+      "route": "/research/research-month-end-billing-reopen-recurrence-2026",
+      "words": 1330,
+      "sources": [
+        "https://doi.org/10.6028/NIST.CSWP.29",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business-0",
+        "https://www.gao.gov/greenbook",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    }
+  ]
+}

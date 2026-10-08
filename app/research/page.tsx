@@ -1,5 +1,6 @@
 import {Header, Footer} from '../components';
 import {researchPosts, site} from '../data';
+const readerDate=new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
 
 const acceptedResearchRank = new Map([
   ['research-medical-billing-aug17-eligibility-response-versioning', 0],
@@ -134,5 +135,5 @@ export default function Research() {
     }
     return (b.published ?? '').localeCompare(a.published ?? '');
   });
-  return <><Header/><main className="section"><div className="container"><p className="eyebrow">Philippines staffing research</p><h1>Research for better role decisions.</h1><p className="lead">Sourced research about Philippines-based billing staffing, queue controls, access boundaries, and owner review.</p>{posts.length ? <div className="cards">{posts.map(p => <a className="card" href={`/research/${p.slug}`} key={p.slug}><h2>{p.title}</h2><p>{p.excerpt}</p></a>)}</div> : <div className="support-strip"><h2>Research library in preparation</h2><p>Return for Philippines-focused research notes as they are published.</p></div>}</div></main><Footer/></>;
+  return <><Header/><main className="section"><div className="container"><p className="eyebrow">Philippines staffing research</p><h1>Research for better role decisions.</h1><p className="lead">Sourced research about Philippines-based billing staffing, queue controls, access boundaries, and owner review.</p>{posts.length ? <div className="cards">{posts.map(p => <a className="card" href={`/research/${p.slug}`} key={p.slug}><h2>{p.title}</h2>{p.datePublished?<time dateTime={p.datePublished}>Published {readerDate.format(new Date(`${p.datePublished}T00:00:00Z`))}</time>:null}<p>{p.excerpt}</p></a>)}</div> : <div className="support-strip"><h2>Research library in preparation</h2><p>Return for Philippines-focused research notes as they are published.</p></div>}</div></main><Footer/></>;
 }

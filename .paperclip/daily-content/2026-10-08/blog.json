@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-08",
+  "requiredCount": 12,
+  "entries": [
+    {
+      "slug": "billing-operations-invoice-address-change-control",
+      "title": "Control a Billing Address Change Before the Next Invoice",
+      "route": "/blog/billing-operations-invoice-address-change-control",
+      "words": 1219
+    },
+    {
+      "slug": "billing-operations-autopay-failure-evidence-queue",
+      "title": "Build an Autopay Failure Evidence Queue",
+      "route": "/blog/billing-operations-autopay-failure-evidence-queue",
+      "words": 1201
+    },
+    {
+      "slug": "billing-operations-partial-payment-allocation-review",
+      "title": "Review a Partial Payment Before Applying It",
+      "route": "/blog/billing-operations-partial-payment-allocation-review",
+      "words": 1207
+    },
+    {
+      "slug": "billing-operations-subscription-pause-effective-date",
+      "title": "Reconcile a Subscription Pause Effective Date",
+      "route": "/blog/billing-operations-subscription-pause-effective-date",
+      "words": 1201
+    },
+    {
+      "slug": "billing-operations-invoice-sequence-collision-triage",
+      "title": "Triage an Invoice Sequence Collision",
+      "route": "/blog/billing-operations-invoice-sequence-collision-triage",
+      "words": 1195
+    },
+    {
+      "slug": "billing-operations-credit-memo-supporting-document-gate",
+      "title": "Use a Supporting-Document Gate for Credit Memos",
+      "route": "/blog/billing-operations-credit-memo-supporting-document-gate",
+      "words": 1207
+    },
+    {
+      "slug": "billing-operations-customer-dispute-contact-preference",
+      "title": "Check Contact Preferences Before Billing Dispute Follow-Up",
+      "route": "/blog/billing-operations-customer-dispute-contact-preference",
+      "words": 1207
+    },
+    {
+      "slug": "billing-operations-usage-meter-replacement-cutover",
+      "title": "Control a Usage-Meter Replacement Cutover",
+      "route": "/blog/billing-operations-usage-meter-replacement-cutover",
+      "words": 1195
+    },
+    {
+      "slug": "billing-operations-refund-bank-detail-change-stop-rule",
+      "title": "Set a Stop Rule for Refund Bank-Detail Changes",
+      "route": "/blog/billing-operations-refund-bank-detail-change-stop-rule",
+      "words": 1213
+    },
+    {
+      "slug": "billing-operations-collections-promise-to-pay-register",
+      "title": "Maintain a Promise-to-Pay Register Without Inventing Commitments",
+      "route": "/blog/billing-operations-collections-promise-to-pay-register",
+      "words": 1207
+    },
+    {
+      "slug": "billing-operations-month-end-late-invoice-freeze",
+      "title": "Freeze Late Invoices at the Month-End Cutoff",
+      "route": "/blog/billing-operations-month-end-late-invoice-freeze",
+      "words": 1207
+    },
+    {
+      "slug": "billing-operations-tax-exemption-document-expiry",
+      "title": "Route Expired Tax-Exemption Evidence Before Billing",
+      "route": "/blog/billing-operations-tax-exemption-document-expiry",
+      "words": 1201
+    }
+  ]
+}

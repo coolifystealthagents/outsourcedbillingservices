@@ -17,6 +17,8 @@ import { sep25BlogBatch } from "../sep25-content";
 import { sep28BlogBatch } from "../sep28-blog";
 import { oct2BlogBatch } from "../oct2-blog";
 import { oct5BlogBatch } from "../oct5-blog";
+import { oct8BlogBatch } from "../oct8-content";
+const readerDate = new Intl.DateTimeFormat("en-US", {year:"numeric",month:"long",day:"numeric",timeZone:"UTC"});
 export const metadata = {
   title: "Billing Operations Blog",
   description: "Practical guides for scoping Philippines-based billing support, documenting handoffs, controlling exceptions, and reviewing recurring work.",
@@ -24,6 +26,9 @@ export const metadata = {
 };
 export default function Blog() {
   const daily = [
+    ...oct8BlogBatch.map(
+      (p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const,
+    ),
     ...oct5BlogBatch.map(
       (p) => [p.slug, { title: p.title, description: p.description }] as const,
     ),
@@ -76,6 +81,7 @@ export default function Blog() {
     title: p.title,
     excerpt: p.description,
     minutes: 8,
+    published: "published" in p ? p.published : undefined,
   }));
   const latest = blogPosts.filter((p) => p.detail?.published === "2026-09-02");
   const earlier = blogPosts.filter((p) => p.detail?.published !== "2026-09-02");
@@ -101,6 +107,7 @@ export default function Blog() {
             {posts.map((p) => (
               <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
                 <h2>{p.title}</h2>
+                {'published' in p && p.published ? <time dateTime={p.published}>Published {readerDate.format(new Date(`${p.published}T00:00:00Z`))}</time> : null}
                 <p>{p.excerpt}</p>
                 <span>{p.minutes} min read</span>
               </a>
