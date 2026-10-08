@@ -146,3 +146,24 @@ The October 2 research batch is now present in the current generated route inven
 | Did a disputed payment return to the right balance? | `/services/dispute-documentation` | One matching link in the research `<main>`. | Keep delivered; do not add another CTA. |
 
 This is a repository-local topical-map correction only. It does not change rendered copy, schema, route registration, sitemap data, deployment state, or public verification.
+
+## Reconciliation — 2026-10-08
+
+A fresh 705-page production build selected all 12 current service routes by self-canonical URL and parsed the sitemap structurally. Every service route is self-canonical and sitemap-listed. The selected supporting research records below each contain one matching service link inside their own rendered `<main>`, so none is a new CTA candidate.
+
+| Service pillar | Existing destination | Delivered supporting research route | Reader question | Route-local result |
+| --- | --- | --- | --- | --- |
+| Invoice preparation | `/services/invoice-preparation` | `/research/research-outsourced-billing-consolidated-invoice-entity-allocation-2026` | Can every charge on a consolidated invoice be traced to its intended entity? | One matching link in `<main>`. |
+| Usage billing administration | `/services/usage-billing-administration` | `/research/research-outsourced-billing-usage-late-arrival-cutoff-cohort-2026` | Which billing cycle should receive late usage evidence? | One matching link in `<main>`. |
+| Subscription billing support | `/services/subscription-billing-support` | `/research/research-outsourced-billing-subscription-retry-authorization-state-2026` | Was each retry allowed by the current account state? | One matching link in `<main>`. |
+| Billing reconciliation | `/services/billing-reconciliation` | `/research/research-outsourced-billing-foreign-exchange-rate-input-lineage-2026` | Which exchange-rate input reached the invoice? | One matching link in `<main>`. |
+| Payment posting | `/services/payment-posting` | `/research/research-medical-billing-payment-posting-quality` | What controls keep prepared payment posting reviewable? | One matching link in `<main>`. |
+| Credit memo administration | `/services/credit-memo-administration` | `/research/research-outsourced-billing-credit-memo-downstream-propagation-2026` | Did an approved change reach every dependent record? | One matching link in `<main>`. |
+| Collections follow-up | `/services/collections-follow-up` | `/research/research-medical-billing-collections-follow-up` | How can approved follow-up preserve account facts and hand off exceptions? | One matching link in `<main>`. |
+| Customer billing support | `/services/customer-billing-support` | `/research/research-outsourced-billing-hold-release-evidence-2026` | What evidence changed before a billing hold was released? | One matching link in `<main>`. |
+| Revenue schedule preparation | `/services/revenue-schedule-preparation` | `/research/research-medical-billing-revenue-schedule-preparation` | What source checks should happen before period close? | One matching link in `<main>`. |
+| Billing data quality review | `/services/billing-data-quality-review` | `/research/research-outsourced-billing-invoice-number-collision-control-2026` | Can one released document be found from each invoice reference? | One matching link in `<main>`. |
+| Dispute documentation | `/services/dispute-documentation` | `/research/research-outsourced-billing-chargeback-receivable-reinstatement-2026` | Did a disputed payment return to the right balance? | One matching link in `<main>`. |
+| Month-end billing support | `/services/month-end-billing-support` | `/research/research-outsourced-billing-month-end-cutoff-completeness-2026` | Does the close population explain its included, held, and excluded items? | One matching link in `<main>`. |
+
+This source-only reconciliation records a complete current service-pillar inventory. Do not create another contextual CTA until a fresh artifact audit identifies a relevant source/destination pair with no existing route-local handoff.
