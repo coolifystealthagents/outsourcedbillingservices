@@ -1,0 +1,202 @@
+{
+  "site": "OutsourcedBillingServices.com",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "branch": "main",
+  "publicationDate": "2026-10-12",
+  "blog": [
+    {
+      "slug": "invoice-split-request-authorization",
+      "title": "Authorize an Invoice Split Request Without Rewriting the Deal",
+      "path": "/blog/invoice-split-request-authorization",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/invoice-split-request-authorization.png"
+    },
+    {
+      "slug": "dormant-billing-account-suppression",
+      "title": "Suppress a Dormant Billing Account Without Losing Open Obligations",
+      "path": "/blog/dormant-billing-account-suppression",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/dormant-billing-account-suppression.png"
+    },
+    {
+      "slug": "draft-invoice-currency-lock",
+      "title": "Lock Draft Invoice Currency Before Calculation and Release",
+      "path": "/blog/draft-invoice-currency-lock",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/draft-invoice-currency-lock.png"
+    },
+    {
+      "slug": "reseller-pass-through-charge-evidence",
+      "title": "Build Evidence for a Reseller Pass-Through Charge",
+      "path": "/blog/reseller-pass-through-charge-evidence",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/reseller-pass-through-charge-evidence.png"
+    },
+    {
+      "slug": "billing-schedule-holiday-shift-control",
+      "title": "Shift a Billing Schedule Around Holidays Without Hiding Cutoff Risk",
+      "path": "/blog/billing-schedule-holiday-shift-control",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/billing-schedule-holiday-shift-control.png"
+    },
+    {
+      "slug": "negative-invoice-line-review",
+      "title": "Review a Negative Invoice Line Before It Becomes a Hidden Credit",
+      "path": "/blog/negative-invoice-line-review",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/negative-invoice-line-review.png"
+    },
+    {
+      "slug": "invoice-pdf-accessibility-check",
+      "title": "Check Invoice PDF Accessibility Without Changing Approved Terms",
+      "path": "/blog/invoice-pdf-accessibility-check",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/invoice-pdf-accessibility-check.png"
+    },
+    {
+      "slug": "customer-portal-invoice-publication-deduplication",
+      "title": "Prevent Duplicate Invoice Publication in a Customer Portal",
+      "path": "/blog/customer-portal-invoice-publication-deduplication",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/customer-portal-invoice-publication-deduplication.png"
+    },
+    {
+      "slug": "lockbox-deposit-reference-reconciliation",
+      "title": "Reconcile Lockbox Deposit References Before Payment Application",
+      "path": "/blog/lockbox-deposit-reference-reconciliation",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/lockbox-deposit-reference-reconciliation.png"
+    },
+    {
+      "slug": "billing-queue-segregation-review",
+      "title": "Review Segregation of Duties Across a Billing Queue",
+      "path": "/blog/billing-queue-segregation-review",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/billing-queue-segregation-review.png"
+    },
+    {
+      "slug": "einvoice-network-acknowledgment-failure",
+      "title": "Route an E-Invoice Network Acknowledgment Failure",
+      "path": "/blog/einvoice-network-acknowledgment-failure",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/einvoice-network-acknowledgment-failure.png"
+    },
+    {
+      "slug": "pricing-catalog-effective-date-boundary",
+      "title": "Apply a Pricing Catalog Effective-Date Boundary to Invoice Preparation",
+      "path": "/blog/pricing-catalog-effective-date-boundary",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/pricing-catalog-effective-date-boundary.png"
+    }
+  ],
+  "research": [
+    {
+      "slug": "research-invoice-draft-return-reason-reliability",
+      "title": "Do Invoice Draft Return Reasons Explain the Actual Defect?",
+      "path": "/research/research-invoice-draft-return-reason-reliability",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/research-invoice-draft-return-reason-reliability.png",
+      "sources": [
+        "https://www.gao.gov/green-book",
+        "https://www.nist.gov/cyberframework",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.frbservices.org/resources/financial-services",
+        "https://www.consumerfinance.gov/compliance/compliance-resources/",
+        "https://www.sec.gov/about/divisions-offices/division-investment-management/books-records-requirements"
+      ]
+    },
+    {
+      "slug": "research-billing-schedule-change-propagation",
+      "title": "How Reliably Does a Billing Schedule Change Reach Every Dependent Queue?",
+      "path": "/research/research-billing-schedule-change-propagation",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/research-billing-schedule-change-propagation.png",
+      "sources": [
+        "https://www.gao.gov/green-book",
+        "https://www.nist.gov/cyberframework",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.frbservices.org/resources/financial-services",
+        "https://www.consumerfinance.gov/compliance/compliance-resources/",
+        "https://www.sec.gov/about/divisions-offices/division-investment-management/books-records-requirements"
+      ]
+    },
+    {
+      "slug": "research-billing-approval-release-lag-distribution",
+      "title": "What Creates the Gap Between Billing Approval and Release?",
+      "path": "/research/research-billing-approval-release-lag-distribution",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/research-billing-approval-release-lag-distribution.png",
+      "sources": [
+        "https://www.gao.gov/green-book",
+        "https://www.nist.gov/cyberframework",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.frbservices.org/resources/financial-services",
+        "https://www.consumerfinance.gov/compliance/compliance-resources/",
+        "https://www.sec.gov/about/divisions-offices/division-investment-management/books-records-requirements"
+      ]
+    },
+    {
+      "slug": "research-billing-source-availability-attrition",
+      "title": "How Much Billing Evidence Becomes Unavailable Before Review?",
+      "path": "/research/research-billing-source-availability-attrition",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/research-billing-source-availability-attrition.png",
+      "sources": [
+        "https://www.gao.gov/green-book",
+        "https://www.nist.gov/cyberframework",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.frbservices.org/resources/financial-services",
+        "https://www.consumerfinance.gov/compliance/compliance-resources/",
+        "https://www.sec.gov/about/divisions-offices/division-investment-management/books-records-requirements"
+      ]
+    },
+    {
+      "slug": "research-billing-manual-override-concentration",
+      "title": "Where Do Manual Billing Overrides Concentrate?",
+      "path": "/research/research-billing-manual-override-concentration",
+      "sourcePath": "app/oct12-content.ts",
+      "thumbnail": "/oct12-heroes/research-billing-manual-override-concentration.png",
+      "sources": [
+        "https://www.gao.gov/green-book",
+        "https://www.nist.gov/cyberframework",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.frbservices.org/resources/financial-services",
+        "https://www.consumerfinance.gov/compliance/compliance-resources/",
+        "https://www.sec.gov/about/divisions-offices/division-investment-management/books-records-requirements"
+      ]
+    }
+  ],
+  "registryPaths": [
+    "app/data.ts"
+  ],
+  "routePaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "indexPaths": [
+    "app/blog/page.tsx",
+    "app/blog/page/[page]/page.tsx",
+    "app/research/page.tsx"
+  ],
+  "sitemapPath": "app/sitemap.xml/route.ts"
+}
