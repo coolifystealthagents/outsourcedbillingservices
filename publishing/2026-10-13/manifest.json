@@ -1,0 +1,146 @@
+{
+  "domain": "OutsourcedBillingServices.com",
+  "canonicalDomain": "https://outsourcedbillingservices.com",
+  "repository": "coolifystealthagents/outsourcedbillingservices",
+  "branch": "main",
+  "baseSha": "2c080a4b909ccc4a69cc6e89a60fb6ccbeef67e7",
+  "publicationDate": "2026-10-13",
+  "blog": [
+    {
+      "title": "Reconcile Usage Cutoff Late Arrivals",
+      "slug": "usage-cutoff-late-arrival-reconciliation",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/usage-cutoff-late-arrival-reconciliation.png",
+      "route": "/blog/usage-cutoff-late-arrival-reconciliation"
+    },
+    {
+      "title": "Verify a Customer Billing Address Change",
+      "slug": "customer-billing-address-change-verification",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/customer-billing-address-change-verification.png",
+      "route": "/blog/customer-billing-address-change-verification"
+    },
+    {
+      "title": "Control a Partial Invoice Cancellation",
+      "slug": "partial-invoice-cancellation-control",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/partial-invoice-cancellation-control.png",
+      "route": "/blog/partial-invoice-cancellation-control"
+    },
+    {
+      "title": "Route Purchase Order Exhaustion Exceptions",
+      "slug": "purchase-order-exhaustion-exception-routing",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/purchase-order-exhaustion-exception-routing.png",
+      "route": "/blog/purchase-order-exhaustion-exception-routing"
+    },
+    {
+      "title": "Track Credit Memo Delivery Evidence",
+      "slug": "credit-memo-delivery-evidence-tracking",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/credit-memo-delivery-evidence-tracking.png",
+      "route": "/blog/credit-memo-delivery-evidence-tracking"
+    },
+    {
+      "title": "Reconcile Tax Exemption Certificate Expiry",
+      "slug": "tax-exemption-certificate-expiry-reconciliation",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/tax-exemption-certificate-expiry-reconciliation.png",
+      "route": "/blog/tax-exemption-certificate-expiry-reconciliation"
+    },
+    {
+      "title": "Verify Metered Billing Unit Conversions",
+      "slug": "metered-billing-unit-conversion-verification",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/metered-billing-unit-conversion-verification.png",
+      "route": "/blog/metered-billing-unit-conversion-verification"
+    },
+    {
+      "title": "Control Consolidated Invoice Group Changes",
+      "slug": "consolidated-invoice-group-change-control",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/consolidated-invoice-group-change-control.png",
+      "route": "/blog/consolidated-invoice-group-change-control"
+    },
+    {
+      "title": "Route Refund Status Inquiry Handoffs",
+      "slug": "refund-status-inquiry-handoff",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/refund-status-inquiry-handoff.png",
+      "route": "/blog/refund-status-inquiry-handoff"
+    },
+    {
+      "title": "Reconcile Payment Processor Fee Lines",
+      "slug": "payment-processor-fee-line-reconciliation",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/payment-processor-fee-line-reconciliation.png",
+      "route": "/blog/payment-processor-fee-line-reconciliation"
+    },
+    {
+      "title": "Verify Billing Contact Consent Changes",
+      "slug": "billing-contact-consent-change-verification",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/billing-contact-consent-change-verification.png",
+      "route": "/blog/billing-contact-consent-change-verification"
+    },
+    {
+      "title": "Close Stale Draft Invoice Versions",
+      "slug": "stale-draft-invoice-version-closure",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/stale-draft-invoice-version-closure.png",
+      "route": "/blog/stale-draft-invoice-version-closure"
+    }
+  ],
+  "research": [
+    {
+      "title": "Study Invoice Approval Queue Censoring",
+      "slug": "research-invoice-approval-queue-censoring",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/research-invoice-approval-queue-censoring.png",
+      "route": "/research/research-invoice-approval-queue-censoring"
+    },
+    {
+      "title": "Measure Billing Address Change Propagation",
+      "slug": "research-billing-address-change-propagation",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/research-billing-address-change-propagation.png",
+      "route": "/research/research-billing-address-change-propagation"
+    },
+    {
+      "title": "Analyze Credit Memo Application Lag",
+      "slug": "research-credit-memo-application-lag",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/research-credit-memo-application-lag.png",
+      "route": "/research/research-credit-memo-application-lag"
+    },
+    {
+      "title": "Measure Reviewer Agreement on Usage Exceptions",
+      "slug": "research-usage-exception-reviewer-agreement",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/research-usage-exception-reviewer-agreement.png",
+      "route": "/research/research-usage-exception-reviewer-agreement"
+    },
+    {
+      "title": "Review Billing Export Field Minimization",
+      "slug": "research-billing-export-field-minimization",
+      "sourcePath": "app/oct13-content.ts",
+      "thumbnailPath": "public/oct13-heroes/research-billing-export-field-minimization.png",
+      "route": "/research/research-billing-export-field-minimization"
+    }
+  ],
+  "registryPaths": [
+    "app/data.ts",
+    "app/blog/page.tsx",
+    "app/blog/[slug]/page.tsx"
+  ],
+  "routePaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "indexPaths": [
+    "app/blog/page.tsx",
+    "app/blog/page/[page]/page.tsx",
+    "app/research/page.tsx"
+  ],
+  "sitemapPath": "app/sitemap.xml/route.ts"
+}

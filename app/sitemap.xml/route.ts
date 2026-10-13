@@ -17,6 +17,7 @@ import { sep28BlogSlugs } from "../sep28-blog";
 import { oct2BlogSlugs } from "../oct2-blog";
 import { oct5BlogSlugs } from "../oct5-blog";
 import { oct12BlogSlugs } from "../oct12-content";
+import { oct13BlogSlugs } from "../oct13-content";
 import { oct5ResearchTopics } from "../oct5-research";
 import { site, services, blogPosts, researchPosts } from "../data";
 export function GET() {
@@ -39,7 +40,8 @@ export function GET() {
         sep28BlogSlugs.length +
         oct2BlogSlugs.length +
         oct5BlogSlugs.length +
-        oct12BlogSlugs.length) /
+        oct12BlogSlugs.length +
+        oct13BlogSlugs.length) /
         20,
     ),
   );
@@ -63,6 +65,7 @@ export function GET() {
   const oct2Paths = oct2BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct5Paths = oct5BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct12Paths = oct12BlogSlugs.map((slug) => `/blog/${slug}`);
+  const oct13Paths = oct13BlogSlugs.map((slug) => `/blog/${slug}`);
   const sep4Paths = sep4BlogSlugs.map((slug) => `/blog/${slug}`);
   const paths = [
     "",
@@ -100,6 +103,7 @@ export function GET() {
     ...oct2Paths,
     ...oct5Paths,
     ...oct12Paths,
+    ...oct13Paths,
   ];
   const oct5ReleasePaths = new Set([
     ...oct5BlogSlugs.map((slug) => `/blog/${slug}`),
