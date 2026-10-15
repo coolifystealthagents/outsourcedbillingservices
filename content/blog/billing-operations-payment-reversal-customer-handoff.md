@@ -1,6 +1,6 @@
 # Payment Reversal Customer Handoff: What Billing Support Should Confirm Before Contact
 
-A posted payment can disappear from a customer balance for several reasons. A bank may return an ACH debit, a card processor may reverse a settlement, an internal correction may undo an application, or a payment may be moved after it was matched to the wrong account. Those events can produce the same visible result—an invoice becomes open again—without carrying the same customer message or next action.
+A posted payment can disappear from a customer balance for several reasons. A bank may return an ACH debit, a card processor may reverse a settlement, an internal correction may undo an application, or a payment may be moved after it was matched to the wrong account. Those events can produce the same visible result: an invoice becomes open again, without carrying the same customer message or next action.
 
 The payment reversal customer handoff sits between financial evidence and communication. It tells customer support what happened operationally, what remains uncertain, which balance is approved for discussion, and who owns decisions about fees, service, collections, or disputes. It prevents a system event from becoming an unsupported accusation.
 

@@ -60,7 +60,7 @@ for (const item of [...blogResults.map((x) => `/blog/${x.slug}`), ...researchRes
 
 const images = [
   ['public/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp', '52494646'],
-  ['public/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png', '89504e47'],
+  ['public/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp', '89504e47'],
 ];
 const imageResults = images.map(([file, signature]) => {
   const bytes = fs.readFileSync(file);

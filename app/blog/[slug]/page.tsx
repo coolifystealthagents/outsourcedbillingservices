@@ -22,12 +22,26 @@ import { oct8BlogBatch, oct8BlogSlugs } from '../../oct8-content';
 import { oct12BlogBatch, oct12BlogSlugs } from '../../oct12-content';
 import { oct13BlogBatch, oct13BlogSlugs } from '../../oct13-content';
 
-const duplicateAliases: Record<string,string> = {'aug13-philippines-medical-billing-claim-status-contact-log':'aug18-philippines-medical-billing-claim-status-contact-log'};
+const duplicateAliases: Record<string,string> = {
+  'aug13-philippines-medical-billing-claim-status-contact-log':'aug18-philippines-medical-billing-claim-status-contact-log',
+  'sep4-medical-billing-charge-entry-source-document-index':'sep7-medical-billing-charge-entry-source-document-index',
+  'sep4-medical-billing-provider-enrollment-document-expiry-board':'sep7-medical-billing-provider-enrollment-document-expiry-board',
+  'sep4-medical-billing-rejected-era-line-recovery-queue':'sep7-medical-billing-rejected-era-line-recovery-queue',
+  'sep4-medical-billing-appeal-submission-receipt-chain':'sep7-medical-billing-appeal-submission-receipt-chain',
+  'sep4-medical-billing-patient-payment-plan-exception-register':'sep7-medical-billing-patient-payment-plan-exception-register',
+  'sep4-medical-billing-payer-portal-message-capture-register':'sep7-medical-billing-payer-portal-message-capture-register',
+  'sep4-medical-billing-authorization-unit-depletion-ledger':'sep7-medical-billing-authorization-unit-depletion-ledger',
+};
+const blogSeoTitles: Record<string,string> = {
+  'aug13-philippines-medical-billing-authorization-expiry-follow-up':'Authorization Expiry Follow-Up: Evidence Log',
+  'philippines-medical-billing-authorization-expiry-follow-up':'Authorization Expiry Follow-Up Workflow',
+};
 const seoTitle=(value:string)=>{const concise=value.replace(/^Philippines medical billing /i,'');return concise.length<=58?concise:`${concise.slice(0,55).replace(/\s+\S*$/,'')}…`};
 const seoDescription=(value:string)=>value.length<=155?value:`${value.slice(0,152).replace(/\s+\S*$/,'')}…`;
 
 export function generateStaticParams() {
-  return [...oct13BlogSlugs.map((slug) => ({ slug })), ...oct12BlogSlugs.map((slug) => ({ slug })), ...oct8BlogSlugs.map((slug) => ({ slug })), ...oct5BlogSlugs.map((slug) => ({ slug })), ...oct2BlogSlugs.map((slug) => ({ slug })), ...sep28BlogSlugs.map((slug) => ({ slug })), ...sep25BlogSlugs.map((slug) => ({ slug })), ...sep24BlogSlugs.map((slug) => ({ slug })), ...sep23BlogSlugs.map((slug) => ({ slug })), ...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
+  const params = [...oct13BlogSlugs.map((slug) => ({ slug })), ...oct12BlogSlugs.map((slug) => ({ slug })), ...oct8BlogSlugs.map((slug) => ({ slug })), ...oct5BlogSlugs.map((slug) => ({ slug })), ...oct2BlogSlugs.map((slug) => ({ slug })), ...sep28BlogSlugs.map((slug) => ({ slug })), ...sep25BlogSlugs.map((slug) => ({ slug })), ...sep24BlogSlugs.map((slug) => ({ slug })), ...sep23BlogSlugs.map((slug) => ({ slug })), ...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
+  return params.filter(({ slug }) => !duplicateAliases[slug]);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -75,7 +89,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) { const suffix=slug.replace(/^philippines-medical-billing-/,''); const target=blogPosts.find((item)=>item.slug!==slug&&item.slug.endsWith(`-${suffix}`)); if(target) permanentRedirect(`/blog/${target.slug}`); return {}; }
   const canonical = `https://${String(site.domain).toLowerCase()}/blog/${post.slug}`;
   return {
-    title: seoTitle(post.title),
+    title: blogSeoTitles[post.slug] || seoTitle(post.title),
     description: seoDescription(post.excerpt),
     alternates: { canonical },
     openGraph: { title: post.title, description: post.excerpt, type: 'article', url: canonical },
@@ -177,7 +191,7 @@ function Sep22Article({ article }: { article: (typeof sep22BlogBatch)[number] })
     <img src={article.featuredImage} alt="Billing team reviewing a structured work queue and approval record" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
-    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact">request a billing role plan</a>.</p>
+    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
@@ -190,7 +204,7 @@ function Sep23Article({ article }: { article: (typeof sep23BlogBatch)[number] })
     <img src={article.featuredImage} alt="Billing specialist reviewing a controlled billing workflow" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
-    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact">request a billing role plan</a>.</p>
+    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
@@ -203,7 +217,7 @@ function Sep24Article({ article }: { article: (typeof sep24BlogBatch)[number] })
     <img src={article.featuredImage} alt="Billing specialist reviewing a controlled billing workflow" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
-    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact">request a billing role plan</a>.</p>
+    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
@@ -216,7 +230,7 @@ function Sep25Article({ article }: { article: (typeof sep25BlogBatch)[number] })
     <img src={article.featuredImage} alt="Billing specialist reviewing a controlled billing workflow" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
-    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact">request a billing role plan</a>.</p>
+    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
@@ -229,7 +243,7 @@ function Sep28Article({ article }: { article: (typeof sep28BlogBatch)[number] })
     <img src={article.featuredImage} alt="Billing specialist reviewing a controlled billing workflow" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
-    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact">request a billing role plan</a>.</p>
+    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
@@ -242,7 +256,7 @@ function Oct2Article({ article }: { article: (typeof oct2BlogBatch)[number] }) {
     <img src={article.featuredImage} alt="Billing specialist reviewing a controlled billing workflow" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
-    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact">request a billing role plan</a>.</p>
+    <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
@@ -260,7 +274,7 @@ function Oct5Article({ article }: { article: (typeof oct5BlogBatch)[number] }) {
     <img src={article.featuredImage} alt="Billing operations evidence and reconciliation workspace" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((block, index) => block.kind === 'heading' ? <h2 key={`${block.text}-${index}`}>{block.text}</h2> : <p key={`${block.text}-${index}`}><InlineLinks text={block.text} /></p>)}</div>
     <h2>Authoritative references</h2><ul>{article.sources.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
-    <p><a href="/contact">Request a billing role plan</a>.</p>
+    <p><a href="/contact-us">Request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
@@ -273,7 +287,7 @@ function Oct8Article({ article }: { article: (typeof oct8BlogBatch)[number] }) {
     <img src={article.featuredImage} alt="Billing team reviewing a controlled evidence queue" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Authoritative references</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
-    <p><a href={article.serviceHref}>Explore the related billing service</a> or <a href="/contact">request a billing role plan</a>.</p>
+    <p><a href={article.serviceHref}>Explore the related billing service</a> or <a href="/contact-us">request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
@@ -288,7 +302,7 @@ function Oct12Article({ article }: { article: (typeof oct12BlogBatch)[number] })
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Authoritative references</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <aside className="card"><h2>Related billing guides</h2>{related.map((item) => <p key={item.slug}><a href={`/blog/${item.slug}`}>{item.title}</a></p>)}</aside>
-    <p><a href={article.serviceHref}>Explore the related billing service</a> or <a href="/contact">request a billing role plan</a>.</p>
+    <p><a href={article.serviceHref}>Explore the related billing service</a> or <a href="/contact-us">request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 
@@ -303,7 +317,7 @@ function Oct13Article({ article }: { article: (typeof oct13BlogBatch)[number] })
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Authoritative references</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <aside className="card"><h2>Related billing guides</h2>{related.map((item) => <p key={item.slug}><a href={`/blog/${item.slug}`}>{item.title}</a></p>)}</aside>
-    <p><a href={article.serviceHref}>Explore the related billing service</a> or <a href="/contact">request a billing role plan</a>.</p>
+    <p><a href={article.serviceHref}>Explore the related billing service</a> or <a href="/contact-us">request a billing role plan</a>.</p>
   </article><CTA /></main><Footer hidePricing /></>;
 }
 

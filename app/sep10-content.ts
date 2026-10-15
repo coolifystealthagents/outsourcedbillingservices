@@ -1,6 +1,6 @@
 const published = '2026-09-10' as const;
-const blogImage = '/aug20-heroes/billing-operations-payer-response-aging-review.png';
-const researchImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png';
+const blogImage = '/aug20-heroes/billing-operations-payer-response-aging-review.webp';
+const researchImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp';
 
 type BlogSeed={slug:string;title:string;situation:string;sources:string;risk:string;owner:string;test:string};
 const blogSeeds:BlogSeed[]=[

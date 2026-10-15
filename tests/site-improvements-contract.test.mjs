@@ -6,14 +6,107 @@ const components = readFileSync(new URL('../app/components.tsx', import.meta.url
 const contact = readFileSync(new URL('../app/contact-us/page.tsx', import.meta.url), 'utf8');
 const intakeContact = readFileSync(new URL('../app/contact/page.tsx', import.meta.url), 'utf8');
 const thankYou = readFileSync(new URL('../app/thank-you/page.tsx', import.meta.url), 'utf8');
+const whatsNext = readFileSync(new URL('../app/thanks-whats-next/page.tsx', import.meta.url), 'utf8');
 const bookingComponents = readFileSync(new URL('../app/booking-components.tsx', import.meta.url), 'utf8');
 const contactCss = readFileSync(new URL('../app/contact-us/contact.css', import.meta.url), 'utf8');
 const globalCss = readFileSync(new URL('../app/globals.css', import.meta.url), 'utf8');
+const nextConfig = readFileSync(new URL('../next.config.mjs', import.meta.url), 'utf8');
+const researchRoute = readFileSync(new URL('../app/research/[slug]/page.tsx', import.meta.url), 'utf8');
+const blogRoute = readFileSync(new URL('../app/blog/[slug]/page.tsx', import.meta.url), 'utf8');
+const blogPagination = readFileSync(new URL('../app/blog/page/[page]/page.tsx', import.meta.url), 'utf8');
+const sitemapRoute = readFileSync(new URL('../app/sitemap.xml/route.ts', import.meta.url), 'utf8');
+const paymentReversalArticle = readFileSync(new URL('../content/blog/billing-operations-payment-reversal-customer-handoff.md', import.meta.url), 'utf8');
+const punctuationSources = [
+  '../app/sep28-blog.ts', '../app/aug18-blog.ts', '../app/sep1-content.ts',
+  '../app/sep18-research.ts', '../app/aug31-content.ts', '../app/sep7-content.ts',
+  '../app/data.ts', '../app/booking-components.tsx', '../app/sep2-content.ts',
+  '../app/contact/page.tsx', '../app/lib/lead-fallback-mattermost.ts',
+  '../app/blog/top-25-billing-back-office-outsourcing-companies/page.tsx',
+  '../app/blog/page/[page]/page.tsx',
+].map((path) => readFileSync(new URL(path, import.meta.url), 'utf8'));
+const canonicalCtaSources = [
+  page,
+  readFileSync(new URL('../app/services/[slug]/page.tsx', import.meta.url), 'utf8'),
+  readFileSync(new URL('../app/pricing/page.tsx', import.meta.url), 'utf8'),
+  readFileSync(new URL('../app/blog/[slug]/page.tsx', import.meta.url), 'utf8'),
+  readFileSync(new URL('../app/blog/top-25-billing-back-office-outsourcing-companies/page.tsx', import.meta.url), 'utf8'),
+];
 
 assert.match(components, /function Attribution\(/, 'shared attribution component is missing');
 assert.match(components, /https:\/\/stealthagents\.com\//, 'attribution must link to Stealth Agents');
 assert.match(components, /<header[\s\S]*?<Attribution\s*\/>[\s\S]*?<\/header>/, 'header must render attribution directly below its logo');
 assert.match(components, /<footer[\s\S]*?<Attribution\s*\/>[\s\S]*?<\/footer>/, 'global footer must render attribution');
+assert.match(components, /className="skip-link" href="#main-content"/, 'shared header must provide a working skip link');
+assert.match(components, /id="main-content" className="skip-target" tabIndex=\{-1\}/, 'shared header must provide the skip-link focus target after navigation');
+assert.match(components, /<nav className="links fleet-links"[\s\S]*?href="\/contact-us">Contact Us<\/a>/, 'primary Contact Us navigation must point to /contact-us');
+assert.doesNotMatch(components.match(/<nav className="links fleet-links"[\s\S]*?<\/nav>/)?.[0] || '', /href="\/contact"/, 'primary navigation must not point Contact Us to the legacy /contact route');
+assert.match(globalCss, /\.nav\{[^}]*position:sticky;[^}]*top:0;/, 'shared navigation must remain visible while scrolling');
+for (const source of canonicalCtaSources) assert.doesNotMatch(source, /href="\/contact"/, 'commercial CTAs must use the canonical /contact-us funnel');
+const legacyTargets = [
+  '/blog/philippines-medical-billing-billing-reconciliation',
+  '/blog/philippines-medical-billing-medical-billing-audit-checklist',
+  '/services/outsourced-team-handoff-checklist',
+  '/blog/philippines-medical-billing-invoice-preparation',
+  '/blog/philippines-medical-billing-dispute-documentation',
+  '/blog/philippines-medical-billing-billing-data-quality-review',
+  '/blog/philippines-medical-billing-customer-billing-support',
+  '/blog/philippines-medical-billing-denial-response-evidence-check',
+  '/services/claim-status-follow-up',
+  '/blog/philippines-medical-billing-claim-status-contact-log',
+  '/blog/philippines-medical-billing-billing-data-quality-review-checklist',
+  '/blog/philippines-medical-billing-billing-period-cutoff-control',
+  '/services/subscription-billing',
+  '/services/billing-process-documentation',
+  '/services/accounts-receivable-follow-up',
+  '/blog/philippines-medical-billing-balance-explanation-evidence',
+  '/services/denial-management',
+  '/blog/philippines-medical-billing-recurring-invoice-cutoff-review',
+  '/services/claim-submission-checklist',
+  '/blog/philippines-medical-billing-prior-authorization-tracking',
+  '/blog/philippines-medical-billing-correction-history',
+  '/services/patient-billing-support',
+  '/services/medical-billing-virtual-assistant',
+  '/services/refund-request-support',
+  '/blog/philippines-medical-billing-payer-enrollment-change-handoff',
+  '/services/charge-entry',
+  '/services/payer-portal-support',
+  '/blog/philippines-medical-billing-payment-batch-control-sheet',
+  '/services/eligibility-verification',
+  '/blog/philippines-medical-billing-encounter-date-integrity-check',
+  '/services/prior-authorization-tracking',
+  '/services/claim-submission',
+];
+for (const target of legacyTargets) assert.ok(nextConfig.includes(`source: '${target}'`), `legacy target needs an explicit redirect: ${target}`);
+const canonicalAliasTargets = [
+  '/research/research-medical-billing-authorization-unit-variance-2026',
+  '/research/research-medical-billing-sep1-authorization-unit-variance',
+  '/research/research-medical-billing-era-import-rejection-recovery-2026',
+  '/research/research-medical-billing-claim-transmission-acknowledgment-gap-2026',
+  '/research/research-medical-billing-appeal-receipt-reproducibility-2026',
+  '/blog/aug13-philippines-medical-billing-claim-status-contact-log',
+  '/blog/sep4-medical-billing-charge-entry-source-document-index',
+  '/blog/sep4-medical-billing-provider-enrollment-document-expiry-board',
+  '/blog/sep4-medical-billing-rejected-era-line-recovery-queue',
+  '/blog/sep4-medical-billing-appeal-submission-receipt-chain',
+  '/blog/sep4-medical-billing-patient-payment-plan-exception-register',
+  '/blog/sep4-medical-billing-payer-portal-message-capture-register',
+  '/blog/sep4-medical-billing-authorization-unit-depletion-ledger',
+];
+for (const target of canonicalAliasTargets) assert.ok(nextConfig.includes(`source: '${target}'`), `canonical alias needs an explicit redirect: ${target}`);
+assert.match(nextConfig, /async redirects\(\)/, 'legacy route repairs must use framework redirects');
+assert.match(nextConfig, /frame-src https:\/\/go\.oncehub\.com https:\/\/\*\.oncehub\.com/, 'security policy must permit the preserved OnceHub iframe and its same-provider navigation');
+assert.match(nextConfig, /key: "Permissions-Policy"/, 'security headers must include Permissions-Policy');
+assert.match(researchRoute, /filter\(\(\{\s*slug\s*\}\)\s*=>\s*!researchAliases\[slug\]\)/, 'research redirect aliases must not be prerendered as empty pages');
+assert.match(blogRoute, /filter\(\(\{\s*slug\s*\}\)\s*=>\s*!duplicateAliases\[slug\]\)/, 'blog redirect aliases must not be prerendered as empty pages');
+assert.match(blogPagination, /i\s*\+\s*2/, 'blog pagination generation must start at page 2');
+assert.match(sitemapRoute, /oct8BlogSlugs/, 'sitemap must include the Oct. 8 article collection');
+assert.match(sitemapRoute, /"\/contact-us"/, 'sitemap must include the canonical contact page');
+assert.match(sitemapRoute, /"\/pricing"/, 'sitemap must include the indexable pricing page');
+assert.match(sitemapRoute, /redirectSources/, 'sitemap must filter redirect sources');
+assert.match(researchRoute, /researchSeoTitles/, 'research pages with similar names must have unique, accurate SEO titles');
+assert.match(blogRoute, /blogSeoTitles/, 'materially different articles with similar names must have unique, accurate SEO titles');
+for (const source of punctuationSources) assert.doesNotMatch(source, /—|–|(?<!-)--(?!-)/, 'rendered site content must not contain forbidden dash punctuation');
+assert.doesNotMatch(paymentReversalArticle, /—|–|(?<!-)--(?!-)/, 'Markdown articles must not emit forbidden dash punctuation');
 
 const trustBlock = page.match(/<div className="billing-trust">[\s\S]*?<\/div>/)?.[0] || '';
 assert.match(trustBlock, /<span className="billing-trust-stars" role="img" aria-label="Five visible billing checkpoints">★★★★★<\/span>/, 'homepage hero must expose the five-star workflow visual accessibly');
@@ -22,6 +115,13 @@ assert.doesNotMatch(trustBlock, /\b(?:rating|rated|reviews?|five-star trust indi
 assert.doesNotMatch(page, /<span>0\{i \+ 1\}<\/span>/, 'homepage service cards should use relevant visual marks instead of repeated numbering');
 
 assert.match(contact, /className="tc-about-image"/, 'contact attribution section must include a relevant industry image');
+assert.ok(contact.indexOf('className="tc-about"') > contact.indexOf('className="tc-hero"') && contact.indexOf('className="tc-about"') < contact.indexOf('className="tc-strip"'), 'parent-company section must appear immediately below the first-fold contact hero');
+assert.match(page, /billing-dashboard\.webp" alt="Illustration of a manager reviewing a billing operations dashboard" width="1400" height="1400"/, 'homepage control-room image must declare intrinsic dimensions');
+assert.match(page, /className="gi-proof-art" src="[^"]*billing-dashboard\.webp" alt="Billing team reviewing an accounts dashboard" width="1400" height="1400"/, 'homepage proof image must declare intrinsic dimensions');
+assert.match(contact, /src="\/thank-you-hero\.png"[^>]+alt="Stealth Agents team in Bacolod"/, 'contact attribution section must use the approved official team photograph');
+assert.match(contact, /src="\/stealth-agents-logo-black\.png"[^>]+alt="Stealth Agents"/, 'contact attribution section must show the official parent-company logo');
+assert.match(contact, /Official team, Bacolod/, 'contact attribution section must include the approved official team plate');
+assert.doesNotMatch(contact, /<article key=\{title\}><span>0\{i\+1\}<\/span>/, 'contact service cards must not use decorative zero-padded numbering');
 assert.match(contact, /<Attribution\s*\/>/, 'contact attribution section must show the exact shared attribution');
 assert.match(contact, /About Stealth Agents/, 'contact attribution section must include its required heading');
 assert.match(contact, /Outsourced Billing Services is a subsidiary of Stealth Agents\./, 'contact attribution section must state the correct subsidiary relationship');
@@ -32,6 +132,10 @@ assert.doesNotMatch(thankYou, /TestimonialsRail|Client testimonials/i, 'the than
 const onceHubDestination = 'https://go.oncehub.com/StealthAgentsTeam?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1';
 assert.equal(thankYou.match(new RegExp(onceHubDestination.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'))?.length, 2, 'thank-you route must preserve the OnceHub iframe and provide one same-destination fallback link');
 assert.match(thankYou, /<a[^>]+href="https:\/\/go\.oncehub\.com\/StealthAgentsTeam\?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1"[^>]*>Open booking calendar<\/a>/, 'thank-you route must show an accessible booking-calendar fallback link');
+assert.match(whatsNext, /Booking confirmed/, 'booking confirmation route must clearly confirm the completed booking');
+assert.match(whatsNext, /What happens next/, 'booking confirmation route must explain the next steps');
+assert.match(whatsNext, /robots:\s*\{\s*index:\s*false,\s*follow:\s*false\s*\}/, 'booking confirmation route must remain out of the search index');
+assert.doesNotMatch(whatsNext, /oncehub|iframe/i, 'booking confirmation route must not duplicate the scheduler');
 assert.doesNotMatch(`${intakeContact}\n${thankYou}`, /5 out of 5 stars|★★★★★|What Stealth Agents clients say/i, 'reachable conversion routes must not contain unsupported rating or testimonial claims');
 assert.match(bookingComponents, /5 out of 5 stars/, 'fixture guard: this contract must continue detecting the unsupported testimonial component if a route reimports it');
 assert.match(contactCss, /\.tc-about-copy>\.stealth-attribution a\{[^}]*display:inline;/, 'contact attribution link must not inherit the section CTA button treatment');

@@ -1,6 +1,6 @@
 const published = '2026-09-22' as const;
 const checked = 'September 22, 2026';
-const featuredImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png';
+const featuredImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp';
 
 export type ResearchSource = { title: string; publisher: string; url: string; use: string };
 export type ResearchSeed = {

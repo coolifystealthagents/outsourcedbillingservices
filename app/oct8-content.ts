@@ -4,7 +4,7 @@ export const oct8BlogBatch=[
     "title": "Control a Billing Address Change Before the Next Invoice",
     "description": "Treat a customer request as evidence to verify, not automatic authority to rewrite billing identity.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For control a billing address change before the next invoice, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -58,7 +58,7 @@ export const oct8BlogBatch=[
     "title": "Build an Autopay Failure Evidence Queue",
     "description": "Separate payment attempt, processor response, account state, customer contact, and owner decisions.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For build an autopay failure evidence queue, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -112,7 +112,7 @@ export const oct8BlogBatch=[
     "title": "Review a Partial Payment Before Applying It",
     "description": "Preserve remittance intent, open-item evidence, competing matches, and approval boundaries.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For review a partial payment before applying it, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -166,7 +166,7 @@ export const oct8BlogBatch=[
     "title": "Reconcile a Subscription Pause Effective Date",
     "description": "Align contract, customer request, system change, proration, invoice, and reactivation evidence.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For reconcile a subscription pause effective date, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -220,7 +220,7 @@ export const oct8BlogBatch=[
     "title": "Triage an Invoice Sequence Collision",
     "description": "Protect lineage and owner review when two documents appear to share or replace a billing identifier.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For triage an invoice sequence collision, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -274,7 +274,7 @@ export const oct8BlogBatch=[
     "title": "Use a Supporting-Document Gate for Credit Memos",
     "description": "Prepare source evidence and calculations without granting release or accounting authority.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For use a supporting-document gate for credit memos, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -328,7 +328,7 @@ export const oct8BlogBatch=[
     "title": "Check Contact Preferences Before Billing Dispute Follow-Up",
     "description": "A case deadline does not erase channel restrictions, identity checks, or communication ownership.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For check contact preferences before billing dispute follow-up, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -382,7 +382,7 @@ export const oct8BlogBatch=[
     "title": "Control a Usage-Meter Replacement Cutover",
     "description": "Link old and new identifiers, readings, timestamps, gaps, estimates, and owner-approved billing treatment.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For control a usage-meter replacement cutover, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -436,7 +436,7 @@ export const oct8BlogBatch=[
     "title": "Set a Stop Rule for Refund Bank-Detail Changes",
     "description": "A new destination introduced during a refund needs independent verification and authorized finance control.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For set a stop rule for refund bank-detail changes, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -490,7 +490,7 @@ export const oct8BlogBatch=[
     "title": "Maintain a Promise-to-Pay Register Without Inventing Commitments",
     "description": "Record exact customer statements and owner-approved terms while keeping collection authority bounded.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For maintain a promise-to-pay register without inventing commitments, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -544,7 +544,7 @@ export const oct8BlogBatch=[
     "title": "Freeze Late Invoices at the Month-End Cutoff",
     "description": "Make late source records visible without silently changing the released population or close evidence.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For freeze late invoices at the month-end cutoff, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -598,7 +598,7 @@ export const oct8BlogBatch=[
     "title": "Route Expired Tax-Exemption Evidence Before Billing",
     "description": "Track document scope and dates while qualified owners retain tax interpretation and invoice decisions.",
     "published": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "capture the source request, stable account and document identifiers, observed time with timezone, business deadline, and accountable owner. For route expired tax-exemption evidence before billing, record what was observed and leave consequential interpretation or approval with the named billing owner. A second authorized reviewer should reproduce the handoff without opening unrelated customer records.",
       "Define the lane before access is granted. Name its entry trigger, authoritative sources, permitted preparation, prohibited actions, stop conditions, decision owner, response clock, and evidence required for closure. A request to handle billing is not a boundary when work can change money, identity, customer commitments, accounting records, or protected information.",
@@ -657,7 +657,7 @@ export const oct8ResearchBatch=[
     "published": "2026-10-08",
     "datePublished": "2026-10-08",
     "updated": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "Research question. How Long Do Billing Exceptions Wait for an Owner Decision? A prospective cohort separates preparation, acknowledgement, decision, execution, and verified closure. The unit is one bounded billing case linked to its sources, preparation, owner decision, transaction event, communication, and later verification. The protocol reports no provider performance and transfers no client authority.",
       "Declare population, inclusion and exclusion rules, observation window, systems, roles, time zones, and unavailable evidence before viewing outcomes. For study stage 1, retain the first-pass classification, cited artifact, reviewer confidence, unresolved question, accountable owner, and downstream consequence so another authorized reviewer can reproduce the result.",
@@ -721,7 +721,7 @@ export const oct8ResearchBatch=[
     "published": "2026-10-08",
     "datePublished": "2026-10-08",
     "updated": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "Research question. Can Reviewers Rebuild an Invoice from Its Source Evidence? A blinded reconstruction study tests customer identity, contract terms, line inputs, calculations, approvals, and release. The unit is one bounded billing case linked to its sources, preparation, owner decision, transaction event, communication, and later verification. The protocol reports no provider performance and transfers no client authority.",
       "Declare population, inclusion and exclusion rules, observation window, systems, roles, time zones, and unavailable evidence before viewing outcomes. For study stage 1, retain the first-pass classification, cited artifact, reviewer confidence, unresolved question, accountable owner, and downstream consequence so another authorized reviewer can reproduce the result.",
@@ -785,7 +785,7 @@ export const oct8ResearchBatch=[
     "published": "2026-10-08",
     "datePublished": "2026-10-08",
     "updated": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "Research question. Do Reviewers Agree on Payment-Posting Exceptions? An inter-rater protocol tests remittance matching, partial payments, reversals, duplicates, and unresolved balances. The unit is one bounded billing case linked to its sources, preparation, owner decision, transaction event, communication, and later verification. The protocol reports no provider performance and transfers no client authority.",
       "Declare population, inclusion and exclusion rules, observation window, systems, roles, time zones, and unavailable evidence before viewing outcomes. For study stage 1, retain the first-pass classification, cited artifact, reviewer confidence, unresolved question, accountable owner, and downstream consequence so another authorized reviewer can reproduce the result.",
@@ -849,7 +849,7 @@ export const oct8ResearchBatch=[
     "published": "2026-10-08",
     "datePublished": "2026-10-08",
     "updated": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "Research question. Do Billing Contact Records Prove the Right Customer Was Reached? An evidence audit separates address, channel preference, identity, message, delivery state, response, and owner action. The unit is one bounded billing case linked to its sources, preparation, owner decision, transaction event, communication, and later verification. The protocol reports no provider performance and transfers no client authority.",
       "Declare population, inclusion and exclusion rules, observation window, systems, roles, time zones, and unavailable evidence before viewing outcomes. For study stage 1, retain the first-pass classification, cited artifact, reviewer confidence, unresolved question, accountable owner, and downstream consequence so another authorized reviewer can reproduce the result.",
@@ -913,7 +913,7 @@ export const oct8ResearchBatch=[
     "published": "2026-10-08",
     "datePublished": "2026-10-08",
     "updated": "2026-10-08",
-    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png",
+    "featuredImage": "/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp",
     "body": [
       "Research question. Why Do Closed Billing Items Reopen After Month End? A recurrence study traces source timing, cutoff decisions, adjustments, downstream sync, and later reversals. The unit is one bounded billing case linked to its sources, preparation, owner decision, transaction event, communication, and later verification. The protocol reports no provider performance and transfers no client authority.",
       "Declare population, inclusion and exclusion rules, observation window, systems, roles, time zones, and unavailable evidence before viewing outcomes. For study stage 1, retain the first-pass classification, cited artifact, reviewer confidence, unresolved question, accountable owner, and downstream consequence so another authorized reviewer can reproduce the result.",

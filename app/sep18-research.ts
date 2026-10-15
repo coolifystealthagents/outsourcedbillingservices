@@ -1,6 +1,6 @@
 const published = '2026-09-18' as const;
 const checked = 'September 18, 2026';
-const featuredImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png';
+const featuredImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp';
 
 type Seed = {
   slug: string;
@@ -146,7 +146,7 @@ const body = (x: Seed): string[] => [
   `Limitations. ${x.limits} This is a study design for a defined operating population, not a benchmark for every billing team. It does not claim that Outsourced Billing Services has performed the study for a client, achieved a stated result, or guarantees an outcome. Replication in another environment requires a newly frozen population and locally approved rules.`,
   `Niche-specific conclusion. For teams considering outsourced billing support, the practical test is not whether a specialist can move items quickly. It is whether the prepared work remains traceable to approved sources and reaches the correct owner without obscuring uncertainty. For this question, the proposed cohort and evidence chain create a reviewable decision surface while keeping business authority with the buyer.`,
   'Source register. The sources below establish control, security, privacy, consumer-protection, or accounting context. They do not prove a result for any company, and they do not replace advice from qualified legal, accounting, compliance, privacy, or security professionals.',
-  ...x.sources.map(s => `${s.title} — ${s.publisher}. ${s.url}. Checked ${checked}. Used for ${s.use}.`),
+  ...x.sources.map(s => `${s.title}: ${s.publisher}. ${s.url}. Checked ${checked}. Used for ${s.use}.`),
 ];
 
 export const sep18ResearchBatch = seeds.map(x => ({

@@ -1,6 +1,6 @@
 const published = '2026-09-09' as const;
-const blogImage = '/aug20-heroes/billing-operations-close-package-checklist.png';
-const researchImage = '/aug20-research-heroes/research-medical-billing-claim-evidence-lineage.png';
+const blogImage = '/aug20-heroes/billing-operations-close-package-checklist.webp';
+const researchImage = '/aug20-research-heroes/research-medical-billing-claim-evidence-lineage.webp';
 
 type BlogSeed = { slug:string; title:string; situation:string; evidence:string; trap:string; owner:string; close:string };
 const blogSeeds: BlogSeed[] = [

@@ -2,7 +2,7 @@ import { buildDecisionResearchBody, type ResearchSeed, type ResearchSource } fro
 
 const published = '2026-10-02' as const;
 const checked = 'October 2, 2026';
-const featuredImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.png';
+const featuredImage = '/aug20-research-heroes/research-medical-billing-remittance-batch-reconciliation.webp';
 
 const greenBook: ResearchSource = { title: 'Standards for Internal Control in the Federal Government: 2025 Revision', publisher: 'U.S. Government Accountability Office', url: 'https://www.gao.gov/greenbook', use: 'quality information, control activities, segregation of duties, and monitoring' };
 const nist: ResearchSource = { title: 'Security and Privacy Controls for Information Systems and Organizations, SP 800-53 Revision 5', publisher: 'National Institute of Standards and Technology', url: 'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final', use: 'audit records, controlled change, least privilege, and information integrity' };

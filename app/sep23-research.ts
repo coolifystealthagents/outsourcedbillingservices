@@ -2,7 +2,7 @@ import { buildDecisionResearchBody, type ResearchSeed, type ResearchSource } fro
 
 const published = '2026-09-23' as const;
 const checked = 'September 23, 2026';
-const featuredImage = '/aug20-research-heroes/research-medical-billing-denial-response-evidence.png';
+const featuredImage = '/aug20-research-heroes/research-medical-billing-denial-response-evidence.webp';
 const cmsClaims: ResearchSource = { title: 'Medicare Claims Processing Manual', publisher: 'Centers for Medicare & Medicaid Services', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912', use: 'primary Medicare claims-processing context while current payer-specific instructions still control each case' };
 const cmsRemit: ResearchSource = { title: 'Health Care Payment and Remittance Advice', publisher: 'Centers for Medicare & Medicaid Services', url: 'https://www.cms.gov/medicare/coding-billing/electronic-billing/health-care-payment-remittance-advice', use: 'claim-, line-, and provider-level adjustment structure and ERA or SPR evidence' };
 const cmsAppeals: ResearchSource = { title: 'Original Medicare Appeals', publisher: 'Centers for Medicare & Medicaid Services', url: 'https://www.cms.gov/medicare/appeals-grievances/original-medicare-appeals', use: 'Medicare appeal stages without generalizing deadlines to other payers' };

@@ -430,7 +430,7 @@ export const blogPosts = [
             'On day four, group the misses by cause instead of blaming the person. A missing source path calls for a better guide, a repeated judgment call needs a clearer escalation line, and a simple entry error needs a focused quality check.',
             'On day five, approve only the checks that were done correctly in the sample. Keep uncertain work in review until the owner has enough evidence to widen the queue safely.',
           ],
-          bullets: ['Day 1: two guided examples', 'Days 2–3: small checked batch', 'Day 4: fix the guide and routes', 'Day 5: approve only proven checks'],
+          bullets: ['Day 1: two guided examples', 'Days 2-3: small checked batch', 'Day 4: fix the guide and routes', 'Day 5: approve only proven checks'],
         },
         {
           heading: 'Measure the audit without fake precision',
@@ -689,7 +689,7 @@ export const blogPosts = [
             'Group mistakes by cause on the fourth day. A missing source path needs a better guide, a repeated judgment call needs a clearer owner, and an entry error needs a focused recheck.',
             'On the fifth day, approve only the record types that the sample supports. Keep hard cases in review until the team has enough checked work to change the boundary safely.',
           ],
-          bullets: ['Day 1: guided examples', 'Days 2–3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
+          bullets: ['Day 1: guided examples', 'Days 2-3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
         },
       ],
       faqs: [
@@ -814,7 +814,7 @@ export const blogPosts = [
             'Group mistakes by cause on the fourth day. A missing source path needs a better guide, a repeated judgment call needs a clearer owner, and an entry error needs a focused recheck.',
             'On the fifth day, approve only the claim types that the sample supports. Keep hard cases in review until the team has enough checked work to change the boundary safely.',
           ],
-          bullets: ['Day 1: guided examples', 'Days 2–3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
+          bullets: ['Day 1: guided examples', 'Days 2-3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
         },
       ],
       faqs: [
@@ -939,7 +939,7 @@ export const blogPosts = [
             'Group mistakes by cause on the fourth day. A missing source path needs a better guide, a repeated owner question needs a clearer boundary, and an entry error needs a focused recheck.',
             'On the fifth day, approve only the notice types the sample supports. Keep uncertain cases in full review until the team has enough checked work to change the boundary safely.',
           ],
-          bullets: ['Day 1: guided examples', 'Days 2–3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
+          bullets: ['Day 1: guided examples', 'Days 2-3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
         },
       ],
       faqs: [
@@ -1064,7 +1064,7 @@ export const blogPosts = [
             'Group mistakes by cause on the fourth day. A missing source path needs a better guide, a repeated judgment question needs a clearer owner, and an entry error needs a focused recheck.',
             'On the fifth day, approve only the packet types the sample supports. Keep uncertain files in full review until the team has enough checked work to change the boundary safely.',
           ],
-          bullets: ['Day 1: guided examples', 'Days 2–3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
+          bullets: ['Day 1: guided examples', 'Days 2-3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
         },
       ],
       faqs: [
@@ -1189,7 +1189,7 @@ export const blogPosts = [
             'Group mistakes by cause on the fourth day. A missing source path needs a better guide, a repeated meaning question needs a clearer owner, and an entry error needs a focused recheck.',
             'On the fifth day, approve only the payer and plan groups the sample supports. Keep uncertain records in full review until the team has enough checked work to change the boundary safely.',
           ],
-          bullets: ['Day 1: guided examples', 'Days 2–3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
+          bullets: ['Day 1: guided examples', 'Days 2-3: fully checked sample', 'Day 4: fix the guide and owner paths', 'Day 5: approve only proven work'],
         },
       ],
       faqs: [
@@ -1305,7 +1305,7 @@ export const blogPosts = [
             'Group mistakes by cause on the fourth day. A missing source path needs a better guide, a repeated medical question needs a clearer owner, and a simple entry error needs a focused recheck.',
             'On the fifth day, approve only the payer and request groups the sample supports. Keep uncertain work in full review until the team has enough checked records to change the boundary safely.',
           ],
-          bullets: ['Day 1: guided examples', 'Days 2–3: fully checked sample', 'Day 4: fix the guide and routes', 'Day 5: approve proven work only'],
+          bullets: ['Day 1: guided examples', 'Days 2-3: fully checked sample', 'Day 4: fix the guide and routes', 'Day 5: approve proven work only'],
         },
       ],
       faqs: [
@@ -1421,7 +1421,7 @@ export const blogPosts = [
             'During the next three days, let the specialist prepare a small mixed group while the owner checks every source match, blank, duplicate, exception note, approval record, and submission reply. Sort errors by cause so a weak guide gets fixed instead of blaming the person following it.',
             'At the end of the week, approve only the claim groups the checked sample supports. Keep uncertain work under full review, remove access that is not needed, and update the field map whenever the owner changes a source or decision path.',
           ],
-          bullets: ['Day 1: guided examples', 'Days 2–4: fully checked sample', 'Fix the guide by error cause', 'Approve proven claim groups only'],
+          bullets: ['Day 1: guided examples', 'Days 2-4: fully checked sample', 'Fix the guide by error cause', 'Approve proven claim groups only'],
         },
       ],
       faqs: [
@@ -3638,8 +3638,8 @@ const researchBatchBody = (topic: string, premise: string, checks: string, owner
   'Methodology: reviewed the CMS claims-processing and coding references, HHS privacy and security guidance, NIST control guidance, ONC safety material, and AHRQ communication guidance. The evidence is used to define observable workflow controls, not to infer local performance or promise financial results.',
   'Key Stats: the 2024 CMS improper-payment table reported 59.8% attributed to insufficient documentation, 15.7% to medical necessity, 10.0% to incorrect coding, and 8.2% to no documentation. These are national program findings, not a target or forecast for this workflow.',
   `Key Takeaways: (1) preserve the source before changing a record; (2) separate preparation from approval; (3) make exceptions, deadlines, and the next owner visible. ${checks}`,
-  'Data section — control fields: record or claim reference; source document; service or invoice date; payer/customer; status; evidence checked; exception category; next action; owner; due date; reviewer; and audit trail.',
-  'Data section — review table: Work item | Source proof | Staff action | Owner decision | Evidence saved. A screenshot-ready table should show one row per item, use truthful statuses, and never hide missing proof behind a completed label.',
+  'Data section: control fields: record or claim reference; source document; service or invoice date; payer/customer; status; evidence checked; exception category; next action; owner; due date; reviewer; and audit trail.',
+  'Data section: review table: Work item | Source proof | Staff action | Owner decision | Evidence saved. A screenshot-ready table should show one row per item, use truthful statuses, and never hide missing proof behind a completed label.',
   `Owner boundary: ${owner}`,
   'Internal links: /services/billing-data-quality-review and /services/billing-reconciliation. Use these contextual paths to connect the research to the site services without a public pricing or rates claim.',
   'FAQs: What can a support specialist do? Prepare, compare, document, and route work inside approved access. What requires escalation? Missing or contradictory evidence, coding or clinical meaning, privacy concerns, money changes, and unresolved deadlines. What should be measured? Completeness, correct routing, aging, rework, and owner-confirmed outcomes.',

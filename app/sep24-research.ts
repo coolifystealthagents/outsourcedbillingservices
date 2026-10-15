@@ -2,7 +2,7 @@ import { buildDecisionResearchBody, type ResearchSeed, type ResearchSource } fro
 
 const published = '2026-09-24' as const;
 const checked = 'September 24, 2026';
-const featuredImage = '/aug20-research-heroes/research-medical-billing-claim-evidence-lineage.png';
+const featuredImage = '/aug20-research-heroes/research-medical-billing-claim-evidence-lineage.webp';
 const eligibility: ResearchSource = { title: 'Eligibility and Benefits Transactions', publisher: 'Centers for Medicare & Medicaid Services', url: 'https://www.cms.gov/files/document/eligibility-and-benefits-transactions.pdf', use: 'the 270 inquiry and 271 response structure and the difference between an inquiry and a health-plan response' };
 const hets: ResearchSource = { title: 'HETS 270/271 Companion Guide', publisher: 'Centers for Medicare & Medicaid Services', url: 'https://www.cms.gov/files/document/current-hets-270/271-companion-guide.pdf', use: 'current Medicare eligibility request and response implementation context' };
 const claims: ResearchSource = { title: 'Medicare Claims Processing Manual', publisher: 'Centers for Medicare & Medicaid Services', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912', use: 'primary Medicare claims-processing context while payer-specific instructions control each case' };

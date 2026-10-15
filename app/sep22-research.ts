@@ -1,6 +1,6 @@
 const published = '2026-09-22' as const;
 const checked = 'September 22, 2026';
-const featuredImage = '/aug20-research-heroes/research-medical-billing-claim-evidence-lineage.png';
+const featuredImage = '/aug20-research-heroes/research-medical-billing-claim-evidence-lineage.webp';
 
 type Source = { title: string; publisher: string; url: string; use: string };
 type Seed = {

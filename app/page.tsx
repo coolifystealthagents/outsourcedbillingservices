@@ -54,7 +54,7 @@ export default function Home() {
               <p><b>Five visible billing checkpoints</b><small>Received, prepared, reviewed, sent, and followed up.</small></p>
             </div>
             <div className="billing-actions">
-              <a className="btn billing-primary" href="/contact">Map my billing desk <span>↗</span></a>
+              <a className="btn billing-primary" href="/contact-us">Map my billing desk <span>↗</span></a>
               <a className="billing-text-link" href="#tasks">See what to hand off <span>↓</span></a>
             </div>
             <div className="control-line">
@@ -107,7 +107,7 @@ export default function Home() {
       <section className="control-room">
         <div className="container control-room-grid">
           <div className="control-image">
-            <img src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" alt="Illustration of a manager reviewing a billing operations dashboard" />
+            <img src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" alt="Illustration of a manager reviewing a billing operations dashboard" width="1400" height="1400" />
             <div className="image-note"><span>OWNER CHECK</span><b>Exceptions stay visible.</b></div>
           </div>
           <div className="control-copy">
@@ -124,7 +124,7 @@ export default function Home() {
       <section className="container billing-section process-section">
         <div className="billing-section-head process-head">
           <div><p className="billing-kicker dark"><span /> The launch</p><h2>A careful handoff beats a rushed hire.</h2></div>
-          <a className="billing-text-link dark-link" href="/contact">Talk through your queue <span>↗</span></a>
+          <a className="billing-text-link dark-link" href="/contact-us">Talk through your queue <span>↗</span></a>
         </div>
         <div className="process-grid">
           {process.map((step) => <article key={step.n}><span>{step.n}</span><h3>{step.title}</h3><p>{step.body}</p></article>)}
@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       <section className="container gi-proof" aria-label="Billing workflow checks">
-        <img className="gi-proof-art" src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" alt="Billing team reviewing an accounts dashboard"/>
+        <img className="gi-proof-art" src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" alt="Billing team reviewing an accounts dashboard" width="1400" height="1400"/>
         <div><p className="billing-kicker dark"><span/>A reviewable queue</p><h2>Keep every billing checkpoint visible.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt="Invoice preparation step" width="42" height="42"/>Invoice prep</span><span><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt="Payment follow-up step" width="42" height="42"/>Payment follow-up</span><span><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt="Weekly billing review" width="42" height="42"/>Weekly review</span></div></div>
       </section>
 
@@ -153,7 +153,7 @@ export default function Home() {
 
       <section className="container billing-final">
         <div><span className="tiny-label">YOUR QUEUE / YOUR RULES</span><h2>Bring the messy billing list.</h2><p>We will turn it into a role with owners, limits, review points, and a practical first handoff.</p></div>
-        <a className="btn billing-primary" href="/contact">Request a billing plan <span>↗</span></a>
+        <a className="btn billing-primary" href="/contact-us">Request a billing plan <span>↗</span></a>
       </section>
     </main>
     <Footer />

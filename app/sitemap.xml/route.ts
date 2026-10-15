@@ -16,6 +16,7 @@ import { sep25BlogSlugs } from "../sep25-content";
 import { sep28BlogSlugs } from "../sep28-blog";
 import { oct2BlogSlugs } from "../oct2-blog";
 import { oct5BlogSlugs } from "../oct5-blog";
+import { oct8BlogSlugs } from "../oct8-content";
 import { oct12BlogSlugs } from "../oct12-content";
 import { oct13BlogSlugs } from "../oct13-content";
 import { oct5ResearchTopics } from "../oct5-research";
@@ -26,6 +27,9 @@ export function GET() {
     1,
     Math.ceil(
       (blogPosts.length +
+        Object.keys(aug20Meta).length +
+        Object.keys(aug21Meta).length +
+        aug23Slugs.length +
         sep3Slugs.length +
         sep4BlogSlugs.length +
         sep7BlogSlugs.length +
@@ -34,12 +38,12 @@ export function GET() {
         sep10BlogSlugs.length +
         sep18bBlogSlugs.length +
         sep22BlogSlugs.length +
-        sep23BlogSlugs.length +
         sep24BlogSlugs.length +
         sep25BlogSlugs.length +
         sep28BlogSlugs.length +
         oct2BlogSlugs.length +
         oct5BlogSlugs.length +
+        oct8BlogSlugs.length +
         oct12BlogSlugs.length +
         oct13BlogSlugs.length) /
         20,
@@ -64,6 +68,7 @@ export function GET() {
   const sep28Paths = sep28BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct2Paths = oct2BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct5Paths = oct5BlogSlugs.map((slug) => `/blog/${slug}`);
+  const oct8Paths = oct8BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct12Paths = oct12BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct13Paths = oct13BlogSlugs.map((slug) => `/blog/${slug}`);
   const sep4Paths = sep4BlogSlugs.map((slug) => `/blog/${slug}`);
@@ -74,6 +79,8 @@ export function GET() {
     "/blog/top-25-billing-back-office-outsourcing-companies",
     "/research",
     "/contact",
+    "/contact-us",
+    "/pricing",
     "/privacy",
     "/terms",
     "/cancellation-policy",
@@ -102,6 +109,7 @@ export function GET() {
     ...sep28Paths,
     ...oct2Paths,
     ...oct5Paths,
+    ...oct8Paths,
     ...oct12Paths,
     ...oct13Paths,
   ];
@@ -109,7 +117,22 @@ export function GET() {
     ...oct5BlogSlugs.map((slug) => `/blog/${slug}`),
     ...oct5ResearchTopics.map(({ slug }) => `/research/${slug}`),
   ]);
-  const body = Array.from(new Set(paths))
+  const redirectSources = new Set([
+    "/research/research-medical-billing-authorization-unit-variance-2026",
+    "/research/research-medical-billing-sep1-authorization-unit-variance",
+    "/research/research-medical-billing-era-import-rejection-recovery-2026",
+    "/research/research-medical-billing-claim-transmission-acknowledgment-gap-2026",
+    "/research/research-medical-billing-appeal-receipt-reproducibility-2026",
+    "/blog/aug13-philippines-medical-billing-claim-status-contact-log",
+    "/blog/sep4-medical-billing-charge-entry-source-document-index",
+    "/blog/sep4-medical-billing-provider-enrollment-document-expiry-board",
+    "/blog/sep4-medical-billing-rejected-era-line-recovery-queue",
+    "/blog/sep4-medical-billing-appeal-submission-receipt-chain",
+    "/blog/sep4-medical-billing-patient-payment-plan-exception-register",
+    "/blog/sep4-medical-billing-payer-portal-message-capture-register",
+    "/blog/sep4-medical-billing-authorization-unit-depletion-ledger",
+  ]);
+  const body = Array.from(new Set(paths.filter((path) => !redirectSources.has(path))))
     .map((x) => `<url><loc>${base}${x}</loc>${oct5ReleasePaths.has(x) ? "<lastmod>2026-10-06</lastmod>" : ""}</url>`)
     .join("");
   return new Response(

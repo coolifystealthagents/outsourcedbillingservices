@@ -111,7 +111,7 @@ export default function Pricing() {
                   <h3>{tier.name}</h3>
                   <p>{tier.fit} The client still sets the approval limits and signs off on sensitive account actions.</p>
                   <ul>{tier.items.map((item) => <li key={item}>{item}</li>)}</ul>
-                  <a className="btn primary" href="/contact">Discuss this level</a>
+                  <a className="btn primary" href="/contact-us">Discuss this level</a>
                 </article>
               ))}
             </div>
