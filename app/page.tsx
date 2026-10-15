@@ -49,6 +49,10 @@ export default function Home() {
             <p className="billing-kicker"><span /> Filipino billing support</p>
             <h1>Get the billing queue out of your inbox.</h1>
             <p className="billing-lead">A Filipino billing specialist handles invoice prep, claims admin, payment follow-up, customer questions, and weekly checks. Your team keeps control of approvals and account decisions.</p>
+            <div className="billing-trust">
+              <span className="billing-trust-stars" role="img" aria-label="Five visible billing checkpoints">★★★★★</span>
+              <p><b>Five visible billing checkpoints</b><small>Received, prepared, reviewed, sent, and followed up.</small></p>
+            </div>
             <div className="billing-actions">
               <a className="btn billing-primary" href="/contact">Map my billing desk <span>↗</span></a>
               <a className="billing-text-link" href="#tasks">See what to hand off <span>↓</span></a>
@@ -92,7 +96,7 @@ export default function Home() {
         </div>
         <div className="billing-service-grid">
           {services.map((service, i) => <a className="billing-service" href={`/services/${slug(service)}`} key={service.slug}>
-            <div className="service-top"><span>0{i + 1}</span><i className={`service-mark mark-${i + 1}`} /></div>
+            <div className="service-top"><span className="service-category">Billing workflow</span><i className={`service-mark mark-${i + 1}`} /></div>
             <h3>{service.title}</h3>
             <p>{service.desc}</p>
             <b className="service-link">Open the workflow <span>↗</span></b>
