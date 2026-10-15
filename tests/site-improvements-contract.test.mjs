@@ -36,5 +36,8 @@ assert.doesNotMatch(contactCss, /\.tc-hero-grid>\.sa-form-card\{order:-1\}/, 'mo
 assert.match(globalCss, /\.stealth-attribution\{[^}]*font-size:10px;[^}]*color:#5f6c80/, 'default attribution must retain readable size and WCAG AA contrast');
 assert.doesNotMatch(globalCss, /\.stealth-attribution\{font-size:9px\}/, 'mobile attribution must not shrink below its readable default');
 assert.match(globalCss, /grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/, 'three-link mobile navigation must use three balanced columns');
+assert.match(globalCss, /@media\(max-width:620px\)\{\.fleet-links>\*\{min-width:0;overflow-wrap:anywhere\}\.billing-hero-grid,\.billing-copy,\.billing-copy h1,\.billing-lead,\.billing-trust\{min-width:0;max-width:100%\}\}/, 'mobile homepage and navigation must constrain wide content to the viewport');
+assert.match(contactCss, /@media\(max-width:620px\)\{\.tc-hero-grid,\.tc-copy,\.tc-copy h1,\.tc-lead,\.tc-proof-row,\.sa-form-card\{min-width:0;max-width:100%\}\.tc-proof-row span,\.sa-form-card \*\{min-width:0;max-width:100%\}\}/, 'mobile contact hero and form must constrain wide content to the viewport');
+assert.match(globalCss, /\.workflow-strip\{display:flex;overflow-x:auto/, 'workflow checkpoints must retain their intentional local mobile scroller');
 
 console.log('site improvement contract passed');
