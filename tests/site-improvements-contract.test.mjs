@@ -8,6 +8,11 @@ const intakeContact = readFileSync(new URL('../app/contact/page.tsx', import.met
 const thankYou = readFileSync(new URL('../app/thank-you/page.tsx', import.meta.url), 'utf8');
 const whatsNext = readFileSync(new URL('../app/thanks-whats-next/page.tsx', import.meta.url), 'utf8');
 const bookingComponents = readFileSync(new URL('../app/booking-components.tsx', import.meta.url), 'utf8');
+const standardContactForm = readFileSync(new URL('../app/contact-us/StandardContactForm.tsx', import.meta.url), 'utf8');
+const acrClient = readFileSync(new URL('../app/acr-client.tsx', import.meta.url), 'utf8');
+const servicesIndex = readFileSync(new URL('../app/services/page.tsx', import.meta.url), 'utf8');
+const serviceDetail = readFileSync(new URL('../app/services/[slug]/page.tsx', import.meta.url), 'utf8');
+const notFoundPage = readFileSync(new URL('../app/not-found.tsx', import.meta.url), 'utf8');
 const contactCss = readFileSync(new URL('../app/contact-us/contact.css', import.meta.url), 'utf8');
 const globalCss = readFileSync(new URL('../app/globals.css', import.meta.url), 'utf8');
 const nextConfig = readFileSync(new URL('../next.config.mjs', import.meta.url), 'utf8');
@@ -113,11 +118,13 @@ assert.match(trustBlock, /<span className="billing-trust-stars" role="img" aria-
 assert.match(trustBlock, /Received, prepared, reviewed, sent, and followed up\./, 'five-star visual must be grounded in the five documented workflow checkpoints');
 assert.doesNotMatch(trustBlock, /\b(?:rating|rated|reviews?|five-star trust indicator)\b/i, 'five-star workflow visual must not imply an unsupported customer rating');
 assert.doesNotMatch(page, /<span>0\{i \+ 1\}<\/span>/, 'homepage service cards should use relevant visual marks instead of repeated numbering');
+assert.doesNotMatch(page, /padStart\(2, '0'\)|Guide \/ 0\{i \+ 1\}/, 'homepage must not use decorative zero-padded labels');
+assert.equal((page.match(/billing-dashboard\.webp/g) || []).length, 1, 'major homepage sections must not repeat the same prominent dashboard image');
 
 assert.match(contact, /className="tc-about-image"/, 'contact attribution section must include a relevant industry image');
 assert.ok(contact.indexOf('className="tc-about"') > contact.indexOf('className="tc-hero"') && contact.indexOf('className="tc-about"') < contact.indexOf('className="tc-strip"'), 'parent-company section must appear immediately below the first-fold contact hero');
 assert.match(page, /billing-dashboard\.webp" alt="Illustration of a manager reviewing a billing operations dashboard" width="1400" height="1400"/, 'homepage control-room image must declare intrinsic dimensions');
-assert.match(page, /className="gi-proof-art" src="[^"]*billing-dashboard\.webp" alt="Billing team reviewing an accounts dashboard" width="1400" height="1400"/, 'homepage proof image must declare intrinsic dimensions');
+assert.match(page, /className="gi-proof-art" src="[^"]*billing-operations-approval-evidence-matrix\.webp" alt="Billing approval evidence matrix with visible review checkpoints" width="1536" height="1024"/, 'homepage proof image must use a distinct relevant asset with intrinsic dimensions');
 assert.match(contact, /src="\/thank-you-hero\.png"[^>]+alt="Stealth Agents team in Bacolod"/, 'contact attribution section must use the approved official team photograph');
 assert.match(contact, /src="\/stealth-agents-logo-black\.png"[^>]+alt="Stealth Agents"/, 'contact attribution section must show the official parent-company logo');
 assert.match(contact, /Official team, Bacolod/, 'contact attribution section must include the approved official team plate');
@@ -125,6 +132,7 @@ assert.doesNotMatch(contact, /<article key=\{title\}><span>0\{i\+1\}<\/span>/, '
 assert.match(contact, /<Attribution\s*\/>/, 'contact attribution section must show the exact shared attribution');
 assert.match(contact, /About Stealth Agents/, 'contact attribution section must include its required heading');
 assert.match(contact, /Outsourced Billing Services is a subsidiary of Stealth Agents\./, 'contact attribution section must state the correct subsidiary relationship');
+assert.match(contact, /<TestimonialsRail contact\s*\/?>/, 'contact first fold must use the approved testimonial rail');
 assert.match(contact, /href="#contactPageForm"/, 'contact attribution section must link to the approved consultation form');
 assert.doesNotMatch(contact, /35\+ industries|featured on Forbes|top rated/i, 'unsupported promotional claims must not appear on the contact page');
 assert.doesNotMatch(intakeContact, /TestimonialsRail|Client testimonials/i, 'the intake contact route must not expose unsupported testimonials or ratings');
@@ -136,8 +144,18 @@ assert.match(whatsNext, /Booking confirmed/, 'booking confirmation route must cl
 assert.match(whatsNext, /What happens next/, 'booking confirmation route must explain the next steps');
 assert.match(whatsNext, /robots:\s*\{\s*index:\s*false,\s*follow:\s*false\s*\}/, 'booking confirmation route must remain out of the search index');
 assert.doesNotMatch(whatsNext, /oncehub|iframe/i, 'booking confirmation route must not duplicate the scheduler');
-assert.doesNotMatch(`${intakeContact}\n${thankYou}`, /5 out of 5 stars|★★★★★|What Stealth Agents clients say/i, 'reachable conversion routes must not contain unsupported rating or testimonial claims');
-assert.match(bookingComponents, /5 out of 5 stars/, 'fixture guard: this contract must continue detecting the unsupported testimonial component if a route reimports it');
+assert.doesNotMatch(`${intakeContact}\n${thankYou}`, /5 out of 5 stars|★★★★★|What Stealth Agents clients say/i, 'post-submit and legacy intake routes must not duplicate the approved testimonial rail');
+assert.match(bookingComponents, /Source: [\s\S]*Stealth Agents client testimonials/, 'approved testimonials must retain visible source attribution');
+assert.match(standardContactForm, /data-acr-managed="react"/, 'React-managed contact form must identify itself to the global ACR submit handler');
+assert.match(acrClient, /form\.dataset\.acrManaged==='react'/, 'global ACR submit handler must skip the React-managed contact form');
+assert.equal((standardContactForm.match(/window\.location\.assign\("\/thank-you"\)/g) || []).length, 1, 'contact form must have exactly one success redirect');
+assert.equal((standardContactForm.match(/acrTracker\?\.trackLead/g) || []).length, 1, 'contact form must track an accepted lead exactly once');
+assert.match(standardContactForm, /\} catch \{\s*setError\("We could not submit your request\. Please try again\."\);\s*setSubmitting\(false\);\s*\}/, 'failed primary lead ingestion must show an error without tracking or redirecting as success');
+assert.match(servicesIndex, /How to choose a billing support lane/, 'service index must provide decision support beyond a card directory');
+assert.match(servicesIndex, /What to prepare before scoping/, 'service index must provide operational onboarding guidance');
+for (const heading of ['Inputs and access', 'Review-ready deliverables', 'Common starting scenarios', 'Questions before launch', 'Related billing services']) assert.match(serviceDetail, new RegExp(heading), `service detail must include ${heading}`);
+assert.match(notFoundPage, /Page not found/, 'site must provide a branded 404 heading');
+assert.match(notFoundPage, /href="\/services"/, 'branded 404 must provide a service recovery link');
 assert.match(contactCss, /\.tc-about-copy>\.stealth-attribution a\{[^}]*display:inline;/, 'contact attribution link must not inherit the section CTA button treatment');
 assert.doesNotMatch(contactCss, /\.tc-hero-grid>\.sa-form-card\{order:-1\}/, 'mobile visual order must stay aligned with DOM and heading order');
 assert.match(globalCss, /\.stealth-attribution\{[^}]*font-size:10px;[^}]*color:#5f6c80/, 'default attribution must retain readable size and WCAG AA contrast');

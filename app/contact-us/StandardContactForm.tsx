@@ -60,14 +60,6 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
       try { (window as TrackerWindow).acrTracker?.trackLead?.(payload); } catch {}
       window.location.assign("/thank-you");
     } catch {
-      try {
-        const tracker = (window as TrackerWindow).acrTracker?.trackLead;
-        if (tracker) {
-          tracker(payload);
-          window.location.assign("/thank-you");
-          return;
-        }
-      } catch {}
       setError("We could not submit your request. Please try again.");
       setSubmitting(false);
     }
@@ -76,13 +68,13 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
   return (
     <div className="sa-form-card">
       <h2>Find Growth In Your Business By Hiring Industry Experienced Virtual Assistants</h2>
-      <form onSubmit={submit} action={endpoint} method="post" id="contactPageForm">
+      <form onSubmit={submit} action={endpoint} method="post" id="contactPageForm" data-acr-managed="react">
         <input className="sa-hp" name="website_url" tabIndex={-1} autoComplete="off" aria-hidden="true" />
         <div className="sa-grid">
           <label>First Name *<input name="firstName" required autoComplete="given-name" /></label>
           <label>Last Name *<input name="lastName" required autoComplete="family-name" /></label>
         </div>
-        <label>Business Email *<input name="email" type="email" required autoComplete="email" /><small>Not Accepting Personal Email</small></label>
+        <label>Business Email *<input name="email" type="email" required autoComplete="email" /></label>
         <label>Phone Number *<span className="sa-phone"><select name="countryCode" aria-label="Country code" value={countryCode} onChange={(e) => setCountryCode(e.target.value)}>{countryCodes.map(([flag, code], i) => <option value={code} key={`${code}-${i}`}>{flag} {code}</option>)}</select><input name="phoneLocal" type="tel" required autoComplete="tel-national" placeholder="Phone number" /></span></label>
         <div className="sa-grid">
           <label>Company Name *<input name="companyName" required autoComplete="organization" /></label>
@@ -109,6 +101,7 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
         .sa-phone select,.sa-phone input{border:0;border-radius:0;box-shadow:none!important}.sa-phone select{border-right:1px solid #dbe1ea;padding-right:8px}.sa-phone input{min-width:0}
         textarea{resize:vertical;min-height:150px}button{width:100%;border:0;border-radius:12px;background:linear-gradient(100deg,#05acec,#79cdf1);color:#fff;padding:20px 24px;font-size:21px;font-weight:700;cursor:pointer;box-shadow:0 7px 16px rgba(0,173,244,.22)}
         button:hover{filter:brightness(.98)}button:disabled{cursor:wait;opacity:.65}.sa-error{margin:0;color:#b42318;font-size:14px}.sa-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
+        @media(min-width:981px) and (max-height:850px){.sa-form-card{padding:18px 24px 20px;border-radius:18px}h2{margin-bottom:10px;font-size:20px;line-height:1.2}form{gap:7px}.sa-grid{gap:12px}label{gap:3px;font-size:13px;line-height:1.15}input,select,textarea{min-height:38px;padding:7px 10px;border-radius:8px;font-size:14px}.sa-phone{grid-template-columns:112px 1fr;border-radius:8px}textarea{min-height:54px;max-height:68px}small{font-size:11px}button{min-height:42px;padding:9px 16px;border-radius:8px;font-size:16px}}
         @media(max-width:700px){.sa-form-card{padding:26px 20px 30px;border-radius:18px}h2{font-size:25px}.sa-grid{grid-template-columns:1fr;gap:22px}label{font-size:17px}.sa-phone{grid-template-columns:122px 1fr}button{font-size:19px}}
       `}</style>
     </div>

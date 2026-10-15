@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Attribution, Header, Footer } from "../components";
 import StandardContactForm from "./StandardContactForm";
+import { TestimonialsRail } from "../booking-components";
 import "./contact.css";
 import "./image-fix.css";
 
@@ -23,7 +24,7 @@ export default function ContactUsPage(){return <>
   <Header/>
   <main className="trusted-contact tc-legal">
     <section className="tc-hero"><div className="container tc-hero-grid">
-      <div className="tc-copy"><p className="tc-kicker">Billing support with clear approval</p><h1>Turn billing backlogs into reliable cash flow.</h1><p className="tc-lead">Tell us where invoice preparation, payment posting, collections follow-up, or exception handling slows the team down. We’ll help scope a Filipino billing desk with explicit ownership and approval rules.</p><div className="tc-proof-row"><span>Review-ready workflows</span><span>Exception management focus</span><span>Free consultation</span></div><a className="tc-text-link" href="#billing-support">Explore the billing plan →</a></div>
+      <div className="tc-copy"><p className="tc-kicker">Billing support with clear approval</p><h1>Turn billing backlogs into reliable cash flow.</h1><p className="tc-lead">Tell us where invoice preparation, payment posting, collections follow-up, or exception handling slows the team down. We’ll help scope a Filipino billing desk with explicit ownership and approval rules.</p><div className="tc-proof-row"><span>Review-ready workflows</span><span>Exception management focus</span><span>Free consultation</span></div><TestimonialsRail contact/><a className="tc-text-link" href="#billing-support">Explore the billing plan →</a></div>
       <StandardContactForm endpoint="/api/contact" encoding="form"/>
     </div></section>
     <section className="tc-about" aria-labelledby="about-stealth-agents"><div className="container tc-about-grid"><div className="tc-about-image"><img className="tc-team-photo" src="/thank-you-hero.png" width="619" height="402" alt="Stealth Agents team in Bacolod"/><div className="tc-team-plate"><img src="/stealth-agents-logo-black.png" width="149" height="50" alt="Stealth Agents"/><span>Official team, Bacolod</span></div></div><div className="tc-about-copy"><Attribution/><h2 id="about-stealth-agents">About Stealth Agents</h2><p>Stealth Agents supports growing teams with carefully scoped virtual-assistant services, documented workflows, and clear review points. For billing operations, that means repeatable administrative work can move forward while your finance owner keeps approval authority.</p><p>Outsourced Billing Services is a subsidiary of Stealth Agents.</p><a className="tc-about-cta" href="#contactPageForm">Plan your billing consultation</a></div></div></section>

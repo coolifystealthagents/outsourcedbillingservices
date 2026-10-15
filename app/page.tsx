@@ -115,7 +115,7 @@ export default function Home() {
             <h2>Outsource the work. Keep the decisions.</h2>
             <p>Your billing desk should not hide behind a monthly report. You should know what moved, what is blocked, and where your approval is needed.</p>
             <div className="control-list">
-              {(staffingOffer.included || []).map((item, i) => <div key={item}><span>{String(i + 1).padStart(2, '0')}</span><p>{item.replace(/^./, (m) => m.toUpperCase())}</p></div>)}
+              {(staffingOffer.included || []).map((item) => <div key={item}><span aria-hidden="true">✓</span><p>{item.replace(/^./, (m) => m.toUpperCase())}</p></div>)}
             </div>
           </div>
         </div>
@@ -140,14 +140,14 @@ export default function Home() {
       </section>
 
       <section className="container gi-proof" aria-label="Billing workflow checks">
-        <img className="gi-proof-art" src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" alt="Billing team reviewing an accounts dashboard" width="1400" height="1400"/>
+        <img className="gi-proof-art" src="/aug19-heroes/billing-operations-approval-evidence-matrix.webp" alt="Billing approval evidence matrix with visible review checkpoints" width="1536" height="1024"/>
         <div><p className="billing-kicker dark"><span/>A reviewable queue</p><h2>Keep every billing checkpoint visible.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt="Invoice preparation step" width="42" height="42"/>Invoice prep</span><span><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt="Payment follow-up step" width="42" height="42"/>Payment follow-up</span><span><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt="Weekly billing review" width="42" height="42"/>Weekly review</span></div></div>
       </section>
 
       <section className="container billing-section guides-section">
         <div className="guides-title"><p className="billing-kicker dark"><span /> Before the handoff</p><h2>Useful reading for your billing owner.</h2></div>
         <div className="billing-guides">
-          {blogPosts.slice(0, 3).map((post, i) => <a href={`/blog/${post.slug}`} key={post.slug}><span>Guide / 0{i + 1}</span><h3>{post.title}</h3><p>{post.excerpt}</p><b>Read guide ↗</b></a>)}
+          {blogPosts.slice(0, 3).map((post) => <a href={`/blog/${post.slug}`} key={post.slug}><span>Billing guide</span><h3>{post.title}</h3><p>{post.excerpt}</p><b>Read guide ↗</b></a>)}
         </div>
       </section>
 
