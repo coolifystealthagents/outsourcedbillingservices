@@ -29,6 +29,9 @@ assert.match(contact, /href="#contactPageForm"/, 'contact attribution section mu
 assert.doesNotMatch(contact, /35\+ industries|featured on Forbes|top rated/i, 'unsupported promotional claims must not appear on the contact page');
 assert.doesNotMatch(intakeContact, /TestimonialsRail|Client testimonials/i, 'the intake contact route must not expose unsupported testimonials or ratings');
 assert.doesNotMatch(thankYou, /TestimonialsRail|Client testimonials/i, 'the thank-you route must not expose unsupported testimonials or ratings');
+const onceHubDestination = 'https://go.oncehub.com/StealthAgentsTeam?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1';
+assert.equal(thankYou.match(new RegExp(onceHubDestination.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'))?.length, 2, 'thank-you route must preserve the OnceHub iframe and provide one same-destination fallback link');
+assert.match(thankYou, /<a[^>]+href="https:\/\/go\.oncehub\.com\/StealthAgentsTeam\?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1"[^>]*>Open booking calendar<\/a>/, 'thank-you route must show an accessible booking-calendar fallback link');
 assert.doesNotMatch(`${intakeContact}\n${thankYou}`, /5 out of 5 stars|★★★★★|What Stealth Agents clients say/i, 'reachable conversion routes must not contain unsupported rating or testimonial claims');
 assert.match(bookingComponents, /5 out of 5 stars/, 'fixture guard: this contract must continue detecting the unsupported testimonial component if a route reimports it');
 assert.match(contactCss, /\.tc-about-copy>\.stealth-attribution a\{[^}]*display:inline;/, 'contact attribution link must not inherit the section CTA button treatment');

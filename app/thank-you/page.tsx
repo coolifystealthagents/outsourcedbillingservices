@@ -23,6 +23,12 @@ export default function ThankYouPage() {
           </div>
           <section className="sa-booking-calendar" aria-labelledby="booking-calendar-title">
             <h2 id="booking-calendar-title">Pick a Time That Works for You</h2>
+            <a
+              className="btn primary"
+              href="https://go.oncehub.com/StealthAgentsTeam?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Open booking calendar</a>
             <iframe
               src="https://go.oncehub.com/StealthAgentsTeam?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1"
               id="SOI_StealthAgentsTeam"
