@@ -181,6 +181,16 @@ assert.match(globalCss, /@media\(max-width:620px\)\{\.fleet-links>\*\{min-width:
 assert.match(contactCss, /@media\(max-width:620px\)\{\.tc-hero-grid,\.tc-copy,\.tc-copy h1,\.tc-lead,\.tc-proof-row,\.sa-form-card\{min-width:0;max-width:100%\}\.tc-proof-row span,\.sa-form-card \*\{min-width:0;max-width:100%\}\}/, 'mobile contact hero and form must constrain wide content to the viewport');
 assert.match(globalCss, /\.workflow-strip\{display:flex;overflow-x:auto/, 'workflow checkpoints must retain their intentional local mobile scroller');
 
+// Intrinsic select/phone widths must not enlarge the tablet grid track.
+assert.match(contactCss, /@media\(max-width:980px\)\{\.tc-hero-grid\{grid-template-columns:minmax\(0,1fr\)\}/, 'stacked contact hero must have a zero-minimum grid track');
+assert.match(standardContactForm, /@media\(max-width:980px\)\{\.sa-form-card\{min-width:0;max-width:100%\}/, 'tablet form card must opt out of its automatic intrinsic minimum');
+assert.match(standardContactForm, /form,\.sa-grid,label,\.sa-phone\{min-width:0;max-width:100%\}/, 'tablet nested grid/flex items must not impose their intrinsic minimum');
+assert.match(standardContactForm, /\.sa-grid\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)\}/, 'tablet field columns must shrink below native select intrinsic widths');
+assert.match(standardContactForm, /\.sa-phone\{grid-template-columns:146px minmax\(0,1fr\)\}/, 'tablet phone remainder must shrink inside its label');
+assert.match(standardContactForm, /input,select,textarea,button\{min-width:0;max-width:100%\}/, 'every tablet control must fit its containing field');
+assert.match(standardContactForm, /\.sa-phone\{grid-template-columns:122px minmax\(0,1fr\)\}/, 'mobile phone remainder must preserve containment');
+// These are sizing-policy regressions, not a substitute for Chrome right-edge geometry checks.
+
 // The contact testimonial container is pale (#f8fbff to #eef7ff), not the blue hero.
 function contrastRatio(foreground, background) {
   const luminance = (hex) => {

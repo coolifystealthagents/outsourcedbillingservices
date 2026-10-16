@@ -104,7 +104,8 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
         textarea{resize:vertical;min-height:150px}button{width:100%;border:0;border-radius:12px;background:linear-gradient(100deg,#05acec,#79cdf1);color:#fff;padding:20px 24px;font-size:21px;font-weight:700;cursor:pointer;box-shadow:0 7px 16px rgba(0,173,244,.22)}
         button:hover{filter:brightness(.98)}button:disabled{cursor:wait;opacity:.65}.sa-error{margin:0;color:#b42318;font-size:14px}.sa-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
         @media(min-width:981px) and (max-height:850px){.sa-form-card{padding:18px 24px 20px;border-radius:18px}h2{margin-bottom:10px;font-size:20px;line-height:1.2}form{gap:7px}.sa-grid{gap:12px}label{gap:3px;font-size:13px;line-height:1.15}input,select,textarea{min-height:38px;padding:7px 10px;border-radius:8px;font-size:14px}.sa-phone{grid-template-columns:112px 1fr;border-radius:8px}textarea{min-height:54px;max-height:68px}small{font-size:11px}button{min-height:42px;padding:9px 16px;border-radius:8px;font-size:16px}}
-        @media(max-width:700px){.sa-form-card{padding:26px 20px 30px;border-radius:18px}h2{font-size:25px}.sa-grid{grid-template-columns:1fr;gap:22px}label{font-size:17px}.sa-phone{grid-template-columns:122px 1fr}button{font-size:19px}}
+        @media(max-width:980px){.sa-form-card{min-width:0;max-width:100%}form,.sa-grid,label,.sa-phone{min-width:0;max-width:100%}.sa-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sa-phone{grid-template-columns:146px minmax(0,1fr)}input,select,textarea,button{min-width:0;max-width:100%}}
+        @media(max-width:700px){.sa-form-card{padding:26px 20px 30px;border-radius:18px}h2{font-size:25px}.sa-grid{grid-template-columns:1fr;gap:22px}label{font-size:17px}.sa-phone{grid-template-columns:122px minmax(0,1fr)}button{font-size:19px}}
       `}</style>
     </div>
   );
