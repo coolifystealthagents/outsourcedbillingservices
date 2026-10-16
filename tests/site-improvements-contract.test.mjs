@@ -149,8 +149,14 @@ assert.match(bookingComponents, /Source: [\s\S]*Stealth Agents client testimonia
 assert.match(standardContactForm, /data-acr-managed="react"/, 'React-managed contact form must identify itself to the global ACR submit handler');
 assert.match(acrClient, /form\.dataset\.acrManaged==='react'/, 'global ACR submit handler must skip the React-managed contact form');
 assert.equal((standardContactForm.match(/window\.location\.assign\("\/thank-you"\)/g) || []).length, 1, 'contact form must have exactly one success redirect');
-assert.equal((standardContactForm.match(/acrTracker\?\.trackLead/g) || []).length, 1, 'contact form must track an accepted lead exactly once');
+assert.equal((standardContactForm.match(/acrTracker\?\.trackLead\?\.\(payload\)/g) || []).length, 1, 'contact form must track an accepted lead exactly once');
 assert.match(standardContactForm, /\} catch \{\s*setError\("We could not submit your request\. Please try again\."\);\s*setSubmitting\(false\);\s*\}/, 'failed primary lead ingestion must show an error without tracking or redirecting as success');
+assert.match(standardContactForm, /waited < 2000[\s\S]*!\(window as TrackerWindow\)\.acrTracker\?\.trackLead[\s\S]*setTimeout\(resolve, 50\)/, 'accepted leads must briefly wait for the asynchronously loaded ACR tracker before redirecting');
+assert.ok(standardContactForm.indexOf('if (!response.ok)') < standardContactForm.indexOf('waited < 2000') && standardContactForm.indexOf('waited < 2000') < standardContactForm.indexOf('window.location.assign("/thank-you")'), 'ingestion acceptance, tracker readiness, and success navigation must remain ordered');
+assert.match(contactCss, /@keyframes tc-testimonial-scroll[^}]*translateX/s, 'Contact Us testimonials must move horizontally');
+assert.doesNotMatch(contactCss, /@keyframes tc-testimonial-scroll[^}]*translateY/s, 'Contact Us testimonials must not use vertical motion');
+assert.match(contactCss, /prefers-reduced-motion:reduce[^}]*height:auto;overflow-x:auto/s, 'reduced motion must expose a static horizontally scrollable testimonial list without clipping');
+assert.doesNotMatch(contact, /reliable cash flow|turn activity into cash flow|throughput grows/i, 'Contact Us copy must not promise unsubstantiated cash-flow or throughput outcomes');
 assert.match(servicesIndex, /How to choose a billing support lane/, 'service index must provide decision support beyond a card directory');
 assert.match(servicesIndex, /What to prepare before scoping/, 'service index must provide operational onboarding guidance');
 for (const heading of ['Inputs and access', 'Review-ready deliverables', 'Common starting scenarios', 'Questions before launch', 'Related billing services']) assert.match(serviceDetail, new RegExp(heading), `service detail must include ${heading}`);
