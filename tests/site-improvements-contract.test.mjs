@@ -181,4 +181,30 @@ assert.match(globalCss, /@media\(max-width:620px\)\{\.fleet-links>\*\{min-width:
 assert.match(contactCss, /@media\(max-width:620px\)\{\.tc-hero-grid,\.tc-copy,\.tc-copy h1,\.tc-lead,\.tc-proof-row,\.sa-form-card\{min-width:0;max-width:100%\}\.tc-proof-row span,\.sa-form-card \*\{min-width:0;max-width:100%\}\}/, 'mobile contact hero and form must constrain wide content to the viewport');
 assert.match(globalCss, /\.workflow-strip\{display:flex;overflow-x:auto/, 'workflow checkpoints must retain their intentional local mobile scroller');
 
+// The contact testimonial container is pale (#f8fbff to #eef7ff), not the blue hero.
+function contrastRatio(foreground, background) {
+  const luminance = (hex) => {
+    const rgb = hex.replace('#', '');
+    const full = rgb.length === 3 ? [...rgb].map((c) => c + c).join('') : rgb;
+    const channels = [0, 2, 4].map((i) => parseInt(full.slice(i, i + 2), 16) / 255).map((v) => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4);
+    return channels[0] * .2126 + channels[1] * .7152 + channels[2] * .0722;
+  };
+  const a = luminance(foreground), b = luminance(background);
+  return (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
+}
+function explicitContactColor(selector) {
+  let result;
+  for (const [, selectors, declarations] of contactCss.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+    if (!selectors.split(',').map((s) => s.trim()).includes(selector)) continue;
+    const color = declarations.match(/(?:^|;)color:(#[a-f0-9]{3,6})(?:;|$)/i);
+    if (color) result = color[1];
+  }
+  assert.ok(result, `explicit testimonial color missing for ${selector}`);
+  return result;
+}
+for (const selector of ['.tc-copy .sa-testimonial-heading h2', '.tc-copy .sa-testimonial-source', '.tc-copy .sa-testimonial-source a']) {
+  for (const background of ['#f8fbff', '#eef7ff']) {
+    assert.ok(contrastRatio(explicitContactColor(selector), background) >= 4.5, `${selector} must have AA contrast on the pale testimonial container`);
+  }
+}
 console.log('site improvement contract passed');
