@@ -58,8 +58,8 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
         : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) };
       const response = await fetch(endpoint, request);
       if (!response.ok) throw new Error("Lead endpoint rejected the request");
-      const trackLead = await waitForTracker(() => (window as TrackerWindow).acrTracker?.trackLead);
-      try { trackLead?.(payload); } catch {}
+      const tracker = await waitForTracker(() => (window as TrackerWindow).acrTracker);
+      try { tracker?.trackLead?.(payload); } catch {}
       window.location.assign("/thank-you");
     } catch {
       setError("We could not submit your request. Please try again.");
