@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
+import { waitForTracker } from "../lib/wait-for-tracker.mjs";
 
 type Props = { endpoint?: string; encoding?: "json" | "form" };
 type TrackerWindow = Window & { acrTracker?: { trackLead?: (payload: Record<string, unknown>) => void } };
@@ -57,10 +58,8 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
         : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) };
       const response = await fetch(endpoint, request);
       if (!response.ok) throw new Error("Lead endpoint rejected the request");
-      for (let waited = 0; waited < 2000 && !(window as TrackerWindow).acrTracker?.trackLead; waited += 50) {
-        await new Promise((resolve) => window.setTimeout(resolve, 50));
-      }
-      try { (window as TrackerWindow).acrTracker?.trackLead?.(payload); } catch {}
+      const trackLead = await waitForTracker(() => (window as TrackerWindow).acrTracker?.trackLead);
+      try { trackLead?.(payload); } catch {}
       window.location.assign("/thank-you");
     } catch {
       setError("We could not submit your request. Please try again.");
