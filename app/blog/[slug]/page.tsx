@@ -21,32 +21,27 @@ import { oct5BlogBatch, oct5BlogSlugs } from '../../oct5-blog';
 import { oct8BlogBatch, oct8BlogSlugs } from '../../oct8-content';
 import { oct12BlogBatch, oct12BlogSlugs } from '../../oct12-content';
 import { oct13BlogBatch, oct13BlogSlugs } from '../../oct13-content';
-
-const duplicateAliases: Record<string,string> = {
-  'aug13-philippines-medical-billing-claim-status-contact-log':'aug18-philippines-medical-billing-claim-status-contact-log',
-  'sep4-medical-billing-charge-entry-source-document-index':'sep7-medical-billing-charge-entry-source-document-index',
-  'sep4-medical-billing-provider-enrollment-document-expiry-board':'sep7-medical-billing-provider-enrollment-document-expiry-board',
-  'sep4-medical-billing-rejected-era-line-recovery-queue':'sep7-medical-billing-rejected-era-line-recovery-queue',
-  'sep4-medical-billing-appeal-submission-receipt-chain':'sep7-medical-billing-appeal-submission-receipt-chain',
-  'sep4-medical-billing-patient-payment-plan-exception-register':'sep7-medical-billing-patient-payment-plan-exception-register',
-  'sep4-medical-billing-payer-portal-message-capture-register':'sep7-medical-billing-payer-portal-message-capture-register',
-  'sep4-medical-billing-authorization-unit-depletion-ledger':'sep7-medical-billing-authorization-unit-depletion-ledger',
-};
+import { EditorialArticle, type EditorialSection } from '../../editorial-article';
+import { blogAliases } from '../../route-aliases';
 const blogSeoTitles: Record<string,string> = {
   'aug13-philippines-medical-billing-authorization-expiry-follow-up':'Authorization Expiry Follow-Up: Evidence Log',
   'philippines-medical-billing-authorization-expiry-follow-up':'Authorization Expiry Follow-Up Workflow',
+  'aug18-philippines-medical-billing-month-end-unposted-item-review':'Month-End Unposted Items: August Review',
+  'philippines-medical-billing-month-end-unposted-item-review':'Month-End Unposted Item Review Workflow',
+  'aug18-philippines-medical-billing-invoice-approval-routing':'Invoice Approval Routing: August Review',
+  'philippines-medical-billing-invoice-approval-routing':'Invoice Approval Routing Workflow',
 };
 const seoTitle=(value:string)=>{const concise=value.replace(/^Philippines medical billing /i,'');return concise.length<=58?concise:`${concise.slice(0,55).replace(/\s+\S*$/,'')}…`};
 const seoDescription=(value:string)=>value.length<=155?value:`${value.slice(0,152).replace(/\s+\S*$/,'')}…`;
 
 export function generateStaticParams() {
   const params = [...oct13BlogSlugs.map((slug) => ({ slug })), ...oct12BlogSlugs.map((slug) => ({ slug })), ...oct8BlogSlugs.map((slug) => ({ slug })), ...oct5BlogSlugs.map((slug) => ({ slug })), ...oct2BlogSlugs.map((slug) => ({ slug })), ...sep28BlogSlugs.map((slug) => ({ slug })), ...sep25BlogSlugs.map((slug) => ({ slug })), ...sep24BlogSlugs.map((slug) => ({ slug })), ...sep23BlogSlugs.map((slug) => ({ slug })), ...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
-  return params.filter(({ slug }) => !duplicateAliases[slug]);
+  return params.filter(({ slug }) => !blogAliases[slug]);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const alias=duplicateAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
+  const alias=blogAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
   const oct13 = oct13BlogBatch.find((item) => item.slug === slug);
   if (oct13) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${oct13.slug}`; return { title: seoTitle(oct13.title), description: seoDescription(oct13.description), alternates: { canonical }, openGraph: { title: seoTitle(oct13.title), description: seoDescription(oct13.description), type: 'article', url: canonical, images: [oct13.featuredImage], publishedTime: oct13.published } }; }
   const oct12 = oct12BlogBatch.find((item) => item.slug === slug);
@@ -96,6 +91,58 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+const editorialFallbackHero = '/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp';
+
+function sectionTitle(title: string, index: number) {
+  const topic = title.replace(/^(Philippines|Medical billing|Billing operations)\s+/i, '').replace(/[:—-].*$/, '').trim();
+  return [
+    `Operating context for ${topic}`,
+    'How the workflow works',
+    'Controls and owner decisions',
+    'Review and evidence checklist',
+  ][index] || 'Implementation notes';
+}
+
+function paragraphSections(title: string, body: string[]): EditorialSection[] {
+  const sectionCount = Math.min(4, Math.max(2, Math.ceil(body.length / 3)));
+  const groups = Array.from({ length: sectionCount }, () => [] as string[]);
+  body.forEach((paragraph, index) => groups[Math.min(sectionCount - 1, Math.floor(index * sectionCount / body.length))].push(paragraph));
+  return groups.filter(Boolean).filter((group) => group.length).map((group, index) => ({
+    heading: sectionTitle(title, index),
+    content: <>{group.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</>,
+  }));
+}
+
+function LegacyEditorialArticle({ article, sources = [] }: { article: any; sources?: ReadonlyArray<{ name: string; url: string }> }) {
+  const canonical = `https://${String(site.domain).toLowerCase()}/blog/${article.slug}`;
+  const rawBody = (article.body || []) as Array<string | { kind: string; text: string }>;
+  const textBody = rawBody.filter((item): item is string => typeof item === 'string');
+  let sections: EditorialSection[];
+  if (textBody.length === rawBody.length) sections = paragraphSections(article.title, textBody);
+  else {
+    const built: EditorialSection[] = [];
+    rawBody.forEach((block) => {
+      if (typeof block !== 'string' && block.kind === 'heading') built.push({ heading: block.text, content: <></> });
+      else {
+        const text = typeof block === 'string' ? block : block.text;
+        if (!built.length) built.push({ heading: sectionTitle(article.title, 0), content: <p><InlineLinks text={text} /></p> });
+        else built[built.length - 1].content = <>{built[built.length - 1].content}<p><InlineLinks text={text} /></p></>;
+      }
+    });
+    sections = built;
+  }
+  if (sources.length) sections.push({ heading: 'Authoritative sources', content: <ol>{sources.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ol> });
+  const hero = article.featuredImage || article.hero || editorialFallbackHero;
+  const related = [
+    ...(article.serviceHref ? [{ href: article.serviceHref, title: article.service || 'Related billing service' }] : []),
+    { href: '/blog', title: 'More billing operations guides' },
+    { href: '/research', title: 'Billing operations research' },
+  ];
+  return <><Header hidePricing /><JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,mainEntityOfPage:canonical,image:`https://${String(site.domain).toLowerCase()}${hero}`,author:{'@type':'Organization',name:site.brand},publisher:{'@type':'Organization',name:site.brand}}} />
+    <EditorialArticle kind="Billing operations guide" title={article.title} description={article.description} published={article.published} hero={hero} heroAlt={`${article.title} editorial illustration`} sections={sections} publisher={site.brand} related={related}><CTA /></EditorialArticle>
+    <Footer /></>;
+}
+
 function Aug21Article({ article }: { article: (typeof aug21BlogBatch)[number] }) {
   const canonical = `https://${String(site.domain).toLowerCase()}/blog/${article.slug}`;
   return <><Header hidePricing /><main className="article-shell"><article>
@@ -103,7 +150,7 @@ function Aug21Article({ article }: { article: (typeof aug21BlogBatch)[number] })
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime="2026-08-21">August 21, 2026</time></p>
     <img src={article.hero} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Aug23Article({ article }: { article: (typeof aug23BlogBatch)[number] }) {
@@ -112,7 +159,7 @@ function Aug23Article({ article }: { article: (typeof aug23BlogBatch)[number] })
     <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,dateModified:article.published,mainEntityOfPage:canonical}} />
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime="2026-08-23">August 23, 2026</time></p>
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep4Article({ article }: { article: (typeof sep4BlogBatch)[number] }) {
@@ -123,7 +170,7 @@ function Sep4Article({ article }: { article: (typeof sep4BlogBatch)[number] }) {
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 4, 2026</time></p>
     <img src={article.featuredImage} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep7Article({ article }: { article: (typeof sep7BlogBatch)[number] }) {
@@ -134,7 +181,7 @@ function Sep7Article({ article }: { article: (typeof sep7BlogBatch)[number] }) {
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 7, 2026</time></p>
     <img src={article.featuredImage} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep8Article({ article }: { article: (typeof sep8BlogBatch)[number] }) {
@@ -145,7 +192,7 @@ function Sep8Article({ article }: { article: (typeof sep8BlogBatch)[number] }) {
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 8, 2026</time></p>
     <img src={article.featuredImage} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep9Article({ article }: { article: (typeof sep9BlogBatch)[number] }) {
@@ -156,7 +203,7 @@ function Sep9Article({ article }: { article: (typeof sep9BlogBatch)[number] }) {
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 9, 2026</time></p>
     <img src={article.featuredImage} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep10Article({ article }: { article: (typeof sep10BlogBatch)[number] }) {
@@ -167,7 +214,7 @@ function Sep10Article({ article }: { article: (typeof sep10BlogBatch)[number] })
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime={article.published}>September 10, 2026</time></p>
     <img src={article.featuredImage} alt={`${article.title} editorial illustration`} width="1536" height="1024" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep18bArticle({ article }: { article: (typeof sep18bBlogBatch)[number] }) {
@@ -179,7 +226,7 @@ function Sep18bArticle({ article }: { article: (typeof sep18bBlogBatch)[number] 
     <img src={article.featuredImage} alt="Billing specialist reviewing a structured billing operations dashboard" width="1200" height="800" style={{width:'100%',height:'auto',borderRadius:'18px'}} />
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep22Article({ article }: { article: (typeof sep22BlogBatch)[number] }) {
@@ -192,7 +239,7 @@ function Sep22Article({ article }: { article: (typeof sep22BlogBatch)[number] })
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep23Article({ article }: { article: (typeof sep23BlogBatch)[number] }) {
@@ -205,7 +252,7 @@ function Sep23Article({ article }: { article: (typeof sep23BlogBatch)[number] })
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep24Article({ article }: { article: (typeof sep24BlogBatch)[number] }) {
@@ -218,7 +265,7 @@ function Sep24Article({ article }: { article: (typeof sep24BlogBatch)[number] })
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep25Article({ article }: { article: (typeof sep25BlogBatch)[number] }) {
@@ -231,7 +278,7 @@ function Sep25Article({ article }: { article: (typeof sep25BlogBatch)[number] })
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep28Article({ article }: { article: (typeof sep28BlogBatch)[number] }) {
@@ -244,7 +291,7 @@ function Sep28Article({ article }: { article: (typeof sep28BlogBatch)[number] })
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Oct2Article({ article }: { article: (typeof oct2BlogBatch)[number] }) {
@@ -257,7 +304,7 @@ function Oct2Article({ article }: { article: (typeof oct2BlogBatch)[number] }) {
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Sources</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <p><a href={article.serviceHref}>Explore {article.service}</a> or <a href="/contact-us">request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function InlineLinks({ text }: { text: string }) {
@@ -275,7 +322,7 @@ function Oct5Article({ article }: { article: (typeof oct5BlogBatch)[number] }) {
     <div className="article-body">{article.body.map((block, index) => block.kind === 'heading' ? <h2 key={`${block.text}-${index}`}>{block.text}</h2> : <p key={`${block.text}-${index}`}><InlineLinks text={block.text} /></p>)}</div>
     <h2>Authoritative references</h2><ul>{article.sources.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <p><a href="/contact-us">Request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Oct8Article({ article }: { article: (typeof oct8BlogBatch)[number] }) {
@@ -288,7 +335,7 @@ function Oct8Article({ article }: { article: (typeof oct8BlogBatch)[number] }) {
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
     <h2>Authoritative references</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <p><a href={article.serviceHref}>Explore the related billing service</a> or <a href="/contact-us">request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Oct12Article({ article }: { article: (typeof oct12BlogBatch)[number] }) {
@@ -303,7 +350,7 @@ function Oct12Article({ article }: { article: (typeof oct12BlogBatch)[number] })
     <h2>Authoritative references</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <aside className="card"><h2>Related billing guides</h2>{related.map((item) => <p key={item.slug}><a href={`/blog/${item.slug}`}>{item.title}</a></p>)}</aside>
     <p><a href={article.serviceHref}>Explore the related billing service</a> or <a href="/contact-us">request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Oct13Article({ article }: { article: (typeof oct13BlogBatch)[number] }) {
@@ -318,7 +365,7 @@ function Oct13Article({ article }: { article: (typeof oct13BlogBatch)[number] })
     <h2>Authoritative references</h2><ul>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
     <aside className="card"><h2>Related billing guides</h2>{related.map((item) => <p key={item.slug}><a href={`/blog/${item.slug}`}>{item.title}</a></p>)}</aside>
     <p><a href={article.serviceHref}>Explore the related billing service</a> or <a href="/contact-us">request a billing role plan</a>.</p>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function Sep3Article({ article }: { article: (typeof sep3BlogBatch)[number] }) {
@@ -327,11 +374,11 @@ function Sep3Article({ article }: { article: (typeof sep3BlogBatch)[number] }) {
     <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,dateModified:article.published,mainEntityOfPage:canonical}} />
     <p className="eyebrow">Blog</p><h1>{article.title}</h1><p><time dateTime="2026-09-03">September 3, 2026</time></p>
     <div className="article-body">{article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-  </article><CTA /></main><Footer hidePricing /></>;
+  </article><CTA /></main><Footer /></>;
 }
 
 function ArticleBanner({ banner }: { banner: { title: string; body: string; href: string; label: string } }) {
-  return <aside className="article-banner"><div><span>Philippines billing role</span><h2>{banner.title}</h2><p>{banner.body}</p></div><a href={banner.href}>{banner.label} <b aria-hidden="true">→</b></a></aside>;
+  return <aside className="article-banner"><div><span>Philippines billing role</span><p className="article-banner-title">{banner.title}</p><p>{banner.body}</p></div><a href={banner.href}>{banner.label} <b aria-hidden="true">→</b></a></aside>;
 }
 
 function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
@@ -428,7 +475,6 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
 
           {detail.sections.map((section: any, index: number) => <div className="article-section-wrap" key={section.heading}>
             <section className="article-section">
-              <span className="section-number">{String(index + 1).padStart(2, '0')}</span>
               <h2>{section.heading}</h2>
               {section.paragraphs.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}
               <div className="check-card"><h3>Put this in the checklist</h3><ul>{section.bullets.map((bullet: string) => <li key={bullet}>{bullet}</li>)}</ul></div>
@@ -444,10 +490,10 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
                   <desc id="flow-desc">The billing specialist checks the source, closes clean records, and sends exceptions to the named owner before recording the approved result.</desc>
                   <path d="M170 115H265 M405 115H500 M640 115H735" className="flow-line" />
                   <path d="M395 112l-14-9v18z M630 112l-14-9v18z M725 112l-14-9v18z" className="flow-arrow" />
-                  <g className="flow-node"><rect x="20" y="55" width="150" height="120" rx="18"/><text x="95" y="95" textAnchor="middle">01</text><text x="95" y="126" textAnchor="middle">Open record</text><text x="95" y="148" textAnchor="middle">in approved tool</text></g>
-                  <g className="flow-node"><rect x="265" y="55" width="140" height="120" rx="18"/><text x="335" y="95" textAnchor="middle">02</text><text x="335" y="126" textAnchor="middle">Check source</text><text x="335" y="148" textAnchor="middle">and proof</text></g>
-                  <g className="flow-node owner"><rect x="500" y="55" width="140" height="120" rx="18"/><text x="570" y="95" textAnchor="middle">03</text><text x="570" y="126" textAnchor="middle">Owner decides</text><text x="570" y="148" textAnchor="middle">any exception</text></g>
-                  <g className="flow-node"><rect x="735" y="55" width="145" height="120" rx="18"/><text x="807" y="95" textAnchor="middle">04</text><text x="807" y="126" textAnchor="middle">Record result</text><text x="807" y="148" textAnchor="middle">and close</text></g>
+                  <g className="flow-node"><rect x="20" y="55" width="150" height="120" rx="18"/><text x="95" y="95" textAnchor="middle">Open</text><text x="95" y="126" textAnchor="middle">Open record</text><text x="95" y="148" textAnchor="middle">in approved tool</text></g>
+                  <g className="flow-node"><rect x="265" y="55" width="140" height="120" rx="18"/><text x="335" y="95" textAnchor="middle">Check</text><text x="335" y="126" textAnchor="middle">Check source</text><text x="335" y="148" textAnchor="middle">and proof</text></g>
+                  <g className="flow-node owner"><rect x="500" y="55" width="140" height="120" rx="18"/><text x="570" y="95" textAnchor="middle">Decide</text><text x="570" y="126" textAnchor="middle">Owner decides</text><text x="570" y="148" textAnchor="middle">any exception</text></g>
+                  <g className="flow-node"><rect x="735" y="55" width="145" height="120" rx="18"/><text x="807" y="95" textAnchor="middle">Record</text><text x="807" y="126" textAnchor="middle">Record result</text><text x="807" y="148" textAnchor="middle">and close</text></g>
                 </svg>
                 <figcaption id="handoff-note">The worker may close only the checks the owner has approved for that role. Every exception moves to a named person before the record changes.</figcaption>
               </figure>
@@ -474,52 +520,73 @@ function RichArticle({ post }: { post: (typeof blogPosts)[number] }) {
         </div>
       </article>
     </main>
-    <Footer hidePricing />
+    <Footer />
   </>;
+}
+
+function RichEditorialArticle({ post }: { post: (typeof blogPosts)[number] }) {
+  const detail = (post as any).detail;
+  const canonical = `https://${String(site.domain).toLowerCase()}/blog/${post.slug}`;
+  const bannerSlots: Record<number, number> = { 1: 0, 3: 1, 5: 2 };
+  const sections: EditorialSection[] = [
+    { heading: 'What this guide covers', content: <>{detail.intro.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}</> },
+    { heading: 'Why the checklist starts with proof', content: <p>Documentation, source evidence, and a named decision owner make review work reproducible instead of dependent on memory.</p> },
+    { heading: 'Audit checks and decision owners', content: <div className="table-scroll" role="region" aria-label="Audit checks and owner decisions" tabIndex={0}><table><thead><tr><th>Audit check</th><th>Billing staff member</th><th>Named owner</th></tr></thead><tbody>{detail.table.map((row: any) => <tr key={row.check}><th scope="row">{row.check}</th><td>{row.staff}</td><td>{row.owner}</td></tr>)}</tbody></table></div> },
+    ...detail.sections.flatMap((section: any, index: number) => [
+      { heading: section.heading, content: <>{section.paragraphs.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}{bannerSlots[index] !== undefined && <ArticleBanner banner={detail.banners[bannerSlots[index]]} />}</> },
+      { heading: `Checklist: ${section.heading}`, level: 3 as const, content: <ul>{section.bullets.map((bullet: string) => <li key={bullet}>{bullet}</li>)}</ul> },
+    ]),
+    { heading: 'Medical billing audit FAQ', content: <>{detail.faqs.map((faq: any) => <details key={faq.q}><summary>{faq.q}</summary><p>{faq.a}</p></details>)}</> },
+    { heading: 'Related billing guides', content: <div className="related-links">{detail.internalLinks.map((link: any) => <a href={link.href} key={link.href}>{link.title}<span aria-hidden="true">→</span></a>)}</div> },
+    { heading: 'Sources used for this checklist', content: <ol>{detail.sources.map((source: any) => <li key={source.n}><a href={source.url}><strong>{source.n}. {source.name}</strong></a><p>{source.note}</p></li>)}</ol> },
+  ];
+  const hero = (post as any).featuredImage || (post as any).image || editorialFallbackHero;
+  return <><Header hidePricing /><JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:post.title,description:post.excerpt,url:canonical,datePublished:detail.published,dateModified:detail.updated,image:`https://${String(site.domain).toLowerCase()}${hero}`,author:{'@type':'Organization',name:site.brand},publisher:{'@type':'Organization',name:site.brand},citation:detail.sources.map((source:any)=>source.url)}} />
+    <EditorialArticle kind="Philippines medical billing guide" title={post.title} description={post.excerpt} published={detail.published} updated={detail.updated} readingTime={`${post.minutes} minute read`} hero={hero} heroAlt={`${post.title} billing operations illustration`} sections={sections} publisher={site.brand} related={detail.internalLinks}><CTA /></EditorialArticle><Footer /></>;
 }
 
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const alias=duplicateAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
+  const alias=blogAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
   const oct13 = oct13BlogBatch.find((item) => item.slug === slug);
-  if (oct13) return <Oct13Article article={oct13} />;
+  if (oct13) return <LegacyEditorialArticle article={oct13} sources={oct13.sourcesList} />;
   const oct12 = oct12BlogBatch.find((item) => item.slug === slug);
-  if (oct12) return <Oct12Article article={oct12} />;
+  if (oct12) return <LegacyEditorialArticle article={oct12} sources={oct12.sourcesList} />;
   const oct8 = oct8BlogBatch.find((item) => item.slug === slug);
-  if (oct8) return <Oct8Article article={oct8} />;
+  if (oct8) return <LegacyEditorialArticle article={oct8} sources={oct8.sourcesList} />;
   const oct5 = oct5BlogBatch.find((item) => item.slug === slug);
-  if (oct5) return <Oct5Article article={oct5} />;
+  if (oct5) return <LegacyEditorialArticle article={oct5} sources={oct5.sources} />;
   const oct2 = oct2BlogBatch.find((item) => item.slug === slug);
-  if (oct2) return <Oct2Article article={oct2} />;
+  if (oct2) return <LegacyEditorialArticle article={oct2} sources={oct2.sourcesList} />;
   const sep28 = sep28BlogBatch.find((item) => item.slug === slug);
-  if (sep28) return <Sep28Article article={sep28} />;
+  if (sep28) return <LegacyEditorialArticle article={sep28} sources={sep28.sourcesList} />;
   const sep25 = sep25BlogBatch.find((item) => item.slug === slug);
-  if (sep25) return <Sep25Article article={sep25} />;
+  if (sep25) return <LegacyEditorialArticle article={sep25} sources={sep25.sourcesList} />;
   const sep24 = sep24BlogBatch.find((item) => item.slug === slug);
-  if (sep24) return <Sep24Article article={sep24} />;
+  if (sep24) return <LegacyEditorialArticle article={sep24} sources={sep24.sourcesList} />;
   const sep22 = sep22BlogBatch.find((item) => item.slug === slug);
-  if (sep22) return <Sep22Article article={sep22} />;
+  if (sep22) return <LegacyEditorialArticle article={sep22} sources={sep22.sourcesList} />;
   const sep23 = sep23BlogBatch.find((item) => item.slug === slug);
-  if (sep23) return <Sep23Article article={sep23} />;
+  if (sep23) return <LegacyEditorialArticle article={sep23} sources={sep23.sourcesList} />;
   const sep18b = sep18bBlogBatch.find((item) => item.slug === slug);
-  if (sep18b) return <Sep18bArticle article={sep18b} />;
+  if (sep18b) return <LegacyEditorialArticle article={sep18b} />;
   const sep10 = sep10BlogBatch.find((item) => item.slug === slug);
-  if (sep10) return <Sep10Article article={sep10} />;
+  if (sep10) return <LegacyEditorialArticle article={sep10} />;
   const sep9 = sep9BlogBatch.find((item) => item.slug === slug);
-  if (sep9) return <Sep9Article article={sep9} />;
+  if (sep9) return <LegacyEditorialArticle article={sep9} />;
   const sep8 = sep8BlogBatch.find((item) => item.slug === slug);
-  if (sep8) return <Sep8Article article={sep8} />;
+  if (sep8) return <LegacyEditorialArticle article={sep8} />;
   const sep7 = sep7BlogBatch.find((item) => item.slug === slug);
-  if (sep7) return <Sep7Article article={sep7} />;
+  if (sep7) return <LegacyEditorialArticle article={sep7} />;
   const sep4 = sep4BlogBatch.find((item) => item.slug === slug);
-  if (sep4) return <Sep4Article article={sep4} />;
+  if (sep4) return <LegacyEditorialArticle article={sep4} />;
   const sep3 = sep3BlogBatch.find((item) => item.slug === slug);
-  if (sep3) return <Sep3Article article={sep3} />;
+  if (sep3) return <LegacyEditorialArticle article={sep3} />;
   const aug23 = aug23BlogBatch.find((item) => item.slug === slug);
-  if (aug23) return <Aug23Article article={aug23} />;
+  if (aug23) return <LegacyEditorialArticle article={aug23} />;
   const aug21 = aug21BlogBatch.find((item) => item.slug === slug);
-  if (aug21) return <Aug21Article article={aug21} />;
+  if (aug21) return <LegacyEditorialArticle article={aug21} />;
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) notFound();
-  return <RichArticle post={post} />;
+  return <RichEditorialArticle post={post} />;
 }

@@ -21,6 +21,7 @@ import { oct12BlogSlugs } from "../oct12-content";
 import { oct13BlogSlugs } from "../oct13-content";
 import { oct5ResearchTopics } from "../oct5-research";
 import { site, services, blogPosts, researchPosts } from "../data";
+import { redirectPaths } from "../route-aliases";
 export function GET() {
   const base = `https://${String(site.domain).toLowerCase()}`;
   const pages = Math.max(
@@ -38,6 +39,7 @@ export function GET() {
         sep10BlogSlugs.length +
         sep18bBlogSlugs.length +
         sep22BlogSlugs.length +
+        sep23BlogSlugs.length +
         sep24BlogSlugs.length +
         sep25BlogSlugs.length +
         sep28BlogSlugs.length +
@@ -78,7 +80,6 @@ export function GET() {
     "/blog",
     "/blog/top-25-billing-back-office-outsourcing-companies",
     "/research",
-    "/contact",
     "/contact-us",
     "/pricing",
     "/privacy",
@@ -117,22 +118,7 @@ export function GET() {
     ...oct5BlogSlugs.map((slug) => `/blog/${slug}`),
     ...oct5ResearchTopics.map(({ slug }) => `/research/${slug}`),
   ]);
-  const redirectSources = new Set([
-    "/research/research-medical-billing-authorization-unit-variance-2026",
-    "/research/research-medical-billing-sep1-authorization-unit-variance",
-    "/research/research-medical-billing-era-import-rejection-recovery-2026",
-    "/research/research-medical-billing-claim-transmission-acknowledgment-gap-2026",
-    "/research/research-medical-billing-appeal-receipt-reproducibility-2026",
-    "/blog/aug13-philippines-medical-billing-claim-status-contact-log",
-    "/blog/sep4-medical-billing-charge-entry-source-document-index",
-    "/blog/sep4-medical-billing-provider-enrollment-document-expiry-board",
-    "/blog/sep4-medical-billing-rejected-era-line-recovery-queue",
-    "/blog/sep4-medical-billing-appeal-submission-receipt-chain",
-    "/blog/sep4-medical-billing-patient-payment-plan-exception-register",
-    "/blog/sep4-medical-billing-payer-portal-message-capture-register",
-    "/blog/sep4-medical-billing-authorization-unit-depletion-ledger",
-  ]);
-  const body = Array.from(new Set(paths.filter((path) => !redirectSources.has(path))))
+  const body = Array.from(new Set(paths.filter((path) => !redirectPaths.has(path))))
     .map((x) => `<url><loc>${base}${x}</loc>${oct5ReleasePaths.has(x) ? "<lastmod>2026-10-06</lastmod>" : ""}</url>`)
     .join("");
   return new Response(

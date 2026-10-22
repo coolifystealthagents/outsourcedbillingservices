@@ -9,6 +9,7 @@ const securityHeaders = [
 ];
 
 const legacyRedirects = [
+  { source: '/contact', destination: '/contact-us' },
   { source: '/blog/philippines-medical-billing-billing-reconciliation', destination: '/services/billing-reconciliation' },
   { source: '/blog/philippines-medical-billing-medical-billing-audit-checklist', destination: '/blog/philippines-medical-billing-audit-checklist' },
   { source: '/services/outsourced-team-handoff-checklist', destination: '/blog/philippines-medical-billing-outsourced-team-handoff-checklist' },
@@ -57,6 +58,7 @@ const legacyRedirects = [
 ];
 
 const nextConfig = {
+  outputFileTracingRoot: process.cwd(),
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

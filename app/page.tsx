@@ -11,10 +11,10 @@ const queue = [
 ];
 
 const process = [
-  { n: '01', title: 'Map the queue', body: 'Show us where billing work arrives, what repeats, and which decisions must stay with your team.' },
-  { n: '02', title: 'Set the guardrails', body: 'We document access, approval points, escalation rules, and the format of the daily handoff.' },
-  { n: '03', title: 'Shadow the work', body: 'The billing specialist starts with sample records and reviewed tasks before touching the live queue.' },
-  { n: '04', title: 'Run and review', body: 'You get a short exception log, clear ownership, and a weekly quality check that people will read.' },
+  { title: 'Map the queue', body: 'Show us where billing work arrives, what repeats, and which decisions must stay with your team.' },
+  { title: 'Set the guardrails', body: 'We document access, approval points, escalation rules, and the format of the daily handoff.' },
+  { title: 'Shadow the work', body: 'The billing specialist starts with sample records and reviewed tasks before touching the live queue.' },
+  { title: 'Run and review', body: 'You get a short exception log, clear ownership, and a weekly quality check that people will read.' },
 ];
 
 const slug = (value: { slug: string }) => value.slug;
@@ -127,7 +127,7 @@ export default function Home() {
           <a className="billing-text-link dark-link" href="/contact-us">Talk through your queue <span>↗</span></a>
         </div>
         <div className="process-grid">
-          {process.map((step) => <article key={step.n}><span>{step.n}</span><h3>{step.title}</h3><p>{step.body}</p></article>)}
+          {process.map((step) => <article key={step.title}><span aria-hidden="true">✓</span><h3>{step.title}</h3><p>{step.body}</p></article>)}
         </div>
       </section>
 
