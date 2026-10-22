@@ -8,6 +8,8 @@ await mkdir(out, { recursive: true });
 const routes = [
   ['home', '/'],
   ['service', '/services/invoice-preparation'],
+  ['subscription-service', '/services/subscription-billing-support'],
+  ['payment-service', '/services/payment-posting'],
   ['blog', '/blog/usage-cutoff-late-arrival-reconciliation'],
   ['research', '/research/research-medical-billing-claim-intake-controls'],
   ['comparison', '/blog/top-25-billing-back-office-outsourcing-companies'],

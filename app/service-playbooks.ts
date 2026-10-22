@@ -49,7 +49,7 @@ export const servicePlaybooks: Record<string, ServicePlaybook> = {
     examples: [{ title: 'Mixed monthly sources', detail: 'Organize approved order, time, and usage files into one review queue with line-level source references.' }, { title: 'Missing purchase order', detail: 'Hold the draft, identify the missing record, and route it to the account owner before release.' }, { title: 'Cutoff review', detail: 'Separate current-period evidence from late records and document the owner decision for each held line.' }],
     launchQuestion: 'Which record proves each billable line, and who authorizes release?',
     related: ['usage-billing-administration', 'subscription-billing-support', 'billing-data-quality-review'],
-    hero: { src: '/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp', alt: 'Invoice preparation documents organized for billing review', width: 512, height: 512 },
+    hero: { src: '/aug20-heroes/billing-operations-invoice-lineage-check.webp', alt: 'Invoice drafts linked through documented preparation and review stages', width: 1536, height: 1024 },
     faqs: standardFaqs('invoice preparation', 'invoice'),
   },
   'usage-billing-administration': {
@@ -81,7 +81,7 @@ export const servicePlaybooks: Record<string, ServicePlaybook> = {
     examples: [{ title: 'Mid-cycle upgrade', detail: 'Prepare old and new plan dates and route proration treatment to the designated owner.' }, { title: 'Cancellation evidence gap', detail: 'Hold the change when requested and approved dates do not agree.' }, { title: 'Recurring-charge variance', detail: 'Compare the current draft with the prior cycle and explain every expected difference.' }],
     launchQuestion: 'Which approved record controls the effective date of a subscription change?',
     related: ['invoice-preparation', 'customer-billing-support', 'billing-reconciliation'],
-    hero: { src: '/aug20-heroes/billing-operations-invoice-lineage-check.webp', alt: 'Subscription billing lineage from approved change to recurring invoice', width: 1536, height: 1024 },
+    hero: { src: '/aug20-heroes/billing-operations-reconciliation-cutoff-calendar.webp', alt: 'Subscription billing periods and approved changes organized by effective stage', width: 1536, height: 1024 },
     faqs: standardFaqs('subscription billing support', 'subscription-change'),
   },
   'billing-reconciliation': {
@@ -113,7 +113,7 @@ export const servicePlaybooks: Record<string, ServicePlaybook> = {
     examples: [{ title: 'Combined payment', detail: 'Allocate only where remittance detail supports each invoice and hold the remaining amount.' }, { title: 'Missing remittance', detail: 'Record the settlement trace and request the missing payer detail.' }, { title: 'Possible duplicate', detail: 'Compare amount, date, account, and processor reference before routing the exception.' }],
     launchQuestion: 'What evidence is required before a payment may be matched to an account?',
     related: ['billing-reconciliation', 'credit-memo-administration', 'customer-billing-support'],
-    hero: { src: '/icons/getillustrations/3d-finance-icons-png/payment-followup.webp', alt: 'Payment and remittance records prepared for controlled posting', width: 512, height: 512 },
+    hero: { src: '/aug20-heroes/billing-operations-payment-application-control.webp', alt: 'Payment and remittance records prepared for controlled posting', width: 1536, height: 1024 },
     faqs: standardFaqs('payment posting', 'payment'),
   },
   'credit-memo-administration': {

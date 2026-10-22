@@ -53,6 +53,47 @@ for (const slug of serviceSlugs) assert.ok(serviceData.includes(`'${slug}':`), `
 for (const field of ['audience', 'problem', 'scope', 'inputs', 'workflow', 'deliverables', 'boundaries', 'quality', 'examples', 'faqs', 'hero']) {
   assert.match(serviceData, new RegExp(`\\b${field}:`), `service data needs ${field}`);
 }
+const imageDimensions = (src) => {
+  const buffer = readFileSync(new URL(`../public${src}`, import.meta.url));
+  if (buffer.subarray(1, 4).toString() === 'PNG') {
+    return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+  }
+  assert.equal(buffer.subarray(0, 4).toString(), 'RIFF', `${src} must be a valid PNG or WebP image`);
+  assert.equal(buffer.subarray(8, 12).toString(), 'WEBP', `${src} must be a valid WebP image`);
+  let offset = 12;
+  while (offset + 8 <= buffer.length) {
+    const type = buffer.subarray(offset, offset + 4).toString();
+    const size = buffer.readUInt32LE(offset + 4);
+    const data = offset + 8;
+    if (type === 'VP8X') {
+      return {
+        width: 1 + buffer.readUIntLE(data + 4, 3),
+        height: 1 + buffer.readUIntLE(data + 7, 3),
+      };
+    }
+    if (type === 'VP8 ') {
+      return {
+        width: buffer.readUInt16LE(data + 6) & 0x3fff,
+        height: buffer.readUInt16LE(data + 8) & 0x3fff,
+      };
+    }
+    if (type === 'VP8L') {
+      const bits = buffer.readUInt32LE(data + 1);
+      return { width: 1 + (bits & 0x3fff), height: 1 + ((bits >>> 14) & 0x3fff) };
+    }
+    offset = data + size + (size % 2);
+  }
+  assert.fail(`could not read intrinsic dimensions for ${src}`);
+};
+const serviceHeroes = [...serviceData.matchAll(/hero:\s*\{\s*src:\s*'([^']+)',\s*alt:\s*'[^']+',\s*width:\s*(\d+),\s*height:\s*(\d+)\s*\}/g)]
+  .map((match) => ({ src: match[1], width: Number(match[2]), height: Number(match[3]) }));
+assert.equal(serviceHeroes.length, 12, 'every primary service needs a declared hero image');
+assert.equal(new Set(serviceHeroes.map(({ src }) => src)).size, 12, 'service hero images must be unique');
+for (const hero of serviceHeroes) {
+  const intrinsic = imageDimensions(hero.src);
+  assert.deepEqual(intrinsic, { width: hero.width, height: hero.height }, `${hero.src} declared dimensions must match the binary`);
+  assert.ok(intrinsic.width >= 1200, `${hero.src} is too narrow for a large service hero`);
+}
 for (const heading of ['Who this service is for', 'The operating problem', 'Scope of support', 'Inputs and access', 'Workflow', 'Review-ready deliverables', 'Boundaries and owner decisions', 'Quality controls', 'Practical examples', 'Frequently asked questions', 'Related billing services']) {
   assert.ok(serviceRoute.includes(heading), `service detail template missing ${heading}`);
 }
