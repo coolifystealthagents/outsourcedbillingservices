@@ -44,7 +44,10 @@ const pages = await mapLimit(sitemapUrls, async (url, index) => {
     const robots = one(text, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']*)/i);
     const h1 = (text.match(/<h1\b/gi) || []).length;
     const expectedCanonical = sitemapCanonicalUrls[index];
-    const links = attr(text, 'a', 'href').filter((href) => href.startsWith('/') || href.startsWith(canonicalOrigin)).map((href) => canonicalUrl(href));
+    const links = attr(text, 'a', 'href')
+      .filter((href) => href.startsWith('/') || href.startsWith(canonicalOrigin))
+      .map((href) => canonicalUrl(href))
+      .filter((href) => !new URL(href).pathname.startsWith('/cdn-cgi/'));
     const images = attr(text, 'img', 'src').filter((src) => src.startsWith('/') || src.startsWith(canonicalOrigin)).map((src) => canonicalUrl(src));
     return { url: expectedCanonical, status: response.status, location: response.headers.get('location'), title, description, canonical, robots, h1, links, images, errors: [
       ...(response.status !== 200 ? [`status:${response.status}`] : []),
