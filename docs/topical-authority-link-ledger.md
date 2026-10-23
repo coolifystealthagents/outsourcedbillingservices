@@ -168,3 +168,17 @@ A fresh 705-page production build selected all 12 current service routes by self
 | Month-end billing support | `/services/month-end-billing-support` | `/research/research-outsourced-billing-month-end-cutoff-completeness-2026` | Does the close population explain its included, held, and excluded items? | One matching link in `<main>`. |
 
 This source-only reconciliation records a complete current service-pillar inventory. Do not create another contextual CTA until a fresh artifact audit identifies a relevant source/destination pair with no existing route-local handoff.
+
+## Reconciliation — 2026-10-23
+
+A fresh 745-page production build found five October 13 research records that already link readers to the existing billing-data-quality-review service. Each source emitted as one self-canonical research artifact and contains exactly one matching `/services/billing-data-quality-review` anchor. The route template keeps its `serviceCta` inside the article section, and the sitemap derives its research paths from the same `researchPosts` inventory. These are delivered paths, not new CTA candidates.
+
+| Supporting research route | Reader question | Existing destination | Route-local result |
+| --- | --- | --- | --- |
+| `/research/research-invoice-approval-queue-censoring` | When should a billing approval queue stop counting an unresolved item as complete? | `/services/billing-data-quality-review` | One matching link in the rendered article main. |
+| `/research/research-billing-address-change-propagation` | How can a team verify that an approved billing address change reached dependent records? | `/services/billing-data-quality-review` | One matching link in the rendered article main. |
+| `/research/research-credit-memo-application-lag` | Which recorded states explain the time between an approved credit memo and account application? | `/services/billing-data-quality-review` | One matching link in the rendered article main. |
+| `/research/research-usage-exception-reviewer-agreement` | Where do reviewers disagree when they classify usage-billing exceptions? | `/services/billing-data-quality-review` | One matching link in the rendered article main. |
+| `/research/research-billing-export-field-minimization` | Which billing-export fields are needed for the stated review purpose? | `/services/billing-data-quality-review` | One matching link in the rendered article main. |
+
+This is a source-only ledger reconciliation. It changes no rendered route, schema, sitemap source, deployment state, or public-verification claim.
