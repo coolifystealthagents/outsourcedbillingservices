@@ -21,6 +21,8 @@ import { oct5BlogBatch, oct5BlogSlugs } from '../../oct5-blog';
 import { oct8BlogBatch, oct8BlogSlugs } from '../../oct8-content';
 import { oct12BlogBatch, oct12BlogSlugs } from '../../oct12-content';
 import { oct13BlogBatch, oct13BlogSlugs } from '../../oct13-content';
+import { oct22BlogBatch, oct22BlogSlugs } from '../../oct22-content';
+import Oct22Toc from '../../oct22-toc';
 import { EditorialArticle, type EditorialSection } from '../../editorial-article';
 import { blogAliases } from '../../route-aliases';
 const blogSeoTitles: Record<string,string> = {
@@ -35,13 +37,15 @@ const seoTitle=(value:string)=>{const concise=value.replace(/^Philippines medica
 const seoDescription=(value:string)=>value.length<=155?value:`${value.slice(0,152).replace(/\s+\S*$/,'')}…`;
 
 export function generateStaticParams() {
-  const params = [...oct13BlogSlugs.map((slug) => ({ slug })), ...oct12BlogSlugs.map((slug) => ({ slug })), ...oct8BlogSlugs.map((slug) => ({ slug })), ...oct5BlogSlugs.map((slug) => ({ slug })), ...oct2BlogSlugs.map((slug) => ({ slug })), ...sep28BlogSlugs.map((slug) => ({ slug })), ...sep25BlogSlugs.map((slug) => ({ slug })), ...sep24BlogSlugs.map((slug) => ({ slug })), ...sep23BlogSlugs.map((slug) => ({ slug })), ...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
+  const params = [...oct22BlogSlugs.map((slug) => ({ slug })), ...oct13BlogSlugs.map((slug) => ({ slug })), ...oct12BlogSlugs.map((slug) => ({ slug })), ...oct8BlogSlugs.map((slug) => ({ slug })), ...oct5BlogSlugs.map((slug) => ({ slug })), ...oct2BlogSlugs.map((slug) => ({ slug })), ...sep28BlogSlugs.map((slug) => ({ slug })), ...sep25BlogSlugs.map((slug) => ({ slug })), ...sep24BlogSlugs.map((slug) => ({ slug })), ...sep23BlogSlugs.map((slug) => ({ slug })), ...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
   return params.filter(({ slug }) => !blogAliases[slug]);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const alias=blogAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
+  const oct22 = oct22BlogBatch.find((item) => item.slug === slug);
+  if (oct22) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${oct22.slug}`; return { title: seoTitle(oct22.title), description: seoDescription(oct22.description), alternates: { canonical }, openGraph: { title: seoTitle(oct22.title), description: seoDescription(oct22.description), type: 'article', url: canonical, images: [oct22.featuredImage], publishedTime: oct22.published } }; }
   const oct13 = oct13BlogBatch.find((item) => item.slug === slug);
   if (oct13) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${oct13.slug}`; return { title: seoTitle(oct13.title), description: seoDescription(oct13.description), alternates: { canonical }, openGraph: { title: seoTitle(oct13.title), description: seoDescription(oct13.description), type: 'article', url: canonical, images: [oct13.featuredImage], publishedTime: oct13.published } }; }
   const oct12 = oct12BlogBatch.find((item) => item.slug === slug);
@@ -548,6 +552,8 @@ function RichEditorialArticle({ post }: { post: (typeof blogPosts)[number] }) {
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const alias=blogAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
+  const oct22 = oct22BlogBatch.find((item) => item.slug === slug);
+  if (oct22) return <><Header hidePricing /><main className="article-shell"><details className="o22-m"><summary>On this page</summary><nav aria-label="Table of contents">{oct22.body.filter((line) => line.startsWith('## ')).map((line) => <a key={line} href={`#${line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}`}>{line.replace('## ','')}</a>)}</nav></details><div className="o22-layout"><article><p className="eyebrow">Billing operations guide</p><h1>{oct22.title}</h1><p>Published <time dateTime={oct22.published}>October 22, 2026</time></p><img src={oct22.featuredImage} alt={oct22.title} width="1200" height="630" style={{ width: '100%', height: 'auto', borderRadius: '18px' }} /><nav className="o22-static-toc" aria-label="Table of contents">{oct22.body.filter((line) => line.startsWith('## ')).map((line) => <a key={line} href={`#${line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}`}>{line.replace('## ','')}</a>)}</nav><div className="article-body">{oct22.body.map((line) => line.startsWith('## ') ? <h2 id={line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')} key={line}>{line.replace('## ','')}</h2> : <p key={line}>{line}</p>)}</div><h2 id="references">Authoritative references</h2><ul>{oct22.sourcesList.map((s) => <li key={s.url}><a href={s.url}>{s.name}</a></li>)}</ul></article><aside className="o22-side" aria-label="Article sidebar"><nav aria-label="Table of contents"><p className="eyebrow">On this page</p>{oct22.body.filter((line) => line.startsWith('## ')).map((line) => <a key={line} href={`#${line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}`}>{line.replace('## ','')}</a>)}</nav></aside></div></main><Footer /></>;
   const oct13 = oct13BlogBatch.find((item) => item.slug === slug);
   if (oct13) return <LegacyEditorialArticle article={oct13} sources={oct13.sourcesList} />;
   const oct12 = oct12BlogBatch.find((item) => item.slug === slug);

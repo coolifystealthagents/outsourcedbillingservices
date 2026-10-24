@@ -19,6 +19,7 @@ import { oct5BlogSlugs } from "../oct5-blog";
 import { oct8BlogSlugs } from "../oct8-content";
 import { oct12BlogSlugs } from "../oct12-content";
 import { oct13BlogSlugs } from "../oct13-content";
+import { oct22BlogSlugs } from "../oct22-content";
 import { oct5ResearchTopics } from "../oct5-research";
 import { site, services, blogPosts, researchPosts } from "../data";
 import { redirectPaths } from "../route-aliases";
@@ -47,7 +48,7 @@ export function GET() {
         oct5BlogSlugs.length +
         oct8BlogSlugs.length +
         oct12BlogSlugs.length +
-        oct13BlogSlugs.length) /
+        oct13BlogSlugs.length + oct22BlogSlugs.length) /
         20,
     ),
   );
@@ -72,6 +73,7 @@ export function GET() {
   const oct5Paths = oct5BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct8Paths = oct8BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct12Paths = oct12BlogSlugs.map((slug) => `/blog/${slug}`);
+  const oct22Paths = oct22BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct13Paths = oct13BlogSlugs.map((slug) => `/blog/${slug}`);
   const sep4Paths = sep4BlogSlugs.map((slug) => `/blog/${slug}`);
   const paths = [
@@ -112,7 +114,7 @@ export function GET() {
     ...oct5Paths,
     ...oct8Paths,
     ...oct12Paths,
-    ...oct13Paths,
+    ...oct22Paths, ...oct13Paths,
   ];
   const oct5ReleasePaths = new Set([
     ...oct5BlogSlugs.map((slug) => `/blog/${slug}`),
