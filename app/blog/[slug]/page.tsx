@@ -48,8 +48,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const alias=blogAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
   const oct26 = oct26BlogBatch.find((item) => item.slug === slug);
   if (oct26) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${oct26.slug}`; return { title: seoTitle(oct26.title), description: seoDescription(oct26.description), alternates: { canonical }, openGraph: { title: seoTitle(oct26.title), description: seoDescription(oct26.description), type: 'article', url: canonical, images: [oct26.featuredImage], publishedTime: oct26.published } }; }
-  const oct26 = oct26BlogBatch.find((item) => item.slug === slug);
-  if (oct26) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${oct26.slug}`; return { title: seoTitle(oct26.title), description: seoDescription(oct26.description), alternates: { canonical }, openGraph: { title: seoTitle(oct26.title), description: seoDescription(oct26.description), type: 'article', url: canonical, images: [oct26.featuredImage], publishedTime: oct26.published } }; }
   const oct25 = oct25BlogBatch.find((item) => item.slug === slug);
   if (oct25) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${oct25.slug}`; return { title: seoTitle(oct25.title), description: seoDescription(oct25.description), alternates: { canonical }, openGraph: { title: seoTitle(oct25.title), description: seoDescription(oct25.description), type: 'article', url: canonical, images: [oct25.featuredImage], publishedTime: oct25.published } }; }
   const oct22 = oct22BlogBatch.find((item) => item.slug === slug);
