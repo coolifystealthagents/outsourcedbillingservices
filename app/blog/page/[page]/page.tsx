@@ -10,6 +10,7 @@ import {oct12BlogBatch} from '../../../oct12-content';
 import {oct13BlogBatch} from '../../../oct13-content';
 import {oct22BlogBatch} from '../../../oct22-content';
 import {oct25BlogBatch} from '../../../oct25-blog';
+import {oct26BlogBatch} from '../../../oct26-blog';
 import {notFound,permanentRedirect} from 'next/navigation';import {Header,Footer} from '../../../components';import {blogPosts} from '../../../data';import aug20Meta from '../../../aug20-meta.json';import aug21Meta from '../../../aug21-meta.json';import {aug23BlogBatch} from '../../../aug23-blog';import {sep3BlogBatch} from '../../../sep3-blog';import {sep4BlogBatch} from '../../../sep4-content';import {sep7BlogBatch} from '../../../sep7-content';import {sep8BlogBatch} from '../../../sep8-content';import {sep9BlogBatch} from '../../../sep9-content';import {sep10BlogBatch} from '../../../sep10-content';import {sep18bBlogBatch} from '../../../sep18b-content';import {sep22BlogBatch} from '../../../sep22-content';
 import {sep23BlogBatch} from '../../../sep23-content';
 
@@ -23,10 +24,11 @@ const oct2Posts=oct2BlogBatch.map(p=>({slug:p.slug,title:p.title,excerpt:p.descr
 const oct5Posts=oct5BlogBatch.map(p=>({slug:p.slug,title:p.title,excerpt:p.description}));
 const oct8Posts=oct8BlogBatch.map(p=>({slug:p.slug,title:p.title,excerpt:p.description,published:p.published}));
 const oct12Posts=oct12BlogBatch.map(p=>({slug:p.slug,title:p.title,excerpt:p.description,published:p.published}));
+const oct26Posts=oct26BlogBatch.map(p=>({slug:p.slug,title:p.title,excerpt:p.description,published:p.published}));
 const oct25Posts=oct25BlogBatch.map(p=>({slug:p.slug,title:p.title,excerpt:p.description,published:p.published}));
 const oct22Posts=oct22BlogBatch.map(p=>({slug:p.slug,title:p.title,excerpt:p.description,published:p.published}));
 const oct13Posts=oct13BlogBatch.map(p=>({slug:p.slug,title:p.title,excerpt:p.description,published:p.published}));
-const allPosts=[...oct25Posts, ...oct22Posts, ...oct13Posts,...oct12Posts,...oct8Posts,...oct5Posts,...oct2Posts,...sep28Posts,...sep25Posts,...sep24Posts,...daily.slice(0,24),...latest,...daily.slice(24),...earlier];
+const allPosts=[...oct26Posts, ...oct25Posts, ...oct22Posts, ...oct13Posts,...oct12Posts,...oct8Posts,...oct5Posts,...oct2Posts,...sep28Posts,...sep25Posts,...sep24Posts,...daily.slice(0,24),...latest,...daily.slice(24),...earlier];
 const readerDate=new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
 function PublishedDate({post}:{post:(typeof allPosts)[number]}){const published='published' in post&&typeof post.published==='string'?post.published:undefined;return published?<time dateTime={published}>Published {readerDate.format(new Date(`${published}T00:00:00Z`))}</time>:null}
 

@@ -22,6 +22,7 @@ import { oct12BlogBatch } from "../oct12-content";
 import { oct13BlogBatch } from "../oct13-content";
 import { oct22BlogBatch } from "../oct22-content";
 import { oct25BlogBatch } from "../oct25-blog";
+import { oct26BlogBatch } from "../oct26-blog";
 const readerDate = new Intl.DateTimeFormat("en-US", {year:"numeric",month:"long",day:"numeric",timeZone:"UTC"});
 export const metadata = {
   title: "Billing Operations Blog",
@@ -30,6 +31,7 @@ export const metadata = {
 };
 export default function Blog() {
   const daily = [
+    ...oct26BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
     ...oct25BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
     ...oct22BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
     ...oct13BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
