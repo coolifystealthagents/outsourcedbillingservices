@@ -33,8 +33,8 @@ export const metadata = {
 };
 export default function Blog() {
   const daily = [
-    ...oct27BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
     ...oct28BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
+    ...oct27BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
     ...oct26BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
     ...oct25BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
     ...oct22BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
