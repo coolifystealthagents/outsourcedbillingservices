@@ -32,7 +32,7 @@ for (const batch of ['oct13','oct12','oct8','oct5','oct2','sep28','sep25','sep24
   assert.match(blog, new RegExp(`if \\(${batch}\\) return <LegacyEditorialArticle`), `blog batch ${batch} must dispatch through shared editorial article`);
 }
 assert.match(blog, /return <RichEditorialArticle post=\{post\}/, 'rich blog posts must dispatch through shared editorial article');
-assert.match(research, /p\.body\.forEach[\s\S]*sections: EditorialSection\[\]/, 'paragraph-only research must receive real semantic sections');
+assert.match(research, /const sections: EditorialSection\[\][\s\S]*p\.body\.forEach/, 'paragraph-only research must receive real semantic sections without pinning the implementation order');
 assert.match(blog, /paragraphSections[\s\S]*EditorialSection\[\]/, 'paragraph-only blog articles must receive real semantic sections');
 
 assert.match(css, /\.editorial-layout\{[^}]*grid-template-columns:minmax\(0,72ch\)/, 'article measure must remain in the readable 60-75ch range');
