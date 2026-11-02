@@ -23,6 +23,7 @@ import { oct22BlogSlugs } from "../oct22-content";
 import { oct25BlogSlugs } from "../oct25-blog";
 import { oct26BlogSlugs } from "../oct26-blog";
 import { oct28BlogSlugs } from "../oct28-blog";
+import { nov02BlogSlugs } from "../nov02-blog";
 import { oct27BlogSlugs } from "../oct27-blog";
 import { oct5ResearchTopics } from "../oct5-research";
 import { site, services, blogPosts, researchPosts } from "../data";
@@ -81,6 +82,7 @@ export function GET() {
   const oct25Paths = oct25BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct26Paths = oct26BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct28Paths = oct28BlogSlugs.map((slug) => `/blog/${slug}`);
+  const nov02Paths = nov02BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct27Paths = oct27BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct13Paths = oct13BlogSlugs.map((slug) => `/blog/${slug}`);
   const sep4Paths = sep4BlogSlugs.map((slug) => `/blog/${slug}`);
@@ -122,7 +124,7 @@ export function GET() {
     ...oct5Paths,
     ...oct8Paths,
     ...oct12Paths,
-    ...oct22Paths, ...oct13Paths, ...oct25Paths, ...oct26Paths, ...oct28Paths, ...oct27Paths,
+    ...oct22Paths, ...oct13Paths, ...oct25Paths, ...oct26Paths, ...oct28Paths, ...nov02Paths, ...oct27Paths,
   ];
   const oct5ReleasePaths = new Set([
     ...oct5BlogSlugs.map((slug) => `/blog/${slug}`),
