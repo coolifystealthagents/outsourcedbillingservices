@@ -24,6 +24,7 @@ import { oct25BlogSlugs } from "../oct25-blog";
 import { oct26BlogSlugs } from "../oct26-blog";
 import { oct28BlogSlugs } from "../oct28-blog";
 import { nov02BlogSlugs } from "../nov02-blog";
+import { nov03BlogSlugs } from "../nov03-blog";
 import { oct27BlogSlugs } from "../oct27-blog";
 import { oct5ResearchTopics } from "../oct5-research";
 import { site, services, blogPosts, researchPosts } from "../data";
@@ -83,6 +84,7 @@ export function GET() {
   const oct26Paths = oct26BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct28Paths = oct28BlogSlugs.map((slug) => `/blog/${slug}`);
   const nov02Paths = nov02BlogSlugs.map((slug) => `/blog/${slug}`);
+  const nov03Paths = nov03BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct27Paths = oct27BlogSlugs.map((slug) => `/blog/${slug}`);
   const oct13Paths = oct13BlogSlugs.map((slug) => `/blog/${slug}`);
   const sep4Paths = sep4BlogSlugs.map((slug) => `/blog/${slug}`);
