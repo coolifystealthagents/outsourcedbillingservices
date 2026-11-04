@@ -34,6 +34,7 @@ import { oct25ResearchBatch } from './oct25-research';
 import { oct26ResearchBatch } from './oct26-research';
 import { oct28ResearchBatch } from './oct28-research';
 import { nov02ResearchBatch } from './nov02-research';
+import { nov04ResearchBatch } from './nov04-research';
 import { nov03ResearchBatch } from './nov03-research';
 import { oct27ResearchBatch } from './oct27-research';
 
