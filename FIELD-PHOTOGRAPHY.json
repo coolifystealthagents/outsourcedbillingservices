@@ -88,5 +88,29 @@
     "source": "https://www.pexels.com/photo/a-calendar-and-laptop-on-a-desk-5240008/",
     "file": "5240008.webp",
     "description": "a calendar and laptop on a desk"
+  },
+  {
+    "id": "4476375",
+    "file": "4476375.webp",
+    "source": "https://www.pexels.com/photo/bookkeeper-writing-down-on-paper-while-using-calculator-4476375/",
+    "placement": "journal thumbnail"
+  },
+  {
+    "id": "5124877",
+    "file": "5124877.webp",
+    "source": "https://www.pexels.com/photo/notebooks-on-a-desk-5124877/",
+    "placement": "journal thumbnail"
+  },
+  {
+    "id": "9301293",
+    "file": "9301293.webp",
+    "source": "https://www.pexels.com/photo/colleagues-looking-at-a-document-9301293/",
+    "placement": "journal thumbnail"
+  },
+  {
+    "id": "7654591",
+    "file": "7654591.webp",
+    "source": "https://www.pexels.com/photo/a-person-using-calculator-7654591/",
+    "placement": "homepage field note"
   }
 ]

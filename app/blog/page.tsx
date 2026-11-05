@@ -1,3 +1,5 @@
+
+import { journalThumbnail } from "../journal-thumbnail";
 import { Header, Footer } from "../components";
 import { allPosts, blogPageCount } from './catalog';
 const readerDate = new Intl.DateTimeFormat("en-US", {year:"numeric",month:"long",day:"numeric",timeZone:"UTC"});
@@ -33,7 +35,7 @@ export default function Blog() {
 
               return (
                 <a className="article-card" href={`/blog/${p.slug}`} key={p.slug}>
-                  <img src={image} alt="" loading="lazy" width="1200" height="630" />
+                  <img src={journalThumbnail(image)} alt="" loading="lazy" width="1200" height="630" />
                   <div className="article-card-body">
                     <h2>{p.title}</h2>
                     <div className="article-card-meta">

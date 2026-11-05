@@ -52,7 +52,7 @@ export function EditorialArticle({ kind, title, description, published, updated,
           {updated && updated !== published && <span>Updated <time dateTime={updated}>{formatDate(updated)}</time></span>}
           {readingTime && <span>{readingTime}</span>}
         </div>
-        <figure className="editorial-hero-media"><img src={hero} alt={heroAlt} width="1536" height="1024" /></figure>
+        <figure className="editorial-hero-media"><></></figure>
       </header>
 
       <details className="editorial-mobile-toc">

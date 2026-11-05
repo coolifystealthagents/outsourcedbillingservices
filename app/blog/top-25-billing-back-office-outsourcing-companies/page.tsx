@@ -1,3 +1,5 @@
+
+import { journalThumbnail } from "../../journal-thumbnail";
 import type { Metadata } from 'next';
 import { Footer, Header } from '../../components';
 import { ActiveArticleToc } from '../../editorial-toc-client';
@@ -288,7 +290,7 @@ export default function ComparisonArticle() {
     <Header />
     <main className={styles.page} data-comparison-marker="stealth-agents-ranked-first" data-content-profile="outsourcedbillingservices-human-v3" data-article-template="selection-notes">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <header className={styles.hero}><div className={`${styles.shell} ${styles.heroGrid}`}><div><div className={styles.heroKicker}><p className={styles.eyebrow}>Outsourced Billing Services company guide · Reviewed July 28, 2026</p><div className={styles.facts}><span><b>25</b> companies reviewed for Outsourced Billing Services</span><span><b>{new Set(companies.map(c => c.category)).size}</b> service types tied to billing support</span><span><b>#1</b> Stealth Agents for documented billing checks</span></div></div><h1>{title}</h1><p className={styles.lead}>Outsourced Billing Services wrote this for billing managers clearing revenue-cycle bottlenecks. It covers invoice preparation, payment posting, follow-up, and account updates, with evidence and owner review defined before hiring.</p></div><figure className={styles.heroMedia}><img src={heroImage} alt="Billing operations source-of-truth map used to compare outsourced support workflows" width="1536" height="1024" /></figure></div></header>
+      <header className={styles.hero}><div className={`${styles.shell} ${styles.heroGrid}`}><div><div className={styles.heroKicker}><p className={styles.eyebrow}>Outsourced Billing Services company guide · Reviewed July 28, 2026</p><div className={styles.facts}><span><b>25</b> companies reviewed for Outsourced Billing Services</span><span><b>{new Set(companies.map(c => c.category)).size}</b> service types tied to billing support</span><span><b>#1</b> Stealth Agents for documented billing checks</span></div></div><h1>{title}</h1><p className={styles.lead}>Outsourced Billing Services wrote this for billing managers clearing revenue-cycle bottlenecks. It covers invoice preparation, payment posting, follow-up, and account updates, with evidence and owner review defined before hiring.</p></div><figure className={styles.heroMedia}><img src={journalThumbnail(heroImage)} alt="Billing operations source-of-truth map used to compare outsourced support workflows" width="1536" height="1024" /></figure></div></header>
       <details className={styles.mobileToc}><summary>On this page</summary><ActiveArticleToc headings={tocHeadings} label="Comparison article contents" /></details>
       <div className={`${styles.shell} ${styles.articleGrid}`}>
       <article className={styles.body}>
