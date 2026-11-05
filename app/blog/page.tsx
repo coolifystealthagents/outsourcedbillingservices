@@ -26,6 +26,7 @@ import { oct26BlogBatch } from "../oct26-blog";
 import { oct28BlogBatch } from "../oct28-blog";
 import { nov02BlogBatch } from "../nov02-blog";
 import { nov04BlogBatch } from "../nov04-blog";
+import { nov05BlogBatch } from "../nov05-blog";
 import { nov03BlogBatch } from "../nov03-blog";
 import { oct27BlogBatch } from "../oct27-blog";
 const readerDate = new Intl.DateTimeFormat("en-US", {year:"numeric",month:"long",day:"numeric",timeZone:"UTC"});
@@ -36,6 +37,7 @@ export const metadata = {
 };
 export default function Blog() {
   const daily = [
+    ...nov05BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published, image: p.featuredImage, minutes: p.minutes }] as const),
     ...nov04BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
     ...nov03BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
     ...nov02BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published }] as const),
@@ -100,7 +102,8 @@ export default function Blog() {
     slug,
     title: p.title,
     excerpt: p.description,
-    minutes: 8,
+    image: "image" in p && typeof p.image === "string" ? p.image : undefined,
+    minutes: "minutes" in p && typeof p.minutes === "number" ? p.minutes : 8,
     published: "published" in p ? p.published : undefined,
   }));
   const latest = blogPosts.filter((p) => p.detail?.published === "2026-09-02");
@@ -123,23 +126,32 @@ export default function Blog() {
             Read concise guidance for scoping and managing Filipino support
             roles. Existing article addresses remain available.
           </p>
-          <div className="cards">
+          <div className="article-cards">
             {posts.map((p) => {
               const published =
                 "published" in p && typeof p.published === "string"
                   ? p.published
                   : undefined;
+              const image =
+                "image" in p && typeof p.image === "string"
+                  ? p.image
+                  : "/hero/november-05/_fallback.webp";
 
               return (
-                <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
-                  <h2>{p.title}</h2>
-                  {published ? (
-                    <time dateTime={published}>
-                      Published {readerDate.format(new Date(`${published}T00:00:00Z`))}
-                    </time>
-                  ) : null}
-                  <p>{p.excerpt}</p>
-                  <span>{p.minutes} min read</span>
+                <a className="article-card" href={`/blog/${p.slug}`} key={p.slug}>
+                  <img src={image} alt="" loading="lazy" width="1200" height="630" />
+                  <div className="article-card-body">
+                    <h2>{p.title}</h2>
+                    <div className="article-card-meta">
+                      {published ? (
+                        <time dateTime={published}>
+                          {readerDate.format(new Date(`${published}T00:00:00Z`))}
+                        </time>
+                      ) : null}
+                      <span>{p.minutes} min read</span>
+                    </div>
+                    <p>{p.excerpt}</p>
+                  </div>
                 </a>
               );
             })}

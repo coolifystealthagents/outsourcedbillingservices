@@ -26,6 +26,7 @@ import { oct25BlogBatch, oct25BlogSlugs } from '../../oct25-blog';
 import { oct26BlogBatch, oct26BlogSlugs } from '../../oct26-blog';
 import { oct28BlogBatch, oct28BlogSlugs } from '../../oct28-blog';
 import { nov04BlogBatch, nov04BlogSlugs } from '../../nov04-blog';
+import { nov05BlogBatch, nov05BlogSlugs } from '../../nov05-blog';
 import { nov03BlogBatch, nov03BlogSlugs } from '../../nov03-blog';
 import { oct27BlogBatch, oct27BlogSlugs } from '../../oct27-blog';
 import Oct22Toc from '../../oct22-toc';
@@ -43,7 +44,7 @@ const seoTitle=(value:string)=>{const concise=value.replace(/^Philippines medica
 const seoDescription=(value:string)=>value.length<=155?value:`${value.slice(0,152).replace(/\s+\S*$/,'')}…`;
 
 export function generateStaticParams() {
-  const params = [...nov04BlogSlugs.map((slug) => ({ slug })), ...nov03BlogSlugs.map((slug) => ({ slug })), ...oct28BlogSlugs.map((slug) => ({ slug })), ...oct27BlogSlugs.map((slug) => ({ slug })), ...oct26BlogSlugs.map((slug) => ({ slug })), ...oct25BlogSlugs.map((slug) => ({ slug })), ...oct22BlogSlugs.map((slug) => ({ slug })), ...oct13BlogSlugs.map((slug) => ({ slug })), ...oct12BlogSlugs.map((slug) => ({ slug })), ...oct8BlogSlugs.map((slug) => ({ slug })), ...oct5BlogSlugs.map((slug) => ({ slug })), ...oct2BlogSlugs.map((slug) => ({ slug })), ...sep28BlogSlugs.map((slug) => ({ slug })), ...sep25BlogSlugs.map((slug) => ({ slug })), ...sep24BlogSlugs.map((slug) => ({ slug })), ...sep23BlogSlugs.map((slug) => ({ slug })), ...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
+  const params = [...nov05BlogSlugs.map((slug) => ({ slug })), ...nov04BlogSlugs.map((slug) => ({ slug })), ...nov03BlogSlugs.map((slug) => ({ slug })), ...oct28BlogSlugs.map((slug) => ({ slug })), ...oct27BlogSlugs.map((slug) => ({ slug })), ...oct26BlogSlugs.map((slug) => ({ slug })), ...oct25BlogSlugs.map((slug) => ({ slug })), ...oct22BlogSlugs.map((slug) => ({ slug })), ...oct13BlogSlugs.map((slug) => ({ slug })), ...oct12BlogSlugs.map((slug) => ({ slug })), ...oct8BlogSlugs.map((slug) => ({ slug })), ...oct5BlogSlugs.map((slug) => ({ slug })), ...oct2BlogSlugs.map((slug) => ({ slug })), ...sep28BlogSlugs.map((slug) => ({ slug })), ...sep25BlogSlugs.map((slug) => ({ slug })), ...sep24BlogSlugs.map((slug) => ({ slug })), ...sep23BlogSlugs.map((slug) => ({ slug })), ...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
   return params.filter(({ slug }) => !blogAliases[slug]);
 }
 
@@ -54,6 +55,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (oct27) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${oct27.slug}`; return { title: seoTitle(oct27.title), description: seoDescription(oct27.description), alternates: { canonical }, openGraph: { title: seoTitle(oct27.title), description: seoDescription(oct27.description), type: 'article', url: canonical, images: [oct27.featuredImage], publishedTime: oct27.published } }; }
   const nov03 = nov03BlogBatch.find((item) => item.slug === slug);
   if (nov03) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov03.slug}`; return { title: seoTitle(nov03.title), description: seoDescription(nov03.description), alternates: { canonical }, openGraph: { title: seoTitle(nov03.title), description: seoDescription(nov03.description), type: 'article', url: canonical, images: [nov03.featuredImage], publishedTime: nov03.published } }; }
+  const nov05 = nov05BlogBatch.find((item) => item.slug === slug);
+  if (nov05) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov05.slug}`; return { title: seoTitle(nov05.title), description: seoDescription(nov05.description), alternates: { canonical }, openGraph: { title: seoTitle(nov05.title), description: seoDescription(nov05.description), type: 'article', url: canonical, images: [nov05.featuredImage], publishedTime: nov05.published } }; }
   const nov04 = nov04BlogBatch.find((item) => item.slug === slug);
   if (nov04) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov04.slug}`; return { title: seoTitle(nov04.title), description: seoDescription(nov04.description), alternates: { canonical }, openGraph: { title: seoTitle(nov04.title), description: seoDescription(nov04.description), type: 'article', url: canonical, images: [nov04.featuredImage], publishedTime: nov04.published } }; }
   const oct28 = oct28BlogBatch.find((item) => item.slug === slug);
@@ -133,6 +136,24 @@ function paragraphSections(title: string, body: string[]): EditorialSection[] {
     heading: sectionTitle(title, index),
     content: <>{group.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</>,
   }));
+}
+
+function Nov05Article({ article }: { article: (typeof nov05BlogBatch)[number] }) {
+  const canonical = `https://${String(site.domain).toLowerCase()}/blog/${article.slug}`;
+  const sections: EditorialSection[] = [];
+  for (const line of article.body) {
+    if (line.startsWith('## ')) {
+      sections.push({ heading: line.slice(3), content: <></> });
+    } else {
+      const last = sections[sections.length - 1];
+      const paragraph = <p key={line}>{line}</p>;
+      last.content = <>{last.content}{paragraph}</>;
+    }
+  }
+  sections.push({ heading: 'Authoritative references', content: <ol>{article.sourcesList.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ol> });
+  return <><Header hidePricing /><JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:article.title,description:article.description,url:canonical,datePublished:article.published,dateModified:article.published,mainEntityOfPage:canonical,image:`https://${String(site.domain).toLowerCase()}${article.featuredImage}`,author:{'@type':'Organization',name:site.brand},publisher:{'@type':'Organization',name:site.brand}}} />
+    <EditorialArticle kind="Billing operations guide" title={article.title} description={article.description} published={article.published} readingTime={`${article.minutes} min read`} hero={article.heroImage} heroAlt={`Billing workspace used to review ${article.title.toLowerCase()}`} sections={sections} publisher={site.brand} related={[{ href: '/blog', title: 'More billing operations guides' }, { href: '/research', title: 'Billing operations research' }]}><CTA /></EditorialArticle>
+    <Footer /></>;
 }
 
 function LegacyEditorialArticle({ article, sources = [] }: { article: any; sources?: ReadonlyArray<{ name: string; url: string }> }) {
@@ -572,6 +593,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const alias=blogAliases[slug]; if(alias) permanentRedirect(`/blog/${alias}`);
   const nov03 = nov03BlogBatch.find((item) => item.slug === slug);
   if (nov03) return <><Header hidePricing /><main className="article-shell"><details className="o22-m"><summary>On this page</summary><nav aria-label="Table of contents">{nov03.body.filter((line) => line.startsWith('## ')).map((line) => <a key={line} href={`#${line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}`}>{line.replace('## ','')}</a>)}</nav></details><div className="o22-layout"><article><p className="eyebrow">Billing operations guide</p><h1>{nov03.title}</h1><p>Published <time dateTime={nov03.published}>November 3, 2026</time></p><img src={nov03.featuredImage} alt={nov03.title} width="1200" height="630" style={{ width: '100%', height: 'auto', borderRadius: '18px' }} /><nav className="o22-static-toc" aria-label="Table of contents">{nov03.body.filter((line) => line.startsWith('## ')).map((line) => <a key={line} href={`#${line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}`}>{line.replace('## ','')}</a>)}</nav><div className="article-body">{nov03.body.map((line) => line.startsWith('## ') ? <h2 id={line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')} key={line}>{line.replace('## ','')}</h2> : <p key={line}>{line}</p>)}</div><h2 id="references">Authoritative references</h2><ul>{nov03.sourcesList.map((s) => <li key={s.url}><a href={s.url}>{s.name}</a></li>)}</ul></article><aside className="o22-side" aria-label="Article sidebar"><nav aria-label="Table of contents"><p className="eyebrow">On this page</p>{nov03.body.filter((line) => line.startsWith('## ')).map((line) => <a key={line} href={`#${line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}`}>{line.replace('## ','')}</a>)}</nav></aside></div></main><Footer /></>;
+  const nov05 = nov05BlogBatch.find((item) => item.slug === slug);
+  if (nov05) return <Nov05Article article={nov05} />;
   const nov04 = nov04BlogBatch.find((item) => item.slug === slug);
   if (nov04) return <><Header hidePricing /><main className="article-shell"><details className="o22-m"><summary>On this page</summary><nav aria-label="Table of contents">{nov04.body.filter((line) => line.startsWith('## ')).map((line) => <a key={line} href={`#${line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}`}>{line.replace('## ','')}</a>)}</nav></details><div className="o22-layout"><article><p className="eyebrow">Billing operations guide</p><h1>{nov04.title}</h1><p>Published <time dateTime={nov04.published}>November 4, 2026</time></p><img src={nov04.featuredImage} alt={nov04.title} width="1200" height="630" style={{ width: '100%', height: 'auto', borderRadius: '18px' }} /><nav className="o22-static-toc" aria-label="Table of contents">{nov04.body.filter((line) => line.startsWith('## ')).map((line) => <a key={line} href={`#${line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}`}>{line.replace('## ','')}</a>)}</nav><div className="article-body">{nov04.body.map((line) => line.startsWith('## ') ? <h2 id={line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')} key={line}>{line.replace('## ','')}</h2> : <p key={line}>{line}</p>)}</div><h2 id="references">Authoritative references</h2><ul>{nov04.sourcesList.map((s) => <li key={s.url}><a href={s.url}>{s.name}</a></li>)}</ul></article><aside className="o22-side" aria-label="Article sidebar"><nav aria-label="Table of contents"><p className="eyebrow">On this page</p>{nov04.body.filter((line) => line.startsWith('## ')).map((line) => <a key={line} href={`#${line.replace('## ','').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}`}>{line.replace('## ','')}</a>)}</nav></aside></div></main><Footer /></>;
   const oct28 = oct28BlogBatch.find((item) => item.slug === slug);

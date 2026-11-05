@@ -146,3 +146,18 @@ body:has(.billing-home) .nav .stealth-attribution{color:#8e9cb6}body:has(.billin
  .o22-m:not([open]) nav{display:none}
  .o22-m[open] nav{position:absolute;top:100%;left:-1px;right:-1px;max-height:42vh;overflow:auto;padding:10px 16px;background:#fff;display:grid;gap:8px}
 }
+
+/* 2026-11-05 editorial listing and article layout */
+.article-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.article-card{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #dfe5ef;border-radius:16px;overflow:hidden}
+.article-card img{width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;display:block}
+.article-card-body{display:flex;flex-direction:column;gap:10px;padding:18px 20px 22px}
+.article-card h2{margin:0;font-size:22px;line-height:1.28;letter-spacing:-.02em;color:#0a1630}
+.article-card-meta{display:flex;flex-wrap:wrap;gap:8px 14px;color:#63708b;font-size:13px;font-weight:700}
+.article-card p{margin:0;color:#52627a;font-size:14px;line-height:1.6}
+.article-card:hover{border-color:#9db8f4;box-shadow:0 16px 34px rgba(24,54,107,.08)}
+@media(max-width:940px){.article-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.article-cards{grid-template-columns:1fr}.article-card h2{font-size:21px}}
+.editorial-layout{grid-template-columns:minmax(0,1fr) 260px;gap:32px}
+.editorial-toc a{font-size:14px;line-height:1.45}
+.editorial-mobile-toc .editorial-toc a{font-size:14px}
