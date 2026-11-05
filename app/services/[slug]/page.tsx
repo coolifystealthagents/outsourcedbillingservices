@@ -1,3 +1,4 @@
+const fieldPhotos: Record<string,[string,string]> = {"invoice-preparation": ["/design-photography/8297030.webp", "person holding calculator checking on documents"], "usage-billing-administration": ["/design-photography/8296977.webp", "a person examining a document"], "subscription-billing-support": ["/design-photography/8296970.webp", "a person examining documents"], "billing-reconciliation": ["/design-photography/8293764.webp", "a person wearing wristwatch filling up the paper"], "payment-posting": ["/design-photography/9052475.webp", "a person using a calculator"], "credit-memo-administration": ["/design-photography/19905193.webp", "planning new year on paper"], "collections-follow-up": ["/design-photography/7682353.webp", "man working in a call center"], "customer-billing-support": ["/design-photography/7709284.webp", "low angle shot of a woman in a white shirt wearing a black headset"], "revenue-schedule-preparation": ["/design-photography/12911169.webp", "pens and a planner on a desk"], "billing-data-quality-review": ["/design-photography/6172482.webp", "a person writing on calendar"], "dispute-documentation": ["/design-photography/5668507.webp", "businesswoman writing notes in planner in office"], "month-end-billing-support": ["/design-photography/5240008.webp", "a calendar and laptop on a desk"]};
 import type { Metadata } from 'next';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { Header, Footer, CTA, JsonLd } from '../../components';
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: service.title,
     description: service.desc,
     alternates: { canonical: `/services/${service.slug}` },
-    openGraph: { title: service.title, description: service.desc, images: [playbook.hero.src] },
+    openGraph: { title: service.title, description: service.desc, images: [fieldPhotos[service.slug][0]] },
   };
 }
 
@@ -43,7 +44,7 @@ export default async function Service({ params }: { params: Promise<{ slug: stri
     <main className="service-detail">
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
-      <section className="service-hero"><div className="container service-hero-grid"><div><p className="eyebrow">Philippines-based billing support</p><h1>{service.title}</h1><p className="lead">{service.desc}</p><p className="service-hero-note">A documented support lane for repeatable preparation, visible exceptions, and owner-controlled decisions.</p><a className="btn primary" href="/contact-us">Discuss this workflow</a></div><figure className="service-hero-figure"><img className="service-hero-image" src={playbook.hero.src} alt={playbook.hero.alt} width={playbook.hero.width} height={playbook.hero.height}/><figcaption>Relevant billing workflow asset from our existing operations library.</figcaption></figure></div></section>
+      <section className="service-hero"><div className="container service-hero-grid"><div><p className="eyebrow">Philippines-based billing support</p><h1>{service.title}</h1><p className="lead">{service.desc}</p><p className="service-hero-note">A documented support lane for repeatable preparation, visible exceptions, and owner-controlled decisions.</p><a className="btn primary" href="/contact-us">Discuss this workflow</a></div><figure className="service-hero-figure"><img className="service-hero-image" src={fieldPhotos[service.slug][0]} alt={fieldPhotos[service.slug][1]} width={playbook.hero.width} height={playbook.hero.height}/><figcaption>Billing desk · workflow preparation</figcaption></figure></div></section>
 
       <section className="section"><div className="container service-reading-grid"><div><p className="eyebrow">Audience</p><h2>Who this service is for</h2><p>{playbook.problem}</p></div><ul className="service-check-list">{playbook.audience.map((item) => <li key={item}>{item}</li>)}</ul></div></section>
 

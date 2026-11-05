@@ -62,7 +62,7 @@ export default function Home() {
         <div className="container billing-hero-grid">
           <div className="billing-copy">
             <p className="billing-kicker"><span /> Filipino billing support</p>
-            <h1>Get the billing queue out of your inbox.</h1>
+            <h1>Keep invoices moving.</h1>
             <p className="billing-lead">Prepare invoices from approved time, usage, and delivery records. Match payment references, track unresolved balances, and return an exception list to your finance owner. Your team approves credits, adjustments, and account decisions.</p>
             <div className="billing-trust">
               <span className="billing-trust-stars" role="img" aria-label="Five visible billing checkpoints">★★★★★</span>
@@ -79,24 +79,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="billing-visual">
-            <div className="billing-photo">
-              <img src="/illustrations/getillustrations/drawink-e-commerce-illustrations-svg/billing-queue-specialist.svg" alt="Illustration of a billing specialist preparing financial documents" width="1200" height="800" />
-
-            </div>
-            <div className="queue-card">
-              <div className="queue-head">
-                <div><span className="tiny-label">TODAY / BILLING DESK</span><strong>Exception queue</strong></div>
-                <span className="live-dot">Active</span>
-              </div>
-              <div className="queue-columns"><span>Work item</span><span>Owner</span><span>Status</span></div>
-              {queue.map((row) => <div className="queue-row" key={row.item}>
-                <b>{row.item}</b><span>{row.owner}</span><em className={row.tone}>{row.state}</em>
-              </div>)}
-              <div className="queue-foot"><span>Last handoff</span><b>Today · reviewed</b></div>
-            </div>
-            <div className="review-chip"><span>✓</span><div><b>Weekly QA</b><small>sample checked against SOP</small></div></div>
-          </div>
+          <figure className="billing-visual field-frame"><img className="field-photo" src="/design-photography/8297220.webp" alt="a person working on the documents using a calculator" width={1440} height={960} loading="eager" fetchPriority="high" /></figure>
         </div>
         <div className="container workflow-strip">
           <span className="workflow-title">How the queue moves</span>
@@ -161,7 +144,7 @@ export default function Home() {
       </section>
 
       <section className="container gi-proof" aria-label="Billing workflow checks">
-        <img className="gi-proof-art" src="/aug19-heroes/billing-operations-approval-evidence-matrix.webp" alt="Billing approval evidence matrix with visible review checkpoints" width="1536" height="1024"/>
+        <img className="gi-proof-art field-photo" src="/design-photography/4308014.webp" alt="focused male accountant doing paperwork" width={1440} height={960} loading="lazy" />
         <div><p className="billing-kicker dark"><span/>A reviewable queue</p><h2>Keep every billing checkpoint visible.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt="Invoice preparation step" width="42" height="42"/>Invoice prep</span><span><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt="Payment follow-up step" width="42" height="42"/>Payment follow-up</span><span><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt="Weekly billing review" width="42" height="42"/>Weekly review</span></div></div>
       </section>
 
