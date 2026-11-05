@@ -108,7 +108,7 @@ assert.match(blogRoute, /filter\(\(\{\s*slug\s*\}\)\s*=>\s*!blogAliases\[slug\]\
 assert.match(blogPagination, /i\s*\+\s*2/, 'blog pagination generation must start at page 2');
 assert.match(sitemapRoute, /oct8BlogSlugs/, 'sitemap must include the Oct. 8 article collection');
 assert.match(sitemapRoute, /"\/contact-us"/, 'sitemap must include the canonical contact page');
-assert.match(sitemapRoute, /"\/pricing"/, 'sitemap must include the indexable pricing page');
+assert.doesNotMatch(sitemapRoute, /"\/pricing"/, 'retired pricing must not be advertised in the sitemap');
 assert.match(sitemapRoute, /redirectPaths/, 'sitemap must filter redirect sources from the shared alias registry');
 assert.match(researchRoute, /researchSeoTitles/, 'research pages with similar names must have unique, accurate SEO titles');
 assert.match(blogRoute, /blogSeoTitles/, 'materially different articles with similar names must have unique, accurate SEO titles');

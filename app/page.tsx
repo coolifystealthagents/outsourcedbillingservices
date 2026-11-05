@@ -48,7 +48,7 @@ export default function Home() {
           <div className="billing-copy">
             <p className="billing-kicker"><span /> Filipino billing support</p>
             <h1>Get the billing queue out of your inbox.</h1>
-            <p className="billing-lead">A Filipino billing specialist handles invoice prep, claims admin, payment follow-up, customer questions, and weekly checks. Your team keeps control of approvals and account decisions.</p>
+            <p className="billing-lead">Prepare invoices from approved time, usage, and delivery records. Match payment references, track unresolved balances, and return an exception list to your finance owner. Your team approves credits, adjustments, and account decisions.</p>
             <div className="billing-trust">
               <span className="billing-trust-stars" role="img" aria-label="Five visible billing checkpoints">★★★★★</span>
               <p><b>Five visible billing checkpoints</b><small>Received, prepared, reviewed, sent, and followed up.</small></p>

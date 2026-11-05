@@ -9,6 +9,7 @@ const securityHeaders = [
 ];
 
 const legacyRedirects = [
+  { source: '/pricing', destination: '/contact-us' },
   { source: '/contact', destination: '/contact-us' },
   { source: '/blog/philippines-medical-billing-billing-reconciliation', destination: '/services/billing-reconciliation' },
   { source: '/blog/philippines-medical-billing-medical-billing-audit-checklist', destination: '/blog/philippines-medical-billing-audit-checklist' },

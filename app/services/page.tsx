@@ -1,3 +1,4 @@
+import { SectorScenarios } from "../sector-scenarios";
 import { Header, Footer, CTA } from '../components';
 import { services, site } from '../data';
 
@@ -24,7 +25,7 @@ export default function Services() {
       <section className="section"><div className="container two"><div><p className="eyebrow">Scope before access</p><h2>What to prepare before scoping</h2><p>Bring one representative queue, the approved source systems, a named reviewer, and the decisions that must stay with your owner. A small, mixed sample is safer than opening broad access on day one.</p></div><div className="support-strip"><h2>A useful starting brief</h2><ul><li>Queue name, volume, and timing</li><li>Source records and required output</li><li>Access boundaries and sensitive fields</li><li>Approval owner and escalation deadlines</li><li>Sample-review cadence and launch criteria</li></ul></div></div></section>
       <section className="section muted"><div className="container"><p className="eyebrow">Common questions</p><h2>Start with the workflow, not a job title.</h2><div className="cards"><article className="card"><h3>Can services be combined?</h3><p>Yes. Combine adjacent queues only when the source records, access rules, and review owner are clear for each lane.</p></article><article className="card"><h3>Who approves billing changes?</h3><p>Your authorized owner retains pricing, coding, refund, write-off, release, and other judgment-based decisions.</p></article><article className="card"><h3>How should a launch begin?</h3><p>Use a representative sample, review every result, correct the instructions, and widen volume only after the controls work.</p></article></div></div></section>
       <CTA />
-    </main>
+    <SectorScenarios /></main>
     <Footer />
   </>;
 }

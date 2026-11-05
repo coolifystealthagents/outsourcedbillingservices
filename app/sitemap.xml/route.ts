@@ -99,7 +99,6 @@ export function GET() {
     "/blog/top-25-billing-back-office-outsourcing-companies",
     "/research",
     "/contact-us",
-    "/pricing",
     "/privacy",
     "/terms",
     "/cancellation-policy",
