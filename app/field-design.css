@@ -29,3 +29,13 @@ main .field-frame{min-height:0;max-height:none;background:transparent}
 .field-story img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
 .field-story>div{max-width:68ch}.field-story h2{font-size:clamp(26px,3vw,44px);line-height:1.08;margin:0 0 16px;color:#182b31}.field-story p{margin:0 0 11px;color:#324349;line-height:1.58}.field-story .field-intro{font-size:1.1rem}.field-story a{display:inline-block;margin-top:5px;color:#123e4b;text-decoration:underline;text-underline-offset:.22em;font-weight:700}.field-story a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 @media(max-width:760px){.field-story{grid-template-columns:1fr;gap:18px}.field-story img{aspect-ratio:16/9;max-height:265px}}
+
+.article-offer-slot { width: 100%; min-width: 0; }
+.article-offer-slot .blog-conversion-banner {
+  box-sizing: border-box;
+  width: min(100%, 64rem);
+  margin: 1.5rem auto;
+}
+@media (max-width: 640px) {
+  .article-offer-slot .blog-conversion-banner { margin-block: 1rem; }
+}
