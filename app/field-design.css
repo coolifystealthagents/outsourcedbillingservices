@@ -42,3 +42,6 @@ main .field-frame{min-height:0;max-height:none;background:transparent}
 .article-offer-slot aside.blog-conversion-banner p { color: #e2eaf6; }
 .article-offer-slot aside.blog-conversion-banner .blog-banner-title { color: white; }
 .article-offer-slot aside.blog-conversion-banner a.btn { color: #14213a; background: #ffc571; }
+
+.sa-booking-calendar .booking-direct-link { display: inline-block; margin-block: .5rem 1rem; text-decoration: underline; }
+.sa-booking-calendar .sa-oncehub-frame { height: clamp(32rem, 76svh, 47.5rem); }
