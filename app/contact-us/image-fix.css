@@ -1,1 +1,38 @@
-.tc-why img{height:auto!important}
+/* Contact-page visual corrections after all three public baseline inspections. */
+.trusted-contact .tc-about-image { min-height:0; }
+.trusted-contact .tc-about-image > .tc-team-photo { display:block; width:100%; height:auto; min-height:0; max-height:none; object-fit:contain; }
+.trusted-contact .tc-team-plate { position:static; margin:0; border-radius:0; box-shadow:none; }
+.tc-handoff { padding:28px; border:1px solid #b8cce0; border-radius:20px; background:#f1f6fb; color:#132844; }
+.tc-handoff .tc-kicker { color:#894016; }
+.tc-handoff h3 { margin:0 0 20px; font-size:26px; line-height:1.2; }
+.tc-handoff dl { margin:0; }
+.tc-handoff dl > div { padding:14px 0; border-top:1px solid #c6d4e1; }
+.tc-handoff dt { font-weight:800; }
+.tc-handoff dd { margin:5px 0 0; line-height:1.55; }
+@media(min-width:981px) {
+ .trusted-contact .tc-hero { padding:28px 0 36px; }
+ .trusted-contact .tc-copy { padding-top:4px; }
+ .trusted-contact .tc-copy h1 { font-size:clamp(38px,4.2vw,58px); }
+ .trusted-contact .tc-lead { font-size:17px; line-height:1.5; }
+}
+@media(max-width:620px) {
+ .trusted-contact .tc-copy h1 { font-size:36px; line-height:1.08; }
+ .trusted-contact .tc-lead { font-size:16px; line-height:1.5; }
+ .trusted-contact .tc-proof-row { margin:16px 0; }
+ .trusted-contact .tc-copy .sa-testimonials { padding:18px; margin-top:18px; }
+ .trusted-contact .tc-section-head,.trusted-contact .tc-check-grid { gap:24px; }
+ .trusted-contact .tc-about { padding:48px 0; }
+ .tc-handoff { padding:22px; }
+}
+
+/* Two complete equal sequences include their trailing gap at the loop boundary. */
+.sa-testimonials-contact .sa-testimonial-track { gap:0; }
+.sa-contact-review-group { display:flex; flex:none; gap:1rem; padding-right:1rem; box-sizing:border-box; }
+.sa-testimonials-contact .sa-testimonial-card { flex:none; }
+@media(prefers-reduced-motion:reduce) {
+ .sa-testimonials-contact .sa-testimonial-track { display:block; width:auto; animation:none; transform:none; }
+ .sa-contact-review-group { display:grid; grid-template-columns:minmax(0,1fr); padding-right:0; }
+ .sa-contact-review-group[aria-hidden=true] { display:none; }
+ .trusted-contact .sa-testimonials-contact .sa-testimonial-viewport { height:auto; overflow:visible; mask-image:none; -webkit-mask-image:none; }
+ .trusted-contact .sa-testimonials-contact .sa-testimonial-card { width:100%; height:auto; min-height:0; }
+}

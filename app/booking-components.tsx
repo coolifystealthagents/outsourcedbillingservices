@@ -27,13 +27,16 @@ export function TestimonialsRail({ contact = false }: { contact?: boolean }) {
       </div>
       <div className="sa-testimonial-viewport">
         <div className="sa-testimonial-track">
-          {repeated.map((review, index) => (
-            <article className="sa-testimonial-card" key={`${review.name}-${index}`} aria-hidden={index >= testimonials.length ? true : undefined}>
+          {(contact ? [testimonials, testimonials] : [repeated]).map((group, copy) => {
+            const cards = group.map((review, index) => (
+            <article className="sa-testimonial-card" key={`${review.name}-${index}`} aria-hidden={!contact && index >= testimonials.length ? true : undefined}>
               <div className="sa-testimonial-stars"><span aria-hidden="true">★★★★★</span><span className="sa-sr-only">5 out of 5 stars</span></div>
               <blockquote>“{review.quote}”</blockquote>
               <p>By {review.name}</p><small>{review.role}</small>
             </article>
-          ))}
+            ));
+            return contact ? <div className="sa-contact-review-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>{cards}</div> : cards;
+          })}
         </div>
       </div>
       <p className="sa-testimonial-source">Source: <a href="https://stealthagents.com/#client-reviews" target="_blank" rel="noopener noreferrer">first-party Stealth Agents client reviews</a>.</p>
