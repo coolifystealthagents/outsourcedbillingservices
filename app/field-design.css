@@ -39,3 +39,6 @@ main .field-frame{min-height:0;max-height:none;background:transparent}
 @media (max-width: 640px) {
   .article-offer-slot .blog-conversion-banner { margin-block: 1rem; }
 }
+.article-offer-slot aside.blog-conversion-banner p { color: #e2eaf6; }
+.article-offer-slot aside.blog-conversion-banner .blog-banner-title { color: white; }
+.article-offer-slot aside.blog-conversion-banner a.btn { color: #14213a; background: #ffc571; }
