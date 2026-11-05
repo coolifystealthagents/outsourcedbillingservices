@@ -161,3 +161,22 @@ body:has(.billing-home) .nav .stealth-attribution{color:#8e9cb6}body:has(.billin
 .editorial-layout{grid-template-columns:minmax(0,1fr) 260px;gap:32px}
 .editorial-toc a{font-size:14px;line-height:1.45}
 .editorial-mobile-toc .editorial-toc a{font-size:14px}
+
+/* Replaces the low-contrast dashboard seen in production screenshots. */
+.billing-exception-example { padding:clamp(1.4rem,3vw,2.4rem); border-radius:1.25rem; background:#f1f7ff; color:#17304d; }
+.billing-exception-example h3 { font-size:clamp(1.4rem,2.3vw,2rem); line-height:1.2; margin:.75rem 0 1.25rem; }
+.billing-exception-example dl { margin:0; }
+.billing-exception-example dl>div { padding:.9rem 0; border-top:1px solid #c9d8e9; }
+.billing-exception-example dt { font-weight:750; margin-bottom:.35rem; }
+.billing-exception-example dd { margin:0; line-height:1.55; }
+@media(max-width:780px) {
+ .billing-service { min-height:0; }
+ .billing-service .service-top { margin-bottom:1.25rem; }
+ .billing-service .service-link { margin-top:1.25rem; }
+}
+
+@media(max-width:780px) {
+ .billing-home .workflow-strip { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); overflow:visible; }
+ .billing-home .workflow-strip .workflow-title { grid-column:1/-1; }
+ .billing-home .workflow-strip>div { min-width:0; }
+}

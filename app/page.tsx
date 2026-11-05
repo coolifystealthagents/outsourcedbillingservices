@@ -3,6 +3,21 @@ import { Footer, Header, JsonLd } from './components';
 
 export const metadata = { alternates: { canonical: '/' } };
 
+const workflowSummaries: Record<string,string> = {
+  "invoice-preparation": "Prepare invoice drafts from approved time entries, order details, and delivery records; flag missing references before review.",
+  "usage-billing-administration": "Compare usage exports with approved rates and billing periods; route gaps or unusual quantities to the account owner.",
+  "subscription-billing-support": "Track renewal dates, approved plan changes, and proration inputs so the owner can review the next recurring bill.",
+  "billing-reconciliation": "Match invoices, credits, and remittances; maintain a dated exception list for balances that do not agree.",
+  "payment-posting": "Match remittance references to open invoices and prepare posting batches; hold unclear allocations for finance review.",
+  "credit-memo-administration": "Assemble the original invoice, adjustment reason, and approval evidence before an authorized owner releases a credit.",
+  "collections-follow-up": "Send approved reminders, log replies and promised dates, and escalate disputed or overdue balances through the agreed process.",
+  "customer-billing-support": "Locate invoice copies, explain approved account information, and route refund or pricing requests to the decision owner.",
+  "revenue-schedule-preparation": "Organize contract dates and approved billing records into a review schedule; accountants retain recognition decisions.",
+  "billing-data-quality-review": "Check customer references, dates, duplicates, and required fields before records enter the next billing batch.",
+  "dispute-documentation": "Collect the disputed line, delivery evidence, correspondence, and open questions in one case file for the account owner.",
+  "month-end-billing-support": "Track unbilled items, unresolved payment matches, and cutoff questions in a close checklist with named owners."
+};
+
 const queue = [
   { item: 'Invoice batch', owner: 'Billing desk', state: 'Ready for review', tone: 'mint' },
   { item: 'Missing PO', owner: 'Client owner', state: 'Approval needed', tone: 'amber' },
@@ -98,7 +113,7 @@ export default function Home() {
           {services.map((service, i) => <a className="billing-service" href={`/services/${slug(service)}`} key={service.slug}>
             <div className="service-top"><span className="service-category">Billing workflow</span><i className={`service-mark mark-${i + 1}`} /></div>
             <h3>{service.title}</h3>
-            <p>{service.desc}</p>
+            <p>{workflowSummaries[service.slug] ?? service.desc}</p>
             <b className="service-link">Open the workflow <span>↗</span></b>
           </a>)}
         </div>
@@ -106,9 +121,15 @@ export default function Home() {
 
       <section className="control-room">
         <div className="container control-room-grid">
-          <div className="control-image">
-            <img src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/billing-dashboard.webp" alt="Illustration of a manager reviewing a billing operations dashboard" width="1400" height="1400" />
-            <div className="image-note"><span>OWNER CHECK</span><b>Exceptions stay visible.</b></div>
+          <div className="billing-exception-example" aria-labelledby="exception-example-title">
+            <p className="billing-kicker dark">Illustrative work item</p>
+            <h3 id="exception-example-title">A short payment with a clear next step</h3>
+            <dl>
+              <div><dt>Source record</dt><dd>Invoice, remittance reference, and customer message</dd></div>
+              <div><dt>Desk prepares</dt><dd>Compare the amounts, attach evidence, and log the unresolved difference.</dd></div>
+              <div><dt>Owner decides</dt><dd>Confirm whether to request payment, correct the invoice, or approve a credit.</dd></div>
+              <div><dt>Review trail</dt><dd>Keep the decision, date, and next action with the account.</dd></div>
+            </dl>
           </div>
           <div className="control-copy">
             <p className="billing-kicker"><span /> Built around control</p>
