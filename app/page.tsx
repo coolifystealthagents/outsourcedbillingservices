@@ -63,11 +63,7 @@ export default function Home() {
           <div className="billing-copy">
             <p className="billing-kicker"><span /> Filipino billing support</p>
             <h1>Keep invoices moving.</h1>
-            <p className="billing-lead">Prepare invoices from approved time, usage, and delivery records. Match payment references, track unresolved balances, and return an exception list to your finance owner. Your team approves credits, adjustments, and account decisions.</p>
-            <div className="billing-trust">
-              <span className="billing-trust-stars" role="img" aria-label="Five visible billing checkpoints">★★★★★</span>
-              <p><b>Five visible billing checkpoints</b><small>Received, prepared, reviewed, sent, and followed up.</small></p>
-            </div>
+            <p className="billing-lead">Prepare invoice drafts, match payment references, and track unresolved balances. Your finance owner keeps control of approvals and account decisions.</p>
             <div className="billing-actions">
               <a className="btn billing-primary" href="/contact-us">Map my billing desk <span>↗</span></a>
               <a className="billing-text-link" href="#tasks">See what to hand off <span>↓</span></a>
@@ -83,7 +79,7 @@ export default function Home() {
         </div>
         <div className="container workflow-strip">
           <span className="workflow-title">How the queue moves</span>
-          {['Received', 'Prepared', 'Reviewed', 'Sent', 'Follow-up'].map((item, i) => <div key={item}><i>{i + 1}</i><b>{item}</b></div>)}
+          {['Received', 'Prepared', 'Reviewed', 'Sent', 'Follow-up'].map((item, i) => <div key={item}><b>{item}</b></div>)}
         </div>
       </section>
 
@@ -96,7 +92,7 @@ export default function Home() {
         </div>
         <div className="billing-service-grid">
           {services.map((service, i) => <a className="billing-service" href={`/services/${slug(service)}`} key={service.slug}>
-            <div className="service-top"><span className="service-category">Billing workflow</span><i className={`service-mark mark-${i + 1}`} /></div>
+
             <h3>{service.title}</h3>
             <p>{workflowSummaries[service.slug] ?? service.desc}</p>
             <b className="service-link">Open the workflow <span>↗</span></b>
@@ -146,10 +142,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container gi-proof" aria-label="Billing workflow checks">
-        <img className="gi-proof-art field-photo" src="/design-photography/12903274.webp" alt="Two colleagues reviewing a document folder together" width={1440} height={960} loading="lazy" />
-        <div><p className="billing-kicker dark"><span/>A reviewable queue</p><h2>Keep every billing checkpoint visible.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt="Invoice preparation step" width="42" height="42"/>Invoice prep</span><span><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt="Payment follow-up step" width="42" height="42"/>Payment follow-up</span><span><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt="Weekly billing review" width="42" height="42"/>Weekly review</span></div></div>
-      </section>
 
       <section className="container billing-section guides-section">
         <div className="guides-title"><p className="billing-kicker dark"><span /> Before the handoff</p><h2>Useful reading for your billing owner.</h2></div>
