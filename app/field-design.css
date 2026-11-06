@@ -142,3 +142,7 @@ main .field-frame{min-height:0;max-height:none;background:transparent}
 @media(max-width:760px){.billing-group{grid-template-columns:1fr;gap:8px}.billing-group header>p{margin-bottom:8px}.billing-service-row{padding:16px 0}.billing-directory .billing-group h2{font-size:26px}}
 
 .billing-home .billing-section-head h2,.billing-home .control-copy h2,.billing-home .fit-section h2{font-size:clamp(28px,3vw,40px);line-height:1.12}.billing-home .billing-section-head{margin-bottom:22px}.billing-home .billing-service-grid{gap:16px}.billing-home .billing-service h3{font-size:25px}.billing-home .billing-final{padding:28px;margin-block:28px}.billing-home .billing-final h2{font-size:clamp(30px,3vw,42px);line-height:1.12}.billing-home .field-story img{max-height:290px;aspect-ratio:16/10}.billing-home .gi-proof{gap:28px;align-items:center}.billing-home .gi-proof-art{max-height:250px;object-fit:cover}
+
+/* Live visual review: keep the portrait face and remove the stacked footer spacer. */
+.service-detail .service-hero-image[src="/design-photography/7682353.webp"]{object-position:center 25%}
+body:has(.service-detail) .legit-footer,body:has(.billing-directory) .legit-footer{margin-top:0}
