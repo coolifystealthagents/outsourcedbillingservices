@@ -94,3 +94,6 @@ main .field-frame{min-height:0;max-height:none;background:transparent}
 .service-detail .service-panel{padding:24px}
 @media(max-width:900px){.billing-directory .service-directory{grid-template-columns:repeat(2,minmax(0,1fr))}.billing-directory .cards,.service-detail .cards{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.billing-directory .service-directory,.billing-directory .cards,.billing-directory .muted .cards,.billing-directory .two,.service-detail .two,.service-detail .cards{grid-template-columns:1fr;gap:16px}.billing-directory .architecture-hero{padding-block:24px}.billing-directory .service-directory>.card{padding:20px}.billing-directory .field-photo{max-height:230px}.service-detail .service-hero{padding-block:24px}.service-detail .service-hero-image{height:auto;max-height:250px}.service-detail .service-reading-grid{gap:20px}}
+
+.billing-directory .directory-faq .cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:760px){.billing-directory .directory-faq .cards{grid-template-columns:1fr}}
