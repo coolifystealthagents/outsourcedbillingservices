@@ -161,3 +161,6 @@ body:has(.service-detail) .legit-footer,body:has(.billing-directory) .legit-foot
 
 /* Let launch steps follow their copy rather than a fixed empty height. */
 .billing-home .process-grid>article{min-height:0;height:auto}
+/* Keep card actions aligned without stacked paragraph/link spacing. */
+.billing-home .billing-service>p{margin-bottom:0}
+.billing-home .billing-service>.service-link{margin-top:auto;padding-top:16px}
