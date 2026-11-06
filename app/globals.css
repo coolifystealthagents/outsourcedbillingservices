@@ -180,3 +180,12 @@ body:has(.billing-home) .nav .stealth-attribution{color:#8e9cb6}body:has(.billin
  .billing-home .workflow-strip .workflow-title { grid-column:1/-1; }
  .billing-home .workflow-strip>div { min-width:0; }
 }
+
+/* Compact policy reading layouts following full-page production review. */
+.legal-hero{padding:32px 0 28px}
+.legal-card{margin:28px auto 32px;border-radius:8px;box-shadow:none}
+.legal-card h2{margin-top:24px}
+.legal-card p:last-child{margin-bottom:0}
+.legal-card a{text-decoration:underline;text-underline-offset:3px}
+.legal-page+.legit-footer{margin-top:0;padding-top:36px}
+@media(max-width:600px){.legal-hero{padding:26px 0}.legal-hero .lead{font-size:18px}.legal-card{padding:22px 20px;margin:24px auto}.legal-page+.legit-footer{padding-top:26px}}
