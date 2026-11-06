@@ -100,3 +100,5 @@ main .field-frame{min-height:0;max-height:none;background:transparent}
 .billing-home .workflow-strip>div{min-height:0;padding:12px 14px}
 .billing-home .gi-proof{margin-block:28px;padding:24px}
 @media(max-width:780px){.billing-home .workflow-strip{gap:0}.billing-home .workflow-strip>div:last-child:nth-child(even){grid-column:1/-1}.billing-home .workflow-strip>div{min-height:44px}.billing-home .gi-proof{padding:18px;margin-block:24px}}
+
+.service-detail .service-hero .eyebrow,.service-detail .service-workflow-section .eyebrow{color:#a7e4d0!important}.service-detail .service-hero-note{color:#dce6f0!important}.service-detail .btn.primary,.billing-directory .btn.primary{background:#e9b56c!important;color:#14283a!important;box-shadow:none!important}
