@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       <section className="container gi-proof" aria-label="Billing workflow checks">
-        <img className="gi-proof-art field-photo" src="/design-photography/4308014.webp" alt="focused male accountant doing paperwork" width={1440} height={960} loading="lazy" />
+        <img className="gi-proof-art field-photo" src="/design-photography/12903274.webp" alt="Two colleagues reviewing a document folder together" width={1440} height={960} loading="lazy" />
         <div><p className="billing-kicker dark"><span/>A reviewable queue</p><h2>Keep every billing checkpoint visible.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/3d-finance-icons-png/invoice-prep.webp" alt="Invoice preparation step" width="42" height="42"/>Invoice prep</span><span><img src="/icons/getillustrations/3d-finance-icons-png/payment-followup.webp" alt="Payment follow-up step" width="42" height="42"/>Payment follow-up</span><span><img src="/icons/getillustrations/3d-finance-icons-png/weekly-review.webp" alt="Weekly billing review" width="42" height="42"/>Weekly review</span></div></div>
       </section>
 
