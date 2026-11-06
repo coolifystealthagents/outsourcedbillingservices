@@ -158,3 +158,6 @@ body:has(.service-detail) .legit-footer,body:has(.billing-directory) .legit-foot
 
 .brief-columns>.brief-launch-note{grid-column:1/-1;margin-top:0}.brief-columns:has(>.brief-launch-note){row-gap:20px}
 @media(max-width:760px){.service-detail .service-hero .lead{font-size:18px;line-height:1.55;margin-bottom:20px}.service-detail .service-hero{padding-block:24px}.service-detail .service-hero-grid{gap:24px}.brief-examples{gap:18px}.brief-examples p{margin-bottom:0}.service-detail .final-cta{padding:24px;margin-block:24px}}
+
+/* Let launch steps follow their copy rather than a fixed empty height. */
+.billing-home .process-grid>article{min-height:0;height:auto}
