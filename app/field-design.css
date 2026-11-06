@@ -102,3 +102,5 @@ main .field-frame{min-height:0;max-height:none;background:transparent}
 @media(max-width:780px){.billing-home .workflow-strip{gap:0}.billing-home .workflow-strip>div:last-child:nth-child(even){grid-column:1/-1}.billing-home .workflow-strip>div{min-height:44px}.billing-home .gi-proof{padding:18px;margin-block:24px}}
 
 .service-detail .service-hero .eyebrow,.service-detail .service-workflow-section .eyebrow{color:#a7e4d0!important}.service-detail .service-hero-note{color:#dce6f0!important}.service-detail .btn.primary,.billing-directory .btn.primary{background:#e9b56c!important;color:#14283a!important;box-shadow:none!important}
+
+.billing-home .billing-hero{padding-top:24px}.billing-home .billing-copy{padding:12px 0 24px}.billing-home .billing-hero-grid{padding-block:24px!important}.billing-home .billing-service{min-height:0;padding:24px;border-radius:8px}.billing-home .service-top{margin-bottom:20px}.billing-home .service-link{padding-top:18px}.billing-home .billing-section-head{margin-bottom:28px}
