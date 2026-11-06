@@ -171,3 +171,7 @@ body:has(.service-detail) .legit-footer,body:has(.billing-directory) .legit-foot
 /* Directory cards must not inherit article offers or oversized opening spacing. */
 main.section:has(.pagination){padding-block:32px}main.section:has(.pagination) .article-card{border-radius:8px}main.section:has(.pagination)+.legit-footer{margin-top:0;padding-top:36px}
 @media(max-width:760px){main.section:has(.pagination){padding-block:24px}}
+
+/* Keep the reading column beside its contents rail rather than a vacant grid track. */
+.editorial-page .editorial-layout{grid-template-columns:minmax(0,72ch) 260px;justify-content:center;gap:32px;padding-top:28px}.editorial-page .editorial-section{padding-bottom:24px}.editorial-page .editorial-section h2,.editorial-page .editorial-section h3{margin-top:24px}.editorial-page .editorial-section:first-child h2{margin-top:0}.editorial-page .editorial-hero{padding-bottom:28px}
+@media(max-width:860px){.editorial-page .editorial-layout{display:block;padding-top:24px}.editorial-page .editorial-section{padding-bottom:20px}}
