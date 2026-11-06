@@ -36,3 +36,38 @@
  .trusted-contact .sa-testimonials-contact .sa-testimonial-viewport { height:auto; overflow:visible; mask-image:none; -webkit-mask-image:none; }
  .trusted-contact .sa-testimonials-contact .sa-testimonial-card { width:100%; height:auto; min-height:0; }
 }
+
+/* Keep supporting contact information compact and aligned with the form. */
+.trusted-contact .tc-section,
+.trusted-contact .tc-about,
+.trusted-contact .tc-testimonials,
+.trusted-contact .tc-why { padding:36px 0; }
+.trusted-contact .tc-section-head { gap:32px; margin-bottom:22px; align-items:start; }
+.trusted-contact .tc-section-head h2,
+.trusted-contact .tc-check-grid h2,
+.trusted-contact .tc-testimonials h2,
+.trusted-contact .tc-why h2,
+.trusted-contact .tc-about h2,
+.trusted-contact .tc-final h2 { font-size:clamp(28px,3.2vw,42px); line-height:1.12; letter-spacing:-.035em; }
+.trusted-contact .tc-section-head>p { margin:0; }
+.trusted-contact .tc-check-grid h2 { margin-bottom:16px; }
+.trusted-contact .tc-card-grid article { padding:22px; border-radius:8px; box-shadow:none; }
+.trusted-contact .tc-card-grid h3 { margin:0 0 12px; }
+.trusted-contact .tc-card-grid p:last-child { margin-bottom:0; }
+.trusted-contact .tc-about-grid,
+.trusted-contact .tc-check-grid,
+.trusted-contact .tc-why-grid { gap:32px; }
+.trusted-contact .tc-about-image { border-radius:8px; box-shadow:none; border:1px solid #c6d4e1; }
+.trusted-contact .tc-quote-grid { margin-top:22px; }
+.trusted-contact .tc-quote-grid article { padding:22px; border-radius:8px; }
+.trusted-contact .tc-final { margin-top:32px; margin-bottom:32px; padding:32px; border-radius:8px; }
+@media(max-width:620px) {
+ .trusted-contact .tc-section,
+ .trusted-contact .tc-about,
+ .trusted-contact .tc-testimonials,
+ .trusted-contact .tc-why { padding:26px 0; }
+ .trusted-contact .tc-about-grid,
+ .trusted-contact .tc-check-grid,
+ .trusted-contact .tc-why-grid { gap:24px; }
+ .trusted-contact .tc-final { margin-top:24px; margin-bottom:24px; padding:24px; }
+}
