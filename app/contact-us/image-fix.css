@@ -71,3 +71,6 @@
  .trusted-contact .tc-why-grid { gap:24px; }
  .trusted-contact .tc-final { margin-top:24px; margin-bottom:24px; padding:24px; }
 }
+
+.trusted-contact + .legit-footer{margin-top:0;padding-top:36px}.trusted-contact .tc-final{margin-bottom:32px}
+@media(max-width:620px){.trusted-contact + .legit-footer{padding-top:26px}.trusted-contact .tc-final{margin-bottom:24px}}
