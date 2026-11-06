@@ -97,3 +97,6 @@ main .field-frame{min-height:0;max-height:none;background:transparent}
 
 .billing-directory .directory-faq .cards{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:760px){.billing-directory .directory-faq .cards{grid-template-columns:1fr}}
+.billing-home .workflow-strip>div{min-height:0;padding:12px 14px}
+.billing-home .gi-proof{margin-block:28px;padding:24px}
+@media(max-width:780px){.billing-home .workflow-strip{gap:0}.billing-home .workflow-strip>div:last-child:nth-child(even){grid-column:1/-1}.billing-home .workflow-strip>div{min-height:44px}.billing-home .gi-proof{padding:18px;margin-block:24px}}
