@@ -164,3 +164,6 @@ body:has(.service-detail) .legit-footer,body:has(.billing-directory) .legit-foot
 /* Keep card actions aligned without stacked paragraph/link spacing. */
 .billing-home .billing-service>p{margin-bottom:0}
 .billing-home .billing-service>.service-link{margin-top:auto;padding-top:16px}
+
+/* Keep stacked homepage groups compact without fixed-height spacers. */
+@media(max-width:780px){.billing-home .billing-lead{margin-bottom:20px}.billing-home .control-line{margin-top:20px}.billing-home .control-room-grid{gap:24px}.billing-home .control-copy>p{margin:18px 0 24px}.billing-home .fit-intro{padding:0}.billing-home .fit-intro>p:last-child{margin-bottom:0}}
