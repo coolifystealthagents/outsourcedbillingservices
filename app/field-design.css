@@ -146,3 +146,6 @@ main .field-frame{min-height:0;max-height:none;background:transparent}
 /* Live visual review: keep the portrait face and remove the stacked footer spacer. */
 .service-detail .service-hero-image[src="/design-photography/7682353.webp"]{object-position:center 25%}
 body:has(.service-detail) .legit-footer,body:has(.billing-directory) .legit-footer{margin-top:0}
+
+/* Section headings carry the hierarchy without decorative numbering. */
+.brief-steps>li{display:block!important}.brief-steps>li>h3,.brief-steps>li>p{grid-column:auto!important}.service-brief-card>header{display:block}.service-number{display:none}
