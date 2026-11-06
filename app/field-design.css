@@ -47,3 +47,50 @@ main .field-frame{min-height:0;max-height:none;background:transparent}
 .sa-booking-calendar .sa-oncehub-frame { height: clamp(32rem, 76svh, 47.5rem); }
 .editorial-page { padding-block-end: clamp(1.25rem, 2.5vw, 2.25rem); }
 .editorial-page + .legit-footer { margin-block-start: 0; }
+
+/* Commercial pages: content-sized spacing and explicit layouts, November 6. */
+.billing-home .billing-section,.billing-home .fit-section,.billing-home .control-room{padding-block:clamp(28px,3.8vw,52px)}
+.billing-home .field-story{margin-block:24px;padding-block:24px}
+.billing-home .billing-final{margin-block:32px;padding:clamp(24px,4vw,48px)}
+.billing-directory .architecture-hero{padding-block:32px;background:#edf2ed;border-bottom:1px solid #ced9d2}
+.billing-directory h1{font-size:clamp(34px,4vw,58px);line-height:1.06;letter-spacing:-.035em;max-width:20ch;margin-bottom:18px}
+.billing-directory .lead{font-size:18px;line-height:1.6;margin-bottom:0}
+.billing-directory .field-photo{aspect-ratio:3/2;max-height:350px;object-fit:cover}
+.billing-directory .section,.service-detail .section{padding-block:clamp(28px,3.6vw,48px)}
+.billing-directory .section+.section{border-top:1px solid #dfd8cd}
+.directory-heading{max-width:760px;margin-bottom:24px}
+.directory-heading h2,.billing-directory .section h2{font-size:clamp(26px,2.8vw,38px);line-height:1.15;letter-spacing:-.025em}
+.billing-directory p{line-height:1.6}
+.billing-directory .service-directory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.billing-directory .service-directory>.card{display:flex;flex-direction:column;gap:14px;padding:24px;background:#fffdf9;border:1px solid #d8d6cb;border-top:3px solid #26755f;border-radius:6px}
+.billing-directory .service-directory h2{font-size:22px;margin:0;line-height:1.2}
+.billing-directory .service-directory p{font-size:15px;margin:0;color:#415667}
+.directory-output{padding-top:14px;border-top:1px solid #e0dfd6;display:grid;gap:5px;font-size:14px}
+.directory-output b{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#45675c}
+.directory-link{margin-top:auto;padding-top:6px;font-weight:750;font-size:14px;color:#165641}
+.billing-directory .card:hover{border-color:#26755f}
+.billing-directory a:focus-visible{outline:3px solid #155943;outline-offset:4px}
+.billing-directory .cards,.service-detail .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.billing-directory .muted .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.billing-directory .cards .card,.service-detail .cards .card{padding:20px;border:1px solid #d9ddd6;background:#fffdf9;border-radius:6px}
+.billing-directory .cards h3{font-size:20px;margin-bottom:10px}
+.billing-directory .cards p{margin-bottom:0}
+.billing-directory .two,.service-detail .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+.billing-directory .support-strip{padding:24px;background:#edf2ed;border:1px solid #ced9d2}
+.billing-directory .support-strip h2{font-size:22px}
+.billing-directory .support-strip li{line-height:1.6;margin-block:6px}
+.billing-directory .final-cta,.service-detail .final-cta{margin-block:32px;padding:clamp(24px,4vw,48px)}
+.service-detail .service-hero{padding-block:32px}
+.service-detail .service-hero-grid{gap:32px}
+.service-detail .service-hero h1{font-size:clamp(38px,4.6vw,64px);line-height:1.05}
+.service-detail .service-hero-figure{padding:0;border:0;border-radius:8px;overflow:hidden;background:transparent}
+.service-detail .service-hero-image{object-fit:cover;height:auto;aspect-ratio:3/2;max-height:360px;border-radius:8px}
+.service-detail .service-hero-figure figcaption{padding-top:10px}
+.service-detail .service-reading-grid{gap:32px}
+.service-detail .section h2{font-size:clamp(27px,3vw,38px);line-height:1.13}
+.service-detail .service-workflow h3{margin-top:18px}
+.service-detail .service-workflow article{padding:20px}
+.service-detail .service-panel,.service-detail .service-check-list{box-shadow:none;border-radius:8px}
+.service-detail .service-panel{padding:24px}
+@media(max-width:900px){.billing-directory .service-directory{grid-template-columns:repeat(2,minmax(0,1fr))}.billing-directory .cards,.service-detail .cards{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.billing-directory .service-directory,.billing-directory .cards,.billing-directory .muted .cards,.billing-directory .two,.service-detail .two,.service-detail .cards{grid-template-columns:1fr;gap:16px}.billing-directory .architecture-hero{padding-block:24px}.billing-directory .service-directory>.card{padding:20px}.billing-directory .field-photo{max-height:230px}.service-detail .service-hero{padding-block:24px}.service-detail .service-hero-image{height:auto;max-height:250px}.service-detail .service-reading-grid{gap:20px}}
