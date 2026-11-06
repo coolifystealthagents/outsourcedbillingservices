@@ -155,3 +155,6 @@ body:has(.service-detail) .legit-footer,body:has(.billing-directory) .legit-foot
 @media(max-width:760px){.billing-home .billing-hero-grid{padding-block:24px;gap:20px}.billing-home .billing-guides{grid-template-columns:1fr;gap:0}.billing-home .billing-service h3{font-size:22px}.billing-home .billing-section,.billing-home .fit-section,.billing-home .control-room{padding-block:24px}}
 
 .billing-directory>.section{padding-block:32px}.billing-directory>.final-cta{padding:28px;margin-block:24px;max-width:1160px;width:calc(100% - 40px);box-sizing:border-box}.billing-directory>.final-cta h2{font-size:clamp(29px,3vw,40px);line-height:1.15}.billing-directory .billing-group{padding-block:22px}.billing-directory .directory-heading{margin-bottom:22px}@media(max-width:760px){.billing-directory>.section{padding-block:24px}.billing-directory>.final-cta{padding:22px;width:calc(100% - 28px)}}
+
+.brief-columns>.brief-launch-note{grid-column:1/-1;margin-top:0}.brief-columns:has(>.brief-launch-note){row-gap:20px}
+@media(max-width:760px){.service-detail .service-hero .lead{font-size:18px;line-height:1.55;margin-bottom:20px}.service-detail .service-hero{padding-block:24px}.service-detail .service-hero-grid{gap:24px}.brief-examples{gap:18px}.brief-examples p{margin-bottom:0}.service-detail .final-cta{padding:24px;margin-block:24px}}
