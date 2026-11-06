@@ -1,6 +1,6 @@
 /** @type {import("next").NextConfig} */
 const securityHeaders = [
-  { key: "Content-Security-Policy", value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://acrtracking.stealthagents.us https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://acrtracking.stealthagents.us https://cloudflareinsights.com; font-src 'self' data:; frame-src https://go.oncehub.com https://*.oncehub.com; object-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'" },
+  { key: "Content-Security-Policy", value: "default-src 'self';  https://databull.stealthagents.us 'self' 'unsafe-inline' https://acrtracking.stealthagents.us https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;  https://databull.stealthagents.us 'self' https://acrtracking.stealthagents.us https://cloudflareinsights.com; font-src 'self' data:; frame-src https://go.oncehub.com https://*.oncehub.com; object-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'" },
   { key: "Strict-Transport-Security", value: "max-age=31536000" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "X-Content-Type-Options", value: "nosniff" },
