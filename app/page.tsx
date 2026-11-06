@@ -86,7 +86,7 @@ export default function Home() {
           {['Received', 'Prepared', 'Reviewed', 'Sent', 'Follow-up'].map((item, i) => <div key={item}><i>{i + 1}</i><b>{item}</b></div>)}
         </div>
       </section>
-<section className="field-story" aria-labelledby="field-story-title"><img src="/design-photography/7654591.webp" alt="Hands checking paper records with a calculator" width={1200} height={800} loading="lazy"/><div><h2 id="field-story-title">When a payment has no invoice number</h2><p className="field-intro">A deposit arrives with the customer name but no reference. The billing desk can narrow the match without guessing which invoice to close.</p><p>Compare the remittance advice with open balances and prior partial payments.</p><p>Return the candidate matches with their dates and amounts. Leave the balance unapplied until finance approves the match.</p><a href="/services/payment-posting">Explore payment posting <span aria-hidden="true">→</span></a></div></section>
+
 
 
       <section className="container billing-section" id="tasks">
@@ -104,6 +104,7 @@ export default function Home() {
         </div>
       </section>
 
+<section className="field-story" aria-labelledby="field-story-title"><img src="/design-photography/7654591.webp" alt="Hands checking paper records with a calculator" width={1200} height={800} loading="lazy"/><div><h2 id="field-story-title">When a payment has no invoice number</h2><p className="field-intro">A deposit arrives with the customer name but no reference. The billing desk can narrow the match without guessing which invoice to close.</p><p>Compare the remittance advice with open balances and prior partial payments.</p><p>Return the candidate matches with their dates and amounts. Leave the balance unapplied until finance approves the match.</p><a href="/services/payment-posting">Explore payment posting <span aria-hidden="true">→</span></a></div></section>
       <section className="control-room">
         <div className="container control-room-grid">
           <div className="billing-exception-example" aria-labelledby="exception-example-title">
