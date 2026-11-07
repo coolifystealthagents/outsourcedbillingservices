@@ -161,6 +161,16 @@ body:has(.billing-home) .nav .stealth-attribution{color:#8e9cb6}body:has(.billin
 .editorial-layout{grid-template-columns:minmax(0,1fr) 260px;gap:32px}
 .editorial-toc a{font-size:14px;line-height:1.45}
 .editorial-mobile-toc .editorial-toc a{font-size:14px}
+.editorial-mobile-toc-panel{display:none}
+@media(max-width:860px){
+ .editorial-mobile-toc{display:block;position:sticky;top:124px;z-index:25;width:100%;max-width:72ch;margin:0 auto 14px;padding:0;border:1px solid #ccd7e6;border-radius:12px;background:#fff;box-shadow:0 10px 24px rgba(24,54,107,.08)}
+ .editorial-mobile-toc>summary{padding:14px 18px;font-weight:850;color:#0a1630;cursor:pointer}
+ .editorial-mobile-toc>summary:focus-visible{outline:3px solid #1e63ff;outline-offset:3px;border-radius:10px}
+ .editorial-article:has(.editorial-mobile-toc[open]) .editorial-mobile-toc-panel{display:block;margin:0 auto 18px;max-width:72ch;padding:10px 18px 16px;border:1px solid #ccd7e6;border-radius:14px;background:#fff}
+ .editorial-mobile-toc-panel .editorial-toc{max-height:min(60vh,420px);overflow-y:auto;overscroll-behavior:contain}
+ .editorial-mobile-toc-panel .editorial-toc h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+}
+@media(max-width:620px){.editorial-mobile-toc{top:134px}}
 
 /* Replaces the low-contrast dashboard seen in production screenshots. */
 .billing-exception-example { padding:clamp(1.4rem,3vw,2.4rem); border-radius:1.25rem; background:#f1f7ff; color:#17304d; }

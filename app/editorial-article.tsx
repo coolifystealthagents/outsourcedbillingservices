@@ -57,8 +57,10 @@ export function EditorialArticle({ kind, title, description, published, updated,
 
       <details className="editorial-mobile-toc">
         <summary>On this page</summary>
-        <ActiveArticleToc headings={toc} label="Article contents" />
       </details>
+      <div className="editorial-mobile-toc-panel">
+        <ActiveArticleToc headings={toc} label="Article contents" />
+      </div>
 
       <div className="editorial-layout">
         <div className="editorial-prose">
