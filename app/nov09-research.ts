@@ -2,7 +2,7 @@
 export const nov09ResearchBatch = [
  {
   "slug": "how-first-pass-claim-acceptance-rates-mislead-capacity-planning",
-  "title": "How first-pass claim acceptance rates mislead billing capacity planning",
+  "title": "How first-pass claim acceptance rates mislead capacity planning",
   "excerpt": "An analysis of what first-pass acceptance measures, which work it hides, and how billing teams can pair it with rework data for capacity decisions.",
   "body": [
    "## Question and scope",
