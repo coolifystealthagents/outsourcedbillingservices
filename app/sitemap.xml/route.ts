@@ -28,6 +28,7 @@ import { nov04BlogSlugs } from "../nov04-blog";
 import { nov05BlogSlugs } from "../nov05-blog";
 import { nov06BlogSlugs } from "../nov06-blog";
 import { nov07BlogSlugs } from "../nov07-blog";
+import { nov10BlogSlugs } from "../nov10-blog";
 import { nov09BlogSlugs } from "../nov09-blog";
 import { nov08BlogSlugs } from "../nov08-blog";
 import { nov03BlogSlugs } from "../nov03-blog";
@@ -60,7 +61,7 @@ export function GET() {
         oct5BlogSlugs.length +
         oct8BlogSlugs.length +
         oct12BlogSlugs.length +
-        oct13BlogSlugs.length + oct22BlogSlugs.length + oct25BlogSlugs.length + oct26BlogSlugs.length + oct27BlogSlugs.length + nov07BlogSlugs.length + nov08BlogSlugs.length + nov09BlogSlugs.length) /
+        oct13BlogSlugs.length + oct22BlogSlugs.length + oct25BlogSlugs.length + oct26BlogSlugs.length + oct27BlogSlugs.length + nov07BlogSlugs.length + nov08BlogSlugs.length + nov09BlogSlugs.length + nov10BlogSlugs.length) /
         20,
     ),
   );
@@ -92,6 +93,7 @@ export function GET() {
   const nov02Paths = nov02BlogSlugs.map((slug) => `/blog/${slug}`);
   const nov06Paths = nov06BlogSlugs.map((slug) => `/blog/${slug}`);
   const nov07Paths = nov07BlogSlugs.map((slug) => `/blog/${slug}`);
+  const nov10Paths = nov10BlogSlugs.map((slug) => `/blog/${slug}`);
   const nov09Paths = nov09BlogSlugs.map((slug) => `/blog/${slug}`);
   const nov08Paths = nov08BlogSlugs.map((slug) => `/blog/${slug}`);
   const nov05Paths = nov05BlogSlugs.map((slug) => `/blog/${slug}`);
@@ -137,7 +139,7 @@ export function GET() {
     ...oct5Paths,
     ...oct8Paths,
     ...oct12Paths,
-    ...oct22Paths, ...oct13Paths, ...oct25Paths, ...oct26Paths, ...oct28Paths, ...nov02Paths, ...oct27Paths, ...nov05Paths, ...nov06Paths, ...nov07Paths, ...nov08Paths, ...nov09Paths,
+    ...oct22Paths, ...oct13Paths, ...oct25Paths, ...oct26Paths, ...oct28Paths, ...nov02Paths, ...oct27Paths, ...nov05Paths, ...nov06Paths, ...nov07Paths, ...nov08Paths, ...nov09Paths, ...nov10Paths,
   ];
   const oct5ReleasePaths = new Set([
     ...oct5BlogSlugs.map((slug) => `/blog/${slug}`),
