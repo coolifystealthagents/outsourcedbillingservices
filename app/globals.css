@@ -199,3 +199,14 @@ body:has(.billing-home) .nav .stealth-attribution{color:#8e9cb6}body:has(.billin
 .legal-card a{text-decoration:underline;text-underline-offset:3px}
 .legal-page+.legit-footer{margin-top:0;padding-top:36px}
 @media(max-width:600px){.legal-hero{padding:26px 0}.legal-hero .lead{font-size:18px}.legal-card{padding:22px 20px;margin:24px auto}.legal-page+.legit-footer{padding-top:26px}}
+
+/* Shared transparent brand lockup; keep white lettering legible on every route. */
+.brand-logo{display:block;width:280px;max-width:100%;height:auto;object-fit:contain}
+.footer-logo{display:inline-block;max-width:100%}
+.nav{background:#071326;border-color:rgba(255,255,255,.1)}
+.nav-inner{padding-block:10px}
+.nav .links a{color:#b8c3d9}
+.nav .links a:hover{color:#fff}
+.nav .stealth-attribution{color:#aab8d0}
+.nav .stealth-attribution a{color:#dce5f7}
+@media(max-width:620px){.brand-logo{width:250px}}
