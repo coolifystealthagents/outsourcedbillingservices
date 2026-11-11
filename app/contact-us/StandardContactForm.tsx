@@ -53,14 +53,21 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
     setSubmitting(true);
     setError("");
     try {
-      const request = encoding === "form"
-        ? { method: "POST", body: new URLSearchParams(payload) }
-        : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) };
+      const request: RequestInit = encoding === "form"
+        ? { method: "POST", headers: { Accept: "application/json" }, body: new URLSearchParams(payload) }
+        : { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload) };
       const response = await fetch(endpoint, request);
       if (!response.ok) throw new Error("Lead endpoint rejected the request");
-      const tracker = await waitForTracker(() => (window as TrackerWindow).acrTracker);
-      try { tracker?.trackLead?.(payload); } catch {}
-      window.location.assign("/thank-you");
+      const receipt = await response.json();
+      if (receipt?.ok !== true) throw new Error("Lead acceptance was not confirmed");
+      // Analytics cannot turn an accepted submission into an error or invite a duplicate retry.
+      try {
+        const tracker = await waitForTracker(() => (window as TrackerWindow).acrTracker);
+        tracker?.trackLead?.(payload);
+      } catch (error) {
+        console.warn("[contact-form] Lead accepted; optional tracking failed", error);
+      }
+      window.location.assign("/thank-you?lead=accepted");
     } catch {
       setError("We could not submit your request. Please try again.");
       setSubmitting(false);
