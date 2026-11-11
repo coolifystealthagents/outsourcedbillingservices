@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendLeadFallbackToMattermost } from '../../lib/lead-fallback-mattermost';
 // The public origin is fixed: request.nextUrl can contain Coolify's internal HTTP origin.
 const PUBLIC_ORIGIN = 'https://outsourcedbillingservices.com';
 function acceptedOrigin(request: NextRequest) {
@@ -70,7 +69,6 @@ export async function POST(request: NextRequest) {
     catch {
         return errorPage(502);
     }
-    void sendLeadFallbackToMattermost({ name, email, phone, business, message, companySize, positions, referral, pageUrl, userAgent: request.headers.get('user-agent') || '' });
     // Fetch callers receive a receipt, not a redirect that fetch must follow.
     if (request.headers.get('accept')?.includes('application/json'))
         return NextResponse.json({ ok: true, redirect: '/thank-you?lead=accepted' }, { headers: { 'cache-control': 'no-store' } });

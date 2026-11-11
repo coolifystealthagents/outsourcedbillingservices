@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
-import { waitForTracker } from "../lib/wait-for-tracker.mjs";
 
 type Props = { endpoint?: string; encoding?: "json" | "form" };
-type TrackerWindow = Window & { acrTracker?: { trackLead?: (payload: Record<string, unknown>) => void } };
 
 const companySizes = ["1-5", "5-10", "11-50", "51-250", "251-1k", "1k+"];
 const positions = ["Just 1 Position", "2-5 Positions", "6-10 Positions", "11-50 Positions", "51-100 Positions", "101-500 Positions", "501-1,000 Positions", "Over 1,000 Positions"];
@@ -60,13 +58,7 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
       if (!response.ok) throw new Error("Lead endpoint rejected the request");
       const receipt = await response.json();
       if (receipt?.ok !== true) throw new Error("Lead acceptance was not confirmed");
-      // Analytics cannot turn an accepted submission into an error or invite a duplicate retry.
-      try {
-        const tracker = await waitForTracker(() => (window as TrackerWindow).acrTracker);
-        tracker?.trackLead?.(payload);
-      } catch (error) {
-        console.warn("[contact-form] Lead accepted; optional tracking failed", error);
-      }
+      // ACR owns automatic lead capture; do not emit a second lead here.
       window.location.assign("/thank-you?lead=accepted");
     } catch {
       setError("We could not submit your request. Please try again.");

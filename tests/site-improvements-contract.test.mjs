@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { waitForTracker } from '../app/lib/wait-for-tracker.mjs';
 
 const page = readFileSync(new URL('../app/page.tsx', import.meta.url), 'utf8');
 const rootLayout = readFileSync(new URL('../app/layout.tsx', import.meta.url), 'utf8');
@@ -27,7 +26,7 @@ const punctuationSources = [
   '../app/sep28-blog.ts', '../app/aug18-blog.ts', '../app/sep1-content.ts',
   '../app/sep18-research.ts', '../app/aug31-content.ts', '../app/sep7-content.ts',
   '../app/data.ts', '../app/booking-components.tsx', '../app/sep2-content.ts',
-  '../app/contact/page.tsx', '../app/lib/lead-fallback-mattermost.ts',
+  '../app/contact/page.tsx',
   '../app/blog/top-25-billing-back-office-outsourcing-companies/page.tsx',
   '../app/blog/page/[page]/page.tsx',
 ].map((path) => readFileSync(new URL(path, import.meta.url), 'utf8'));
@@ -152,20 +151,10 @@ assert.ok((bookingComponents.match(/name: "/g) || []).length >= 10, 'the review 
 assert.doesNotMatch(bookingComponents, /<button|Pause testimonials|Play testimonials/, 'the automatic review marquee must not expose playback controls');
 assert.match(standardContactForm, /data-acr-managed="react"/, 'React-managed contact form must identify itself to the global ACR submit handler');
 assert.match(acrClient, /form\.dataset\.acrManaged==='react'/, 'global ACR submit handler must skip the React-managed contact form');
-assert.equal((standardContactForm.match(/window\.location\.assign\("\/thank-you"\)/g) || []).length, 1, 'contact form must have exactly one success redirect');
-assert.equal((standardContactForm.match(/tracker\?\.trackLead\?\.\(payload\)/g) || []).length, 1, 'contact form must track an accepted lead exactly once as an object method');
+assert.equal((standardContactForm.match(/window\.location\.assign\("\/thank-you\?lead=accepted"\)/g) || []).length, 1, 'contact form must have exactly one success redirect');
+assert.doesNotMatch(standardContactForm + acrClient, /\.trackLead(?:FromForm)?\s*(?:\?\.)?\s*\(/, 'ACR owns lead capture; site handlers must not emit a duplicate lead');
 assert.match(standardContactForm, /\} catch \{\s*setError\("We could not submit your request\. Please try again\."\);\s*setSubmitting\(false\);\s*\}/, 'failed primary lead ingestion must show an error without tracking or redirecting as success');
-assert.ok(standardContactForm.indexOf('if (!response.ok)') < standardContactForm.indexOf('await waitForTracker') && standardContactForm.indexOf('await waitForTracker') < standardContactForm.indexOf('window.location.assign("/thank-you")'), 'ingestion acceptance, tracker readiness, and success navigation must remain ordered');
-let elapsed = 0;
-const delayedTracker = { trackCalls: 0, trackLead() { this.trackCalls += 1; } };
-const resolvedTracker = await waitForTracker(() => elapsed >= 100 ? delayedTracker : undefined, async (delay) => { elapsed += delay; });
-resolvedTracker?.trackLead();
-assert.equal(elapsed, 100, 'tracker readiness must be detected without waiting the full bound');
-assert.equal(delayedTracker.trackCalls, 1, 'a delayed tracker must be invoked exactly once with its method receiver preserved');
-let absentElapsed = 0;
-const absentTracker = await waitForTracker(() => undefined, async (delay) => { absentElapsed += delay; });
-assert.equal(absentElapsed, 2000, 'an absent tracker must stop waiting at the 2,000 ms bound');
-assert.equal(absentTracker, undefined, 'an absent tracker must remain optional after the bounded wait');
+assert.ok(standardContactForm.indexOf('if (receipt?.ok !== true)') < standardContactForm.indexOf('window.location.assign'), 'server acceptance must precede the success redirect');
 assert.match(globalCss, /@keyframes sa-testimonial-marquee\{from\{transform:translateX\(0\)\}to\{transform:translateX\(calc\(-50% - \.5rem\)\)\}\}/, 'Contact Us reviews must move continuously sideways through one complete unique review set');
 assert.doesNotMatch(`${globalCss}\n${contactCss}`, /@keyframes sa-testimonial-(?:scroll|marquee)[^}]*translateY/s, 'Contact Us reviews must not use vertical motion');
 assert.match(globalCss, /@media\(prefers-reduced-motion:reduce\)/, 'stylesheet must define a reduced-motion mode');

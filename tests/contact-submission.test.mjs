@@ -23,7 +23,7 @@ function request({origin=PUBLIC,accept='application/json',payload='name=Regressi
 // Reproduce the old deployment's pre-validation rejection behind an HTTP proxy.
 const oldFile=process.env.CONTACT_BASELINE;
 if(oldFile){const old=loadRoute(new URL('file://'+oldFile));assert.equal((await old.POST(request())).status,400);assert.equal(sends,0);console.log('Baseline reproduced: valid public-origin request rejected before delivery.');}
-let route=loadRoute();let response=await route.POST(request());assert.equal(response.status,200);assert.deepEqual(await response.json(),{ok:true,redirect:'/thank-you?lead=accepted'});assert.equal(response.headers.get('location'),null);assert.equal(sends,1);assert.equal(fallbacks,1);
+let route=loadRoute();let response=await route.POST(request());assert.equal(response.status,200);assert.deepEqual(await response.json(),{ok:true,redirect:'/thank-you?lead=accepted'});assert.equal(response.headers.get('location'),null);assert.equal(sends,1);assert.equal(fallbacks,0);
 console.log('PASS: proxy-origin submission returns JSON acceptance without following a redirect.');
 route=loadRoute();response=await route.POST(request({accept:'text/html'}));assert.equal(response.status,303);assert.equal(response.headers.get('location'),PUBLIC+'/thank-you?lead=accepted');console.log('PASS: native form redirects to canonical HTTPS, never an internal container.');
 for(const origin of ['https://attacker.example','null',PUBLIC+'.attacker.example']){const before=sends;response=await route.POST(request({origin}));assert.equal(response.status,400);assert.equal(sends,before);}
@@ -44,12 +44,21 @@ async function clientCase(mode,trackerMode='ok'){
  const source=load(new URL('../app/contact-us/StandardContactForm.tsx',import.meta.url),{
  'react':react,'react/jsx-runtime':{jsx,jsxs:jsx},'../lib/wait-for-tracker.mjs':{waitForTracker:async(get)=>{if(trackerMode==='wait-fails')throw new Error('mock tracker getter failure');return get();}},
  globals:{window:{acrTracker:{trackLead:()=>{tracked++;if(trackerMode==='throws')throw new Error('mock tracking failure');}},location:{assign:u=>navigations.push(u)}},FormData:class {constructor(form){return form.data;}},fetch:async(url,options)=>{calls++;assert.equal(options.headers.Accept,'application/json');if(mode==='network')throw new Error('mock network failure');return Response.json(mode==='bad-receipt'?{ok:false}:{ok:true},{status:mode==='rejected'?502:200});},console:{warn:()=>{}}}});
+ // Replay the actual hosted SDK's capture listener before React's submit handler.
+ let autoCapture, automaticLeads=0;
+ vm.runInNewContext(readFileSync(new URL('./fixtures/acr-auto-submit-0.4.19.js',import.meta.url),'utf8'), {
+   document:{addEventListener:(name,handler)=>{assert.equal(name,'submit');autoCapture=handler;}},
+   _captureFormSnapshot:()=>{}, _scanFormFields:()=>({lead_name:'Regression',lead_email:'regression@example.com',lead_phone:'123',lead_message:'Test'}),
+   sessionStorage:{getItem:()=>null}, track:()=>{}, flush:()=>{},
+   trackLead:()=>{automaticLeads++;}
+ });
+ autoCapture({target:{tagName:'FORM',id:'contactPageForm',action:'/api/contact',method:'post',className:'',elements:[],getAttribute:()=>''}});
  const tree=source.default({endpoint:'/api/contact',encoding:'form'});
  function find(node){if(!node||typeof node!=='object')return;if(node?.type==='form')return node;for(const child of [node?.props?.children].flat(Infinity)){const r=find(child);if(r)return r;}}
  const form=find(tree);const data=new Map([['firstName','Regression'],['lastName','Test'],['email','regression@example.com']]);
  await form.props.onSubmit({preventDefault(){},currentTarget:{data}});
  if(mode==='ok')assert.deepEqual(navigations,['/thank-you?lead=accepted']);else {assert.deepEqual(navigations,[]);assert.ok(states.includes('We could not submit your request. Please try again.'));assert.equal(tracked,0);}
- assert.equal(calls,1);
+ assert.equal(calls,1);assert.equal(tracked,0,'Site submit handler must not duplicate ACR automatic capture');assert.equal(automaticLeads+tracked,1,'One browser submission must emit exactly one ACR lead');
 }
 await clientCase('ok');await clientCase('ok','throws');await clientCase('ok','wait-fails');await clientCase('rejected');await clientCase('bad-receipt');await clientCase('network');
-console.log('PASS: real React handler redirects after acceptance even if tracking fails; rejection, bad receipt, and network failure stay on form.');
+console.log('PASS: hosted ACR capture plus the real React handler emits exactly one lead; accepted submissions redirect and failures stay on form.');

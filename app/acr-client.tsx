@@ -26,19 +26,7 @@ export function AcrClient() {
             const receipt = await response.json();
             if (receipt?.ok !== true)
                 throw new Error('site lead acceptance was not confirmed');
-            const payload: Record<string, string> = {};
-            for (const [key, value] of data.entries())
-                if (typeof value === 'string' && !HONEYPOTS.has(key))
-                    payload[key] = value;
-            const name = payload.name || `${payload.firstName || ''} ${payload.lastName || ''}`.trim();
-            try {
-                for (let i = 0; i < 20 && !window.acrTracker; i++)
-                    await new Promise(r => setTimeout(r, 100));
-                window.acrTracker?.trackLead({ ...payload, name, email: payload.email || '', phone: payload.phone || '', message: payload.message || payload.needs || payload.details || '', source: 'contact-page-intake', formId: form.id || 'contact-form', pageUrl: location.href });
-            }
-            catch (error) {
-                console.warn('[contact-form] Lead accepted; optional tracking failed', error);
-            }
+            // The centrally hosted ACR submit listener already captures this lead.
             location.assign('/thank-you?lead=accepted');
         }
         catch (error) {
