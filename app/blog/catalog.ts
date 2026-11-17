@@ -29,6 +29,7 @@ import { nov05BlogBatch } from "../nov05-blog";
 import { nov06BlogBatch } from "../nov06-blog";
 import { nov07BlogBatch } from "../nov07-blog";
 import { nov10BlogBatch } from "../nov10-blog";
+import { nov17BlogBatch } from "../nov17-blog";
 import { nov16BlogBatch } from "../nov16-blog";
 import { nov11BlogBatch } from "../nov11-blog";
 import { nov09BlogBatch } from "../nov09-blog";
@@ -36,6 +37,7 @@ import { nov08BlogBatch } from "../nov08-blog";
 import { nov03BlogBatch } from "../nov03-blog";
 import { oct27BlogBatch } from "../oct27-blog";
 const daily = [
+    ...nov17BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published, image: p.featuredImage, minutes: p.minutes }] as const),
     ...nov16BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published, image: p.featuredImage, minutes: p.minutes }] as const),
     ...nov11BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published, image: p.featuredImage, minutes: p.minutes }] as const),
     ...nov10BlogBatch.map((p) => [p.slug, { title: p.title, description: p.description, published: p.published, image: p.featuredImage, minutes: p.minutes }] as const),
