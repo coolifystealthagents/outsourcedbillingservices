@@ -38,7 +38,7 @@ export const nov17BlogBatch = [
     ],
     "sourcesList": [
       {
-        "label": "CMS: Medicare Claims Processing Manual",
+        "name": "CMS: Medicare Claims Processing Manual",
         "url": "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
       }
     ]
@@ -80,7 +80,7 @@ export const nov17BlogBatch = [
     ],
     "sourcesList": [
       {
-        "label": "IRS: Recordkeeping for small business",
+        "name": "IRS: Recordkeeping for small business",
         "url": "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping"
       }
     ]
@@ -122,7 +122,7 @@ export const nov17BlogBatch = [
     ],
     "sourcesList": [
       {
-        "label": "NIST Cybersecurity Framework",
+        "name": "NIST Cybersecurity Framework",
         "url": "https://www.nist.gov/cyberframework"
       }
     ]
@@ -164,7 +164,7 @@ export const nov17BlogBatch = [
     ],
     "sourcesList": [
       {
-        "label": "CMS: National Correct Coding Initiative",
+        "name": "CMS: National Correct Coding Initiative",
         "url": "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
       }
     ]
@@ -206,7 +206,7 @@ export const nov17BlogBatch = [
     ],
     "sourcesList": [
       {
-        "label": "GAO Green Book",
+        "name": "GAO Green Book",
         "url": "https://www.gao.gov/products/gao-14-704g"
       }
     ]
@@ -248,7 +248,7 @@ export const nov17BlogBatch = [
     ],
     "sourcesList": [
       {
-        "label": "CMS: Medicare Claims Processing Manual",
+        "name": "CMS: Medicare Claims Processing Manual",
         "url": "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
       }
     ]
@@ -290,7 +290,7 @@ export const nov17BlogBatch = [
     ],
     "sourcesList": [
       {
-        "label": "CMS: Medicare Claims Processing Manual",
+        "name": "CMS: Medicare Claims Processing Manual",
         "url": "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
       }
     ]
@@ -332,7 +332,7 @@ export const nov17BlogBatch = [
     ],
     "sourcesList": [
       {
-        "label": "NIST Cybersecurity Framework",
+        "name": "NIST Cybersecurity Framework",
         "url": "https://www.nist.gov/cyberframework"
       }
     ]
