@@ -4,6 +4,8 @@ export const nov17ResearchBatch = [
   {
     "slug": "how-often-do-denial-notes-name-the-payer-contact-and-owner",
     "title": "How often do denial notes name the payer contact and owner?",
+    "date": "2026-11-17",
+    "published": "2026-11-17",
     "excerpt": "A measurement review of denial contact coverage in billing operations, with a defined population, dated evidence, and stated limits.",
     "body": [
       "## Question and decision scope",
@@ -35,6 +37,8 @@ export const nov17ResearchBatch = [
   {
     "slug": "are-patient-balance-transfers-reviewed-before-statements",
     "title": "Are patient balance transfers reviewed before statements?",
+    "date": "2026-11-17",
+    "published": "2026-11-17",
     "excerpt": "A measurement review of balance transfer review coverage in billing operations, with a defined population, dated evidence, and stated limits.",
     "body": [
       "## Question and decision scope",
@@ -66,6 +70,8 @@ export const nov17ResearchBatch = [
   {
     "slug": "can-payer-portal-access-changes-be-traced-to-an-approval",
     "title": "Can payer portal access changes be traced to an approval?",
+    "date": "2026-11-17",
+    "published": "2026-11-17",
     "excerpt": "A measurement review of portal access traceability in billing operations, with a defined population, dated evidence, and stated limits.",
     "body": [
       "## Question and decision scope",
@@ -97,6 +103,8 @@ export const nov17ResearchBatch = [
   {
     "slug": "how-often-do-modifier-edits-catch-a-claim-error-before-submission",
     "title": "How often do modifier edits catch a claim error before submission?",
+    "date": "2026-11-17",
+    "published": "2026-11-17",
     "excerpt": "A measurement review of modifier edit effectiveness in billing operations, with a defined population, dated evidence, and stated limits.",
     "body": [
       "## Question and decision scope",
@@ -128,6 +136,8 @@ export const nov17ResearchBatch = [
   {
     "slug": "do-write-offs-carry-a-named-approver-before-posting",
     "title": "Do write-offs carry a named approver before posting?",
+    "date": "2026-11-17",
+    "published": "2026-11-17",
     "excerpt": "A measurement review of write-off approval coverage in billing operations, with a defined population, dated evidence, and stated limits.",
     "body": [
       "## Question and decision scope",
@@ -159,6 +169,8 @@ export const nov17ResearchBatch = [
   {
     "slug": "are-clearinghouse-rejections-resolved-before-the-resubmission-deadline",
     "title": "Are clearinghouse rejections resolved before the resubmission deadline?",
+    "date": "2026-11-17",
+    "published": "2026-11-17",
     "excerpt": "A measurement review of rejection resolution timeliness in billing operations, with a defined population, dated evidence, and stated limits.",
     "body": [
       "## Question and decision scope",
@@ -190,6 +202,8 @@ export const nov17ResearchBatch = [
   {
     "slug": "how-often-do-payer-credentialing-expiries-interrupt-claim-batches",
     "title": "How often do payer credentialing expiries interrupt claim batches?",
+    "date": "2026-11-17",
+    "published": "2026-11-17",
     "excerpt": "A measurement review of credentialing currency in billing operations, with a defined population, dated evidence, and stated limits.",
     "body": [
       "## Question and decision scope",
