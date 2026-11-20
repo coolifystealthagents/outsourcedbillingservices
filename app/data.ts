@@ -40,6 +40,7 @@ import { nov06ResearchBatch } from './nov06-research';
 import { nov07ResearchBatch } from './nov07-research';
 import { nov10ResearchBatch } from './nov10-research';
 import { nov19ResearchBatch } from './nov19-research';
+import { nov20ResearchBatch } from './nov20-research';
 import { nov18ResearchBatch } from './nov18-research';
 import { nov17ResearchBatch } from './nov17-research';
 import { nov16ResearchBatch } from './nov16-research';

@@ -32,6 +32,7 @@ import { nov06BlogBatch, nov06BlogSlugs } from '../../nov06-blog';
 import { nov07BlogBatch, nov07BlogSlugs } from '../../nov07-blog';
 import { nov10BlogBatch, nov10BlogSlugs } from '../../nov10-blog';
 import { nov19BlogBatch, nov19BlogSlugs } from '../../nov19-blog';
+import { nov20BlogBatch, nov20BlogSlugs } from '../../nov20-blog';
 import { nov18BlogBatch, nov18BlogSlugs } from '../../nov18-blog';
 import { nov17BlogBatch, nov17BlogSlugs } from '../../nov17-blog';
 import { nov16BlogBatch, nov16BlogSlugs } from '../../nov16-blog';
@@ -72,6 +73,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (nov06) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov06.slug}`; return { title: seoTitle(nov06.title), description: seoDescription(nov06.description), alternates: { canonical }, openGraph: { title: seoTitle(nov06.title), description: seoDescription(nov06.description), type: 'article', url: canonical, images: [nov06.featuredImage], publishedTime: nov06.published } }; }
   const nov19 = nov19BlogBatch.find((item) => item.slug === slug);
   if (nov19) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov19.slug}`; return { title: seoTitle(nov19.title), description: seoDescription(nov19.description), alternates: { canonical }, openGraph: { title: seoTitle(nov19.title), description: seoDescription(nov19.description), type: 'article', url: canonical, images: [nov19.featuredImage], publishedTime: nov19.published } }; }
+  const nov20 = nov20BlogBatch.find((item) => item.slug === slug);
+  if (nov20) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov20.slug}`; return { title: seoTitle(nov20.title), description: seoDescription(nov20.description), alternates: { canonical }, openGraph: { title: seoTitle(nov20.title), description: seoDescription(nov20.description), type: 'article', url: canonical, images: [nov20.featuredImage], publishedTime: nov20.published } }; }
   const nov18 = nov18BlogBatch.find((item) => item.slug === slug);
   if (nov18) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov18.slug}`; return { title: seoTitle(nov18.title), description: seoDescription(nov18.description), alternates: { canonical }, openGraph: { title: seoTitle(nov18.title), description: seoDescription(nov18.description), type: 'article', url: canonical, images: [nov18.featuredImage], publishedTime: nov18.published } }; }
   const nov17 = nov17BlogBatch.find((item) => item.slug === slug);
@@ -740,6 +743,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   if (nov06) return <Nov06Article article={nov06} />;
   const nov19 = nov19BlogBatch.find((item) => item.slug === slug);
   if (nov19) return <Nov11Article article={nov19} />;
+  const nov20 = nov20BlogBatch.find((item) => item.slug === slug);
+  if (nov20) return <Nov11Article article={nov20} />;
   const nov18 = nov18BlogBatch.find((item) => item.slug === slug);
   if (nov18) return <Nov11Article article={nov18} />;
   const nov17 = nov17BlogBatch.find((item) => item.slug === slug);
