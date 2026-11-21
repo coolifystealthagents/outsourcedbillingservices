@@ -32,6 +32,7 @@ import { nov06BlogBatch, nov06BlogSlugs } from '../../nov06-blog';
 import { nov07BlogBatch, nov07BlogSlugs } from '../../nov07-blog';
 import { nov10BlogBatch, nov10BlogSlugs } from '../../nov10-blog';
 import { nov19BlogBatch, nov19BlogSlugs } from '../../nov19-blog';
+import { nov21BlogBatch, nov21BlogSlugs } from '../../nov21-blog';
 import { nov20BlogBatch, nov20BlogSlugs } from '../../nov20-blog';
 import { nov18BlogBatch, nov18BlogSlugs } from '../../nov18-blog';
 import { nov17BlogBatch, nov17BlogSlugs } from '../../nov17-blog';
@@ -56,7 +57,7 @@ const seoTitle=(value:string)=>{const concise=value.replace(/^Philippines medica
 const seoDescription=(value:string)=>value.length<=155?value:`${value.slice(0,152).replace(/\s+\S*$/,'')}…`;
 
 export function generateStaticParams() {
-  const params = [...nov19BlogSlugs.map((slug) => ({ slug })), ...nov18BlogSlugs.map((slug) => ({ slug })), ...nov17BlogSlugs.map((slug) => ({ slug })), ...nov16BlogSlugs.map((slug) => ({ slug })), ...nov11BlogSlugs.map((slug) => ({ slug })), ...nov10BlogSlugs.map((slug) => ({ slug })), ...nov09BlogSlugs.map((slug) => ({ slug })), ...nov08BlogSlugs.map((slug) => ({ slug })), ...nov07BlogSlugs.map((slug) => ({ slug })), ...nov06BlogSlugs.map((slug) => ({ slug })), ...nov05BlogSlugs.map((slug) => ({ slug })), ...nov04BlogSlugs.map((slug) => ({ slug })), ...nov03BlogSlugs.map((slug) => ({ slug })), ...oct28BlogSlugs.map((slug) => ({ slug })), ...oct27BlogSlugs.map((slug) => ({ slug })), ...oct26BlogSlugs.map((slug) => ({ slug })), ...oct25BlogSlugs.map((slug) => ({ slug })), ...oct22BlogSlugs.map((slug) => ({ slug })), ...oct13BlogSlugs.map((slug) => ({ slug })), ...oct12BlogSlugs.map((slug) => ({ slug })), ...oct8BlogSlugs.map((slug) => ({ slug })), ...oct5BlogSlugs.map((slug) => ({ slug })), ...oct2BlogSlugs.map((slug) => ({ slug })), ...sep28BlogSlugs.map((slug) => ({ slug })), ...sep25BlogSlugs.map((slug) => ({ slug })), ...sep24BlogSlugs.map((slug) => ({ slug })), ...sep23BlogSlugs.map((slug) => ({ slug })), ...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
+  const params = [...nov21BlogSlugs.map((slug) => ({ slug })), ...nov19BlogSlugs.map((slug) => ({ slug })), ...nov18BlogSlugs.map((slug) => ({ slug })), ...nov17BlogSlugs.map((slug) => ({ slug })), ...nov16BlogSlugs.map((slug) => ({ slug })), ...nov11BlogSlugs.map((slug) => ({ slug })), ...nov10BlogSlugs.map((slug) => ({ slug })), ...nov09BlogSlugs.map((slug) => ({ slug })), ...nov08BlogSlugs.map((slug) => ({ slug })), ...nov07BlogSlugs.map((slug) => ({ slug })), ...nov06BlogSlugs.map((slug) => ({ slug })), ...nov05BlogSlugs.map((slug) => ({ slug })), ...nov04BlogSlugs.map((slug) => ({ slug })), ...nov03BlogSlugs.map((slug) => ({ slug })), ...oct28BlogSlugs.map((slug) => ({ slug })), ...oct27BlogSlugs.map((slug) => ({ slug })), ...oct26BlogSlugs.map((slug) => ({ slug })), ...oct25BlogSlugs.map((slug) => ({ slug })), ...oct22BlogSlugs.map((slug) => ({ slug })), ...oct13BlogSlugs.map((slug) => ({ slug })), ...oct12BlogSlugs.map((slug) => ({ slug })), ...oct8BlogSlugs.map((slug) => ({ slug })), ...oct5BlogSlugs.map((slug) => ({ slug })), ...oct2BlogSlugs.map((slug) => ({ slug })), ...sep28BlogSlugs.map((slug) => ({ slug })), ...sep25BlogSlugs.map((slug) => ({ slug })), ...sep24BlogSlugs.map((slug) => ({ slug })), ...sep23BlogSlugs.map((slug) => ({ slug })), ...sep22BlogSlugs.map((slug) => ({ slug })), ...sep18bBlogSlugs.map((slug) => ({ slug })), ...sep10BlogSlugs.map((slug) => ({ slug })), ...sep9BlogSlugs.map((slug) => ({ slug })), ...blogPosts.map((post) => ({ slug: post.slug })), ...aug21Slugs.map((slug) => ({ slug })), ...aug23Slugs.map((slug) => ({ slug })), ...sep3Slugs.map((slug) => ({ slug })), ...sep4BlogSlugs.map((slug) => ({ slug })), ...sep7BlogSlugs.map((slug) => ({ slug })), ...sep8BlogSlugs.map((slug) => ({ slug }))];
   return params.filter(({ slug }) => !blogAliases[slug]);
 }
 
@@ -73,6 +74,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (nov06) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov06.slug}`; return { title: seoTitle(nov06.title), description: seoDescription(nov06.description), alternates: { canonical }, openGraph: { title: seoTitle(nov06.title), description: seoDescription(nov06.description), type: 'article', url: canonical, images: [nov06.featuredImage], publishedTime: nov06.published } }; }
   const nov19 = nov19BlogBatch.find((item) => item.slug === slug);
   if (nov19) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov19.slug}`; return { title: seoTitle(nov19.title), description: seoDescription(nov19.description), alternates: { canonical }, openGraph: { title: seoTitle(nov19.title), description: seoDescription(nov19.description), type: 'article', url: canonical, images: [nov19.featuredImage], publishedTime: nov19.published } }; }
+  const nov21 = nov21BlogBatch.find((item) => item.slug === slug);
+  if (nov21) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov21.slug}`; return { title: seoTitle(nov21.title), description: seoDescription(nov21.description), alternates: { canonical }, openGraph: { title: seoTitle(nov21.title), description: seoDescription(nov21.description), type: 'article', url: canonical, images: [nov21.featuredImage], publishedTime: nov21.published } }; }
   const nov20 = nov20BlogBatch.find((item) => item.slug === slug);
   if (nov20) { const canonical = `https://${String(site.domain).toLowerCase()}/blog/${nov20.slug}`; return { title: seoTitle(nov20.title), description: seoDescription(nov20.description), alternates: { canonical }, openGraph: { title: seoTitle(nov20.title), description: seoDescription(nov20.description), type: 'article', url: canonical, images: [nov20.featuredImage], publishedTime: nov20.published } }; }
   const nov18 = nov18BlogBatch.find((item) => item.slug === slug);
@@ -743,6 +746,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   if (nov06) return <Nov06Article article={nov06} />;
   const nov19 = nov19BlogBatch.find((item) => item.slug === slug);
   if (nov19) return <Nov11Article article={nov19} />;
+  const nov21 = nov21BlogBatch.find((item) => item.slug === slug);
+  if (nov21) return <Nov11Article article={nov21} />;
   const nov20 = nov20BlogBatch.find((item) => item.slug === slug);
   if (nov20) return <Nov11Article article={nov20} />;
   const nov18 = nov18BlogBatch.find((item) => item.slug === slug);
